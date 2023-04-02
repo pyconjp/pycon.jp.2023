@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import {Inter} from 'next/font/google'
 import useLocale from "@/components/hooks/locale";
 
 export default function Home() {

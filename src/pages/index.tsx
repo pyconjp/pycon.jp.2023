@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import useLocale from "@/components/hooks/locale";
+import styles from "@/styles/button.module.css";
 
 export default function Home() {
   const {t} = useLocale();
@@ -14,6 +15,11 @@ export default function Home() {
       </Head>
       <div className='h-[2000px]'>
         <h1 className='text-lg'>{t.GREETING}</h1>
+
+        {/*CSS Modulesを用いたデザインのサンプル*/}
+        <div className={styles.button}>
+          Styled Button with CSS Modules
+        </div>
       </div>
     </>
   )

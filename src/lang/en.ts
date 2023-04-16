@@ -1,6 +1,6 @@
 import {Lang} from "@/types/lang";
 
-const Lang: Lang = {
+const En: Lang = {
   PAGES: {
     TIMETABLE: 'Timetable',
     SPONSOR: 'Sponsor',
@@ -9,4 +9,4 @@ const Lang: Lang = {
   GREETING: 'Welcome to PyCon APAC 2023',
 };
 
-export default Lang;
+export default En;

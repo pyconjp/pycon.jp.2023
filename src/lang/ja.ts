@@ -1,4 +1,4 @@
-import {Lang} from "@/components/types/lang";
+import {Lang} from "@/types/lang";
 
 const Ja: Lang = {
   PAGES: {

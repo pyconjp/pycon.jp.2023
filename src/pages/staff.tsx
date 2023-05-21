@@ -3,14 +3,8 @@ import * as fs from "fs";
 import {parse} from "csv-parse/sync";
 import {GetStaticProps} from "next";
 import Image from "next/image";
+import {Staff} from "@/types/staff";
 
-type Staff = {
-  name: string;
-  icon: string;
-  twitter: string;
-  github: string;
-  facebook: string;
-}
 
 const StaffCard = ({name, icon, twitter, github, facebook}: Staff) => (
   <div className={'flex items-center gap-2 flex-col'}>
@@ -24,7 +18,7 @@ const StaffCard = ({name, icon, twitter, github, facebook}: Staff) => (
   </div>
 )
 const StaffPage = ({rows = []}: { rows: Staff[] }) => {
-  const { t } = useLocale();
+  const {t} = useLocale();
 
   return (
     <>

@@ -23,13 +23,13 @@ const StaffCard = ({name, icon, twitter, github, facebook}: Staff) => (
     </div>
   </div>
 )
-
-const Staff = ({rows = []}: { rows: Staff[] }) => {
-  const {t} = useLocale();
+const StaffPage = ({rows = []}: { rows: Staff[] }) => {
+  const { t } = useLocale();
 
   return (
     <>
-      <h1 className='text-lg text-center'>{t.PAGES.STAFF}</h1>
+      <h1 className='text-lg'>{t.PAGES.STAFF}</h1>
+      <h2>スタッフページ（ハードコード文）</h2>
       <div className={'grid lg:grid-cols-3 grid-cols-2 gap-4'}>
         {rows.map((row, index) => (
           <StaffCard key={index} name={row.name} icon={row.icon} twitter={row.twitter} github={row.github}
@@ -51,4 +51,4 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 }
 
-export default Staff;
+export default StaffPage;

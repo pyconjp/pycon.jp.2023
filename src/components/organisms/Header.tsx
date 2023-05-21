@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 import useLocale from "@/components/hooks/locale";
 
 const Header = () => {
-  const {locale} = useRouter();
-  const {t} = useLocale();
+  const { locale } = useRouter();
+  const { t } = useLocale();
 
   return (
     <>
@@ -13,7 +13,7 @@ const Header = () => {
         <nav>
           <ul className='flex flex-row w-10/12 justify-between mx-auto items-center'>
             <Link href='/'>
-              <Image src={'/logo.png'} alt={'PyCon APAC 2023'} width={260} height={90}/>
+              <Image src={'/logo.png'} alt={'PyCon APAC 2023'} width={260} height={90} />
             </Link>
             <li>
               <Link href='/timetable'>
@@ -26,7 +26,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link href='/'>
+              <Link href='/staff'>
                 {t.PAGES.STAFF}
               </Link>
             </li>

@@ -3,6 +3,7 @@ export type Lang = {
     TIMETABLE: string,
     SPONSOR: string,
     STAFF: string,
+    CONTENTS_OTHERS: string,
   },
   GREETING: string,
 }

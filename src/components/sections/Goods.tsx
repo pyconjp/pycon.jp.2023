@@ -1,4 +1,4 @@
-import useLocale from "@/components/hooks/locale";
+// import useLocale from "@/components/hooks/locale";
 
 export default function GoodsSection() {
     // const {t} = useLocale();

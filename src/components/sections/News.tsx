@@ -1,4 +1,3 @@
-import useLocale from "@/components/hooks/locale";
 import {Blog} from "@/types/blog";
 import Link from "next/link";
 

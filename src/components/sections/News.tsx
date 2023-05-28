@@ -28,7 +28,7 @@ const BlogList = ({blogs}: { blogs: Blog[] }) => {
 }
 
 export default function NewsSection({blogs}: Props) {
-    const {t} = useLocale();
+    // const {t} = useLocale();
 
     return (
         <div className='my-4'>

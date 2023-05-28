@@ -1,7 +1,7 @@
 import useLocale from "@/components/hooks/locale";
 
 export default function FaqSection() {
-    const {t} = useLocale();
+    // const {t} = useLocale();
 
     return (
         <div>

@@ -1,7 +1,7 @@
 import useLocale from "@/components/hooks/locale";
 
 export default function ConferenceSection() {
-    const {t} = useLocale();
+    // const {t} = useLocale();
 
     return (
         <div>

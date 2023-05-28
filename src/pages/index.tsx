@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import useLocale from "@/components/hooks/locale";
+// import useLocale from "@/components/hooks/locale";
 import HeroSection from "@/components/sections/Hero";
 import NewsSection from "@/components/sections/News";
 import OverviewSection from "@/components/sections/Overview";

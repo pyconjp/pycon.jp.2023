@@ -18,3 +18,5 @@ const option: InitOptions = {
 };
 
 i18next.use(detector).use(initReactI18next).init(option);
+
+export default i18next;

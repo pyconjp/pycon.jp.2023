@@ -1,11 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
 
 const Header = () => {
-  const { locale } = useRouter();
-  const { t } = useTranslation("PAGES");
+  const { t, i18n } = useTranslation("PAGES");
 
   return (
     <>
@@ -31,22 +29,28 @@ const Header = () => {
             </li>
             <div className="flex flex-row">
               <div className="mx-2">
-                {locale === "ja" ? (
+                {i18n.language.startsWith("ja") ? (
                   <span className="text-gray-500">JA</span>
                 ) : (
-                  <Link href="" className="text-blue-500" locale="ja">
+                  <button
+                    className="text-blue-500"
+                    onClick={() => i18n.changeLanguage("ja")}
+                  >
                     JA
-                  </Link>
+                  </button>
                 )}
               </div>
               /
               <div className="mx-2">
-                {locale === "en" ? (
+                {i18n.language.startsWith("en") ? (
                   <span className="text-gray-500">EN</span>
                 ) : (
-                  <Link href="" className="text-blue-500" locale="en">
+                  <button
+                    className="text-blue-500"
+                    onClick={() => i18n.changeLanguage("en")}
+                  >
                     EN
-                  </Link>
+                  </button>
                 )}
               </div>
             </div>

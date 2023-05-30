@@ -1,11 +1,11 @@
-import useLocale from "@/components/hooks/locale";
+import {useTranslation} from "react-i18next";
 
 const TimeTable = () => {
-  const {t} = useLocale();
+  const {t} = useTranslation("PAGES");
 
   return (
     <>
-      <h1 className='text-lg'>{t.PAGES.TIMETABLE}</h1>
+      <h1 className='text-lg'>{t("TIMETABLE")}</h1>
     </>
   )
 }

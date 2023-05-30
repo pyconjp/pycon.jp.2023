@@ -1,11 +1,11 @@
-import useLocale from "@/components/hooks/locale";
+import {useTranslation} from "react-i18next";
 
 const Sponsor = () => {
-  const {t} = useLocale();
+  const {t} = useTranslation("PAGES")
 
   return (
     <>
-      <h1 className='text-lg'>{t.PAGES.SPONSOR}</h1>
+      <h1 className='text-lg'>{t("SPONSOR")}</h1>
     </>
   )
 }

@@ -39,7 +39,14 @@ export const getStaticProps: GetStaticProps = async () => {
     "https://www.googleapis.com/blogger/v3/blogs/1711203921350230994/posts";
   const blogUrl = `${blogBaseUrl}?key=${process.env.BLOGGER_API_KEY}`;
   const blogResponse = await fetch(blogUrl);
-  const { items: blogs } = await blogResponse.json();
+  const { items } = await blogResponse.json();
+  const blogs: Blog[] = items.slice(5).map((
+    { url, title, published }: Blog,
+  ) => ({
+    url,
+    title,
+    published,
+  }));
 
   return {
     props: {

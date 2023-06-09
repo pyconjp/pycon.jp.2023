@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
+const withExportImages = require("next-export-optimize-images");
 const nextConfig = {
   reactStrictMode: true,
-  i18n: {
+  /* i18n: {
     locales: ['ja', 'en'],
     defaultLocale: 'ja',
-  }
-}
+  } */
+};
 
-module.exports = nextConfig
+module.exports = withExportImages(nextConfig);

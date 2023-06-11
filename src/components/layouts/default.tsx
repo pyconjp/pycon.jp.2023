@@ -1,7 +1,11 @@
-import Header from "@/components/organisms/Header";
 import Footer from "@/components/organisms/Footer";
+import dynamic from "next/dynamic";
 
 const Layout = ({children}: { children: JSX.Element }) => {
+  const Header = dynamic(
+    () => import('@/components/organisms/Header'), {ssr: false}
+  );
+
   return (
     <>
       <Header/>

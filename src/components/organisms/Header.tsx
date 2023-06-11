@@ -1,57 +1,64 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/router";
-import useLocale from "@/components/hooks/locale";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
-  const { locale } = useRouter();
-  const { t } = useLocale();
+  const { t, i18n } = useTranslation("PAGES");
 
   return (
     <>
-      <header className='sticky h-[90px] top-0'>
+      <header className="sticky h-[90px] top-0">
         <nav>
-          <ul className='flex flex-row w-10/12 justify-between mx-auto items-center'>
-            <Link href='/'>
-              <Image src={'/logo.png'} alt={'PyCon APAC 2023'} width={260} height={90} />
+          <ul className="flex flex-row w-10/12 justify-between mx-auto items-center">
+            <Link href="/">
+              <Image
+                src={"/logo.png"}
+                alt={"PyCon APAC 2023"}
+                width={260}
+                height={90}
+              />
             </Link>
             <li>
-              <Link href='/timetable'>
-                {t.PAGES.TIMETABLE}
-              </Link>
+              <Link href="/timetable">{t("TIMETABLE")}</Link>
             </li>
             <li>
-              <Link href='/'>
-                {t.PAGES.SPONSOR}
-              </Link>
+              <Link href="/">{t("SPONSOR")}</Link>
             </li>
             <li>
-              <Link href='/staff'>
-                {t.PAGES.STAFF}
-              </Link>
+              <Link href="/staff">{t("STAFF")}</Link>
             </li>
-            <div className='flex flex-row'>
-              <div className='mx-2'>
-                {
-                  locale === 'ja'
-                    ? <span className='text-gray-500'>JA</span>
-                    : <Link href='' className='text-blue-500' locale='ja'>JA</Link>
-                }
+            <div className="flex flex-row">
+              <div className="mx-2">
+                {i18n.language.startsWith("ja") ? (
+                  <span className="text-gray-500">JA</span>
+                ) : (
+                  <button
+                    className="text-blue-500"
+                    onClick={() => i18n.changeLanguage("ja")}
+                  >
+                    JA
+                  </button>
+                )}
               </div>
               /
-              <div className='mx-2'>
-                {
-                  locale === 'en'
-                    ? <span className='text-gray-500'>EN</span>
-                    : <Link href='' className='text-blue-500' locale='en'>EN</Link>
-                }
+              <div className="mx-2">
+                {i18n.language.startsWith("en") ? (
+                  <span className="text-gray-500">EN</span>
+                ) : (
+                  <button
+                    className="text-blue-500"
+                    onClick={() => i18n.changeLanguage("en")}
+                  >
+                    EN
+                  </button>
+                )}
               </div>
             </div>
           </ul>
         </nav>
       </header>
     </>
-  )
-}
+  );
+};
 
 export default Header;

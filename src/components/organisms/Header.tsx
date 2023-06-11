@@ -11,12 +11,8 @@ const Header = () => {
         <nav>
           <ul className="flex flex-row w-10/12 justify-between mx-auto items-center">
             <Link href="/">
-              <Image
-                src={"/logo.png"}
-                alt={"PyCon APAC 2023"}
-                width={260}
-                height={90}
-              />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src='/logo.png' alt='PyCon APAC 2023' width={260} height={90} />
             </Link>
             <li>
               <Link href="/timetable">{t("TIMETABLE")}</Link>

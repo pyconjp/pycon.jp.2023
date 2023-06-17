@@ -3,6 +3,7 @@ import Heading from "@/components/elements/Heading";
 import SectionTitle from "@/components/elements/SectionTitle";
 import React from "react";
 import ExternalLink from "@/components/elements/ExternalLink";
+import SectionSubTitle from "@/components/elements/SectionSubTitle";
 
 export default function GoodsSection() {
   return (
@@ -23,6 +24,9 @@ export default function GoodsSection() {
         </p>
         <ExternalLink text='外部リンク' url={'https://example.com'}/>
       </TextCard>
+      <SectionSubTitle title={'SubTitle'} subTitle={'サブタイトル'} className='subTitle'/>
+      <SectionSubTitle title={'SubTitle'} subTitle={'サブタイトル'} className='subTitle' hasSeparator={true}/>
+      <SectionSubTitle title={'SubTitle'} subTitle={'サブタイトル'} className='subTitle' hasSeparator={true}/>
     </div>
   )
 }

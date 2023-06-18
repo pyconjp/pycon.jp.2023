@@ -9,7 +9,7 @@ const Layout = ({children}: { children: JSX.Element }) => {
       loading: () =>
         <header>
           <nav>
-            <ul className="flex flex-row w-10/12 justify-between mx-auto items-center">
+            <ul className="flex flex-row w-full justify-between mx-auto items-center">
               <Image
                 src={"/logo.png"}
                 alt={"PyCon APAC 2023"}
@@ -26,7 +26,7 @@ const Layout = ({children}: { children: JSX.Element }) => {
     <>
       <Header/>
       <main>
-        <div className={'mx-auto w-10/12 pt-12 pb-8'}>
+        <div className='w-full pt-12 pb-8'>
           {children}
         </div>
       </main>

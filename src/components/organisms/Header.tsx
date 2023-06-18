@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
 const Header = () => {
@@ -9,7 +8,7 @@ const Header = () => {
     <>
       <header className="sticky h-[90px] top-0">
         <nav>
-          <ul className="flex flex-row w-10/12 justify-between mx-auto items-center">
+          <ul className="flex flex-row w-full justify-between mx-auto items-center">
             <Link href="/">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src='/logo.png' alt='PyCon APAC 2023' width={260} height={90} />

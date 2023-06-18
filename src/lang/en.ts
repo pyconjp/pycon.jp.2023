@@ -12,7 +12,7 @@ const En: Lang = {
     VENUE_INFO: "Venue Info",
     CONFERENCE_DATE: "OCTOBER 27 - 28, 2023",
     SPRINT_DATE: "OCTOBER 29, 2023",
-    TICKET_INFO: "Ticket Info",
+    TICKET_INFO: "Ticket Info  (Comming soon)",
   },
   GREETING: "Welcome to PyCon APAC 2023",
 };

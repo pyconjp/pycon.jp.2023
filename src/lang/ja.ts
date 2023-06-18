@@ -12,7 +12,7 @@ const Ja: Lang = {
     VENUE_INFO: "会場案内",
     CONFERENCE_DATE: "2023.10.27(Fri)-28(Sat)",
     SPRINT_DATE: "2023.10.29(Sun)",
-    TICKET_INFO: "会場案内",
+    TICKET_INFO: "チケット案内 (Comming soon)",
   },
   GREETING: "PyCon APAC 2023へようこそ",
 };

@@ -14,7 +14,6 @@ export default function HeroSection() {
 
     return (
         <section className="flex flex-col justify-stretch sm:mx-[60px] sm:my-[80px] mx-[16px] my-[20px]">
-            {/* <img src="/hero.svg" className="items-center bg-no-repeat bg-center" /> */}
             <Image
                 src={"/hero.svg"}
                 alt={""}
@@ -29,7 +28,13 @@ export default function HeroSection() {
                         <img src="/location.png" alt="" className="object-contain mx-[16px]"/>
                         <div className="flex sm:flex-row flex-col">
                             <h2 suppressHydrationWarning className="text-tertiary-900 font-bold text-2xl">{t("VENUE")}</h2>
-                            <a href="https://www.toc.co.jp/saiji/ariake/access/" suppressHydrationWarning className="hover:opacity-70 text-lg text-secondary-600 font-bold underline underline-offset-8">
+                            <a 
+                                href="https://www.toc.co.jp/saiji/ariake/access/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                suppressHydrationWarning 
+                                className="hover:opacity-70 text-lg text-secondary-600 font-bold underline underline-offset-8"
+                            >
                                 <div className="flex flex-row sm:mx-[16px]">
                                     <p suppressHydrationWarning>{t("VENUE_INFO")}</p>
                                     <Image
@@ -59,7 +64,12 @@ export default function HeroSection() {
                     </div>
                 </div>
                 
-                <a href="" suppressHydrationWarning className="bg-alt-black hover:bg-secondary-700 rounded text-center text-alt-white w-full py-[14px]">{t("TICKET_INFO")}</a>
+                <button
+                    disabled
+                    suppressHydrationWarning
+                    type="button"
+                    className="bg-alt-black hover:bg-secondary-700 rounded text-center text-alt-white w-full py-[14px]"
+                >{t("TICKET_INFO")}</button>
             </div>
         </section>
 

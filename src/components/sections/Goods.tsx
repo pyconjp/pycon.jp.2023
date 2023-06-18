@@ -1,13 +1,13 @@
+import React from "react";
 import TextCard from "@/components/organisms/TextCard";
 import Heading from "@/components/elements/Heading";
 import SectionTitle from "@/components/elements/SectionTitle";
-import React from "react";
 import ExternalLink from "@/components/elements/ExternalLink";
 import SectionSubTitle from "@/components/elements/SectionSubTitle";
 
 export default function GoodsSection() {
   return (
-    <div className='lg:m-[60px] my-20 mx-4'>
+    <div className='my-20'>
       <SectionTitle title='Goods' subTitle='グッズ'/>
       <TextCard image={{src: '/dummy.png', alt: '商品画像', width: 400, height: 300}}>
         <Heading>

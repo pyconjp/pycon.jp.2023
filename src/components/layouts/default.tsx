@@ -26,7 +26,7 @@ const Layout = ({children}: { children: JSX.Element }) => {
     <>
       <Header/>
       <main>
-        <div className='mx-auto w-full pt-12 pb-8'>
+        <div className='w-full lg:px-[60px] px-4 pt-12 pb-8'>
           {children}
         </div>
       </main>

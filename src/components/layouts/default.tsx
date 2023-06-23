@@ -1,14 +1,6 @@
 import Footer from "@/components/organisms/Footer";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { Montserrat_Alternates } from 'next/font/google';
-
-const montserrat_alternates = Montserrat_Alternates({
-  weight: ['600'],
-  style: ['italic'],
-  subsets: ['latin'],
-  variable: '--font-montserrat_alternates',
-});
 
 const Layout = ({children}: { children: JSX.Element }) => {
   const Header = dynamic(
@@ -33,7 +25,7 @@ const Layout = ({children}: { children: JSX.Element }) => {
   return (
     <>
       <Header/>
-      <main className={`${montserrat_alternates.variable}`}>
+      <main>
         <div className={'mx-auto w-10/12 pt-12 pb-8'}>
           {children}
         </div>

@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      montserrat: ['Montserrat Alternates'],
+      montserrat: ['Montserrat Alternates', 'sans-serif'],
     },
     colors: {
       primary: {

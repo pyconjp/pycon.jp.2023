@@ -18,7 +18,7 @@ const SectionSubTitle = ({title, subTitle, hasSeparator = false, ...others}: Pro
                  className='mx-auto my-8 lg:w-auto lg:h-auto w-[150px] h-[16px]'/>
         }
         <div>
-          <h2 className='lg:text-2xl text-xl italic font-semibold'>{title}</h2>
+          <h2 className='lg:text-2xl text-xl font-montserrat italic'>{title}</h2>
           <div className='text-primary-600 lg:text-base text-sm'>{subTitle}</div>
         </div>
       </div>

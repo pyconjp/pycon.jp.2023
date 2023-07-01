@@ -22,6 +22,9 @@ const Header = () => {
             <li>
               <Link href="/staff">{t("STAFF")}</Link>
             </li>
+            <li>
+              <Link href="/coc">COC</Link>
+            </li>
             <div className="flex flex-row">
               <div className="mx-2">
                 {i18n.language.startsWith("ja") ? (

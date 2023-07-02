@@ -20,7 +20,7 @@ const HeaderMenu = ({parent, childPages}: Props) => {
               <Link href={url} key={index}>
                 <div className='hover:bg-secondary-100 flex items-center py-2'>
                   <ChevronRightIcon className='w-5 h-5 ml-6 text-primary-400'/>
-                  <span className='ml-2 text-alt-black'>{label}</span>
+                  <span className='ml-2 text-alt-black' suppressHydrationWarning>{label}</span>
                 </div>
               </Link>
             )

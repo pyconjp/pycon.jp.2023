@@ -1,7 +1,6 @@
 import Link from "next/link";
 import {useTranslation} from "react-i18next";
 import Image from "next/image";
-import {GlobeAltIcon} from "@heroicons/react/20/solid";
 import HeaderMenu from "@/components/elements/HeaderMenu";
 import menu from "@/data/menu";
 import LangButton from "@/components/elements/LangButton";

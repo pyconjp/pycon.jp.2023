@@ -1,7 +1,7 @@
 import Footer from "@/components/organisms/Footer";
 import Header from "@/components/organisms/Header";
-import {createContext, useState} from "react";
 import menuContext from "@/utils/menuContext";
+import {useState} from "react";
 
 const Layout = ({children}: { children: JSX.Element }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

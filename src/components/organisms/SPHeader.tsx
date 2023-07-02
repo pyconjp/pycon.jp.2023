@@ -1,15 +1,14 @@
 import Link from "next/link";
 import {useTranslation} from "react-i18next";
 import Image from "next/image";
-import {Bars3Icon, ChevronRightIcon, GlobeAltIcon, MinusIcon, XMarkIcon} from "@heroicons/react/20/solid";
-import HeaderMenu from "@/components/elements/HeaderMenu";
+import {Bars3Icon, ChevronRightIcon, MinusIcon, XMarkIcon} from "@heroicons/react/20/solid";
 import menu from "@/data/menu";
-import {useContext, useState} from "react";
+import {useContext} from "react";
 import menuContext from "@/utils/menuContext";
 import LangButton from "@/components/elements/LangButton";
 
 const PCHeader = () => {
-  const {t, i18n} = useTranslation('PAGES');
+  const {t} = useTranslation('PAGES');
   const {t: mt} = useTranslation('MENU');
 
   const {isMenuOpen, setIsMenuOpen} = useContext(menuContext);
@@ -25,7 +24,7 @@ const PCHeader = () => {
             <nav className='mt-16 mx-14 py-1 bg-secondary-50 rounded flex lg:hidden flex-col shadow'>
               <ul>
                 {
-                  menu.map((m, index) => (
+                  menu.map((m) => (
                     <>
                       <li className='pl-6 flex lg:hidden items-center gap-2.5 h-10'>
                         <ChevronRightIcon className='h-5 w-5 text-primary-400'/>

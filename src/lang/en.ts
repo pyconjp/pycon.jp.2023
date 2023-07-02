@@ -1,10 +1,13 @@
-import { Lang } from "@/types/lang";
+import {Lang} from "@/types/lang";
 
 const En: Lang = {
   PAGES: {
-    TIMETABLE: "Timetable",
+    ABOUT: 'About',
+    EVENTS: 'Events',
     SPONSOR: "Sponsor",
-    STAFF: "Staff",
+    CONTENTS: 'Contents',
+    STAFF: "Volunteers",
+    TIMETABLE: "Timetable",
     CONTENTS_OTHERS: "Other PyCon",
   },
   HERO: {
@@ -14,7 +17,26 @@ const En: Lang = {
     SPRINT_DATE: "OCTOBER 29, 2023",
     TICKET_INFO: "Ticket Info  (Comming soon)",
   },
-  GREETING: "Welcome to PyCon APAC 2023",
+  MENU: {
+    ABOUT: {
+      COC: 'COC(Code Of Conduct)',
+      VENUE: 'Venue Information',
+    },
+    EVENTS: {
+      TIMETABLE: 'Timetable',
+      EVENTS: 'Event List',
+    },
+    SPONSOR: {
+      SPONSOR_LIST: 'Sponsor List',
+    },
+    CONTENTS: {
+      COMMUNITIES: 'Python Communities',
+      BEGINNERS: 'First steps of Python',
+    },
+    STAFF: {
+      STAFF: 'Volunteers',
+    }
+  },
 };
 
 export default En;

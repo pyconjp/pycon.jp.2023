@@ -1,8 +1,11 @@
 export type Lang = {
   PAGES: {
-    TIMETABLE: string,
+    ABOUT: string,
+    EVENTS: string,
     SPONSOR: string,
+    CONTENTS: string,
     STAFF: string,
+    TIMETABLE: string,
     CONTENTS_OTHERS: string,
   },
   HERO: {
@@ -11,6 +14,25 @@ export type Lang = {
     CONFERENCE_DATE: string,
     SPRINT_DATE: string,
     TICKET_INFO: string,
+  },
+  MENU: {
+    ABOUT: {
+      COC: string,
+      VENUE: string,
+    },
+    EVENTS: {
+      TIMETABLE: string,
+      EVENTS: string,
+    },
+    SPONSOR: {
+      SPONSOR_LIST: string,
+    },
+    CONTENTS: {
+      COMMUNITIES: string,
+      BEGINNERS: string,
+    },
+    STAFF: {
+      STAFF: string,
+    }
   }
-  GREETING: string,
 }

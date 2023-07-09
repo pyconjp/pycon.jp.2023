@@ -1,4 +1,4 @@
-import { Lang } from "@/types/lang";
+import {Lang} from "@/types/lang";
 
 const En: Lang = {
   PAGES: {
@@ -17,7 +17,6 @@ const En: Lang = {
     SPRINT_DATE: "OCTOBER 29, 2023",
     TICKET_INFO: "Ticket Info  (Comming soon)",
   },
-};
   MENU: {
     ABOUT: {
       COC: 'COC(Code Of Conduct)',
@@ -80,6 +79,6 @@ const En: Lang = {
     P12: "Attendees should observe this Code of Conduct in the conference room, workshop venue, social events associated with the conference, conference website, and applications used.",
     P13: "For inquiries about the Code of Conduct, please contact the desk for inquiries about the Code of Conduct, not by posting on a blog or SNS.",
   },
-  GREETING: "Welcome to PyCon APAC 2023",
+};
 
 export default En;

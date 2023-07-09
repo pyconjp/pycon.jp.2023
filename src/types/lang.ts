@@ -77,4 +77,8 @@ export type Lang = {
     P12: string,
     P13: string,
   }
+  OVERVIEW: {
+    APAC: string,
+    JP: string,
+  },
 }

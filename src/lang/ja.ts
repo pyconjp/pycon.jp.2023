@@ -2,9 +2,12 @@ import { Lang } from "@/types/lang";
 
 const Ja: Lang = {
   PAGES: {
-    TIMETABLE: "タイムテーブル",
+    ABOUT: '開催概要',
+    EVENTS: 'イベント詳細',
     SPONSOR: "スポンサー",
+    CONTENTS: 'コンテンツ',
     STAFF: "スタッフ",
+    TIMETABLE: "タイムテーブル",
     CONTENTS_OTHERS: "海外のPyCon",
   },
   HERO: {
@@ -13,6 +16,26 @@ const Ja: Lang = {
     CONFERENCE_DATE: "2023.10.27(Fri)-28(Sat)",
     SPRINT_DATE: "2023.10.29(Sun)",
     TICKET_INFO: "チケット案内 (Comming soon)",
+  },
+  MENU: {
+    ABOUT: {
+      COC: 'CoC(行動規範)',
+      VENUE: '会場案内',
+    },
+    EVENTS: {
+      TIMETABLE: 'タイムテーブル',
+      EVENTS: 'イベント一覧',
+    },
+    SPONSOR: {
+      SPONSOR_LIST: 'スポンサー一覧',
+    },
+    CONTENTS: {
+      COMMUNITIES: 'コミュニティ紹介',
+      BEGINNERS: 'はじめてのPython',
+    },
+    STAFF: {
+      STAFF: 'スタッフ一覧',
+    }
   },
   COC: {
     P1: "PyCon JP Code of Conduct （以下「行動規範」といいます。）は、一般社団法人PyCon JP Association（以下「PyCon JP」といいます。）が開催するイベント（以下「本イベント」といいます。）に対して参加される方全員に（以下「参加者」といいます。）と守っていただきたい内容を定めるものです。本イベントに参加していただく参加者の方には、本規約の全ての条項を確認のうえ、本行動規範に同意していただく必要があります。",
@@ -56,7 +79,6 @@ const Ja: Lang = {
     P12: "参加者は会議場、ワークショップ会場、また会議に関連したソーシャルイベント、カンファレンスのウェブサイトや使用するアプリケーションで、この行動規範を守ってください。",
     P13: "行動規範についての問い合わせはblog、SNS等への投稿による報告ではなく、行動規範の問い合わせ窓口へのご連絡をお願いします。",
   },
-  GREETING: "PyCon APAC 2023へようこそ",
 };
 
 export default Ja;

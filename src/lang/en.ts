@@ -2,9 +2,12 @@ import { Lang } from "@/types/lang";
 
 const En: Lang = {
   PAGES: {
-    TIMETABLE: "Timetable",
+    ABOUT: 'About',
+    EVENTS: 'Events',
     SPONSOR: "Sponsor",
-    STAFF: "Staff",
+    CONTENTS: 'Contents',
+    STAFF: "Volunteers",
+    TIMETABLE: "Timetable",
     CONTENTS_OTHERS: "Other PyCon",
   },
   HERO: {
@@ -13,6 +16,27 @@ const En: Lang = {
     CONFERENCE_DATE: "OCTOBER 27 - 28, 2023",
     SPRINT_DATE: "OCTOBER 29, 2023",
     TICKET_INFO: "Ticket Info  (Comming soon)",
+  },
+};
+  MENU: {
+    ABOUT: {
+      COC: 'COC(Code Of Conduct)',
+      VENUE: 'Venue Information',
+    },
+    EVENTS: {
+      TIMETABLE: 'Timetable',
+      EVENTS: 'Event List',
+    },
+    SPONSOR: {
+      SPONSOR_LIST: 'Sponsor List',
+    },
+    CONTENTS: {
+      COMMUNITIES: 'Python Communities',
+      BEGINNERS: 'First steps of Python',
+    },
+    STAFF: {
+      STAFF: 'Volunteers',
+    }
   },
   COC: {
     P1: 'PyCon JP Code of Conduct (hereinafter referred to as the "Code of Conduct") is an event (hereinafter referred to as the "Event") held by the General Incorporated Association PyCon JP Association (hereinafter referred to as the "PyCon JP"). All the participants who participate in this event are required to read all the terms of this agreement and agree to this code of conduct.',
@@ -57,6 +81,5 @@ const En: Lang = {
     P13: "For inquiries about the Code of Conduct, please contact the desk for inquiries about the Code of Conduct, not by posting on a blog or SNS.",
   },
   GREETING: "Welcome to PyCon APAC 2023",
-};
 
 export default En;

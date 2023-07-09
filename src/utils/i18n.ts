@@ -15,6 +15,7 @@ const option: InitOptions = {
     en: en,
     ja: ja,
   },
+  fallbackLng: 'ja',
 };
 
 i18next.use(detector).use(initReactI18next).init(option);

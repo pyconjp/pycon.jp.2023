@@ -1,13 +1,10 @@
 import Link from "next/link";
+import { MinusIcon } from "@heroicons/react/20/solid";
 import { Menu, menu } from "@/data/menu";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
-import { GetStaticProps } from "next";
-import path from "path";
 import pyconApacLogo from "../../../public/footer-2023-logo.png";
 import { TFunction } from "i18next";
-// import { ExternalLink } from 'react-external-link';
-// import menus from "../../data/menu.json";
 
 type SNS = {
   name: string;
@@ -32,7 +29,7 @@ const Footer = () => {
     },
   ];
 
-  const { t } = useTranslation("PAGES");
+  const { t } = useTranslation();
 
   return (
     <footer className="bg-[#111C3B]">
@@ -48,25 +45,45 @@ const Footer = () => {
               }}
             />
           </div>
-          <div>{menu.map((v, k) => MenuContents(v, k, t))}</div>
+          <FooterMenu menus={menu} t={t} />
         </div>
       </div>
     </footer>
   );
 };
 
-const MenuContents = (menu: Menu, key: number, t: TFunction) => {
+const FooterMenu = ({ menus, t }: { menus: Menu[]; t: TFunction }) => {
   return (
-    <div className="flex-1" key={key}>
-      <p>{t(menu.title)}</p>
-      {/*menu.children.map((child) => (
-        <>
-          <p>
-            <Link href={child.link}>{child.title}</Link>
-          </p>
-        </>
-      ))*/}
-    </div>
+    <nav className="pt-9">
+      <ul className="grid gap-5 w-max mx-auto">
+        {menus.map((menu, menuKey) => (
+          <li key={menuKey}>
+            <div className="grid grid-cols-1 gap-3">
+              <h5 className="text-alt-white">
+                {t(menu.title, { ns: "PAGES" })}
+              </h5>
+              <ul className="grid gap-3">
+                {menu.children.map((child, childKey) => (
+                  <Link
+                    href={t(child.url, { ns: "MENU" }) ?? ""}
+                    key={childKey}
+                  >
+                    <li className="flex gap-2.5">
+                      <span>
+                        <MinusIcon className="h-6 text-primary-800 mx-auto" />
+                      </span>
+                      <p className="text-tertiary-100">
+                        {t(child.title, { ns: "MENU" })}
+                      </p>
+                    </li>
+                  </Link>
+                ))}
+              </ul>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 };
 

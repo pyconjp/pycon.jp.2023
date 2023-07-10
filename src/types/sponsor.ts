@@ -1,5 +1,5 @@
 export type Sponsor = {
-  category: "diamond" | "platinum" | "golod" | "silver" | "bronze" | "special"
+  category: "diamond" | "platinum" | "gold" | "silver" | "bronze" | "special"
   name: string;
   logo: string;
   description: string;

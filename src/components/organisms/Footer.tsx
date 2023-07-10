@@ -46,6 +46,7 @@ const Footer = () => {
             />
           </div>
           <FooterMenu menus={menu} t={t} />
+          <hr className="h-px my-9 bg-primary-400 border-0 " />
         </div>
       </div>
     </footer>
@@ -57,29 +58,22 @@ const FooterMenu = ({ menus, t }: { menus: Menu[]; t: TFunction }) => {
     <nav className="pt-9">
       <ul className="grid gap-5 w-max mx-auto">
         {menus.map((menu, menuKey) => (
-          <li key={menuKey}>
-            <div className="grid grid-cols-1 gap-3">
-              <h5 className="text-alt-white">
-                {t(menu.title, { ns: "PAGES" })}
-              </h5>
-              <ul className="grid gap-3">
-                {menu.children.map((child, childKey) => (
-                  <Link
-                    href={t(child.url, { ns: "MENU" }) ?? ""}
-                    key={childKey}
-                  >
-                    <li className="flex gap-2.5">
-                      <span>
-                        <MinusIcon className="h-6 text-primary-800 mx-auto" />
-                      </span>
-                      <p className="text-tertiary-100">
-                        {t(child.title, { ns: "MENU" })}
-                      </p>
-                    </li>
-                  </Link>
-                ))}
-              </ul>
-            </div>
+          <li className="grid grid-cols-1 gap-3" key={menuKey}>
+            <h5 className="text-alt-white">{t(menu.title, { ns: "PAGES" })}</h5>
+            <ul className="grid gap-3">
+              {menu.children.map((child, childKey) => (
+                <Link href={t(child.url, { ns: "MENU" }) ?? ""} key={childKey}>
+                  <li className="flex gap-2.5">
+                    <span>
+                      <MinusIcon className="h-6 text-primary-800 mx-auto" />
+                    </span>
+                    <p className="text-tertiary-100">
+                      {t(child.title, { ns: "MENU" })}
+                    </p>
+                  </li>
+                </Link>
+              ))}
+            </ul>
           </li>
         ))}
       </ul>
@@ -87,30 +81,14 @@ const FooterMenu = ({ menus, t }: { menus: Menu[]; t: TFunction }) => {
   );
 };
 
-// const SNSContents = (sns: SNS[]) => {
-//   return (
-//     <div className="mr-2">
-//       SNS
-//     </div>
-//       {sns.map((s) => <>
-//       </>
-//             <div key="sns.name">
-//               <div class="inline-flex">
-//                 <div class="w-28">
-//                   <outer-link class="text-secondary-300" :to="sns.url">
-//                     {{ sns.account }}
-//                   </outer-link>
-//                 </div>
-//                 <img
-//                   class="inline w-6 h-6"
-//                   :src="require(`@/assets/images/sns/${sns.logo}`)"
-//                   :alt="sns.name"
-//                 />
-//               </div>
-//             </div >
-//             )}
-//
-//   )
-// }
+const ContactUs = ({ t }: { t: TFunction }) => {
+  return (
+    <div>
+      <div>
+        <p>Follow us</p>
+      </div>
+    </div>
+  );
+};
 
 export default Footer;

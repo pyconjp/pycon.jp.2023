@@ -1,33 +1,45 @@
 import Link from "next/link";
 import { ArrowRightIcon, MinusIcon } from "@heroicons/react/20/solid";
 import { Menu, menu } from "@/data/menu";
-import Image from "next/image";
+import Image, { ImageProps } from "next/image";
 import { useTranslation } from "react-i18next";
 import { TFunction } from "i18next";
 
 import pyconApacLogo from "../../../public/footer-2023-logo.png";
 import pyconAssociationLogo from "../../../public/association-logo.svg";
+import facebookLogo from "../../../public/facebook_w.svg";
+import twitterLogo from "../../../public/twitter_w.svg";
 
 type SNS = {
   name: string;
   account: string;
   url: string;
-  logo: string;
+  logo: ImageProps;
 };
 
 const Footer = () => {
-  const snsData = [
+  const snsData: SNS[] = [
     {
       name: "twitter",
       account: "@pyconjapan",
       url: "https://twitter.com/pyconjapan",
-      logo: "twitter_w.svg",
+      logo: {
+        src: "/twitter_w.svg",
+        height: 24,
+        width: 20,
+        alt: "twitter logo",
+      },
     },
     {
       name: "facebook",
       account: "@PyConJP",
       url: "https://www.facebook.com/PyConJP/",
-      logo: "facebook_w.svg",
+      logo: {
+        src: "/facebook_w.svg",
+        height: 24,
+        width: 24,
+        alt: "facebook logo",
+      },
     },
   ];
 
@@ -63,7 +75,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <div className="p-10 flex flex-col gap-10">
+      <div className="p-10 flex flex-col gap-10 bg-white">
         <div className="pyconjp-logo h-[85px]" style={{ position: "relative" }}>
           <Image
             src={pyconAssociationLogo}
@@ -114,12 +126,28 @@ const FooterMenu = ({ menus, t }: { menus: Menu[]; t: TFunction }) => {
 const ContactUs = ({ snsList, t }: { snsList: SNS[]; t: TFunction }) => {
   return (
     <div className="flex flex-col gap-3">
-      <div>
-        <p className="text-white text-sm">Follow Us!</p>
+      <div className="flex gap-5">
+        <p className="text-white text-sm w-fit">Follow Us!</p>
+        <div>
+          {snsList.map((sns, key) => (
+            <Link href={sns.url} key={key}>
+              <div className="grid grid-cols-2 gap-2">
+                <p className="text-tertiary-100">{sns.account}</p>
+                <Image {...sns.logo} alt={sns.name} />
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
       <div>
         <p className="text-white text-sm">
           {t("CONTACT_US", { ns: "FOOTER" })}
+          <a
+            href="mailto: pyconjp@pycon.jp"
+            className="text-tertiary-100 ml-2  "
+          >
+            pyconjp@pycon.jp
+          </a>
         </p>
       </div>
       <div>

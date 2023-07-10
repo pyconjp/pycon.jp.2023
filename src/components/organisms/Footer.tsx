@@ -130,12 +130,17 @@ const ContactUs = ({ snsList, t }: { snsList: SNS[]; t: TFunction }) => {
         <p className="text-white text-sm w-fit">Follow Us!</p>
         <div>
           {snsList.map((sns, key) => (
-            <Link href={sns.url} key={key}>
+            <a
+              href={sns.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={key}
+            >
               <div className="grid grid-cols-2 gap-2">
                 <p className="text-tertiary-100">{sns.account}</p>
                 <Image {...sns.logo} alt={sns.name} />
               </div>
-            </Link>
+            </a>
           ))}
         </div>
       </div>

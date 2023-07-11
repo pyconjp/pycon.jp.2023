@@ -7,8 +7,7 @@ import { TFunction } from "i18next";
 
 import pyconApacLogo from "../../../public/footer-2023-logo.png";
 import pyconAssociationLogo from "../../../public/association-logo.svg";
-import facebookLogo from "../../../public/facebook_w.svg";
-import twitterLogo from "../../../public/twitter_w.svg";
+import bgImage from "../../../public/section_bgimg_map.png";
 
 type SNS = {
   name: string;
@@ -46,9 +45,9 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer>
-      <div className="p-5 bg-[#111C3B]">
-        <div className="p-5 flex flex-col gap-9">
+    <footer className="absolute w-screen h-fit">
+      <div className="p-10 bg-[#111C3B] overflow-hidden bg-[url('/section_bgimg_map.png')] bg-[length:438px_508px] bg-no-repeat bg-center">
+        <div className="flex flex-col gap-9">
           <div className="logo h-[95px]" style={{ position: "relative" }}>
             <Image
               src={pyconApacLogo}

@@ -46,49 +46,48 @@ const Footer = () => {
 
   return (
     <footer className="absolute w-screen h-fit">
-      <div className="p-10 bg-[#111C3B] overflow-hidden bg-[url('/section_bgimg_map.png')] bg-[length:438px_508px] bg-no-repeat bg-center">
+      <div className="p-10 lg:py-6 lg:px-32 bg-[#111C3B] overflow-hidden bg-[url('/section_bgimg_map.png')] bg-[length:438px_508px] bg-no-repeat bg-center">
         <div className="flex flex-col gap-9">
-          <div className="logo h-[95px]" style={{ position: "relative" }}>
+          <div className="lg:py-5">
             <Image
               src={pyconApacLogo}
+              className="mx-auto lg:mx-0"
               alt="Pycon APAC 2023 Logo"
-              fill
-              style={{
-                objectFit: "contain",
-              }}
+              width={282}
+              height={91.3}
             />
           </div>
           <FooterMenu menus={menu} t={t} />
           <hr className="h-px bg-primary-400 border-0 " />
           <ContactUs snsList={snsData} t={t} />
-          <Link
-            href="/"
-            className="flex w-full h-[32px] border-b-[1px] border-tertiary-100"
-          >
-            <p className="text-tertiary-100">
-              {t("PAST_EVENTS", { ns: "FOOTER" })}
-            </p>
-            <span>
-              <ArrowRightIcon className="h-6 text-tertiary-100 mx-auto" />
-            </span>
-          </Link>
+          <div className="flex w-full h-[32px] lg:justify-end">
+            <Link
+              href="/"
+              className="flex w-full border-b-[1px] lg:max-w-[240px] border-tertiary-100 lg:"
+            >
+              <p className="text-tertiary-100">
+                {t("PAST_EVENTS", { ns: "FOOTER" })}
+              </p>
+              <span>
+                <ArrowRightIcon className="h-6 text-tertiary-100 mx-auto" />
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
-      <div className="p-10 flex flex-col gap-10 bg-white">
-        <div className="pyconjp-logo h-[85px]" style={{ position: "relative" }}>
+      <div className="flex p-10 lg:px-0 lg:py-12 bg-white justify-center">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 lg:max-w-[653px]">
           <Image
             src={pyconAssociationLogo}
             alt="Pycon JP Association Logo"
-            fill
-            style={{
-              objectFit: "contain",
-            }}
+            height={143}
+            width={85}
           />
+          <p>
+            主催: 一般社団法人PyCon JP Association PyCon JP 2022 is a production
+            of the PyCon JP Association
+          </p>
         </div>
-        <p>
-          主催: 一般社団法人PyCon JP Association PyCon JP 2022 is a production
-          of the PyCon JP Association
-        </p>
       </div>
     </footer>
   );
@@ -97,9 +96,9 @@ const Footer = () => {
 const FooterMenu = ({ menus, t }: { menus: Menu[]; t: TFunction }) => {
   return (
     <nav>
-      <ul className="grid gap-5 w-max mx-auto">
+      <ul className="grid lg:grid-cols-5 gap-5 w-max mx-auto lg:mx-0">
         {menus.map((menu, menuKey) => (
-          <li className="grid grid-cols-1 gap-3" key={menuKey}>
+          <li className="grid grid-cols-1 gap-3 lg:auto-rows-max" key={menuKey}>
             <h5 className="text-alt-white">{t(menu.title, { ns: "PAGES" })}</h5>
             <ul className="grid gap-3">
               {menu.children.map((child, childKey) => (
@@ -124,7 +123,7 @@ const FooterMenu = ({ menus, t }: { menus: Menu[]; t: TFunction }) => {
 
 const ContactUs = ({ snsList, t }: { snsList: SNS[]; t: TFunction }) => {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 max-w-[429.146px]">
       <div className="flex gap-5">
         <p className="text-white text-sm w-fit">Follow Us!</p>
         <div>

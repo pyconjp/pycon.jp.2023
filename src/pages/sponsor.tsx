@@ -4,6 +4,8 @@ import { Sponsor } from "@/types/sponsor";
 import { GetStaticProps } from "next";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
+import SectionTitle from "@/components/elements/SectionTitle";
+import SectionSubTitle from "@/components/elements/SectionSubTitle";
 
 
 const SponsorCard = ({ name, logo, description, url }: Omit<Sponsor, "category">) => (
@@ -28,9 +30,9 @@ const SponsorPage = ({ rows = [] }: { rows: Sponsor[] }) => {
 
   return (
     <>
-      <h1 className='text-lg'>{t("SPONSOR")}</h1>
+      <SectionTitle title='SPONSOR' subTitle='スポンサー' />
 
-      <h2 className='text-lg'>{t("DIAMOND")}</h2>
+      <SectionSubTitle title={'DIAMOND'} subTitle={'ダイヤモンド'} className='subTitle' />
       {rows.filter((row) => row.category === "diamond").map((row, index) => (
         <SponsorCard
           key={index}
@@ -41,7 +43,7 @@ const SponsorPage = ({ rows = [] }: { rows: Sponsor[] }) => {
         />
       ))}
 
-      <h2 className='text-lg'>{t("PLATINUM")}</h2>
+      <SectionSubTitle title={'PLATINUM'} subTitle={'プラチナ'} className='subTitle' />
       {rows.filter((row) => row.category === "platinum").map((row, index) => (
         <SponsorCard
           key={index}
@@ -52,7 +54,7 @@ const SponsorPage = ({ rows = [] }: { rows: Sponsor[] }) => {
         />
       ))}
 
-      <h2 className='text-lg'>{t("GOLD")}</h2>
+      <SectionSubTitle title={'GOLD'} subTitle={'ゴールド'} className='subTitle' />
       {rows.filter((row) => row.category === "gold").map((row, index) => (
         <SponsorCard
           key={index}
@@ -63,7 +65,7 @@ const SponsorPage = ({ rows = [] }: { rows: Sponsor[] }) => {
         />
       ))}
 
-      <h2 className='text-lg'>{t("SILVER")}</h2>
+      <SectionSubTitle title={'SILVER'} subTitle={'シルバー'} className='subTitle' />
       {rows.filter((row) => row.category === "silver").map((row, index) => (
         <SponsorCard
           key={index}
@@ -74,7 +76,7 @@ const SponsorPage = ({ rows = [] }: { rows: Sponsor[] }) => {
         />
       ))}
 
-      <h2 className='text-lg'>{t("BRONZE")}</h2>
+      <SectionSubTitle title={'BRONZE'} subTitle={'ブロンズ'} className='subTitle' />
       {rows.filter((row) => row.category === "bronze").map((row, index) => (
         <SponsorCard
           key={index}
@@ -85,7 +87,7 @@ const SponsorPage = ({ rows = [] }: { rows: Sponsor[] }) => {
         />
       ))}
 
-      <h2 className='text-lg'>{t("SPECIAL")}</h2>
+      <SectionSubTitle title={'SPECIAL'} subTitle={'スペシャル'} className='subTitle' />
       {rows.filter((row) => row.category === "special").map((row, index) => (
         <SponsorCard
           key={index}

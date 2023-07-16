@@ -1,19 +1,31 @@
 import {Blog} from "@/types/blog";
 import Link from "next/link";
+import SectionTitle from "@/components/elements/SectionTitle";
+import { parseISO, format } from 'date-fns'
+import Heading from "@/components/elements/Heading";
+import NewsDate from "@/components/elements/NewsDate";
+import NewsTitle from "@/components/elements/NewsTitle";
 
 type Props = {
     blogs: Blog[]
 }
 
+function parseDate(dateString:string){
+    const date = parseISO(dateString);
+    return format(date, 'yyyy.MM.dd');
+}
+
 const Blog = ({blog}: { blog: Blog }) => {
     return (
         <div>
-            <span className='me-4'>
-                {blog.published}
-            </span>
-            <Link href={blog.url}>
-                {blog.title}
-            </Link>
+            <NewsDate>
+                {parseDate(blog.published)}
+            </NewsDate>
+            <NewsTitle>
+                <Link href={blog.url}>
+                    {blog.title}
+                </Link>
+            </NewsTitle>
         </div>
     )
 }
@@ -31,11 +43,8 @@ export default function NewsSection({blogs}: Props) {
 
     return (
         <div className='my-4'>
-            <h1>
-                NEWS
-            </h1>
+            <SectionTitle title='News'  subTitle='新着情報'/>
             <div>
-                TODO News
                 <BlogList blogs={blogs}/>
             </div>
         </div>

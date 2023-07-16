@@ -3,7 +3,6 @@ import HeroSection from "@/components/sections/Hero";
 import NewsSection from "@/components/sections/News";
 import OverviewSection from "@/components/sections/Overview";
 import ConferenceSection from "@/components/sections/Conference";
-import GoodsSection from "@/components/sections/Goods";
 import FaqSection from "@/components/sections/Faq";
 import SponsorsSection from "@/components/sections/Sponsors";
 import {Blog} from "@/types/blog";

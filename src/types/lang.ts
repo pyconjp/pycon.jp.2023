@@ -82,4 +82,8 @@ export type Lang = {
     READ_FAQ: string;
     PAST_EVENTS: string;
   };
+  OVERVIEW: {
+    APAC: string;
+    JP: string;
+  };
 };

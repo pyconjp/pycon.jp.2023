@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import SectionTitle from "@/components/elements/SectionTitle";
 import SectionSubTitle from "@/components/elements/SectionSubTitle";
+import ExternalLink from "@/components/elements/ExternalLink";
 
 
 const SponsorCard = ({ name, logo, description, url }: Omit<Sponsor, "category">) => (
@@ -18,9 +19,10 @@ const SponsorCard = ({ name, logo, description, url }: Omit<Sponsor, "category">
       className={"flex-1"}
     />
     <div className={"flex-1"}>
-      <div>name: {name}</div>
-      <div>url: {url}</div>
-      <div>description: {description}</div>
+      <div>
+        <ExternalLink text={name} url={url} />
+      </div>
+      <div>{description}</div>
     </div>
   </div>
 );

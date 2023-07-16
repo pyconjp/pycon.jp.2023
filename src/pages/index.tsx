@@ -26,7 +26,6 @@ export default function Home({blogs = []}: Props) {
       <NewsSection blogs={blogs}/>
       <OverviewSection/>
       <ConferenceSection/>
-      <GoodsSection/>
       <FaqSection/>
       <SponsorsSection/>
     </>

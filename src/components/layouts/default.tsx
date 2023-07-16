@@ -14,7 +14,7 @@ const Layout = ({ children }: { children: JSX.Element }) => {
       <main>
         <div
           className={
-            "w-full pt-12 pb-8 lg:block " + (isMenuOpen ? "hidden" : "block")
+            "w-full pt-12 lg:pt-0 pb-8 lg:block " + (isMenuOpen ? "hidden" : "block")
           }
         >
           {children}

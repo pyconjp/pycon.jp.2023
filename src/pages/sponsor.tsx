@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import PageTitle from "@/components/elements/PageTitle";
 import SectionSubTitle from "@/components/elements/SectionSubTitle";
+import { PatronSection } from "@/components/sections/Patron";
 
 const DiamondComponent = ({ name, logo, url, description }: Omit<Sponsor, "category">) => (
   <div className={""}>
@@ -355,9 +356,10 @@ export const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "heig
           />
         ))}
       </div>
+      <PatronSection />
     </>
-  )
-}
+  );
+};
 
 export const getStaticProps: GetStaticProps = async () => {
   const buffer = fs.readFileSync("./src/data/sponsor.csv");

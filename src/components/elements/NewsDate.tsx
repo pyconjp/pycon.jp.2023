@@ -8,8 +8,8 @@ type Props = {
 const NewsDate = ({children}: Props) => {
   return (
       <div className='newsDate'>  
-        <div className='before:top-1/2 before:w-4 before:h-4 before:mr-4 before:-mt-2  before:inline-block'>
-        {children}
+        <div className="before:top before:w-2 before:h-2.5 before:mr-2 before:mt-4 before:inline-block before:content-[''] before:bg-center before:bg-no-repeat before:bg-contain before:bg-[url('/ellipse.svg')] text-sm ">
+            {children}
         </div>
       </div>
   )

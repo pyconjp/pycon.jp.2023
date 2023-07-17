@@ -1,38 +1,28 @@
 import Footer from "@/components/organisms/Footer";
-import dynamic from "next/dynamic";
-import Image from "next/image";
+import Header from "@/components/organisms/Header";
+import menuContext from "@/utils/menuContext";
+import { useState } from "react";
 
-const Layout = ({children}: { children: JSX.Element }) => {
-  const Header = dynamic(
-    () => import('@/components/organisms/Header'),
-    {
-      loading: () =>
-        <header>
-          <nav>
-            <ul className="flex flex-row w-full justify-between mx-auto items-center">
-              <Image
-                src={"/logo.png"}
-                alt={"PyCon APAC 2023"}
-                width={260}
-                height={90}
-              />
-            </ul>
-          </nav>
-        </header>
-    }
-  );
+const Layout = ({ children }: { children: JSX.Element }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  console.log(isMenuOpen);
 
   return (
-    <>
-      <Header/>
+    <menuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
+      <Header />
       <main>
-        <div className='w-full pt-12 pb-8'>
+        <div
+          className={
+            "w-full pt-12 lg:pt-0 pb-8 lg:block " + (isMenuOpen ? "hidden" : "block")
+          }
+        >
           {children}
         </div>
       </main>
-      <Footer/>
-    </>
-  )
-}
+      <Footer />
+    </menuContext.Provider>
+  );
+};
 
 export default Layout;

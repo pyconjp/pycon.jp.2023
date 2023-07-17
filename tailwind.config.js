@@ -48,6 +48,9 @@ module.exports = {
         800: '#0A595C',
         900: '#052D2E',
       },
+      'white': {
+        DEFAULT: '#FFFFFF',
+      },
       'alt-white': {
         DEFAULT: '#FDFCEE',
       },

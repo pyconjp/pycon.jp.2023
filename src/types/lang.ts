@@ -86,7 +86,4 @@ export type Lang = {
     APAC: string;
     JP: string;
   };
-  SAMPLE: {
-    MD_TEXT: string;
-  };
 };

@@ -7,7 +7,6 @@ import FaqSection from "@/components/sections/Faq";
 import SponsorsSection from "@/components/sections/Sponsors";
 import {Blog} from "@/types/blog";
 import {GetStaticProps} from "next";
-import GoodsSection from "@/components/sections/Goods";
 
 type Props = {
   blogs: Blog[];
@@ -25,7 +24,6 @@ export default function Home({blogs = []}: Props) {
       <HeroSection/>
       <NewsSection blogs={blogs}/>
       <OverviewSection/>
-      <GoodsSection/>
       <ConferenceSection/>
       <FaqSection/>
       <SponsorsSection/>

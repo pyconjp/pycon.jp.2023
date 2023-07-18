@@ -1,9 +1,9 @@
 import Link from "next/link";
-import {ArrowRightIcon, MinusIcon} from "@heroicons/react/20/solid";
-import {Menu, menu} from "@/data/menu";
-import Image, {ImageProps} from "next/image";
-import {useTranslation} from "react-i18next";
-import {TFunction} from "i18next";
+import { ArrowRightIcon, MinusIcon } from "@heroicons/react/20/solid";
+import { Menu, menu } from "@/data/menu";
+import Image, { ImageProps } from "next/image";
+import { useTranslation } from "react-i18next";
+import { TFunction } from "i18next";
 
 import pyconApacLogo from "../../../public/footer-2023-logo.png";
 import pyconAssociationLogo from "../../../public/association-logo.svg";
@@ -43,7 +43,7 @@ const Footer = () => {
     },
   ];
 
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <footer className="absolute w-screen h-fit">
@@ -59,9 +59,9 @@ const Footer = () => {
               height={91.3}
             />
           </div>
-          <FooterMenu menus={menu} t={t}/>
-          <hr className="h-px bg-primary-400 border-0 "/>
-          <ContactUs snsList={snsData} t={t}/>
+          <FooterMenu menus={menu} t={t} />
+          <hr className="h-px bg-primary-400 border-0 " />
+          <ContactUs snsList={snsData} t={t} />
           <div className="flex w-full h-[32px] lg:justify-end">
             <a
               href="https://www.pycon.jp/organizer/index.html"
@@ -70,10 +70,10 @@ const Footer = () => {
               className="flex w-full border-b-[1px] lg:max-w-[240px] border-tertiary-100 lg:"
             >
               <p className="text-tertiary-100">
-                {t("PAST_EVENTS", {ns: "FOOTER"})}
+                {t("PAST_EVENTS", { ns: "FOOTER" })}
               </p>
               <span>
-                <ArrowRightIcon className="h-6 text-tertiary-100 mx-auto"/>
+                <ArrowRightIcon className="h-6 text-tertiary-100 mx-auto" />
               </span>
             </a>
           </div>
@@ -88,7 +88,7 @@ const Footer = () => {
             width={85}
           />
           <p>
-            主催: 一般社団法人PyCon JP Association PyCon JP 2022 is a production
+            主催: 一般社団法人PyCon JP Association PyCon JP 2023 is a production
             of the PyCon JP Association
           </p>
         </div>
@@ -97,22 +97,22 @@ const Footer = () => {
   );
 };
 
-const FooterMenu = ({menus, t}: { menus: Menu[]; t: TFunction }) => {
+const FooterMenu = ({ menus, t }: { menus: Menu[]; t: TFunction }) => {
   return (
     <nav>
       <ul className="grid lg:grid-cols-5 gap-5 w-max mx-auto lg:mx-0">
         {menus.map((menu, menuKey) => (
           <li className="grid grid-cols-1 gap-3 lg:auto-rows-max" key={menuKey}>
-            <h5 className="text-alt-white">{t(menu.title, {ns: "PAGES"})}</h5>
+            <h5 className="text-alt-white">{t(menu.title, { ns: "PAGES" })}</h5>
             <ul className="grid gap-3">
               {menu.children.map((child, childKey) => (
-                <Link href={t(child.url, {ns: "MENU"}) ?? ""} key={childKey}>
+                <Link href={t(child.url, { ns: "MENU" }) ?? ""} key={childKey}>
                   <li className="flex gap-2.5">
                     <span>
-                      <MinusIcon className="h-6 text-primary-800 mx-auto"/>
+                      <MinusIcon className="h-6 text-primary-800 mx-auto" />
                     </span>
                     <p className="text-tertiary-100">
-                      {t(child.title, {ns: "MENU"})}
+                      {t(child.title, { ns: "MENU" })}
                     </p>
                   </li>
                 </Link>
@@ -125,7 +125,7 @@ const FooterMenu = ({menus, t}: { menus: Menu[]; t: TFunction }) => {
   );
 };
 
-const ContactUs = ({snsList, t}: { snsList: SNS[]; t: TFunction }) => {
+const ContactUs = ({ snsList, t }: { snsList: SNS[]; t: TFunction }) => {
   return (
     <div className="flex flex-col gap-3 max-w-[429.146px]">
       <div className="flex gap-5">
@@ -140,7 +140,7 @@ const ContactUs = ({snsList, t}: { snsList: SNS[]; t: TFunction }) => {
             >
               <div className="grid grid-cols-2 gap-2">
                 <p className="text-tertiary-100">{sns.account}</p>
-                <Image {...sns.logo} alt={sns.name}/>
+                <Image {...sns.logo} alt={sns.name} />
               </div>
             </a>
           ))}
@@ -148,7 +148,7 @@ const ContactUs = ({snsList, t}: { snsList: SNS[]; t: TFunction }) => {
       </div>
       <div>
         <p className="text-white text-sm">
-          {t("CONTACT_US", {ns: "FOOTER"})}
+          {t("CONTACT_US", { ns: "FOOTER" })}
           <a
             href="mailto: pyconjp@pycon.jp"
             className="text-tertiary-100 ml-2  "
@@ -158,7 +158,7 @@ const ContactUs = ({snsList, t}: { snsList: SNS[]; t: TFunction }) => {
         </p>
       </div>
       <div>
-        <p className="text-white text-sm">{t("READ_FAQ", {ns: "FOOTER"})}</p>
+        <p className="text-white text-sm">{t("READ_FAQ", { ns: "FOOTER" })}</p>
       </div>
     </div>
   );

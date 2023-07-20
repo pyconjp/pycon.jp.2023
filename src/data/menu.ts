@@ -37,7 +37,7 @@ export const menu: Menu[] = [
   },
   {
     title: "STAFF",
-    children: [{ title: "STAFF.STAFF", url: "/" }],
+    children: [{ title: "STAFF.STAFF", url: "/staff" }],
   },
 ];
 

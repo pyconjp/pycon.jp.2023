@@ -6,8 +6,6 @@ import { useState } from "react";
 const Layout = ({ children }: { children: JSX.Element }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  console.log(isMenuOpen);
-
   return (
     <menuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
       <Header />

@@ -86,4 +86,9 @@ export type Lang = {
     APAC: string;
     JP: string;
   };
+  STAFF: {
+    P1: string;
+    P2: string;
+    P3: string;
+  };
 };

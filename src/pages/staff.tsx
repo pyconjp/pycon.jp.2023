@@ -12,12 +12,12 @@ import TextCard from "@/components/organisms/TextCard";
 const StaffCard = ({ name, icon, twitter, github, facebook, division }: Staff) => (
   <div className={"flex items-center gap-2 flex-row"}>
     <Image
-      src={"/staff/" + icon}
-      alt={name}
-      width={10}
-      height={10}
-      className={"flex-1 rounded-[10px] max-w-[60px] min-w-[60px]"}
-    />
+        src={"/staff/" + icon}
+        alt={name}
+        width={600}
+        height={600}
+        className={"flex-1 rounded-[10px] max-w-[60px] min-w-[60px]"}
+      />
     <div className={"flex flex-col m-[12px]"}>
       <div className={"mb-[6px] font-bold"}>{name}</div>
       <div className={"flex flex-row items-center"}>

@@ -7,8 +7,6 @@ import { TFunction } from "i18next";
 
 import pyconApacLogo from "../../../public/footer-2023-logo.png";
 import pyconAssociationLogo from "../../../public/association-logo.svg";
-import bgImage from "../../../public/section_bgimg_map.png";
-import ExternalLink from "@/components/elements/ExternalLink";
 
 type SNS = {
   name: string;

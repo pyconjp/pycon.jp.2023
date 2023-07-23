@@ -1,30 +1,37 @@
 category,name,logo,description,url
 diamond,グーグル・クラウド・ジャパン合同会社,GoogleCloud.svg,Google Cloud は、最高クラスのインフラストラクチャ、プラットフォーム、インダストリーソリューションと専門知識により、企業のデジタルトランスフォーメーション（DX）を加速します。Google の最先端技術を活用したエンタープライズ グレードのソリューションを、業界で最もクリーンなクラウド上で提供しています。200 以上の国と地域のお客様が、成長を実現し、重要なビジネス上の課題を解決するための信頼できるパートナーとして、Google Cloud を利用しています。,https://cloud.google.com/innovators?hl=ja
-platinum,HENNGE株式会社,sposor11.png,Sponsor11,http://pycon.jp/
-platinum,ファインディ株式会社,sposor11.png,Sponsor11,http://pycon.jp/
-platinum,株式会社カケハシ,sposor11.png,Sponsor11,http://pycon.jp/
-gold,Sponsor21,sposor21.png,Sponsor21,http://pycon.jp/
-gold,Sponsor22,sposor22.png,Sponsor22,http://pycon.jp/
-gold,Sponsor23,sposor23.png,Sponsor23,http://pycon.jp/
-silver,Sponsor31,sposor31.png,Sponsor31,http://pycon.jp/
-silver,Sponsor32,sposor32.png,Sponsor32,http://pycon.jp/
-silver,Sponsor33,sposor33.png,Sponsor33,http://pycon.jp/
-silver,Sponsor34,sposor34.png,Sponsor34,http://pycon.jp/
-silver,Sponsor35,sposor35.png,Sponsor35,http://pycon.jp/
-silver,Sponsor36,sposor36.png,Sponsor36,http://pycon.jp/
-silver,Sponsor37,sposor37.png,Sponsor37,http://pycon.jp/
-silver,Sponsor38,sposor38.png,Sponsor38,http://pycon.jp/
-silver,Sponsor39,sposor39.png,Sponsor39,http://pycon.jp/
-bronze,Sponsor41,sposor41.png,Sponsor41,http://pycon.jp/
-bronze,Sponsor42,sposor42.png,Sponsor42,http://pycon.jp/
-bronze,Sponsor43,sposor43.png,Sponsor43,http://pycon.jp/
-bronze,Sponsor44,sposor44.png,Sponsor44,http://pycon.jp/
-bronze,Sponsor45,sposor45.png,Sponsor45,http://pycon.jp/
-bronze,Sponsor46,sposor46.png,Sponsor46,http://pycon.jp/
-bronze,Sponsor47,sposor47.png,Sponsor47,http://pycon.jp/
-bronze,Sponsor48,sposor48.png,Sponsor48,http://pycon.jp/
-bronze,Sponsor49,sposor49.png,Sponsor49,http://pycon.jp/
-special,Sponsor51,sposor51.png,Sponsor41,http://pycon.jp/
-special,Sponsor52,sposor52.png,Sponsor42,http://pycon.jp/
-special,Sponsor53,sposor53.png,Sponsor43,http://pycon.jp/
-special,Sponsor54,sposor54.png,Sponsor44,http://pycon.jp/
+platinum,HENNGE株式会社,Dummy_sponsor.png,Sponsor11,http://pycon.jp/
+platinum,ファインディ株式会社,Dummy_sponsor.png,Sponsor11,http://pycon.jp/
+platinum,株式会社カケハシ,Dummy_sponsor.png,Sponsor11,http://pycon.jp/
+gold,一般社団法人Pythonエンジニア育成推進協会,Dummy_sponsor.png,Sponsor21,http://pycon.jp/
+gold,株式会社Helpfeel,Dummy_sponsor.png,Sponsor22,http://pycon.jp/
+gold,株式会社博報堂テクノロジーズ,Dummy_sponsor.png,Sponsor23,http://pycon.jp/
+gold,株式会社Flatt Security,FlattSecurity_vertical.png,Sponsor31,http://pycon.jp/
+gold,株式会社アーバンエックステクノロジーズ,Dummy_sponsor.png,Sponsor32,http://pycon.jp/
+gold,株式会社ビープラウド,Dummy_sponsor.png,Sponsor33,http://pycon.jp/
+gold,株式会社ハイヤールー,Dummy_sponsor.png,Sponsor34,http://pycon.jp/
+gold,セーフィー株式会社,Dummy_sponsor.png,Sponsor35,http://pycon.jp/
+gold,New Relic株式会社,Dummy_sponsor.png,Sponsor36,http://pycon.jp/
+gold,株式会社grooves,Dummy_sponsor.png,Sponsor37,http://pycon.jp/
+silver,株式会社MagicPod,magicpod.png,Sponsor38,http://pycon.jp/
+silver,ソフトバンク株式会社,Dummy_sponsor.png,Sponsor39,http://pycon.jp/
+silver,株式会社SQUEEZE,squeeze.png,Sponsor39,http://pycon.jp/
+silver,GROOVE X株式会社,GROOVE X_logo_beside_black.png,Sponsor39,http://pycon.jp/
+silver,株式会社アイリッジ,Dummy_sponsor.png,Sponsor39,http://pycon.jp/
+silver,株式会社日本システ厶技研,Dummy_sponsor.png,Sponsor39,http://pycon.jp/
+silver,Anyflow株式会社,anyflow-rgb.svg,Sponsor39,http://pycon.jp/
+silver,LegalOn Technologies Inc.,LegalOn_logo_main.png,Sponsor39,http://pycon.jp/
+silver,さくらインターネット株式会社,Dummy_sponsor.png,Sponsor39,http://pycon.jp/
+silver,株式会社リセ,Dummy_sponsor.png,Sponsor39,http://pycon.jp/
+silver,ヤフー株式会社,Dummy_sponsor.png,Sponsor39,http://pycon.jp/
+bronze,株式会社Nexedi,Dummy_sponsor.png,,https://www.nexedi.com/ja
+bronze,日本経済新聞社,Dummy_sponsor.png,,https://www.nikkei.co.jp/nikkeiinfo/
+bronze,株式会社シオラボ,shiolab_logo.png,,https://www.shiolab.com
+bronze,OLTA,Dummy_sponsor.png,,https://corp.olta.co.jp/
+bronze,株式会社はてな,Dummy_sponsor.png,,https://hatena.co.jp
+bronze,ニフティ株式会社,Dummy_sponsor.png,,https://www.nifty.co.jp/
+bronze,株式会社いい生活,Dummy_sponsor.png,,https://www.e-seikatsu.info/
+bronze,株式会社オープングルーヴ,Dummy_sponsor.png,,https://tracpath.com/
+special,Sponsor52,Dummy_sponsor.png,Sponsor42,http://pycon.jp/
+special,Sponsor53,Dummy_sponsor.png,Sponsor43,http://pycon.jp/
+special,Sponsor54,Dummy_sponsor.png,Sponsor44,http://pycon.jp/

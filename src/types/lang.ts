@@ -86,6 +86,9 @@ export type Lang = {
     APAC: string;
     JP: string;
   };
+  BLOG: {
+    ACCESS:string;
+  };
   STAFF: {
     P1: string;
     P2: string;

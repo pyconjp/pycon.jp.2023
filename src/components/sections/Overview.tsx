@@ -10,7 +10,7 @@ export default function OverviewSection() {
   return (
       <div className='my-4'>
         <SectionTitle title='Overview' subTitle='概要'/>
-        <TextCard image={{src: '/unsplash.svg', alt: 'unsplash', width: 294, height: 442}}>
+        <TextCard image={{src: '/about_pycon.jpg', alt: 'unsplash', width: 294, height: 442}}>
           <Heading>
             What is PyCon APAC
           </Heading>

@@ -34,6 +34,7 @@ export type Lang = {
     STAFF: {
       STAFF: string;
     };
+    COMING_SOON: string;
   };
   COC: {
     P1: string;
@@ -85,5 +86,16 @@ export type Lang = {
   OVERVIEW: {
     APAC: string;
     JP: string;
+  };
+  BLOG: {
+    ACCESS:string;
+  };
+  STAFF: {
+    P1: string;
+    P2: string;
+    P3: string;
+    H1: string;
+    P4: string;
+    A1: string;
   };
 };

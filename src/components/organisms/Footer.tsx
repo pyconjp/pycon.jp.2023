@@ -7,8 +7,6 @@ import {TFunction} from "i18next";
 
 import pyconApacLogo from "../../../public/footer-2023-logo.png";
 import pyconAssociationLogo from "../../../public/association-logo.svg";
-import bgImage from "../../../public/section_bgimg_map.png";
-import ExternalLink from "@/components/elements/ExternalLink";
 
 type SNS = {
   name: string;
@@ -88,7 +86,7 @@ const Footer = () => {
             width={85}
           />
           <p>
-            主催: 一般社団法人PyCon JP Association PyCon JP 2022 is a production
+            主催: 一般社団法人PyCon JP Association PyCon JP 2023 is a production
             of the PyCon JP Association
           </p>
         </div>
@@ -111,9 +109,17 @@ const FooterMenu = ({menus, t}: { menus: Menu[]; t: TFunction }) => {
                     <span>
                       <MinusIcon className="h-6 text-primary-800 mx-auto"/>
                     </span>
-                    <p className="text-tertiary-100">
-                      {t(child.title, {ns: "MENU"})}
-                    </p>
+                    {
+                      !child.isComingSoon
+                        ? <p className="text-tertiary-100">
+                          {t(child.title, {ns: "MENU"})}
+                        </p>
+                        : <p className="text-tertiary-100 opacity-75 cursor-default">
+                          {t(child.title, {ns: "MENU"})}
+                          <br/>
+                          <span className='text-sm'>({t("COMING_SOON", {ns: "MENU"})})</span>
+                        </p>
+                    }
                   </li>
                 </Link>
               ))}

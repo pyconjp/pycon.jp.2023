@@ -9,7 +9,6 @@ import LangButton from "@/components/elements/LangButton";
 
 const PCHeader = () => {
   const {t} = useTranslation('PAGES');
-  const {t: mt} = useTranslation('MENU');
 
   const {isMenuOpen, setIsMenuOpen} = useContext(menuContext);
 
@@ -28,14 +27,27 @@ const PCHeader = () => {
                     <>
                       <li className='pl-6 flex lg:hidden items-center gap-2.5 h-10'>
                         <ChevronRightIcon className='h-5 w-5 text-primary-400'/>
-                        <div className='text-alt-black'>{t(m.title)}</div>
+                        <div className='text-alt-black'>{t(m.title, {ns: 'PAGES'})}</div>
                       </li>
                       {m.children.map((c, index) => (
                         <li key={index} className='pl-10 flex lg:hidden items-center gap-2.5 h-10'>
                           <MinusIcon className='h-6 w-6 text-primary-400 scale-x-125'/>
-                          <Link href={c.url}>
-                            <div className='text-alt-black'>{mt(c.title)}</div>
-                          </Link>
+                          {
+                            !c.isComingSoon
+                              ? (
+                                <Link href={c.url}>
+                                  <p className='text-alt-black'>
+                                    {t(c.title, {ns: 'MENU'})}
+                                  </p>
+                                </Link>
+                              )
+                              : (
+                                <p className='text-alt-black opacity-75'>
+                                  {t(c.title, {ns: 'MENU'})}
+                                  <span className='text-sm ml-2'>({t('COMING_SOON', {ns: 'MENU'})})</span>
+                                </p>
+                              )
+                          }
                         </li>
                       ))}
                     </>

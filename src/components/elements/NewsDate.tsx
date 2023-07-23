@@ -1,4 +1,5 @@
 import React from "react";
+import {ChevronRightIcon} from "@heroicons/react/20/solid";
 
 type Props = {
     children: React.ReactNode
@@ -7,8 +8,9 @@ type Props = {
 
 const NewsDate = ({children}: Props) => {
   return (
-      <div className='newsDate'>  
-        <div className="before:top before:w-2 before:h-2.5 before:mr-2 before:mt-4 before:inline-block before:content-[''] before:bg-center before:bg-no-repeat before:bg-contain before:bg-[url('/ellipse.svg')] text-sm ">
+      <div className='newsDate flex flex-row'>
+        <ChevronRightIcon className='h-5 w-5 my-auto text-primary-500'/>
+        <div className="text-lg text-secondary-600">
             {children}
         </div>
       </div>

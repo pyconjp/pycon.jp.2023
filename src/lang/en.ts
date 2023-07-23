@@ -36,6 +36,7 @@ const En: Lang = {
     STAFF: {
       STAFF: "Volunteers",
     },
+    COMING_SOON: 'Coming Soon',
   },
   COC: {
     P1: 'PyCon JP Code of Conduct (hereinafter referred to as the "Code of Conduct") is an event (hereinafter referred to as the "Event") held by the General Incorporated Association PyCon JP Association (hereinafter referred to as the "PyCon JP"). All the participants who participate in this event are required to read all the terms of this agreement and agree to this code of conduct.',

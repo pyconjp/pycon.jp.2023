@@ -6,8 +6,7 @@ import menu from "@/data/menu";
 import LangButton from "@/components/elements/LangButton";
 
 const PCHeader = () => {
-  const {t} = useTranslation('PAGES');
-  const {t: mt} = useTranslation('MENU');
+  const {t} = useTranslation();
 
   return (
     <div className='lg:flex hidden justify-between items-center mx-5 h-full'>
@@ -20,11 +19,11 @@ const PCHeader = () => {
             menu.map((m, index) => (
               <li className='flex-1' key={index}>
                 <HeaderMenu
-                  parent={t(m.title)}
+                  parent={t(m.title, {ns: 'PAGES'})}
                   childPages={
                     m.children.map(
                       (c) => (
-                        {label: mt(c.title), url: c.url}
+                        {label: t(c.title, {ns: 'MENU'}), url: c.url, isComingSoon: c.isComingSoon}
                       )
                     )
                   }/>

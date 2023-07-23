@@ -34,6 +34,7 @@ export type Lang = {
     STAFF: {
       STAFF: string;
     };
+    COMING_SOON: string;
   };
   COC: {
     P1: string;

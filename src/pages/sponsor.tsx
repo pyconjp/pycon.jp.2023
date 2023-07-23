@@ -34,7 +34,7 @@ const SponsorCard = ({ name, logo, url, description, width, height }: Omit<Spons
   </div>
 );
 
-const SilverSponsorCard = ({ name, logo, url, description, width, height }: Omit<Sponsor, "category">) => (
+const NoLogoSponsorCard = ({ name, url }: Omit<Sponsor, "category" | "logo" | "description" | "width" | "height">) => (
   <div className={"flex items-center gap-2 flex-col"}>
     <div>
       <ExternalLink text={name} url={url} />
@@ -134,14 +134,11 @@ const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "height">[] 
         <div className={"grid lg:grid-cols-4 grid-cols-4 gap-4 mx-44"}>
           {
             rows.filter((row) => row.category === "silver").map((row, index) => (
-              <SilverSponsorCard
+              <NoLogoSponsorCard
                 key={index}
                 name={row.name}
                 logo={row.logo}
-                description={row.description}
                 url={row.url}
-                width={150}
-                height={150}
               />
             ))
           }
@@ -156,14 +153,11 @@ const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "height">[] 
         <div className={"grid lg:grid-cols-4 grid-cols-4 gap-4 mx-44"}>
           {
             rows.filter((row) => row.category === "bronze").map((row, index) => (
-              <SilverSponsorCard
+              <NoLogoSponsorCard
                 key={index}
                 name={row.name}
                 logo={row.logo}
-                description={row.description}
                 url={row.url}
-                width={150}
-                height={150}
               />
             ))
           }

@@ -89,4 +89,12 @@ export type Lang = {
   BLOG: {
     ACCESS:string;
   };
+  STAFF: {
+    P1: string;
+    P2: string;
+    P3: string;
+    H1: string;
+    P4: string;
+    A1: string;
+  };
 };

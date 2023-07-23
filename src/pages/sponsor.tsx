@@ -12,19 +12,23 @@ import Link from "next/link";
 
 const SponsorCard = ({ name, logo, url, description, width, height }: Omit<Sponsor, "category">) => (
   <div className={"flex items-center gap-2 flex-col"}>
-    <Image
-      src={"/sponsor/" + logo}
-      alt={name}
-      width={width}
-      height={height}
-      className={"flex-1"}
-    />
-    <div className={"flex-1"}>
+    <div className={"item-center flex my-2 gap-2 shadow w-[150px] h-[150px]"}>
+      <div>
+        <Image
+          src={"/sponsor/" + logo}
+          alt={name}
+          width={width}
+          height={height}
+          className={"flex-1"}
+        />
+      </div>
+    </div>
+    <div className={"flex-1 mt-2 w-[150px]"}>
       <div>
         <ExternalLink text={name} url={url} />
       </div>
     </div>
-    <div>
+    <div className={"mt-2 w-[150px]"}>
       {description}
     </div>
   </div>
@@ -47,22 +51,26 @@ const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "height">[] 
         rows.filter((row) => row.category === "diamond").map((row, index) => (
           <>
             <div className={"flex items-center flex-col mx-44"}>
-              <div className={"m-28"}>
-                <Image
-                  src={"/sponsor/" + row.logo}
-                  alt={row.name}
-                  width={600}
-                  height={600}
-                  className={"flex-1"}
-                />
-              </div>
-              <div className={"flex-1 my-8"}>
-                <div>
-                  <ExternalLink text={row.name} url={row.url} />
+              <div className={"flex items-center flex-col mx-44  shadow-lg"}>
+                <div className={"m-24"}>
+                  <Image
+                    src={"/sponsor/" + row.logo}
+                    alt={row.name}
+                    width={600}
+                    height={600}
+                    className={"flex-1"}
+                  />
                 </div>
               </div>
-              <div>
-                {row.description}
+              <div className={"flex-1 my-8"}>
+                <div className={"flex items-center flex-col mx-44"}>
+                  <div>
+                    <ExternalLink text={row.name} url={row.url} />
+                  </div>
+                  <div className={"mt-8"}>
+                    {row.description}
+                  </div>
+                </div>
               </div>
             </div >
           </>

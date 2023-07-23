@@ -45,7 +45,7 @@ export default function NewsSection({blogs}: Props) {
   return (
     <div className="flex-row items-center px-[5%] sm:px-[10%] xl:px-[20%] my-[36px]">
       <SectionTitle title='News' subTitle='新着情報'/>
-      <div className='lg:p-12 py-8 px-6 shadow rounded'>
+      <div className='lg:p-12 py-8 px-6 shadow rounded-lg'>
         <div className='mb-5'>
           <BlogList blogs={blogs}/>
         </div>

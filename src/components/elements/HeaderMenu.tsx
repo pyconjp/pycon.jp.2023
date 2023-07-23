@@ -10,7 +10,7 @@ const HeaderMenu = ({parent, childPages}: Props) => {
 
   return (
     <div className='relative'>
-      <div className='peer text-secondary-600 font-bold py-auto' suppressHydrationWarning>
+      <div className='peer text-secondary-600 font-bold py-auto cursor-pointer' suppressHydrationWarning>
         {parent}<ChevronDownIcon className='w-5 h-5 inline-block text-primary-200'/>
       </div>
       <div className='invisible hover:visible peer-hover:visible absolute -left-5'>

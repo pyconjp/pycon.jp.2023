@@ -21,10 +21,10 @@ const DiamondComponent = ({ name, logo, url, description }: Omit<Sponsor, "categ
           />
         </div>
         <a
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex flex-row text-secondary-600 underline justify-center mt-[16px] mx-[16px] hover:opacity-50">
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-row text-secondary-600 underline justify-center mt-[16px] mx-[16px] hover:opacity-50">
           <p>{name}</p>
           <Image
             src={"/linkout_b.svg"}
@@ -38,11 +38,11 @@ const DiamondComponent = ({ name, logo, url, description }: Omit<Sponsor, "categ
       <p className={"mx-[24px] mt-[19px] z-10 relative"}>{description}</p>
     </div>
     <Image
-        src={"/Page_bg.svg"}
-        alt={""}
-        width={1426}
-        height={468}
-        className="block z-0 absolute bottom-[20px] left-1/2 -translate-x-1/2"
+      src={"/Page_bg.svg"}
+      alt={""}
+      width={1426}
+      height={468}
+      className="block z-0 absolute bottom-[20px] left-1/2 -translate-x-1/2"
     />
   </div>
 );
@@ -59,10 +59,10 @@ const PlatitnumComponent = ({ name, logo, url, description }: Omit<Sponsor, "cat
       />
     </div>
     <a
-    href={url}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex flex-row text-secondary-600 underline justify-center mt-[16px] mx-[16px] hover:opacity-50">
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex flex-row text-secondary-600 underline justify-center mt-[16px] mx-[16px] hover:opacity-50">
       <p>{name}</p>
       <Image
         src={"/linkout_b.svg"}
@@ -87,10 +87,10 @@ const GoldComponent = ({ name, logo, url, description }: Omit<Sponsor, "category
       />
     </div>
     <a
-    href={url}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex flex-row text-secondary-600 underline justify-center mt-[16px] hover:opacity-50">
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex flex-row text-secondary-600 underline justify-center mt-[16px] hover:opacity-50">
       <p>{name}</p>
       <Image
         src={"/linkout_b.svg"}
@@ -107,10 +107,10 @@ const GoldComponent = ({ name, logo, url, description }: Omit<Sponsor, "category
 const SilverComponent = ({ name, logo, url, description }: Omit<Sponsor, "category">) => (
   <div>
     <a
-    href={url}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex flex-row text-secondary-600 underline justify-center mt-[16px] hover:opacity-50">
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex flex-row text-secondary-600 underline justify-center mt-[16px] hover:opacity-50">
       <p>{name}</p>
       <Image
         src={"/linkout_b.svg"}
@@ -126,10 +126,10 @@ const SilverComponent = ({ name, logo, url, description }: Omit<Sponsor, "catego
 const BronzeComponent = ({ name, logo, url, description }: Omit<Sponsor, "category">) => (
   <div>
     <a
-    href={url}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex flex-row text-secondary-600 underline justify-center mt-[16px] hover:opacity-50">
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex flex-row text-secondary-600 underline justify-center mt-[16px] hover:opacity-50">
       <p>{name}</p>
       <Image
         src={"/linkout_b.svg"}
@@ -153,10 +153,10 @@ const SpecialComponent = ({ name, logo, url, description }: Omit<Sponsor, "categ
       />
     </div>
     <a
-    href={url}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex flex-row text-secondary-600 underline justify-center mt-[16px] hover:opacity-50">
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex flex-row text-secondary-600 underline justify-center mt-[16px] hover:opacity-50">
       <p>{name}</p>
       <Image
         src={"/linkout_b.svg"}
@@ -172,76 +172,124 @@ const SpecialComponent = ({ name, logo, url, description }: Omit<Sponsor, "categ
 const PatronComponent = ({ name, logo, url, description }: Omit<Sponsor, "category">) => (
   <div className={"flex items-center gap-2 flex-row"}>
     <Image
-        src={"/sponsor/" + logo}
-        alt={name}
-        width={600}
-        height={600}
-        className={"flex-1 rounded-[10px] max-w-[60px] min-w-[60px]"}
-      />
+      src={"/sponsor/" + logo}
+      alt={name}
+      width={600}
+      height={600}
+      className={"flex-1 rounded-[10px] max-w-[60px] min-w-[60px]"}
+    />
     <div className={"mb-[6px] font-bold"}>{name}</div>
   </div>
-)
+);
+
+export const BecomeSponsorSection = () => {
+  const { t } = useTranslation("SPONSOR")
+  const [c, setContents] = useState({
+    h1: "",
+    p1: "",
+    a1: "",
+  });
+  useEffect(() => {
+    setContents({
+      ...c,
+      h1: t("H1"),
+      p1: t("P1"),
+      a1: t("A1"),
+    })
+  }, [t]);
+
+  return <>
+    <div className="lg:mx-[131px] mx-[16px] lg:my-[81px] my-[60px] py-[32px] bg-[#ffffff] shadow-lg rounded-lg">
+      <div className="flex flex-col mx-[72px]">
+        <div className='before:top-1/2 before:w-4 before:h-4 before:mr-4 before:-ml-8 before:-mt-2  before:content-[url("/ellipse.svg")] before:inline-block ml-0 pl-8'>
+          <h3 className="lg:text-2xl text-xl text-alt-black font-bold inline">
+            {c.h1}
+          </h3>
+        </div>
+        <p className="text-alt-black text-lg p-[12px]">{c.p1}</p>
+        <div className="ml-[auto]">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfMgKYoLCU8Q7Vv9ppImGZ1-kcTaTlzkUXATtZuYSyeM7gwGQ/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-row text-primary-500 underline hover:opacity-50">
+            <p>{c.a1}</p>
+            <Image
+              src={"/linkout_p.svg"}
+              alt={""}
+              width={20}
+              height={20}
+              className="object-contain ml-[3px]"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </>
+};
+
 const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "height">[] }) => {
   const { t } = useTranslation("SPONSOR")
   const [c, setContents] = useState({
-    h1:"",
-    p1:"",
-    a1:"",
+    h1: "",
+    p1: "",
+    a1: "",
   });
   useEffect(() => {
-    setContents({...c, 
-        h1:t("H1"),
-        p1:t("P1"),
-        a1:t("A1"),
+    setContents({
+      ...c,
+      h1: t("H1"),
+      p1: t("P1"),
+      a1: t("A1"),
     })
-  },[t]);
+  }, [t]);
 
   return (
     <>
-      <PageTitle title='SPONSOR'/>
+      <PageTitle title='SPONSOR' />
       <div className={"text-center"}>
         <h2 className={"text-tertiary-900 font-montserrat italic text-[32px] drop-shadow-lg"}>Diamond</h2>
         <h2 className={"text-primary-600 text-[16px] drop-shadow-lg"}>ダイヤモンドスポンサー</h2>
       </div>
       <div className={"lg:mx-[245px] mx-[20px] mb-[32px]"}>
-      {rows.map((row, index) => (
-        (row.category === "diamond")
+        {rows.map((row, index) => (
+          (row.category === "diamond")
           && <DiamondComponent
             key={index}
             name={row.name}
             logo={row.logo}
             description={row.description}
             url={row.url}
-            />
-      ))}
+          />
+        ))}
       </div>
-      
+
 
       <SectionSubTitle title={'Platinum'} subTitle={'プラチナスポンサー'} hasSeparator={true} className='subTitle' />
       <div className={"grid lg:grid-cols-3 gap-3 lg:mx-[80px] mx-[47px]  mb-[32px]"}>
         {rows.map((row, index) => (
           (row.category === "platinum")
-            && <PlatitnumComponent
-              key={index}
-              name={row.name}
-              logo={row.logo}
-              description={row.description}
-              url={row.url}
-              />
+          && <PlatitnumComponent
+            key={index}
+            name={row.name}
+            logo={row.logo}
+            description={row.description}
+            url={row.url}
+          />
         ))}
       </div>
-      
+
       <SectionSubTitle title={'Gold'} subTitle={'ゴールドスポンサー'} hasSeparator={true} className='subTitle' />
       <div className={"grid lg:grid-cols-4 gap-5 lg:mx-[135px] mx-[102px] mb-[32px]"}>
         {rows.map((row, index) => (
           (row.category === "gold")
-            && <GoldComponent
-              key={index}
-              name={row.name}
-              logo={row.logo}
-              description={row.description}
-              url={row.url}
-              />
+          && <GoldComponent
+            key={index}
+            name={row.name}
+            logo={row.logo}
+            description={row.description}
+            url={row.url}
+          />
         ))}
       </div>
 
@@ -249,13 +297,13 @@ const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "height">[] 
       <div className={"grid lg:grid-cols-4 gap-3 lg:mx-[135px] mb-[32px]"}>
         {rows.map((row, index) => (
           (row.category === "silver")
-            && <SilverComponent
-              key={index}
-              name={row.name}
-              logo={row.logo}
-              description={row.description}
-              url={row.url}
-              />
+          && <SilverComponent
+            key={index}
+            name={row.name}
+            logo={row.logo}
+            description={row.description}
+            url={row.url}
+          />
         ))}
       </div>
 
@@ -263,13 +311,13 @@ const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "height">[] 
       <div className={"grid lg:grid-cols-4 gap-3 lg:mx-[135px] mb-[32px]"}>
         {rows.map((row, index) => (
           (row.category === "bronze")
-            && <BronzeComponent
-              key={index}
-              name={row.name}
-              logo={row.logo}
-              description={row.description}
-              url={row.url}
-              />
+          && <BronzeComponent
+            key={index}
+            name={row.name}
+            logo={row.logo}
+            description={row.description}
+            url={row.url}
+          />
         ))}
       </div>
 
@@ -277,13 +325,13 @@ const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "height">[] 
       <div className={"grid lg:grid-cols-4 gap-5 lg:mx-[135px] mx-[102px] mb-[32px]"}>
         {rows.map((row, index) => (
           (row.category === "special")
-            && <SpecialComponent
-              key={index}
-              name={row.name}
-              logo={row.logo}
-              description={row.description}
-              url={row.url}
-              />
+          && <SpecialComponent
+            key={index}
+            name={row.name}
+            logo={row.logo}
+            description={row.description}
+            url={row.url}
+          />
         ))}
       </div>
 
@@ -291,42 +339,16 @@ const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "height">[] 
       <div className={"lg:mx-[128px] mb-[60px] grid lg:grid-cols-4  gap-4 justify-center mb-[32px]"}>
         {rows.map((row, index) => (
           (row.category === "patron")
-            && <PatronComponent
-              key={index}
-              name={row.name}
-              logo={row.logo}
-              description={row.description}
-              url={row.url}
-              />
+          && <PatronComponent
+            key={index}
+            name={row.name}
+            logo={row.logo}
+            description={row.description}
+            url={row.url}
+          />
         ))}
       </div>
 
-      <div className="lg:mx-[131px] mx-[16px] lg:my-[81px] my-[60px] py-[32px] bg-[#ffffff] shadow-lg rounded-lg">
-        <div className="flex flex-col mx-[72px]">
-          <div className='before:top-1/2 before:w-4 before:h-4 before:mr-4 before:-ml-8 before:-mt-2  before:content-[url("/ellipse.svg")] before:inline-block ml-0 pl-8'>
-            <h3 className="lg:text-2xl text-xl text-alt-black font-bold inline">
-              {c.h1}
-            </h3>
-          </div>
-          <p className="text-alt-black text-lg p-[12px]">{c.p1}</p>
-          <div className="ml-[auto]">
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfMgKYoLCU8Q7Vv9ppImGZ1-kcTaTlzkUXATtZuYSyeM7gwGQ/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-row text-primary-500 underline hover:opacity-50">
-              <p>{c.a1}</p>
-              <Image
-                src={"/linkout_p.svg"}
-                alt={""}
-                width={20}
-                height={20}
-                className="object-contain ml-[3px]"
-              />
-          </a>
-          </div>
-        </div>
-      </div>
     </>
   )
 }

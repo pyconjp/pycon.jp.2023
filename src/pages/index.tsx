@@ -17,16 +17,16 @@ export default function Home({ blogs = [] }: Props) {
     <>
       <Head>
         <title>PyCon APAC 2023</title>
-        <meta name="description" content="PyCon APAC 2023"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="icon" href="/favicon.ico"/>
+        <meta name="description" content="PyCon APAC 2023" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <HeroSection/>
-      <NewsSection blogs={blogs}/>
-      <OverviewSection/>
-      <ConferenceSection/>
-      <FaqSection/>
-      <SponsorsSection/>
+      <HeroSection />
+      <NewsSection blogs={blogs} />
+      <OverviewSection />
+      <ConferenceSection />
+      <FaqSection />
+      <SponsorsSection />
     </>
   );
 }

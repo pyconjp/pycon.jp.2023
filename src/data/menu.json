@@ -42,7 +42,7 @@
     "children": [
       {
         "title": "common.menu.sponsor.sponsorList",
-        "link": "/sponsors",
+        "link": "/sponsor",
         "innerlink": true
       }
     ]

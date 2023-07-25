@@ -98,4 +98,9 @@ export type Lang = {
     P4: string;
     A1: string;
   };
+  SPONSOR: {
+    H1: string;
+    P1: string;
+    A1: string;
+  }
 };

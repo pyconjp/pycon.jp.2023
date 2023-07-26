@@ -1,7 +1,11 @@
 // import useLocale from "@/components/hooks/locale";
 
-import { BecomeSponsorSection } from "@/pages/sponsor";
+import * as fs from "fs";
+import { BecomeSponsorSection, } from "@/pages/sponsor";
 import SectionTitle from "../elements/SectionTitle";
+import { GetStaticProps } from "next";
+import { Sponsor } from "@/types/sponsor";
+import { parse } from "csv-parse/sync";
 
 export default function SponsorsSection() {
 
@@ -12,3 +16,14 @@ export default function SponsorsSection() {
     </>
   )
 }
+
+const getStaticProps: GetStaticProps = async () => {
+  const buffer = fs.readFileSync("./src/data/sponsor.csv");
+  const rows: Sponsor[] = parse(buffer, { delimiter: ",", columns: true });
+
+  return {
+    props: {
+      rows,
+    },
+  };
+};

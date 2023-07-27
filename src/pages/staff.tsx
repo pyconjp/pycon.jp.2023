@@ -59,9 +59,46 @@ const StaffCard = ({ name, icon, twitter, github, facebook, division }: Staff) =
 );
 
 const SimpleStaffCard = ({ name, icon, twitter, github, facebook, division }: Staff) => (
-  <div className={"flex flex-row"}>
-    <div className={"m-[12px] text-secondary-600 font-bold underline"}>{name}</div>
+  <div className={"flex flex-col m-[12px]"}>
+    <div className={"mb-[6px] text-secondary-600 font-bold underline"}>{name}</div>
+    <div className={"flex flex-row items-center"}>
+        {(twitter !== "")
+        && <a href={"https://twitter.com/" + twitter} target="_blank" rel="noopener noreferrer">
+          <Image
+            src="/twitter_b.svg"
+            alt=""
+            width={20}
+            height={20}
+            className={"mr-[8px] hover:opacity-50"}
+          />
+        </a>
+        }
+        {github !== ""
+        && <a href={"https://github.com/" + github} target="_blank" rel="noopener noreferrer">
+          <Image
+            src="/github_b.svg"
+            alt=""
+            width={20}
+            height={20}
+            className={"mr-[8px] hover:opacity-50"}
+          />
+        </a>
+        }
+        {(facebook !== "")
+        && <a href={"https://www.facebook.com/" + facebook} target="_blank" rel="noopener noreferrer">
+          <Image
+            src="/facebook_b.svg"
+            alt=""
+            width={20}
+            height={20}
+            className={"mr-[8px] hover:opacity-50"}
+          />
+        </a>
+        }
+      </div>
   </div>
+  
+  
 );
 
 const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {

@@ -105,12 +105,20 @@ const GoldComponent = ({ name, logo, url, description }: Omit<Sponsor, "category
 );
 
 const SilverComponent = ({ name, logo, url, description }: Omit<Sponsor, "category">) => (
-  <div>
+  <div className={"flex flex-col items-center"}>
+    <div className={"bg-[#ffffff] shadow-lg rounded-lg mt-[36px] px-[50%] py-[50px] relative"}>
+      <Image
+        src={"/sponsor/" + logo}
+        alt=""
+        fill
+        className={"object-contain m-auto max-w-[70%] max-h-[80%] absolute"}
+      />
+    </div>
     <a
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-row text-secondary-600 underline justify-center mt-[16px] hover:opacity-50">
+      className="flex flex-row text-secondary-600 underline justify-center mt-[8px] hover:opacity-50">
       <p>{name}</p>
       <Image
         src={"/linkout_b.svg"}
@@ -174,8 +182,8 @@ const PatronComponent = ({ name, logo, url, description }: Omit<Sponsor, "catego
     <Image
       src={"/sponsor/" + logo}
       alt={name}
-      width={600}
-      height={600}
+      width={20}
+      height={20}
       className={"flex-1 rounded-[10px] max-w-[60px] min-w-[60px]"}
     />
     <div className={"mb-[6px] font-bold"}>{name}</div>
@@ -228,7 +236,7 @@ export const BecomeSponsorSection = () => {
   </>
 };
 
-const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "height">[] }) => {
+export const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "height">[] }) => {
   const { t } = useTranslation("SPONSOR")
   const [c, setContents] = useState({
     h1: "",
@@ -264,7 +272,6 @@ const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "height">[] 
         ))}
       </div>
 
-
       <SectionSubTitle title={'Platinum'} subTitle={'プラチナスポンサー'} hasSeparator={true} className='subTitle' />
       <div className={"grid lg:grid-cols-3 gap-3 lg:mx-[80px] mx-[47px]  mb-[32px]"}>
         {rows.map((row, index) => (
@@ -294,7 +301,7 @@ const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "height">[] 
       </div>
 
       <SectionSubTitle title={'Silver'} subTitle={'シルバースポンサー'} hasSeparator={true} className='subTitle' />
-      <div className={"grid lg:grid-cols-4 gap-3 lg:mx-[135px] mb-[32px]"}>
+      <div className={"grid lg:grid-cols-5 gap-2 lg:mx-[135px] mb-[16px]"}>
         {rows.map((row, index) => (
           (row.category === "silver")
           && <SilverComponent
@@ -336,7 +343,7 @@ const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "height">[] 
       </div>
 
       <SectionSubTitle title={'Patron'} subTitle={'パトロン'} hasSeparator={true} className='subTitle' />
-      <div className={"lg:mx-[128px] mb-[60px] grid lg:grid-cols-4  gap-4 justify-center mb-[32px]"}>
+      <div className={"lg:mx-[128px] mb-[60px] grid lg:grid-cols-6  gap-4 justify-center mb-[32px]"}>
         {rows.map((row, index) => (
           (row.category === "patron")
           && <PatronComponent
@@ -348,7 +355,6 @@ const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "height">[] 
           />
         ))}
       </div>
-
     </>
   )
 }

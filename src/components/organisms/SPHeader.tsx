@@ -3,14 +3,22 @@ import {useTranslation} from "react-i18next";
 import Image from "next/image";
 import {Bars3Icon, ChevronRightIcon, MinusIcon, XMarkIcon} from "@heroicons/react/20/solid";
 import menu from "@/data/menu";
-import {useContext} from "react";
+import {useCallback, useContext} from "react";
 import menuContext from "@/utils/menuContext";
 import LangButton from "@/components/elements/LangButton";
+import {useRouter} from "next/router";
 
 const PCHeader = () => {
+  const router = useRouter();
+
   const {t} = useTranslation('PAGES');
 
   const {isMenuOpen, setIsMenuOpen} = useContext(menuContext);
+
+  const transition = useCallback(async (url: string) => {
+    await router.push(url);
+    setIsMenuOpen(false);
+  }, [router, setIsMenuOpen])
 
   return (
     <>
@@ -35,11 +43,11 @@ const PCHeader = () => {
                           {
                             !c.isComingSoon
                               ? (
-                                <Link href={c.url}>
+                                <a onClick={() => transition(c.url)} className='cursor-pointer'>
                                   <p className='text-alt-black'>
                                     {t(c.title, {ns: 'MENU'})}
                                   </p>
-                                </Link>
+                                </a>
                               )
                               : (
                                 <p className='text-alt-black opacity-75'>

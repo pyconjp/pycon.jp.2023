@@ -1,0 +1,5 @@
+.textCardText {
+  > *:not(:global(.heading)) {
+    margin-left: 16px;
+  }
+}

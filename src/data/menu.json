@@ -1,0 +1,77 @@
+[
+  {
+    "category": "about",
+    "title": "common.menu.about.about",
+    "children": [
+      {
+        "title": "common.menu.about.coc",
+        "link": "/coc",
+        "innerlink": true
+      },
+      {
+        "title": "common.menu.about.guideline",
+        "link": "common.menu.about.guidelineLink",
+        "innerlink": false
+      },
+      {
+        "title": "common.menu.about.venue",
+        "link": "/venue",
+        "innerlink": true
+      }
+    ]
+  },
+  {
+    "category": "event",
+    "title": "common.menu.event.event",
+    "children": [
+      {
+        "title": "common.menu.event.timetable",
+        "link": "/timetable",
+        "innerlink": true
+      },
+      {
+        "title": "common.menu.event.events",
+        "link": "/events",
+        "innerlink": true
+      }
+    ]
+  },
+  {
+    "category": "sponsor",
+    "title": "common.menu.sponsor.sponsor",
+    "children": [
+      {
+        "title": "common.menu.sponsor.sponsorList",
+        "link": "/sponsor",
+        "innerlink": true
+      }
+    ]
+  },
+  {
+    "category": "contents",
+    "title": "common.menu.contents.contents",
+    "children": [
+      {
+        "title": "common.menu.contents.communities",
+        "link": "/contents/communities",
+        "innerlink": true
+      },
+      {
+        "title": "common.menu.contents.beginners",
+        "link": "/contents/beginners",
+        "innerlink": true
+      }
+    ]
+  },
+  {
+    "category": "volunteer",
+    "title": "common.menu.volunteer.volunteer",
+    "children": [
+      {
+        "title": "common.menu.volunteer.volunteer",
+        "link": "/staff",
+        "innerlink": true
+      }
+    ]
+  }
+]

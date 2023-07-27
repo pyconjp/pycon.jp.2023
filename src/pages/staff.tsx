@@ -7,7 +7,6 @@ import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
 import PageTitle from "@/components/elements/PageTitle";
 import SectionTitle from "@/components/elements/SectionTitle";
-import TextCard from "@/components/organisms/TextCard";
 
 const StaffCard = ({ name, icon, twitter, github, facebook, division }: Staff) => (
   <div className={"flex items-center gap-2 flex-row"}>
@@ -76,7 +75,7 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
     a1:"",
   });
   useEffect(() => {
-    setContents({...c, 
+    setContents({...c,
         p1:t("P1"),
         p2:t("P2"),
         p3:t("P3"),
@@ -157,21 +156,26 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
         ))}
       </div>
 
-      <SectionTitle title='Staff On The Day' subTitle='当日スタッフ'/>
-      <div className={"lg:mx-[128px] mx-[20px] mb-[60px] grid lg:grid-cols-4 grid-cols-2 place-items-center gap-4"}>
-        {rows.map((row, index) => (
-          (row.division === "day")
-          && <SimpleStaffCard
-            key={index}
-            name={row.name}
-            icon={row.icon}
-            twitter={row.twitter}
-            github={row.github}
-            facebook={row.facebook}
-            division={row.division}
-          />
-        ))}
-      </div>
+      {
+        rows.filter(r => r.division === "day").length > 0 &&
+        <>
+          <SectionTitle title='Staff On The Day' subTitle='当日スタッフ'/>
+          <div className={"lg:mx-[128px] mx-[20px] mb-[60px] grid lg:grid-cols-4 grid-cols-2 place-items-center gap-4"}>
+            {rows.map((row, index) => (
+              (row.division === "day")
+              && <SimpleStaffCard
+                key={index}
+                name={row.name}
+                icon={row.icon}
+                twitter={row.twitter}
+                github={row.github}
+                facebook={row.facebook}
+                division={row.division}
+              />
+            ))}
+          </div>
+        </>
+      }
 
       <SectionTitle title='Reviewer' subTitle='レビュワー'/>
       <div className={"lg:mx-[128px] mx-[20px] mb-[60px] grid lg:grid-cols-4 grid-cols-2 place-items-center gap-4"}>

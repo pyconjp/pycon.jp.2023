@@ -8,7 +8,7 @@ import TextCard from "@/components/organisms/TextCard";
 export default function OverviewSection() {
   const { t } = useTranslation("OVERVIEW");
   return (
-      <div className='my-4'>
+      <div className='lg:py-[60px] py-20'>
         <SectionTitle title='Overview' subTitle='概要'/>
         <TextCard image={{src: '/about_pycon.jpg', alt: 'unsplash', width: 799, height: 533}}>
           <Heading>

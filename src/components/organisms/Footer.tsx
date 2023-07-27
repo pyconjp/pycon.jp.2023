@@ -44,7 +44,7 @@ const Footer = () => {
   const {t} = useTranslation();
 
   return (
-    <footer className="absolute w-screen h-fit">
+    <footer className="absolute w-full h-fit">
       <div
         className="p-10 lg:py-6 lg:px-32 bg-[#111C3B] overflow-hidden bg-[url('/section_bgimg_map.png')] bg-[length:438px_508px] bg-no-repeat bg-center">
         <div className="flex flex-col gap-9">

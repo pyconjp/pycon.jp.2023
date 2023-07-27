@@ -10,10 +10,10 @@ import { parse } from "csv-parse/sync";
 export default function SponsorsSection() {
 
   return (
-    <>
+    <div className='lg:py-[60px] py-20'>
       <SectionTitle title='SPONSOR' subTitle='スポンサー' />
       <BecomeSponsorSection />
-    </>
+    </div>
   )
 }
 

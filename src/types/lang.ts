@@ -97,9 +97,9 @@ export type Lang = {
     peacock_bio: string;
     ainamori_bio: string;
     yoshida_bio: string;
-    H1: string;
-    P7: string;
-    A1: string;
+    recruite_title: string;
+    recruite_text: string;
+    recruite_link: string;
   };
   SPONSOR: {
     H1: string;

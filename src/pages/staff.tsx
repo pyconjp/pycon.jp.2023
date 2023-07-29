@@ -280,9 +280,9 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
     vicechair_bio1:"",
     vicechair_bio2:"",
     supervisor_bio1:"",
-    h1:"",
-    p7:"",
-    a1:"",
+    recruite_title:"",
+    recruite_text:"",
+    recruite_link:"",
   });
   useEffect(() => {
     setContents({...c,
@@ -292,9 +292,9 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
       vicechair_bio1:t("peacock_bio"),
       vicechair_bio2:t("ainamori_bio"),
       supervisor_bio1:t("yoshida_bio"),
-      h1:t("H1"),
-      p7:t("P7"),
-      a1:t("A1"),
+      recruite_title:t("recruite_title"),
+      recruite_text:t("recruite_text"),
+      recruite_link:t("recruite_link"),
     })
   },[t]);
 
@@ -432,17 +432,18 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
         <div className="flex flex-col mx-[72px]">
           <div className='before:top-1/2 before:w-4 before:h-4 before:mr-4 before:-ml-8 before:-mt-2  before:content-[url("/ellipse.svg")] before:inline-block ml-0 pl-8'>
             <h3 className="lg:text-2xl text-xl text-alt-black font-bold inline">
-              {c.h1}
+              {c.recruite_title}
             </h3>
           </div>
-          <p className="text-alt-black text-lg p-[12px]">{c.p7}</p>
+          <p className="text-alt-black text-lg p-[12px]">{c.recruite_text}</p>
           <div className="ml-[auto]">
-          <a
+          {/* 募集フォーム有効 */}
+          {/* <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSf3Zw3b-X9KMo81G9BJJFFfq6jYzzUAviLZALzhiCFeFuMybQ/viewform"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-row text-primary-500 underline hover:opacity-50">
-              <p>{c.a1}</p>
+              <p>{c.recruite_link}</p>
               <Image
                 src={"/linkout_p.svg"}
                 alt={""}
@@ -450,7 +451,18 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
                 height={20}
                 className="object-contain ml-[3px]"
               />
-          </a>
+          </a> */}
+          {/* 募集フォーム無効 */}
+          <div className="flex flex-row text-primary-500 underline">
+            <p>{c.recruite_link}</p>
+            <Image
+              src={"/linkout_p.svg"}
+              alt={""}
+              width={20}
+              height={20}
+              className="object-contain ml-[3px]"
+            />
+          </div>
           </div>
         </div>
       </div>

@@ -112,9 +112,9 @@ const En: Lang = {
     peacock_bio: "He joined PyCon JP in 2019 and started serving as a volunteer staff member in 2020. Since 2022, he's been the vice-chair.And, also part of the PyCon JP Association's Operating Member, as a director of the PyCon JP TV. He talked at EuroPython 2021, PyCon APAC 2021, and PyCon US 2022. At TOPGATE, Inc. he pushes for IaC and DevOps with Google Cloud and develops Golang Web APIs. His hobbies include mirrorless cameras, skiing, and classical music. He frequently attends and photographs presenters at study groups.",
     ainamori_bio: "Works for Internet Initiative Japan Inc. as infrastructure engineer. has been involved PyConJP2019 as a NOC team staff member. his involvement with Python is mainly for the purpose of infrastructure development and operational automation and orchestration. Recent deliverables are based on FastAPI.",
     yoshida_bio: "biography biography biography biography biography biography biography biography biography biography biography biography biography biography biography biography biography biography",
-    H1: "Recruitment of PyCon JP 2023 staff!",
-    P7: "If you want to boost the Python community, or are interested in joining the conference staff, please apply!",
-    A1: "Staff application form",
+    recruite_title: "Recruitment of PyCon JP 2023 staff!",
+    recruite_text: "If you want to boost the Python community, or are interested in joining the conference staff, please apply!",
+    recruite_link: "Staff application form(comming soon)",
   },
   SPONSOR: {
     H1: "Please be our sponsor!",

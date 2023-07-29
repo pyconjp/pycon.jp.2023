@@ -112,9 +112,9 @@ const Ja: Lang = {
     peacock_bio: "PyCon JP 2019から参加し、翌年PyCon JP 2020よりボランティアスタッフとして活動。副座長としては2022より。一般社団法人PyCon JP Associationの運営メンバーでもあり、PyCon JP TVのディレクターも務める。また、EuroPython 2021, PyCon APAC 2021, PyCon US 2022にスピーカーとして参加。普段は株式会社トップゲートでGoogle CloudによるIaCとDevOpsの推進やGolangによるWeb API開発などを行っている。趣味はミラーレスカメラ、スキー、クラシック音楽鑑賞など。勉強会などに出没し、発表している人を撮影することもしばしば。",
     ainamori_bio: "株式会社インターネットイニシアティブ勤務。PyConJP2019にNOCチームスタッフとして参加以来、NOC・システムを中心に運営に従事。Pythonとの関わりは主にインフラ開発と運用の自動化・オーケストレーションを目的としている。最近の成果物はFastAPIベース。",
     yoshida_bio: "biography biography biography biography biography biography biography biography biography biography biography biography biography biography biography biography biography",
-    H1: "ボランティアスタッフ募集中！",
-    P7: "Pythonコミュニティを盛り上げたい方、カンファレンススタッフに興味がある方など、ぜひお申し込みください！",
-    A1: "ボランティアスタッフ募集フォーム",
+    recruite_title: "当日スタッフ募集中！",
+    recruite_text: "Pythonコミュニティを盛り上げたい方、カンファレンススタッフに興味がある方など、ぜひお申し込みください！",
+    recruite_link: "当日スタッフ募集フォーム(準備中)",
   },
   SPONSOR: {
     H1: "スポンサー募集中！",

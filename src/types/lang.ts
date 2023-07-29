@@ -91,11 +91,14 @@ export type Lang = {
     ACCESS:string;
   };
   STAFF: {
-    P1: string;
-    P2: string;
-    P3: string;
+    selina_bio1: string;
+    selina_bio2: string;
+    selina_bio3: string;
+    peacock_bio: string;
+    ainamori_bio: string;
+    yoshida_bio: string;
     H1: string;
-    P4: string;
+    P7: string;
     A1: string;
   };
   SPONSOR: {

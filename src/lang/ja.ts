@@ -106,11 +106,14 @@ const Ja: Lang = {
     ACCESS:"ニュースをもっと見る"
   },
   STAFF: {
-    P1: "PyCon JP 2016に初参加。その後、2017,2018にスピーカー参加し、2020年には招待講演で登壇。",
-    P2: "海外では、PyCon US、PyCon Taiwan、PyCon Thailandの参加経験あり。",
-    P3: "うさぎ好き。車やDrone, Raspberry Piなどガジェット好き。ピアノ,バイオリンを特訓中。プログラマー、エンジニアではなく科学者(Scientist)を目指す。Pyladies Tokyo Staff, (株)moegi代表。東海大学 航空宇宙学修了。慶應義塾大学SFC研究所 上席所員。",
+    selina_bio1: "PyCon JP 2016に初参加。その後、2017,2018にスピーカー参加し、2020年には招待講演で登壇。",
+    selina_bio2: "海外では、PyCon US、PyCon Taiwan、PyCon Thailandの参加経験あり。",
+    selina_bio3: "うさぎ好き。車やDrone, Raspberry Piなどガジェット好き。ピアノ,バイオリンを特訓中。プログラマー、エンジニアではなく科学者(Scientist)を目指す。Pyladies Tokyo Staff, (株)moegi代表。東海大学 航空宇宙学修了。慶應義塾大学SFC研究所 上席所員。",
+    peacock_bio: "biography biography biography biography biography biography biography biography biography biography biography biography biography biography biography biography biography",
+    ainamori_bio: "株式会社インターネットイニシアティブ勤務。PyConJP2019にNOCチームスタッフとして参加以来、NOC・システムを中心に運営に従事。Pythonとの関わりは主にインフラ開発と運用の自動化・オーケストレーションを目的としている。最近の成果物はFastAPIベース。",
+    yoshida_bio: "biography biography biography biography biography biography biography biography biography biography biography biography biography biography biography biography biography",
     H1: "ボランティアスタッフ募集中！",
-    P4: "Pythonコミュニティを盛り上げたい方、カンファレンススタッフに興味がある方など、ぜひお申し込みください！",
+    P7: "Pythonコミュニティを盛り上げたい方、カンファレンススタッフに興味がある方など、ぜひお申し込みください！",
     A1: "ボランティアスタッフ募集フォーム",
   },
   SPONSOR: {

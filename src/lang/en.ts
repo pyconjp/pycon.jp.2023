@@ -106,11 +106,14 @@ const En: Lang = {
     JP: "PyCon JP is a conference for Python users to gather, exchange information and interact with Python and software using Python. Through PyCon JP, the goal is to gather Python users together, exchange knowledge and information on various fields related to Python, connect with new friends and communities, and increase work and business opportunities."
   },
   STAFF: {
-    P1: "Lina attended Pycon JP in 2016 for the first time. Participated in 2017 and 2018 as a speaker, and as an invited speaker in 2020.",
-    P2: "She also attended Pycon overseas, such as in the US, Taiwan, and Thailand.",
-    P3: "Loves rabbits, cars, drones, and gadgets such as Raspberry Pi as well. Currently taking special lessons in piano and violin. Always wants to be a scientist, not a programmer or an engineer. An active member of Pyladies Tokyo and a founder of moegi Inc. Lina graduated from Tokai University with a BS and an MS in Aeronautics and Astronautics. She is currently a Senior Research Fellow at the Keio Research Institute at SFC (Shonan Fujisawa Campus).",
+    selina_bio1: "Lina attended Pycon JP in 2016 for the first time. Participated in 2017 and 2018 as a speaker, and as an invited speaker in 2020.",
+    selina_bio2: "She also attended Pycon overseas, such as in the US, Taiwan, and Thailand.",
+    selina_bio3: "Loves rabbits, cars, drones, and gadgets such as Raspberry Pi as well. Currently taking special lessons in piano and violin. Always wants to be a scientist, not a programmer or an engineer. An active member of Pyladies Tokyo and a founder of moegi Inc. Lina graduated from Tokai University with a BS and an MS in Aeronautics and Astronautics. She is currently a Senior Research Fellow at the Keio Research Institute at SFC (Shonan Fujisawa Campus).",
+    peacock_bio: "biography biography biography biography biography biography biography biography biography biography biography biography biography biography biography biography biography",
+    ainamori_bio: "Works for Internet Initiative Japan Inc. as infrastructure engineer. has been involved PyConJP2019 as a NOC team staff member. his involvement with Python is mainly for the purpose of infrastructure development and operational automation and orchestration. Recent deliverables are based on FastAPI.",
+    yoshida_bio: "biography biography biography biography biography biography biography biography biography biography biography biography biography biography biography biography biography biography",
     H1: "Recruitment of PyCon JP 2023 staff!",
-    P4: "If you want to boost the Python community, or are interested in joining the conference staff, please apply!",
+    P7: "If you want to boost the Python community, or are interested in joining the conference staff, please apply!",
     A1: "Staff application form",
   },
   SPONSOR: {

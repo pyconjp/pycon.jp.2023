@@ -120,7 +120,28 @@ const En: Lang = {
   },
   BLOG: {
     ACCESS: "Read More"
-  }
+  },
+  CONFERENCE: {
+    SPEAKER_JP: {
+      NAME: "Hajime Kita",
+      BIO: 'Hajime Kita received his B.E., M.E., and D. E. degrees all from Kyoto University. \n' +
+        '\n\n' +
+        'From 1987 to 1997, he was an Assistant Professor at the Faculty of Engineering, Kyoto University.  \n' +
+        'From 1997 to 2000, he was an Associate Professor at Interdisciplinary Graduate School of Science and Engineering, Tokyo Institute of Technology.  \n' +
+        'From 2000 to 2003, he was a Professor at National Institution for Academic Degrees and University Evaluation.  \n' +
+        'From 2003 to 2013, he was a Professor at Academic Center for Computing and Media Study, Kyoto University.  \n' +
+        'Since 2013, he has been a Professor at Institute for Liberal Arts and Sciences (ILAS), Kyoto University.  \n' +
+        '\n\n' +
+        'His research major is System Science and Engineering. In ILAS, he teaches general education courses in informatics including computer programming.  \n' +
+        'His research interests are social simulation and general education of informatics in universities including education in computer programming.',
+      IMG_ALT: "Photo of Hajime Kita"
+    },
+    SPEAKER_EN: {
+      NAME: "Lorena Mesa",
+      BIO: 'Political scientist turned coder, Lorena Mesa is a GitHub data engineer, past Director & Chair of the Python Software Foundation, [JOSS](https://joss.theoj.org/about) editor, and PyLadies Chicago co-organizer. Lorena\'s time at Obama for America and her subsequent graduate research required her to learn how to transform messy, incomplete data into intelligible analysis on topics like predicting Latinx voter behavior. It\'s this unique background in research and applied mathematics that drove Lorena to pursue a career in engineering and data science. One part activist, one part Star Wars fanatic, and another part [Trekkie](https://www.greggpollack.com/wp-content/uploads/2017/03/lorena_for_twitter.jpg), Lorena abides by the motto to "live long and prosper".',
+      IMG_ALT: "Photo of Lorena Mesa"
+    }
+  },
 };
 
 export default En;

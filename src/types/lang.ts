@@ -102,5 +102,17 @@ export type Lang = {
     H1: string;
     P1: string;
     A1: string;
-  }
+  };
+  CONFERENCE: {
+    SPEAKER_JP: {
+      NAME: string;
+      BIO: string;
+      IMG_ALT: string;
+    };
+    SPEAKER_EN: {
+      NAME: string;
+      BIO: string;
+      IMG_ALT: string;
+    };
+  };
 };

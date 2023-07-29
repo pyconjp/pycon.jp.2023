@@ -17,7 +17,7 @@ const PageTitle = ({ title, ...others }: Props) => {
           className="lg:mr-[40px] lg:ml-[20px] mr-[10px] ml-[16px] mt-8 lg:w-[193px] lg:h-[145px] w-[110px] h-[83px]"
         />
         <div>
-          <h1 className="lg:text-5xl text-[48px] font-montserrat italic align-bottom text-alt-black">
+          <h1 className="lg:text-5xl text-2xl font-montserrat italic align-bottom text-alt-black">
             {title}
           </h1>
         </div>

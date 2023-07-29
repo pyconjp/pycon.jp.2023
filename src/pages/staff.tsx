@@ -77,7 +77,7 @@ const ViceChairCard = ({staff, bio=[]}:Props) => (
     />
     <div className={"p-[16px]"}>
       <div className={"mb-[16px] flex flex-col"}>
-        <h4 className={"font-montserrat italic text-primary-600 text-base"}>Vicechair</h4>
+        <h4 className={"font-montserrat italic text-primary-600 text-base"}>Vice chair</h4>
         <p className={"text-primary-900 text-2xl font-bold"}>{staff.name}</p>
       </div>
       {bio.map((text) => (

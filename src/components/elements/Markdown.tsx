@@ -5,6 +5,7 @@ import {
   MDXRemoteSerializeResult,
 } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
+import { ArrowRightIcon } from "@heroicons/react/20/solid";
 
 type Props = {
   content: string;
@@ -17,9 +18,11 @@ const Markdown = ({ content, components }: Props) => {
     a: (props) => (
       <a
         {...props}
-        className="text-primary-500 bold underline underline-offset-8 leading-4 "
+        className="flex items-center text-primary-500 font-bold border-b-[1px] w-fit h-[27px]"
       >
         {props.children}
+
+        <ArrowRightIcon width={24} height={18} />
       </a>
     ),
     h3: (props) => (

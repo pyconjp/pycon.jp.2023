@@ -5,6 +5,7 @@ import TextCard from "@/components/organisms/TextCard";
 import SectionSubTitle from "@/components/elements/SectionSubTitle";
 import {useTranslation} from "react-i18next";
 import Markdown from "@/components/elements/Markdown";
+import Separator from "@/components/elements/Separator";
 
 export default function ConferenceSection() {
   const { t} = useTranslation("CONFERENCE");
@@ -19,12 +20,15 @@ export default function ConferenceSection() {
             </Heading>
             <Markdown content={t('SPEAKER_EN.BIO')} components={{Heading}}/>
           </TextCard>
+          <Separator/>
           <TextCard image={{src: '/kita-photo-2020-07-07-trim.jpg', alt: t('SPEAKER_JP.IMG_ALT'), width: 300, height: 368}} className='w-10/12 mx-auto'>
             <Heading>
               {t('SPEAKER_JP.NAME')}
             </Heading>
             <Markdown content={t('SPEAKER_JP.BIO')} components={{Heading}}/>
           </TextCard>
+          <Separator/>
+          {/* TODO ここにタイムテーブルへのリンク */}
         </div>
     )
 }

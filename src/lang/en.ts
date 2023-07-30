@@ -120,6 +120,18 @@ const En: Lang = {
   },
   BLOG: {
     ACCESS: "Read More"
+  },
+  VENUE: {
+    GMAP_URL: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6485.625372822181!2d139.788521!3d35.632344!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x29ed0c04cca72dd5!2sTOC%20Ariake%20Convention%20Hall!5e0!3m2!1sen!2sjp!4v1665392941094!5m2!1sen!2sjp",
+    FLOOR4: "4th-floor",
+    FLOOR20: "20th-floor",
+    NURSERY: "Day Nuesery",
+    VENUE_TITLE: "Venue",
+    VENUE_TEXT: "TOC Ariake Convention Hall",
+    LOCATION_TITLE: "Location",
+    LOCATION_TEXT: "3-5-7 Ariake, Koto-ku, Tokyo",
+    STATION_TITLE: "By Train",
+    STATION_TEXT: "<Rinkai Line> Approx. 3 minutes' walk from Kokusai-Tenjijo Station\n<Yurikamome> Approx. 4 minutes' walk from Tokyo Big Sight Station or Ariake Station",
   }
 };
 

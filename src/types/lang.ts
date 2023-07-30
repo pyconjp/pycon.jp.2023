@@ -102,5 +102,17 @@ export type Lang = {
     H1: string;
     P1: string;
     A1: string;
+  };
+  VENUE: {
+    GMAP_URL: string;
+    FLOOR4: string;
+    FLOOR20: string;
+    NURSERY: string;
+    VENUE_TITLE: string;
+    VENUE_TEXT: string;
+    LOCATION_TITLE: string;
+    LOCATION_TEXT: string;
+    STATION_TITLE: string;
+    STATION_TEXT: string;
   }
 };

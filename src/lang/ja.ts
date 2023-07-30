@@ -117,6 +117,18 @@ const Ja: Lang = {
     H1: "スポンサー募集中！",
     P1: "現在PyCon JP 2023は、スポンサーを募集中です。Pythonをキーワードに集まる多くの参加者に、Pythonを扱う企業であることや、エンジニアコミュニティを理解し支援する風土のある企業であること、または自社のサービスをアピールすることが可能です。詳細は募集要項をご覧ください。",
     A1: "スポンサー募集概要・応募フォーム",
+  },
+  VENUE: {
+    GMAP_URL: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6485.625372822181!2d139.788521!3d35.632344!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x29ed0c04cca72dd5!2zVE9D5pyJ5piO44Kz44Oz44OZ44Oz44K344On44Oz44Ob44O844Or!5e0!3m2!1sja!2sjp!4v1665392924080!5m2!1sja!2sjp",
+    FLOOR4: "4階",
+    FLOOR20: "20階",
+    NURSERY: "託児所",
+    VENUE_TITLE: "会場",
+    VENUE_TEXT: "TOC有明コンベンションホール",
+    LOCATION_TITLE: "所在地",
+    LOCATION_TEXT: "東京都江東区有明3丁目5番7号",
+    STATION_TITLE: "最寄り駅",
+    STATION_TEXT: "<りんかい線> 国際展示場駅より徒歩3分\n<ゆりかもめ> 東京ビッグサイト駅/有明駅より徒歩4分",
   }
 };
 

@@ -114,5 +114,17 @@ export type Lang = {
     LOCATION_TEXT: string;
     STATION_TITLE: string;
     STATION_TEXT: string;
-  }
+  };
+  CONFERENCE: {
+    SPEAKER_JP: {
+      NAME: string;
+      BIO: string;
+      IMG_ALT: string;
+    };
+    SPEAKER_EN: {
+      NAME: string;
+      BIO: string;
+      IMG_ALT: string;
+    };
+  };
 };

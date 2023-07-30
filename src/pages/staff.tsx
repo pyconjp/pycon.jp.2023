@@ -25,7 +25,7 @@ const ChairCard = ({staff, bio=[]}:Props) => (
     <div className={"p-[16px]"}>
       <h4 className={"mb-[16px] text-primary-900 text-2xl font-bold"}>{staff.name}</h4>
       {bio.map((text) => (
-        <p className={"mb-[16px] text-alt-black"}>{text}</p>
+        <p className={"mb-[16px] text-base text-alt-black"}>{text}</p>
       ))}
       <div className={"flex flex-row items-center"}>
         {(staff.twitter !== "")
@@ -81,7 +81,7 @@ const ViceChairCard = ({staff, bio=[]}:Props) => (
         <p className={"text-primary-900 text-2xl font-bold"}>{staff.name}</p>
       </div>
       {bio.map((text) => (
-        <p className={"mb-[16px] text-alt-black"}>{text}</p>
+        <p className={"mb-[16px] lg:text-base text-sm text-alt-black whitespace-pre-wrap"}>{text}</p>
       ))}
       <div className={"flex flex-row items-center"}>
         {(staff.twitter !== "")
@@ -137,7 +137,7 @@ const SupervisorCard = ({staff, bio=[]}:Props) => (
         <p className={"text-primary-900 text-2xl font-bold"}>{staff.name}</p>
       </div>
       {bio.map((text) => (
-        <p className={"mb-[16px] text-alt-black"}>{text}</p>
+        <p className={"mb-[16px] text-alt-black whitespace-pre-wrap"}>{text}</p>
       ))}
       <div className={"flex flex-row items-center"}>
         {(staff.twitter !== "")
@@ -435,7 +435,7 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
               {c.recruite_title}
             </h3>
           </div>
-          <p className="text-alt-black text-lg p-[12px]">{c.recruite_text}</p>
+          <p className="text-alt-black lg:text-lg text-base p-[12px]">{c.recruite_text}</p>
           <div className="ml-[auto]">
           {/* 募集フォーム有効 */}
           {/* <a
@@ -443,7 +443,7 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-row text-primary-500 underline hover:opacity-50">
-              <p>{c.recruite_link}</p>
+              <p className={"lg:text-lg text-base"}>{c.recruite_link}</p>
               <Image
                 src={"/linkout_p.svg"}
                 alt={""}
@@ -454,7 +454,7 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
           </a> */}
           {/* 募集フォーム無効 */}
           <div className="flex flex-row text-primary-500 underline">
-            <p>{c.recruite_link}</p>
+            <p className={"lg:text-lg text-base"}>{c.recruite_link}</p>
             <Image
               src={"/linkout_p.svg"}
               alt={""}

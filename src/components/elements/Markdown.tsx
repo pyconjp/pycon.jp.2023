@@ -56,6 +56,19 @@ const Markdown = ({ content, components }: Props) => {
         {props.children}
       </li>
     ),
+    pre: (props) => (
+      <pre
+        {...props}
+        className="flex align-start self-stretch p-4 whitespace-pre-wrap bg-secondary-800"
+      >
+        {props.children}
+      </pre>
+    ),
+    code: (props) => (
+      <code {...props} className="text-white">
+        {props.children}
+      </code>
+    ),
   };
 
   useEffect(() => {

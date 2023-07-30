@@ -14,6 +14,14 @@ type Props = {
 const Markdown = ({ content, components }: Props) => {
   const [source, setSource] = useState<MDXRemoteSerializeResult | null>(null);
   const mdComponent: MDXRemoteProps["components"] = {
+    a: (props) => (
+      <a
+        {...props}
+        className="text-primary-500 bold underline underline-offset-8 leading-4 "
+      >
+        {props.children}
+      </a>
+    ),
     h3: (props) => (
       <h3
         {...props}
@@ -41,13 +49,13 @@ const Markdown = ({ content, components }: Props) => {
     p: (props) => (
       <p
         {...props}
-        className="flex align-start self-stretch p-3 text-alt-black"
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 self-stretch p-3 text-alt-black"
       >
         {props.children}
       </p>
     ),
     ul: (props) => (
-      <ul {...props} className="flex flex-col align-start self-stretch px-4">
+      <ul {...props} className="flex flex-col align-start self-stretch px-8">
         {props.children}
       </ul>
     ),

@@ -107,7 +107,6 @@ export type Lang = {
     GMAP_URL: string;
     FLOOR4: string;
     FLOOR20: string;
-    NURSERY: string;
     VENUE_TITLE: string;
     VENUE_TEXT: string;
     LOCATION_TITLE: string;

@@ -18,13 +18,10 @@ type VenueInfo = {
 type PageInfo = {
   text_4F: string;
   text_20F: string;
-  text_daynursery: string;
 }
 type SelectFloor = {
     floor: string;
 }
-
-let target="4階";
 
 const SubtitleComponent = ({title}:SubTitle) => (
   <>
@@ -50,7 +47,7 @@ const VenueInfoComponent = ({title, text}:VenueInfo) => (
       </div>
     </>
 );
-const PCMapComponent = ({text_4F, text_20F, text_daynursery}:PageInfo) => (
+const PCMapComponent = ({text_4F, text_20F}:PageInfo) => (
     <>
       <div className={"flex flex-col items-center mb-[60px] lg:mx-[80px]"}>
         <SubtitleComponent title={text_4F} />
@@ -72,52 +69,41 @@ const PCMapComponent = ({text_4F, text_20F, text_daynursery}:PageInfo) => (
           className={"flex-1 rounded-[10px]"}
         />
       </div>
-      <div className={"flex flex-col items-center mb-[60px] lg:mx-[80px]"}>
-        <SubtitleComponent title={text_daynursery} />
-        <Image
-          src={"/venue_map_day-nursery.png"}
-          alt={"map20F"}
-          width={600}
-          height={600}
-          className={"flex-1 rounded-[10px]"}
-        />
-      </div>
     </>
   );
-const SPMapComponent = ({text_4F, text_20F, text_daynursery}:PageInfo) => {
+const SPMapComponent = ({text_4F, text_20F}:PageInfo) => {
   const [floor, setFloor] = useState(1);
   const FloorHandler = (floor:string) => {
     if(floor === text_4F) setFloor(1);
     if(floor === text_20F) setFloor(2);
-    if(floor === text_daynursery) setFloor(3);
   };
   
   const PaginationComponent = () => {
     const Current = ({floor}:SelectFloor) => (
       <>
-        <div className={'flex flex-col items-center'}>
-          <h1 className={'p-[10px] text-xl font-bold text-montserrat italic align-bottom text-alt-black'}>{floor}</h1>
+        <div className={'flex flex-col items-center p-[3px]'}>
+          <h1 className={'text-2xl font-bold text-montserrat italic align-bottom text-alt-black'}>{floor}</h1>
           <Image
             src={'/Page_heade_pc_right.svg'} 
             alt={'ヘッダー右'} 
             width={196} 
             height={18} 
-            className={'w-[50px] h-[20px]'}
+            className={'w-[150px] h-[20px]'}
           />
         </div>
       </>
     );
     const Other = ({floor}:SelectFloor) => (
         <>
-          <div className={'flex flex-col items-center cursor-pointer'} onClick={()=>FloorHandler(floor)}>
-            <h1 className={'p-[10px] text-xl font-bold text-montserrat italic align-bottom opacity-50 hover:text-alt-black hover:opacity-100'}>{floor}</h1>
+          <div className={'flex flex-col items-center cursor-pointer p-[3px]'} onClick={()=>FloorHandler(floor)}>
+            <h1 className={'p-[10px] text-2xl font-bold text-montserrat italic align-bottom opacity-50 hover:text-alt-black hover:opacity-100'}>{floor}</h1>
           </div>
         </>
     );
 
     return (
     <>
-      <div className={"mx-[20px] my-[40px]"}>
+      <div className={"mx-[20px] mt-[20px] mb-[10px]"}>
         <ul className={"flex flex-row justify-around"}>
             <li className={""}>
               {
@@ -141,18 +127,6 @@ const SPMapComponent = ({text_4F, text_20F, text_daynursery}:PageInfo) => {
                 (floor !== 2)
                   &&
                   <Other floor={text_20F}/>
-              }
-            </li>
-            <li className={""}>
-              {
-                (floor === 3)
-                  &&
-                  <Current floor={text_daynursery}/>
-              }
-              {
-                (floor !== 3)
-                  &&
-                  <Other floor={text_daynursery}/>
               }
             </li>
         </ul>
@@ -186,19 +160,7 @@ const SPMapComponent = ({text_4F, text_20F, text_daynursery}:PageInfo) => {
             height={600}
             className={"mx-auto items-center rounded-[10px]"}
           />
-      }
-      {
-        (floor === 3)
-          &&
-          <Image
-            src={"/venue_map_day-nursery.png"}
-            alt={"map4F"}
-            width={600}
-            height={600}
-            className={"mx-auto items-center rounded-[10px]"}
-          />
-      }
-      
+      }      
     </div>
   </>
   );
@@ -210,7 +172,6 @@ const VenuePage = () => {
     gmap_url: "",
     floor4: "",
     floor20: "",
-    nursery: "",
     venue_title: "",
     venue_text: "",
     location_title: "",
@@ -223,7 +184,6 @@ const VenuePage = () => {
       gmap_url: t("GMAP_URL"),
       floor4: t("FLOOR4"),
       floor20: t("FLOOR20"),
-      nursery: t("NURSERY"),
       venue_title: t("VENUE_TITLE"),
       venue_text: t("VENUE_TEXT"),
       location_title: t("LOCATION_TITLE"),
@@ -239,10 +199,10 @@ const VenuePage = () => {
 
       <SectionTitle title='Map' subTitle='会場レイアウト'/>
       <div className={"lg:inline hidden"}>
-        <PCMapComponent text_4F={c.floor4} text_20F={c.floor20} text_daynursery={c.nursery}/>
+        <PCMapComponent text_4F={c.floor4} text_20F={c.floor20}/>
       </div>
       <div className={"lg:hidden inline"}>
-        <SPMapComponent text_4F={c.floor4} text_20F={c.floor20} text_daynursery={c.nursery}/>
+        <SPMapComponent text_4F={c.floor4} text_20F={c.floor20}/>
       </div>
 
       <SectionTitle title='Access' subTitle='会場アクセス'/>
@@ -250,7 +210,7 @@ const VenuePage = () => {
         <div className={"m-[10px]"}>
           <Gmap
             url={c.gmap_url}
-            width={"400"}
+            width={"500"}
             height={"400"}
           />
         </div>

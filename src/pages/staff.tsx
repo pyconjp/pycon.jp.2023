@@ -71,8 +71,8 @@ const ViceChairCard = ({staff, bio=[]}:Props) => (
     <Image
       src={"/staff/" + staff.icon}
       alt={staff.name}
-      width={170}
-      height={170}
+      width={180}
+      height={180}
       className={"self-center object-contain rounded-[50%] shadow-lg m-[16px]"}
     />
     <div className={"p-[16px]"}>
@@ -127,8 +127,8 @@ const SupervisorCard = ({staff, bio=[]}:Props) => (
     <Image
       src={"/staff/" + staff.icon}
       alt={staff.name}
-      width={170}
-      height={170}
+      width={180}
+      height={180}
       className={"self-center object-contain rounded-[50%] shadow-lg m-[16px]"}
     />
     <div className={"p-[16px]"}>

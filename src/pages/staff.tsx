@@ -24,9 +24,7 @@ const ChairCard = ({staff, bio = []}: Props) => (
     />
     <div className={"p-[16px]"}>
       <h4 className={"mb-[16px] text-primary-900 text-2xl font-bold"}>{staff.name}</h4>
-      {bio.map((text) => (<>
-        <p className={"mb-[16px] text-base text-alt-black"}>{text}</p>
-      </>))}
+      {bio.map((text, index) => (<p key={index} className={"mb-[16px] text-base text-alt-black"}>{text}</p>))}
       <div className={"flex flex-row items-center"}>
         {(staff.twitter !== "")
           && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">
@@ -80,10 +78,11 @@ const ViceChairCard = ({staff, bio = []}: Props) => (
         <h4 className={"font-montserrat italic text-primary-600 text-base"}>Vice chair</h4>
         <p className={"text-primary-900 text-2xl font-bold"}>{staff.name}</p>
       </div>
-      {bio.map((text) => (<>
-          <p className={"mb-[16px] lg:text-base text-sm text-alt-black whitespace-pre-wrap"}>{text}</p>
-        </>
-      ))}
+      {
+        bio.map((text, index) => (
+          <p key={index} className={"mb-[16px] lg:text-base text-sm text-alt-black whitespace-pre-wrap"}>{text}</p>)
+        )
+      }
       <div className={"flex flex-row items-center"}>
         {(staff.twitter !== "")
           && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">
@@ -137,9 +136,12 @@ const SupervisorCard = ({staff, bio = []}: Props) => (
         <h4 className={"font-montserrat italic text-primary-600 text-base"}>Supervisor</h4>
         <p className={"text-primary-900 text-2xl font-bold"}>{staff.name}</p>
       </div>
-      {bio.map((text) => (<>
-          <p className={"mb-[16px] text-alt-black whitespace-pre-wrap"}>{text}</p></>
-      ))}
+      {
+        bio.map((text, index) => (
+            <p key={index} className={"mb-[16px] text-alt-black whitespace-pre-wrap"}>{text}</p>
+          )
+        )
+      }
       <div className={"flex flex-row items-center"}>
         {(staff.twitter !== "")
           && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">

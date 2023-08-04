@@ -106,12 +106,15 @@ const Ja: Lang = {
     ACCESS:"ニュースをもっと見る"
   },
   STAFF: {
-    P1: "PyCon JP 2016に初参加。その後、2017,2018にスピーカー参加し、2020年には招待講演で登壇。",
-    P2: "海外では、PyCon US、PyCon Taiwan、PyCon Thailandの参加経験あり。",
-    P3: "うさぎ好き。車やDrone, Raspberry Piなどガジェット好き。ピアノ,バイオリンを特訓中。プログラマー、エンジニアではなく科学者(Scientist)を目指す。Pyladies Tokyo Staff, (株)moegi代表。東海大学 航空宇宙学修了。慶應義塾大学SFC研究所 上席所員。",
-    H1: "ボランティアスタッフ募集中！",
-    P4: "Pythonコミュニティを盛り上げたい方、カンファレンススタッフに興味がある方など、ぜひお申し込みください！",
-    A1: "ボランティアスタッフ募集フォーム",
+    selina_bio1: "PyCon JP 2016に初参加。その後、2017,2018にスピーカー参加し、2020年には招待講演で登壇。",
+    selina_bio2: "海外では、PyCon US、PyCon Taiwan、PyCon Thailandの参加経験あり。",
+    selina_bio3: "うさぎ好き。車やDrone, Raspberry Piなどガジェット好き。ピアノ,バイオリンを特訓中。プログラマー、エンジニアではなく科学者(Scientist)を目指す。Pyladies Tokyo Staff, (株)moegi代表。東海大学 航空宇宙学修了。慶應義塾大学SFC研究所 上席所員。",
+    peacock_bio: "PyCon JP 2020よりボランティアスタッフとして活動。副座長としては2022より。一般社団法人PyCon JP Associationの運営メンバーでもあり、PyCon JP TVのディレクターも務める。\n\n普段は株式会社トップゲートでGoogle CloudによるIaCとDevOpsの推進やGolangによるWeb API開発などを行っている。趣味はミラーレスカメラ、スキー、クラシック音楽鑑賞など。",
+    ainamori_bio: "株式会社インターネットイニシアティブ勤務。PyConJP2019にNOCチームスタッフとして参加以来、NOC・システムを中心に運営に従事。Pythonとの関わりは主にインフラ開発と運用の自動化・オーケストレーションを目的としている。最近の成果物はFastAPIベース。",
+    yoshida_bio: "サイバートラスト株式会社 所属、MIRACLE LINUX の製品サポートなどを行っている。 社内サイトをZopeで構築することを切っ掛けとしてPythonを始めた。 共著書に『 Debug Hacks （2009 オライリー・ジャパン刊）』などがある。\n\nPyCon JP 2014からスタッフ、PyCon JP 2015副座長(事務局)、PyCon JP 2016副座長(メディア)、PyCon JP 2017-2019座長。\n\n小江戸らぐ、東京エリアDebian勉強会 などのOSSコミュニティ活動にも参加している。\n\n趣味は温泉巡り、OSCやカンファレンスに参加した際にもよく現地の温泉に行くこと。",
+    recruite_title: "当日スタッフ募集中！",
+    recruite_text: "Pythonコミュニティを盛り上げたい方、カンファレンススタッフに興味がある方など、ぜひお申し込みください！",
+    recruite_link: "当日スタッフ募集フォーム(準備中)",
   },
   SPONSOR: {
     H1: "スポンサー募集中！",

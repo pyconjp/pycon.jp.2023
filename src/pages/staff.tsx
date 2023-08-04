@@ -7,6 +7,7 @@ import {useTranslation} from "react-i18next";
 import {useState, useEffect} from "react";
 import PageTitle from "@/components/elements/PageTitle";
 import SectionTitle from "@/components/elements/SectionTitle";
+import PageHead from "@/components/elements/PageHead";
 
 type Props = {
   staff: Staff;
@@ -298,10 +299,11 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
       recruite_text: t("recruite_text"),
       recruite_link: t("recruite_link"),
     })
-  }, [t]);
+  }, [c, t]);
 
   return (
     <>
+      <PageHead pageTitle={"スタッフ一覧"}/>
       <PageTitle title='Staff'/>
       <SectionTitle title='Chair' subTitle='座長'/>
       <div className={"lg:mx-[80px] mx-[20px] mb-[60px] flex lg:flex-row flex-col"}>

@@ -1,10 +1,10 @@
 import * as fs from "fs";
-import { parse } from "csv-parse/sync";
-import { GetStaticProps } from "next";
+import {parse} from "csv-parse/sync";
+import {GetStaticProps} from "next";
 import Image from "next/image";
-import { Staff } from "@/types/staff";
-import { useTranslation } from "react-i18next";
-import { useState, useEffect } from "react";
+import {Staff} from "@/types/staff";
+import {useTranslation} from "react-i18next";
+import {useState, useEffect} from "react";
 import PageTitle from "@/components/elements/PageTitle";
 import SectionTitle from "@/components/elements/SectionTitle";
 
@@ -13,7 +13,7 @@ type Props = {
   bio?: string[];
 };
 
-const ChairCard = ({staff, bio=[]}:Props) => (
+const ChairCard = ({staff, bio = []}: Props) => (
   <div className={"lg:mx-[80px] mx-[20px] mb-[60px] flex lg:flex-row flex-col"}>
     <Image
       src={"/staff/" + staff.icon}
@@ -26,48 +26,48 @@ const ChairCard = ({staff, bio=[]}:Props) => (
       <h4 className={"mb-[16px] text-primary-900 text-2xl font-bold"}>{staff.name}</h4>
       {bio.map((text) => (<>
         <p className={"mb-[16px] text-base text-alt-black"}>{text}</p>
-        </>      ))}
+      </>))}
       <div className={"flex flex-row items-center"}>
         {(staff.twitter !== "")
-        && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">
-          <Image
-            src="/twitter_b.svg"
-            alt=""
-            width={30}
-            height={30}
-            className={"mr-[10px] hover:opacity-50"}
-          />
-        </a>
+          && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">
+            <Image
+              src="/twitter_b.svg"
+              alt=""
+              width={30}
+              height={30}
+              className={"mr-[10px] hover:opacity-50"}
+            />
+          </a>
         }
         {(staff.github !== "")
-        && <a href={"https://github.com/" + staff.github} target="_blank" rel="noopener noreferrer">
-          <Image
-            src="/github_b.svg"
-            alt=""
-            width={30}
-            height={30}
-            className={"mr-[10px] hover:opacity-50"}
-          />
-        </a>
+          && <a href={"https://github.com/" + staff.github} target="_blank" rel="noopener noreferrer">
+            <Image
+              src="/github_b.svg"
+              alt=""
+              width={30}
+              height={30}
+              className={"mr-[10px] hover:opacity-50"}
+            />
+          </a>
         }
         {(staff.facebook !== "")
-        && <a href={"https://www.facebook.com/" + staff.facebook} target="_blank" rel="noopener noreferrer">
-          <Image
-            src="/facebook_b.svg"
-            alt=""
-            width={30}
-            height={30}
-            className={"mr-[10px] hover:opacity-50"}
-          />
-        </a>
+          && <a href={"https://www.facebook.com/" + staff.facebook} target="_blank" rel="noopener noreferrer">
+            <Image
+              src="/facebook_b.svg"
+              alt=""
+              width={30}
+              height={30}
+              className={"mr-[10px] hover:opacity-50"}
+            />
+          </a>
         }
       </div>
     </div>
   </div>
 );
 
-const ViceChairCard = ({staff, bio=[]}:Props) => (
-  <div className={"mb-[60px] flex flex-col"}>
+const ViceChairCard = ({staff, bio = []}: Props) => (
+  <div className={"lg:mb-[60px] flex lg:flex-col flex-row"}>
     <Image
       src={"/staff/" + staff.icon}
       alt={staff.name}
@@ -81,50 +81,50 @@ const ViceChairCard = ({staff, bio=[]}:Props) => (
         <p className={"text-primary-900 text-2xl font-bold"}>{staff.name}</p>
       </div>
       {bio.map((text) => (<>
-        <p className={"mb-[16px] lg:text-base text-sm text-alt-black whitespace-pre-wrap"}>{text}</p>
+          <p className={"mb-[16px] lg:text-base text-sm text-alt-black whitespace-pre-wrap"}>{text}</p>
         </>
-        ))}
+      ))}
       <div className={"flex flex-row items-center"}>
         {(staff.twitter !== "")
-        && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">
-          <Image
-            src="/twitter_b.svg"
-            alt=""
-            width={30}
-            height={30}
-            className={"mr-[10px] hover:opacity-50"}
-          />
-        </a>
+          && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">
+            <Image
+              src="/twitter_b.svg"
+              alt=""
+              width={30}
+              height={30}
+              className={"mr-[10px] hover:opacity-50"}
+            />
+          </a>
         }
         {(staff.github !== "")
-        && <a href={"https://github.com/" + staff.github} target="_blank" rel="noopener noreferrer">
-          <Image
-            src="/github_b.svg"
-            alt=""
-            width={30}
-            height={30}
-            className={"mr-[10px] hover:opacity-50"}
-          />
-        </a>
+          && <a href={"https://github.com/" + staff.github} target="_blank" rel="noopener noreferrer">
+            <Image
+              src="/github_b.svg"
+              alt=""
+              width={30}
+              height={30}
+              className={"mr-[10px] hover:opacity-50"}
+            />
+          </a>
         }
         {(staff.facebook !== "")
-        && <a href={"https://www.facebook.com/" + staff.facebook} target="_blank" rel="noopener noreferrer">
-          <Image
-            src="/facebook_b.svg"
-            alt=""
-            width={30}
-            height={30}
-            className={"mr-[10px] hover:opacity-50"}
-          />
-        </a>
+          && <a href={"https://www.facebook.com/" + staff.facebook} target="_blank" rel="noopener noreferrer">
+            <Image
+              src="/facebook_b.svg"
+              alt=""
+              width={30}
+              height={30}
+              className={"mr-[10px] hover:opacity-50"}
+            />
+          </a>
         }
       </div>
     </div>
   </div>
 );
 
-const SupervisorCard = ({staff, bio=[]}:Props) => (
-  <div className={"mb-[60px] flex flex-col"}>
+const SupervisorCard = ({staff, bio = []}: Props) => (
+  <div className={"mb-[60px] flex lg:flex-col flex-row"}>
     <Image
       src={"/staff/" + staff.icon}
       alt={staff.name}
@@ -138,102 +138,102 @@ const SupervisorCard = ({staff, bio=[]}:Props) => (
         <p className={"text-primary-900 text-2xl font-bold"}>{staff.name}</p>
       </div>
       {bio.map((text) => (<>
-        <p className={"mb-[16px] text-alt-black whitespace-pre-wrap"}>{text}</p></>
+          <p className={"mb-[16px] text-alt-black whitespace-pre-wrap"}>{text}</p></>
       ))}
       <div className={"flex flex-row items-center"}>
         {(staff.twitter !== "")
-        && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">
-          <Image
-            src="/twitter_b.svg"
-            alt=""
-            width={30}
-            height={30}
-            className={"mr-[10px] hover:opacity-50"}
-          />
-        </a>
+          && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">
+            <Image
+              src="/twitter_b.svg"
+              alt=""
+              width={30}
+              height={30}
+              className={"mr-[10px] hover:opacity-50"}
+            />
+          </a>
         }
         {(staff.github !== "")
-        && <a href={"https://github.com/" + staff.github} target="_blank" rel="noopener noreferrer">
-          <Image
-            src="/github_b.svg"
-            alt=""
-            width={30}
-            height={30}
-            className={"mr-[10px] hover:opacity-50"}
-          />
-        </a>
+          && <a href={"https://github.com/" + staff.github} target="_blank" rel="noopener noreferrer">
+            <Image
+              src="/github_b.svg"
+              alt=""
+              width={30}
+              height={30}
+              className={"mr-[10px] hover:opacity-50"}
+            />
+          </a>
         }
         {(staff.facebook !== "")
-        && <a href={"https://www.facebook.com/" + staff.facebook} target="_blank" rel="noopener noreferrer">
-          <Image
-            src="/facebook_b.svg"
-            alt=""
-            width={30}
-            height={30}
-            className={"mr-[10px] hover:opacity-50"}
-          />
-        </a>
+          && <a href={"https://www.facebook.com/" + staff.facebook} target="_blank" rel="noopener noreferrer">
+            <Image
+              src="/facebook_b.svg"
+              alt=""
+              width={30}
+              height={30}
+              className={"mr-[10px] hover:opacity-50"}
+            />
+          </a>
         }
       </div>
     </div>
   </div>
 );
 
-const StaffCard = ({staff}:Props) => (
+const StaffCard = ({staff}: Props) => (
   <div className={"flex items-center gap-2 flex-row"}>
     <Image
-        src={"/staff/" + staff.icon}
-        alt={staff.name}
-        width={600}
-        height={600}
-        className={"flex-1 rounded-[10px] max-w-[60px] min-w-[60px]"}
-      />
+      src={"/staff/" + staff.icon}
+      alt={staff.name}
+      width={600}
+      height={600}
+      className={"flex-1 rounded-[10px] max-w-[60px] min-w-[60px]"}
+    />
     <div className={"flex flex-col m-[12px]"}>
       <div className={"mb-[6px] font-bold"}>{staff.name}</div>
       <div className={"flex flex-row items-center"}>
         {(staff.twitter !== "")
-        && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">
-          <Image
-            src="/twitter_b.svg"
-            alt=""
-            width={20}
-            height={20}
-            className={"mr-[8px] hover:opacity-50"}
-          />
-        </a>
+          && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">
+            <Image
+              src="/twitter_b.svg"
+              alt=""
+              width={20}
+              height={20}
+              className={"mr-[8px] hover:opacity-50"}
+            />
+          </a>
         }
         {(staff.github !== "")
-        && <a href={"https://github.com/" + staff.github} target="_blank" rel="noopener noreferrer">
-          <Image
-            src="/github_b.svg"
-            alt=""
-            width={20}
-            height={20}
-            className={"mr-[8px] hover:opacity-50"}
-          />
-        </a>
+          && <a href={"https://github.com/" + staff.github} target="_blank" rel="noopener noreferrer">
+            <Image
+              src="/github_b.svg"
+              alt=""
+              width={20}
+              height={20}
+              className={"mr-[8px] hover:opacity-50"}
+            />
+          </a>
         }
         {(staff.facebook !== "")
-        && <a href={"https://www.facebook.com/" + staff.facebook} target="_blank" rel="noopener noreferrer">
-          <Image
-            src="/facebook_b.svg"
-            alt=""
-            width={20}
-            height={20}
-            className={"mr-[8px] hover:opacity-50"}
-          />
-        </a>
+          && <a href={"https://www.facebook.com/" + staff.facebook} target="_blank" rel="noopener noreferrer">
+            <Image
+              src="/facebook_b.svg"
+              alt=""
+              width={20}
+              height={20}
+              className={"mr-[8px] hover:opacity-50"}
+            />
+          </a>
         }
       </div>
     </div>
   </div>
 );
 
-const SimpleStaffCard = ({staff}:Props) => (
+const SimpleStaffCard = ({staff}: Props) => (
   <div className={"flex flex-col m-[12px]"}>
     <div className={"mb-[6px] text-secondary-600 font-bold underline"}>{staff.name}</div>
     <div className={"flex flex-row items-center"}>
-        {(staff.twitter !== "")
+      {(staff.twitter !== "")
         && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">
           <Image
             src="/twitter_b.svg"
@@ -243,8 +243,8 @@ const SimpleStaffCard = ({staff}:Props) => (
             className={"mr-[8px] hover:opacity-50"}
           />
         </a>
-        }
-        {(staff.github !== "")
+      }
+      {(staff.github !== "")
         && <a href={"https://github.com/" + staff.github} target="_blank" rel="noopener noreferrer">
           <Image
             src="/github_b.svg"
@@ -254,8 +254,8 @@ const SimpleStaffCard = ({staff}:Props) => (
             className={"mr-[8px] hover:opacity-50"}
           />
         </a>
-        }
-        {(staff.facebook !== "")
+      }
+      {(staff.facebook !== "")
         && <a href={"https://www.facebook.com/" + staff.facebook} target="_blank" rel="noopener noreferrer">
           <Image
             src="/facebook_b.svg"
@@ -265,41 +265,42 @@ const SimpleStaffCard = ({staff}:Props) => (
             className={"mr-[8px] hover:opacity-50"}
           />
         </a>
-        }
-      </div>
+      }
+    </div>
   </div>
 );
 
-const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
-  const { t } = useTranslation("STAFF");
+const StaffPage = ({rows = []}: { rows: Staff[] }) => {
+  const {t} = useTranslation("STAFF");
   const [c, setContents] = useState({
-    chair_bio1:"",
-    chair_bio2:"",
-    chair_bio3:"",
-    vicechair_bio1:"",
-    vicechair_bio2:"",
-    supervisor_bio1:"",
-    recruite_title:"",
-    recruite_text:"",
-    recruite_link:"",
+    chair_bio1: "",
+    chair_bio2: "",
+    chair_bio3: "",
+    vicechair_bio1: "",
+    vicechair_bio2: "",
+    supervisor_bio1: "",
+    recruite_title: "",
+    recruite_text: "",
+    recruite_link: "",
   });
   useEffect(() => {
-    setContents({...c,
-      chair_bio1:t("selina_bio1"),
-      chair_bio2:t("selina_bio2"),
-      chair_bio3:t("selina_bio3"),
-      vicechair_bio1:t("peacock_bio"),
-      vicechair_bio2:t("ainamori_bio"),
-      supervisor_bio1:t("yoshida_bio"),
-      recruite_title:t("recruite_title"),
-      recruite_text:t("recruite_text"),
-      recruite_link:t("recruite_link"),
+    setContents({
+      ...c,
+      chair_bio1: t("selina_bio1"),
+      chair_bio2: t("selina_bio2"),
+      chair_bio3: t("selina_bio3"),
+      vicechair_bio1: t("peacock_bio"),
+      vicechair_bio2: t("ainamori_bio"),
+      supervisor_bio1: t("yoshida_bio"),
+      recruite_title: t("recruite_title"),
+      recruite_text: t("recruite_text"),
+      recruite_link: t("recruite_link"),
     })
-  },[t]);
+  }, [t]);
 
   return (
     <>
-      <PageTitle title='Staff' />
+      <PageTitle title='Staff'/>
       <SectionTitle title='Chair' subTitle='座長'/>
       <div className={"lg:mx-[80px] mx-[20px] mb-[60px] flex lg:flex-row flex-col"}>
         {rows.map((row, index) => (
@@ -307,31 +308,31 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
           && <ChairCard
             key={index}
             staff={{
-              name:row.name,
-              icon:row.icon,
-              twitter:row.twitter,
-              github:row.github,
-              facebook:row.facebook,
-              division:row.division
+              name: row.name,
+              icon: row.icon,
+              twitter: row.twitter,
+              github: row.github,
+              facebook: row.facebook,
+              division: row.division
             }}
             bio={[c.chair_bio1, c.chair_bio2, c.chair_bio3]}
           />
         ))}
       </div>
 
-      <SectionTitle title='Vice Chair & Supervisor' subTitle='副座長＆スーパーバイザー' />
-      <div className={"lg:mx-[80px] mx-[20px] mb-[60px] grid grid-cols-3 gap-2 justify-center"}>
+      <SectionTitle title='Vice Chair & Supervisor' subTitle='副座長＆スーパーバイザー'/>
+      <div className={"lg:mx-[80px] mx-[20px] mb-[60px] flex flex-col lg:flex-row gap-12 lg:gap-2 justify-center"}>
         {rows.map((row, index) => (
           (row.division === "vicechair1")
           && <ViceChairCard
             key={index}
             staff={{
-              name:row.name,
-              icon:row.icon,
-              twitter:row.twitter,
-              github:row.github,
-              facebook:row.facebook,
-              division:row.division
+              name: row.name,
+              icon: row.icon,
+              twitter: row.twitter,
+              github: row.github,
+              facebook: row.facebook,
+              division: row.division
             }}
             bio={[c.vicechair_bio1]}
           />
@@ -341,12 +342,12 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
           && <ViceChairCard
             key={index}
             staff={{
-              name:row.name,
-              icon:row.icon,
-              twitter:row.twitter,
-              github:row.github,
-              facebook:row.facebook,
-              division:row.division
+              name: row.name,
+              icon: row.icon,
+              twitter: row.twitter,
+              github: row.github,
+              facebook: row.facebook,
+              division: row.division
             }}
             bio={[c.vicechair_bio2]}
           />
@@ -356,12 +357,12 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
           && <SupervisorCard
             key={index}
             staff={{
-              name:row.name,
-              icon:row.icon,
-              twitter:row.twitter,
-              github:row.github,
-              facebook:row.facebook,
-              division:row.division
+              name: row.name,
+              icon: row.icon,
+              twitter: row.twitter,
+              github: row.github,
+              facebook: row.facebook,
+              division: row.division
             }}
             bio={[c.supervisor_bio1]}
           />
@@ -375,12 +376,12 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
           && <StaffCard
             key={index}
             staff={{
-              name:row.name,
-              icon:row.icon,
-              twitter:row.twitter,
-              github:row.github,
-              facebook:row.facebook,
-              division:row.division
+              name: row.name,
+              icon: row.icon,
+              twitter: row.twitter,
+              github: row.github,
+              facebook: row.facebook,
+              division: row.division
             }}
           />
         ))}
@@ -396,12 +397,12 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
               && <SimpleStaffCard
                 key={index}
                 staff={{
-                  name:row.name,
-                  icon:row.icon,
-                  twitter:row.twitter,
-                  github:row.github,
-                  facebook:row.facebook,
-                  division:row.division
+                  name: row.name,
+                  icon: row.icon,
+                  twitter: row.twitter,
+                  github: row.github,
+                  facebook: row.facebook,
+                  division: row.division
                 }}
               />
             ))}
@@ -416,12 +417,12 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
           && <SimpleStaffCard
             key={index}
             staff={{
-              name:row.name,
-              icon:row.icon,
-              twitter:row.twitter,
-              github:row.github,
-              facebook:row.facebook,
-              division:row.division
+              name: row.name,
+              icon: row.icon,
+              twitter: row.twitter,
+              github: row.github,
+              facebook: row.facebook,
+              division: row.division
             }}
           />
         ))}
@@ -429,15 +430,16 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
 
       <div className="lg:mx-[131px] mx-[16px] lg:my-[81px] my-[60px] py-[32px] bg-[#ffffff] shadow-lg rounded-lg">
         <div className="flex flex-col mx-[72px]">
-          <div className='before:top-1/2 before:w-4 before:h-4 before:mr-4 before:-ml-8 before:-mt-2  before:content-[url("/ellipse.svg")] before:inline-block ml-0 pl-8'>
+          <div
+            className='before:top-1/2 before:w-4 before:h-4 before:mr-4 before:-ml-8 before:-mt-2  before:content-[url("/ellipse.svg")] before:inline-block ml-0 pl-8'>
             <h3 className="lg:text-2xl text-xl text-alt-black font-bold inline">
               {c.recruite_title}
             </h3>
           </div>
           <p className="text-alt-black lg:text-lg text-base p-[12px]">{c.recruite_text}</p>
           <div className="ml-[auto]">
-          {/* 募集フォーム有効 */}
-          {/* <a
+            {/* 募集フォーム有効 */}
+            {/* <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSf3Zw3b-X9KMo81G9BJJFFfq6jYzzUAviLZALzhiCFeFuMybQ/viewform"
             target="_blank"
             rel="noopener noreferrer"
@@ -451,17 +453,17 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
                 className="object-contain ml-[3px]"
               />
           </a> */}
-          {/* 募集フォーム無効 */}
-          <div className="flex flex-row text-primary-500 underline">
-            <p className={"lg:text-lg text-base"}>{c.recruite_link}</p>
-            <Image
-              src={"/linkout_p.svg"}
-              alt={""}
-              width={20}
-              height={20}
-              className="object-contain ml-[3px]"
-            />
-          </div>
+            {/* 募集フォーム無効 */}
+            <div className="flex flex-row text-primary-500 underline">
+              <p className={"lg:text-lg text-base"}>{c.recruite_link}</p>
+              <Image
+                src={"/linkout_p.svg"}
+                alt={""}
+                width={20}
+                height={20}
+                className="object-contain ml-[3px]"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -471,7 +473,7 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const buffer = fs.readFileSync("./src/data/staff.csv");
-  const rows: Staff[] = parse(buffer, { delimiter: ",", columns: true });
+  const rows: Staff[] = parse(buffer, {delimiter: ",", columns: true});
 
   return {
     props: {

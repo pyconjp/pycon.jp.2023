@@ -15,11 +15,11 @@ const En: Lang = {
     VENUE_INFO: "Venue Info",
     CONFERENCE_DATE: "OCTOBER 27 - 28, 2023",
     SPRINT_DATE: "OCTOBER 29, 2023",
-    TICKET_INFO: "Ticket Info  (Comming soon)",
+    TICKET_INFO: "Ticket Info  (Coming soon)",
   },
   MENU: {
     ABOUT: {
-      COC: "COC(Code Of Conduct)",
+      COC: "COC (Code Of Conduct)",
       VENUE: "Venue Information",
     },
     EVENTS: {
@@ -98,11 +98,11 @@ const En: Lang = {
   FOOTER: {
     CONTACT_US: "Contact US:",
     READ_FAQ:
-      "Please check the FAQ in advance before contacting us. Since it run by volunteers, it takes about a week to reply. Thank you for your patience.",
+      "Please check the FAQ in advance before contacting us. As this event is organized by volunteers, it may take about a week for a reply. We appreciate your understanding and patience.",
     PAST_EVENTS: "List of past PyCon JP events",
   },
   OVERVIEW: {
-    APAC: "PyCon APAC is a volunteer, non-profit annual conference focused on the Python programming language.The purpose of this conference is to explore, discuss and practice the Python programming language and its peripheral technologies.The management team is mainly composed of countries or regions in the Asia-Pacific region, and currently Singapore, Malaysia, Indonesia, the Philippines, Thailand, South Korea, Hong Kong, Vietnam, Japan, Taiwan, India, and Bangladesh are held in rotation every year. In 2023, Japanese members will be the main players.",
+    APAC: "PyCon APAC is a volunteer, non-profit annual conference focused on the Python programming language. The purpose of this conference is to explore, discuss and practice the Python programming language and its peripheral technologies. Each year the event is organized by a team from a country or territory in teh Asia-Pacific region. Currently, Python communities in Singapore, Malaysia, Indonesia, the Philippines, Thailand, South Korea, Hong Kong, Vietnam, Japan, Taiwan, India, and Bangladesh are participating. In 2023, the event will be held in Japan, the Japanese community being the primary organizers this time.",
     JP: "PyCon JP is a conference for Python users to gather, exchange information and interact with Python and software using Python. Through PyCon JP, the goal is to gather Python users together, exchange knowledge and information on various fields related to Python, connect with new friends and communities, and increase work and business opportunities."
   },
   STAFF: {

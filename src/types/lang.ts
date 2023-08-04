@@ -91,16 +91,31 @@ export type Lang = {
     ACCESS:string;
   };
   STAFF: {
-    P1: string;
-    P2: string;
-    P3: string;
-    H1: string;
-    P4: string;
-    A1: string;
+    selina_bio1: string;
+    selina_bio2: string;
+    selina_bio3: string;
+    peacock_bio: string;
+    ainamori_bio: string;
+    yoshida_bio: string;
+    recruite_title: string;
+    recruite_text: string;
+    recruite_link: string;
   };
   SPONSOR: {
     H1: string;
     P1: string;
     A1: string;
-  }
+  };
+  CONFERENCE: {
+    SPEAKER_JP: {
+      NAME: string;
+      BIO: string;
+      IMG_ALT: string;
+    };
+    SPEAKER_EN: {
+      NAME: string;
+      BIO: string;
+      IMG_ALT: string;
+    };
+  };
 };

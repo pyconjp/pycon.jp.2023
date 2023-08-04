@@ -7,6 +7,8 @@ import FaqSection from "@/components/sections/Faq";
 import SponsorsSection from "@/components/sections/Sponsors";
 import { Blog } from "@/types/blog";
 import { GetStaticProps } from "next";
+import PageTitle from "@/components/elements/PageTitle";
+import PageHead from "@/components/elements/PageHead";
 
 type Props = {
   blogs: Blog[];
@@ -15,12 +17,7 @@ type Props = {
 export default function Home({ blogs = [] }: Props) {
   return (
     <>
-      <Head>
-        <title>PyCon APAC 2023</title>
-        <meta name="description" content="PyCon APAC 2023" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <PageHead/>
       <HeroSection />
       <NewsSection blogs={blogs} />
       <OverviewSection />

@@ -65,7 +65,7 @@ const ChairCard = ({staff, bio = []}: Props) => (
 );
 
 const ViceChairCard = ({staff, bio = []}: Props) => (
-  <div className={"lg:mb-[60px] flex lg:flex-col flex-row"}>
+  <div className={"lg:mb-[60px] flex flex-col"}>
     <Image
       src={"/staff/" + staff.icon}
       alt={staff.name}
@@ -123,7 +123,7 @@ const ViceChairCard = ({staff, bio = []}: Props) => (
 );
 
 const SupervisorCard = ({staff, bio = []}: Props) => (
-  <div className={"mb-[60px] flex lg:flex-col flex-row"}>
+  <div className={"mb-[60px] flex flex-col"}>
     <Image
       src={"/staff/" + staff.icon}
       alt={staff.name}

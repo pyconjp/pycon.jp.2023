@@ -15,10 +15,10 @@ export default function HeroSection() {
     return (
         <section className="flex flex-col justify-stretch sm:mx-[60px] sm:my-[80px] mx-[16px] my-[20px]">
             <Image
-                src={"/hero.svg"}
+                src={"/main_logo.png"}
                 alt={""}
-                width={860}
-                height={663.85}
+                width={1112}
+                height={645}
                 className="self-center object-contain"
             />
 

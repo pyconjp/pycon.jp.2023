@@ -5,10 +5,8 @@ const Ja: Lang = {
     ABOUT: "開催概要",
     EVENTS: "イベント詳細",
     SPONSOR: "スポンサー",
-    CONTENTS: "コンテンツ",
     STAFF: "スタッフ",
     TIMETABLE: "タイムテーブル",
-    CONTENTS_OTHERS: "海外のPyCon",
   },
   HERO: {
     VENUE: "TOC有明コンベンションホール",
@@ -28,10 +26,6 @@ const Ja: Lang = {
     },
     SPONSOR: {
       SPONSOR_LIST: "スポンサー一覧",
-    },
-    CONTENTS: {
-      COMMUNITIES: "コミュニティ紹介",
-      BEGINNERS: "はじめてのPython",
     },
     STAFF: {
       STAFF: "スタッフ一覧",

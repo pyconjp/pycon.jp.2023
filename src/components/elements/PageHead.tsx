@@ -7,7 +7,7 @@ type Props = {
 const PageHead = ({pageTitle}: Props) => {
   return (
     <Head>
-      <title>PyCon APAC 2023{pageTitle && ' | ' + pageTitle}</title>
+      <title>PyCon APAC 2023</title>
       <meta name="description" content="PyCon APAC 2023"/>
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
       <meta name="description" content=""/>

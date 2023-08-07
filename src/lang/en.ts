@@ -5,10 +5,8 @@ const En: Lang = {
     ABOUT: "About",
     EVENTS: "Events",
     SPONSOR: "Sponsor",
-    CONTENTS: "Contents",
     STAFF: "Volunteers",
     TIMETABLE: "Timetable",
-    CONTENTS_OTHERS: "Other PyCon",
   },
   HERO: {
     VENUE: "TOC Ariake Convention Hall",
@@ -28,10 +26,6 @@ const En: Lang = {
     },
     SPONSOR: {
       SPONSOR_LIST: "Sponsor List",
-    },
-    CONTENTS: {
-      COMMUNITIES: "Python Communities",
-      BEGINNERS: "First steps of Python",
     },
     STAFF: {
       STAFF: "Volunteers",

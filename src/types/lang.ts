@@ -3,10 +3,8 @@ export type Lang = {
     ABOUT: string;
     EVENTS: string;
     SPONSOR: string;
-    CONTENTS: string;
     STAFF: string;
     TIMETABLE: string;
-    CONTENTS_OTHERS: string;
   };
   HERO: {
     VENUE: string;
@@ -26,10 +24,6 @@ export type Lang = {
     };
     SPONSOR: {
       SPONSOR_LIST: string;
-    };
-    CONTENTS: {
-      COMMUNITIES: string;
-      BEGINNERS: string;
     };
     STAFF: {
       STAFF: string;

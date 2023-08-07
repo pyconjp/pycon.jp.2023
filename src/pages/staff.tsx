@@ -4,7 +4,6 @@ import {GetStaticProps} from "next";
 import Image from "next/image";
 import {Staff} from "@/types/staff";
 import {useTranslation} from "react-i18next";
-import {useState, useEffect} from "react";
 import PageTitle from "@/components/elements/PageTitle";
 import SectionTitle from "@/components/elements/SectionTitle";
 import PageHead from "@/components/elements/PageHead";
@@ -275,31 +274,6 @@ const SimpleStaffCard = ({staff}: Props) => (
 
 const StaffPage = ({rows = []}: { rows: Staff[] }) => {
   const {t} = useTranslation("STAFF");
-  const [c, setContents] = useState({
-    chair_bio1: "",
-    chair_bio2: "",
-    chair_bio3: "",
-    vicechair_bio1: "",
-    vicechair_bio2: "",
-    supervisor_bio1: "",
-    recruite_title: "",
-    recruite_text: "",
-    recruite_link: "",
-  });
-  useEffect(() => {
-    setContents({
-      ...c,
-      chair_bio1: t("selina_bio1"),
-      chair_bio2: t("selina_bio2"),
-      chair_bio3: t("selina_bio3"),
-      vicechair_bio1: t("peacock_bio"),
-      vicechair_bio2: t("ainamori_bio"),
-      supervisor_bio1: t("yoshida_bio"),
-      recruite_title: t("recruite_title"),
-      recruite_text: t("recruite_text"),
-      recruite_link: t("recruite_link"),
-    })
-  }, [c, t]);
 
   return (
     <>
@@ -319,7 +293,7 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
               facebook: row.facebook,
               division: row.division
             }}
-            bio={[c.chair_bio1, c.chair_bio2, c.chair_bio3]}
+            bio={[t("selina_bio1"), t("selina_bio2"), t("selina_bio3")]}
           />
         ))}
       </div>
@@ -338,7 +312,7 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
               facebook: row.facebook,
               division: row.division
             }}
-            bio={[c.vicechair_bio1]}
+            bio={[t("peacock_bio")]}
           />
         ))}
         {rows.map((row, index) => (
@@ -353,7 +327,7 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
               facebook: row.facebook,
               division: row.division
             }}
-            bio={[c.vicechair_bio2]}
+            bio={[t("ainamori_bio")]}
           />
         ))}
         {rows.map((row, index) => (
@@ -368,7 +342,7 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
               facebook: row.facebook,
               division: row.division
             }}
-            bio={[c.supervisor_bio1]}
+            bio={[t("yoshida_bio")]}
           />
         ))}
       </div>
@@ -437,10 +411,10 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
           <div
             className='before:top-1/2 before:w-4 before:h-4 before:mr-4 before:-ml-8 before:-mt-2  before:content-[url("/ellipse.svg")] before:inline-block ml-0 pl-8'>
             <h3 className="lg:text-2xl text-xl text-alt-black font-bold inline">
-              {c.recruite_title}
+              {t("recruite_title")}
             </h3>
           </div>
-          <p className="text-alt-black lg:text-lg text-base p-[12px]">{c.recruite_text}</p>
+          <p className="text-alt-black lg:text-lg text-base p-[12px]">{t("recruite_text")}</p>
           <div className="ml-[auto]">
             {/* 募集フォーム有効 */}
             {/* <a
@@ -459,7 +433,7 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
           </a> */}
             {/* 募集フォーム無効 */}
             <div className="flex flex-row text-primary-500 underline">
-              <p className={"lg:text-lg text-base"}>{c.recruite_link}</p>
+              <p className={"lg:text-lg text-base"}>{t("recruite_link")}</p>
               <Image
                 src={"/linkout_p.svg"}
                 alt={""}

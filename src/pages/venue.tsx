@@ -83,20 +83,13 @@ const SPMapComponent = ({text_4F, text_20F}:PageInfo) => {
       <>
         <div className={'flex flex-col items-center p-[3px]'}>
           <h1 className={'text-2xl font-bold text-montserrat italic align-bottom text-alt-black'}>{floor}</h1>
-          <Image
-            src={'/Page_heade_pc_right.svg'} 
-            alt={'ヘッダー右'} 
-            width={196} 
-            height={18} 
-            className={'w-[150px] h-[20px]'}
-          />
         </div>
       </>
     );
     const Other = ({floor}:SelectFloor) => (
         <>
           <div className={'flex flex-col items-center cursor-pointer p-[3px]'} onClick={()=>FloorHandler(floor)}>
-            <h1 className={'p-[10px] text-2xl font-bold text-montserrat italic align-bottom opacity-50 hover:text-alt-black hover:opacity-100'}>{floor}</h1>
+            <h1 className={'text-2xl font-bold text-montserrat italic align-bottom opacity-30 hover:text-alt-black hover:opacity-100'}>{floor}</h1>
           </div>
         </>
     );
@@ -210,7 +203,7 @@ const VenuePage = () => {
         <div className={"m-[10px]"}>
           <Gmap
             url={c.gmap_url}
-            width={"500"}
+            width={"400"}
             height={"400"}
           />
         </div>

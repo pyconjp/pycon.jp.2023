@@ -138,7 +138,7 @@ const SupervisorCard = ({staff, bio = []}: Props) => (
       </div>
       {
         bio.map((text, index) => (
-            <p key={index} className={"mb-[16px] text-alt-black whitespace-pre-wrap"}>{text}</p>
+            <p key={index} className={"mb-[16px] lg:text-base text-sm text-alt-black whitespace-pre-wrap"}>{text}</p>
           )
         )
       }

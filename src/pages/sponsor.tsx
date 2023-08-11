@@ -1,4 +1,5 @@
 import * as fs from "fs";
+import * as path from 'path'
 import { parse } from "csv-parse/sync";
 import { Sponsor } from "@/types/sponsor";
 import { GetStaticProps } from "next";
@@ -359,7 +360,7 @@ export const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "heig
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getCSVStaticProps: GetStaticProps = async () => {
   const buffer = fs.readFileSync("./src/data/sponsor.csv");
   const rows: Sponsor[] = parse(buffer, { delimiter: ",", columns: true });
 
@@ -369,5 +370,15 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   };
 };
+
+export const getStaticProps: GetStaticProps = async () => {
+  // JSON ファイルを読み込む
+  const jsonPath = path.join(process.cwd(), 'src', 'data', 'sponsor.json')
+  const jsonText = fs.readFileSync(jsonPath, 'utf-8')
+  const rows = JSON.parse(jsonText) as Sponsor[]
+
+  // ページコンポーネントに渡す props オブジェクトを設定する
+  return { props: { rows } }
+}
 
 export default SponsorPage;

@@ -28,13 +28,10 @@ const ChairCard = ({ staff, bio = [] }: Props) => (
       <div className={"flex flex-row items-center"}>
         {(staff.twitter !== "")
           && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">
-            <Image
-              src="/twitter_b.svg"
-              alt=""
-              width={30}
-              height={30}
-              className={"mr-[10px] hover:opacity-50"}
-            />
+            <svg className={"mr-[8px] hover:opacity-50"} width="30" height="30" viewBox="0 0 1800 1800" xmlns="http://www.w3.org/2000/svg">
+              <rect height="100%" width="100%" rx="10%" ry="10%" />
+              <path d="m1014.2 805.8 446.7-519.3h-105.9l-387.9 450.9-309.8-450.9h-357.3l468.5 681.8-468.5 544.6h105.9l409.6-476.2 327.2 476.2h357.3zm-145 168.5-47.5-67.9-377.7-540.2h162.6l304.8 436 47.5 67.9 396.2 566.7h-162.6z" fill="#fff" />
+            </svg>
           </a>
         }
         {(staff.github !== "")
@@ -86,13 +83,10 @@ const ViceChairCard = ({ staff, bio = [] }: Props) => (
       <div className={"flex flex-row items-center"}>
         {(staff.twitter !== "")
           && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">
-            <Image
-              src="/twitter_b.svg"
-              alt=""
-              width={30}
-              height={30}
-              className={"mr-[10px] hover:opacity-50"}
-            />
+            <svg className={"mr-[8px] hover:opacity-50"} width="30" height="30" viewBox="0 0 1800 1800" xmlns="http://www.w3.org/2000/svg">
+              <rect height="100%" width="100%" rx="10%" ry="10%" />
+              <path d="m1014.2 805.8 446.7-519.3h-105.9l-387.9 450.9-309.8-450.9h-357.3l468.5 681.8-468.5 544.6h105.9l409.6-476.2 327.2 476.2h357.3zm-145 168.5-47.5-67.9-377.7-540.2h162.6l304.8 436 47.5 67.9 396.2 566.7h-162.6z" fill="#fff" />
+            </svg>
           </a>
         }
         {(staff.github !== "")
@@ -145,13 +139,10 @@ const SupervisorCard = ({ staff, bio = [] }: Props) => (
       <div className={"flex flex-row items-center"}>
         {(staff.twitter !== "")
           && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">
-            <Image
-              src="/twitter_b.svg"
-              alt=""
-              width={30}
-              height={30}
-              className={"mr-[10px] hover:opacity-50"}
-            />
+            <svg className={"mr-[8px] hover:opacity-50"} width="30" height="30" viewBox="0 0 1800 1800" xmlns="http://www.w3.org/2000/svg">
+              <rect height="100%" width="100%" rx="10%" ry="10%" />
+              <path d="m1014.2 805.8 446.7-519.3h-105.9l-387.9 450.9-309.8-450.9h-357.3l468.5 681.8-468.5 544.6h105.9l409.6-476.2 327.2 476.2h357.3zm-145 168.5-47.5-67.9-377.7-540.2h162.6l304.8 436 47.5 67.9 396.2 566.7h-162.6z" fill="#fff" />
+            </svg>
           </a>
         }
         {(staff.github !== "")
@@ -195,13 +186,10 @@ const StaffCard = ({ staff }: Props) => (
       <div className={"flex flex-row items-center"}>
         {(staff.twitter !== "")
           && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">
-            <Image
-              src="/twitter_b.svg"
-              alt=""
-              width={20}
-              height={20}
-              className={"mr-[8px] hover:opacity-50"}
-            />
+            <svg className={"mr-[8px] hover:opacity-50"} width="20" height="20" viewBox="0 0 1800 1800" xmlns="http://www.w3.org/2000/svg">
+              <rect height="100%" width="100%" rx="10%" ry="10%" />
+              <path d="m1014.2 805.8 446.7-519.3h-105.9l-387.9 450.9-309.8-450.9h-357.3l468.5 681.8-468.5 544.6h105.9l409.6-476.2 327.2 476.2h357.3zm-145 168.5-47.5-67.9-377.7-540.2h162.6l304.8 436 47.5 67.9 396.2 566.7h-162.6z" fill="#fff" />
+            </svg>
           </a>
         }
         {(staff.github !== "")
@@ -237,13 +225,10 @@ const SimpleStaffCard = ({ staff }: Props) => (
     <div className={"flex flex-row items-center"}>
       {(staff.twitter !== "")
         && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">
-          <Image
-            src="/twitter_b.svg"
-            alt=""
-            width={20}
-            height={20}
-            className={"mr-[8px] hover:opacity-50"}
-          />
+          <svg className={"mr-[8px] hover:opacity-50"} width="20" height="20" viewBox="0 0 1800 1800" xmlns="http://www.w3.org/2000/svg">
+            <rect height="100%" width="100%" rx="10%" ry="10%" />
+            <path d="m1014.2 805.8 446.7-519.3h-105.9l-387.9 450.9-309.8-450.9h-357.3l468.5 681.8-468.5 544.6h105.9l409.6-476.2 327.2 476.2h357.3zm-145 168.5-47.5-67.9-377.7-540.2h162.6l304.8 436 47.5 67.9 396.2 566.7h-162.6z" fill="#fff" />
+          </svg>
         </a>
       }
       {(staff.github !== "")

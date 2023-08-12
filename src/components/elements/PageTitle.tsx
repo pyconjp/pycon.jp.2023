@@ -8,7 +8,7 @@ type Props = {
 const PageTitle = ({title, ...others}: Props) => {
   return (
     <div {...others}>
-      <div className='mx-auto text-center mb-16 flex flex-row items-end justify-center'>
+      <div className='mx-auto text-center mb-16 flex flex-row items-end justify-center w-full overflow-x-hidden'>
         <Image 
           src={'/Page_heade_pc_left.svg'} 
           alt={'ヘッダー左'} 

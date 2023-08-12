@@ -53,6 +53,10 @@ export default function HeroSection() {
                         <img src="/calendar.png" alt="" className="mx-[16px]"/>
                         <div className="">
                             <div className="flex sm:flex-row flex-col sm:items-center justify-between">
+                                <h5 className="text-tertiary-600 font-montserrat italic mr-[16px]">Tutorial:</h5>
+                                <p suppressHydrationWarning className="text-2xl text-left font-bold text-alt-black">{t("TUTORIAL_DATE")}</p>
+                            </div>
+                            <div className="flex sm:flex-row flex-col sm:items-center justify-between">
                                 <h5 className="text-tertiary-600 font-montserrat italic mr-[16px]">Conference:</h5>
                                 <p suppressHydrationWarning className="text-2xl font-bold text-alt-black">{t("CONFERENCE_DATE")}</p>
                             </div>

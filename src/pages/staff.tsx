@@ -277,7 +277,7 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
 
   return (
     <>
-      <PageHead pageTitle={"スタッフ一覧"}/>
+      <PageHead/>
       <PageTitle title='Staff'/>
       <SectionTitle title='Chair' subTitle='座長'/>
       <div className={"lg:mx-[80px] mx-[20px] mb-[60px] flex lg:flex-row flex-col"}>

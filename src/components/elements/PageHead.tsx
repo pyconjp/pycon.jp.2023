@@ -1,10 +1,6 @@
 import Head from "next/head";
 
-type Props = {
-  pageTitle?: string;
-}
-
-const PageHead = ({pageTitle}: Props) => {
+const PageHead = () => {
   return (
     <Head>
       <title>PyCon APAC 2023</title>

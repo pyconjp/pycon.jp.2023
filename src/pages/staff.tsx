@@ -65,7 +65,7 @@ const ChairCard = ({staff, bio = []}: Props) => (
 );
 
 const ViceChairCard = ({staff, bio = []}: Props) => (
-  <div className={"lg:mb-[60px] flex flex-col"}>
+  <div className={"flex-1 flex flex-col"}>
     <Image
       src={"/staff/" + staff.icon}
       alt={staff.name}
@@ -123,7 +123,7 @@ const ViceChairCard = ({staff, bio = []}: Props) => (
 );
 
 const SupervisorCard = ({staff, bio = []}: Props) => (
-  <div className={"mb-[60px] flex flex-col"}>
+  <div className={"flex-1 flex flex-col"}>
     <Image
       src={"/staff/" + staff.icon}
       alt={staff.name}
@@ -277,7 +277,7 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
 
   return (
     <>
-      <PageHead pageTitle={"スタッフ一覧"}/>
+      <PageHead/>
       <PageTitle title='Staff'/>
       <SectionTitle title='Chair' subTitle='座長'/>
       <div className={"lg:mx-[80px] mx-[20px] mb-[60px] flex lg:flex-row flex-col"}>

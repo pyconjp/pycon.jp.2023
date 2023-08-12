@@ -38,11 +38,11 @@ export default function HeroSection() {
                                 <div className="flex flex-row sm:mx-[16px]">
                                     <p suppressHydrationWarning>{t("VENUE_INFO")}</p>
                                     <Image
-                                        src={"/linkout.png"}
+                                        src={"/linkout_b.svg"}
                                         alt={""}
-                                        width={15}
-                                        height={15}
-                                        className="object-contain"
+                                        width={20}
+                                        height={20}
+                                        className="object-contain ml-[5px]"
                                     />
                                 </div>
                             </a>

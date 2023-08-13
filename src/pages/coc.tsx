@@ -185,7 +185,7 @@ const Coc = () => {
 
   return (
     <>
-      <PageHead pageTitle="CoC(行動規範)" />
+      <PageHead/>
       <div className="relative">
         <PageTitle title='Code of conduct' />
         <div className="lg:mx-[216px] mx-[16px] lg:my-[60px] my-[20px] lg:px-[72px] px-[16px] lg:py-[60px] py-[40px] z-20 bg-[#ffffff] shadow-lg rounded-lg relative">

@@ -3,14 +3,13 @@ export type Lang = {
     ABOUT: string;
     EVENTS: string;
     SPONSOR: string;
-    CONTENTS: string;
     STAFF: string;
     TIMETABLE: string;
-    CONTENTS_OTHERS: string;
   };
   HERO: {
     VENUE: string;
     VENUE_INFO: string;
+    TUTORIAL_DATE: string;
     CONFERENCE_DATE: string;
     SPRINT_DATE: string;
     TICKET_INFO: string;
@@ -26,10 +25,6 @@ export type Lang = {
     };
     SPONSOR: {
       SPONSOR_LIST: string;
-    };
-    CONTENTS: {
-      COMMUNITIES: string;
-      BEGINNERS: string;
     };
     STAFF: {
       STAFF: string;
@@ -91,12 +86,15 @@ export type Lang = {
     ACCESS:string;
   };
   STAFF: {
-    P1: string;
-    P2: string;
-    P3: string;
-    H1: string;
-    P4: string;
-    A1: string;
+    selina_bio1: string;
+    selina_bio2: string;
+    selina_bio3: string;
+    peacock_bio: string;
+    ainamori_bio: string;
+    yoshida_bio: string;
+    recruite_title: string;
+    recruite_text: string;
+    recruite_link: string;
   };
   SPONSOR: {
     H1: string;

@@ -15,10 +15,10 @@ export default function HeroSection() {
     return (
         <section className="flex flex-col justify-stretch sm:mx-[60px] sm:my-[80px] mx-[16px] my-[20px]">
             <Image
-                src={"/hero.svg"}
+                src={"/main_logo.png"}
                 alt={""}
-                width={860}
-                height={663.85}
+                width={1112}
+                height={645}
                 className="self-center object-contain"
             />
 
@@ -38,11 +38,11 @@ export default function HeroSection() {
                                 <div className="flex flex-row sm:mx-[16px]">
                                     <p suppressHydrationWarning>{t("VENUE_INFO")}</p>
                                     <Image
-                                        src={"/linkout.png"}
+                                        src={"/linkout_b.svg"}
                                         alt={""}
-                                        width={15}
-                                        height={15}
-                                        className="object-contain"
+                                        width={20}
+                                        height={20}
+                                        className="object-contain ml-[5px]"
                                     />
                                 </div>
                             </a>
@@ -52,6 +52,10 @@ export default function HeroSection() {
                     <div className="flex flex-row items-center mb-[24px]">
                         <img src="/calendar.png" alt="" className="mx-[16px]"/>
                         <div className="">
+                            <div className="flex sm:flex-row flex-col sm:items-center justify-between">
+                                <h5 className="text-tertiary-600 font-montserrat italic mr-[16px]">Tutorial:</h5>
+                                <p suppressHydrationWarning className="text-2xl text-left font-bold text-alt-black">{t("TUTORIAL_DATE")}</p>
+                            </div>
                             <div className="flex sm:flex-row flex-col sm:items-center justify-between">
                                 <h5 className="text-tertiary-600 font-montserrat italic mr-[16px]">Conference:</h5>
                                 <p suppressHydrationWarning className="text-2xl font-bold text-alt-black">{t("CONFERENCE_DATE")}</p>

@@ -30,13 +30,6 @@ export const menu: Menu[] = [
     children: [{title: "SPONSOR.SPONSOR_LIST", url: "/", isComingSoon: true}],
   },
   {
-    title: "CONTENTS",
-    children: [
-      {title: "CONTENTS.COMMUNITIES", url: "/", isComingSoon: true},
-      {title: "CONTENTS.BEGINNERS", url: "/", isComingSoon: true},
-    ],
-  },
-  {
     title: "STAFF",
     children: [{title: "STAFF.STAFF", url: "/staff"}],
   },

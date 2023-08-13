@@ -9,7 +9,7 @@ export default function SponsorsSection({ rows = [] }: { rows: Omit<Sponsor, "wi
 
   return (
     <div className='lg:py-[60px] py-20'>
-      <SectionTitle title='SPONSOR' subTitle='スポンサー' />
+      <SectionTitle title='Sponsor' subTitle='スポンサー' />
       <div className={"text-center"}>
         <h2 className={"text-tertiary-900 font-montserrat italic text-[32px] drop-shadow-lg"}>Diamond</h2>
         <h2 className={"text-primary-600 text-[16px] drop-shadow-lg"}>ダイヤモンドスポンサー</h2>

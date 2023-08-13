@@ -11,7 +11,7 @@ export default function SponsorsSection() {
 
   return (
     <div className='lg:py-[60px] py-20'>
-      <SectionTitle title='SPONSOR' subTitle='スポンサー' />
+      <SectionTitle title='Sponsor' subTitle='スポンサー' />
       <BecomeSponsorSection />
     </div>
   )

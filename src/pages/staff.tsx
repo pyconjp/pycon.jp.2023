@@ -64,8 +64,8 @@ const ChairCard = ({ staff, bio = [] }: Props) => (
   </div>
 );
 
-const ViceChairCard = ({ staff, bio = [] }: Props) => (
-  <div className={"lg:mb-[60px] flex flex-col"}>
+const ViceChairCard = ({staff, bio = []}: Props) => (
+  <div className={"flex-1 flex flex-col"}>
     <Image
       src={"/staff/" + staff.icon}
       alt={staff.name}
@@ -122,8 +122,8 @@ const ViceChairCard = ({ staff, bio = [] }: Props) => (
   </div>
 );
 
-const SupervisorCard = ({ staff, bio = [] }: Props) => (
-  <div className={"mb-[60px] flex flex-col"}>
+const SupervisorCard = ({staff, bio = []}: Props) => (
+  <div className={"flex-1 flex flex-col"}>
     <Image
       src={"/staff/" + staff.icon}
       alt={staff.name}
@@ -138,8 +138,8 @@ const SupervisorCard = ({ staff, bio = [] }: Props) => (
       </div>
       {
         bio.map((text, index) => (
-          <p key={index} className={"mb-[16px] text-alt-black whitespace-pre-wrap"}>{text}</p>
-        )
+            <p key={index} className={"mb-[16px] lg:text-base text-sm text-alt-black whitespace-pre-wrap"}>{text}</p>
+          )
         )
       }
       <div className={"flex flex-row items-center"}>
@@ -277,7 +277,7 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
 
   return (
     <>
-      <PageHead pageTitle={"スタッフ一覧"} />
+      <PageHead />
       <PageTitle title='Staff' />
       <SectionTitle title='Chair' subTitle='座長' />
       <div className={"lg:mx-[80px] mx-[20px] mb-[60px] flex lg:flex-row flex-col"}>
@@ -457,11 +457,6 @@ export const getStaticProps: GetStaticProps = async () => {
 
   // ページコンポーネントに渡す props オブジェクトを設定する
   return { props: { rows } }
-  return {
-    props: {
-      rows,
-    },
-  };
 };
 
 export default StaffPage;

@@ -37,13 +37,13 @@ export const DiamondComponent = ({ name, logo, url, description }: Omit<Sponsor,
       </div>
       <p className={"mx-[24px] mt-[19px] z-10 relative"}>{description}</p>
     </div>
-    <Image
-      src={"/Page_bg.svg"}
-      alt={""}
-      width={1426}
-      height={468}
-      className="block z-0 absolute bottom-[20px] left-1/2 -translate-x-1/2"
-    />
+    {/*<Image*/}
+    {/*  src={"/Page_bg.svg"}*/}
+    {/*  alt={""}*/}
+    {/*  width={1426}*/}
+    {/*  height={468}*/}
+    {/*  className="block z-0 absolute bottom-[20px] left-1/2 -translate-x-1/2"*/}
+    {/*/>*/}
   </div>
 );
 

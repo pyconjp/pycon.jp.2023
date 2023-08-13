@@ -1,3 +1,5 @@
+import * as fs from "fs";
+import * as path from 'path'
 import Head from "next/head";
 import HeroSection from "@/components/sections/Hero";
 import NewsSection from "@/components/sections/News";
@@ -7,14 +9,15 @@ import FaqSection from "@/components/sections/Faq";
 import SponsorsSection from "@/components/sections/Sponsors";
 import { Blog } from "@/types/blog";
 import { GetStaticProps } from "next";
-import PageTitle from "@/components/elements/PageTitle";
 import PageHead from "@/components/elements/PageHead";
+import { Sponsor } from "@/types/sponsor";
 
 type Props = {
   blogs: Blog[];
+  sponsor_rows: Sponsor[];
 };
 
-export default function Home({ blogs = [] }: Props) {
+export default function Home({ blogs = [], sponsor_rows = [] }: Props) {
   return (
     <>
       <PageHead/>
@@ -23,7 +26,7 @@ export default function Home({ blogs = [] }: Props) {
       <OverviewSection />
       <ConferenceSection />
       <FaqSection />
-      <SponsorsSection />
+      <SponsorsSection rows={sponsor_rows} />
     </>
   );
 }
@@ -41,10 +44,13 @@ export const getStaticProps: GetStaticProps = async () => {
     title,
     published,
   }));
+  const jsonPath = path.join(process.cwd(), 'src', 'data', 'sponsor.json')
+  const jsonText = fs.readFileSync(jsonPath, 'utf-8')
+  const sponsor_rows = JSON.parse(jsonText) as Sponsor[]
 
   return {
     props: {
-      blogs,
+      blogs, sponsor_rows
     },
   };
 };

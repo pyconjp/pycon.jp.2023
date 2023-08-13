@@ -86,25 +86,23 @@ const TimeTable = ({sessions}: Props) => {
           </button>
         </div>
 
-        <div className='mx-24 flex flex-col gap-1 text-sm'>
-          <div className='flex gap-2 text-lg'>
-            {
-              TRACKS[floor].map(
-                (track, index) =>
-                  <div key={index}
-                       className='flex-1 text-center odd:bg-secondary-600 even:bg-secondary-800 text-alt-white py-1 rounded'>
-                    {track}
-                  </div>
-              )
-            }
-          </div>
+        <div className={'mx-24 grid gap-1 text-sm grid-cols-' + TRACKS[floor].length}>
+          {
+            TRACKS[floor].map(
+              (track, index) =>
+                <div key={index}
+                     className='text-lg text-center odd:bg-secondary-600 even:bg-secondary-800 text-alt-white py-1 rounded'>
+                  {track}
+                </div>
+            )
+          }
           {
             START_TIME[date].map((start, index) => {
               const session_line = sessions.filter(session => session.slot.start === start);
               if (session_line.length > 1) {
                 return <TalkSessionLine key={index} sessions={session_line} floor={floor}/>;
               } else {
-                return <ConferenceSessionLine key={index} session={session_line[0]}/>;
+                return <ConferenceSessionLine key={index} session={session_line[0]} floor={floor}/>;
               }
             })
           }
@@ -115,7 +113,7 @@ const TimeTable = ({sessions}: Props) => {
 }
 
 const TalkSessionLine = ({sessions, floor}: { sessions: Session[], floor: Floor }) =>
-  <div className='flex gap-2 items-stretch'>
+  <>
     {
       TRACKS[floor].map(
         (track, index) =>
@@ -125,10 +123,11 @@ const TalkSessionLine = ({sessions, floor}: { sessions: Session[], floor: Floor 
           />
       )
     }
-  </div>
+  </>
+
 
 const TalkSession = ({session}: { session?: Session }) =>
-  <div className='rounded flex-1'>
+  <div className='rounded'>
     {
       session &&
       <div className='px-4 py-2 rounded bg-secondary-100 h-full flex flex-col justify-between gap-4'>
@@ -161,8 +160,8 @@ const TalkSession = ({session}: { session?: Session }) =>
     }
   </div>
 
-const ConferenceSessionLine = ({session}: { session: Session }) =>
-  <div className='text-center py-2 bg-primary-600 text-alt-white font-bold rounded'>
+const ConferenceSessionLine = ({session, floor}: { session: Session, floor: Floor }) =>
+  <div className='text-center py-2 bg-primary-600 text-alt-white font-bold rounded col-span-full'>
     {session.title}
   </div>
 

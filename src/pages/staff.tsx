@@ -1,19 +1,19 @@
 import * as fs from "fs";
-import {parse} from "csv-parse/sync";
-import {GetStaticProps} from "next";
+import { GetStaticProps } from "next";
 import Image from "next/image";
-import {Staff} from "@/types/staff";
-import {useTranslation} from "react-i18next";
+import { Staff } from "@/types/staff";
+import { useTranslation } from "react-i18next";
 import PageTitle from "@/components/elements/PageTitle";
 import SectionTitle from "@/components/elements/SectionTitle";
 import PageHead from "@/components/elements/PageHead";
+import path from "path";
 
 type Props = {
   staff: Staff;
   bio?: string[];
 };
 
-const ChairCard = ({staff, bio = []}: Props) => (
+const ChairCard = ({ staff, bio = [] }: Props) => (
   <div className={"lg:mx-[80px] mx-[20px] mb-[60px] flex lg:flex-row flex-col"}>
     <Image
       src={"/staff/" + staff.icon}
@@ -65,7 +65,7 @@ const ChairCard = ({staff, bio = []}: Props) => (
 );
 
 const ViceChairCard = ({staff, bio = []}: Props) => (
-  <div className={"lg:mb-[60px] flex flex-col"}>
+  <div className={"flex-1 flex flex-col"}>
     <Image
       src={"/staff/" + staff.icon}
       alt={staff.name}
@@ -123,7 +123,7 @@ const ViceChairCard = ({staff, bio = []}: Props) => (
 );
 
 const SupervisorCard = ({staff, bio = []}: Props) => (
-  <div className={"mb-[60px] flex flex-col"}>
+  <div className={"flex-1 flex flex-col"}>
     <Image
       src={"/staff/" + staff.icon}
       alt={staff.name}
@@ -138,7 +138,7 @@ const SupervisorCard = ({staff, bio = []}: Props) => (
       </div>
       {
         bio.map((text, index) => (
-            <p key={index} className={"mb-[16px] text-alt-black whitespace-pre-wrap"}>{text}</p>
+            <p key={index} className={"mb-[16px] lg:text-base text-sm text-alt-black whitespace-pre-wrap"}>{text}</p>
           )
         )
       }
@@ -181,7 +181,7 @@ const SupervisorCard = ({staff, bio = []}: Props) => (
   </div>
 );
 
-const StaffCard = ({staff}: Props) => (
+const StaffCard = ({ staff }: Props) => (
   <div className={"flex items-center gap-2 flex-row"}>
     <Image
       src={"/staff/" + staff.icon}
@@ -231,7 +231,7 @@ const StaffCard = ({staff}: Props) => (
   </div>
 );
 
-const SimpleStaffCard = ({staff}: Props) => (
+const SimpleStaffCard = ({ staff }: Props) => (
   <div className={"flex flex-col m-[12px]"}>
     <div className={"mb-[6px] text-secondary-600 font-bold underline"}>{staff.name}</div>
     <div className={"flex flex-row items-center"}>
@@ -272,14 +272,14 @@ const SimpleStaffCard = ({staff}: Props) => (
   </div>
 );
 
-const StaffPage = ({rows = []}: { rows: Staff[] }) => {
-  const {t} = useTranslation("STAFF");
+const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
+  const { t } = useTranslation("STAFF");
 
   return (
     <>
-      <PageHead pageTitle={"スタッフ一覧"}/>
-      <PageTitle title='Staff'/>
-      <SectionTitle title='Chair' subTitle='座長'/>
+      <PageHead />
+      <PageTitle title='Staff' />
+      <SectionTitle title='Chair' subTitle='座長' />
       <div className={"lg:mx-[80px] mx-[20px] mb-[60px] flex lg:flex-row flex-col"}>
         {rows.map((row, index) => (
           (row.division === "chair")
@@ -298,7 +298,7 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
         ))}
       </div>
 
-      <SectionTitle title='Vice Chair & Supervisor' subTitle='副座長＆スーパーバイザー'/>
+      <SectionTitle title='Vice Chair & Supervisor' subTitle='副座長＆スーパーバイザー' />
       <div className={"lg:mx-[80px] mx-[20px] mb-[60px] flex flex-col lg:flex-row gap-12 lg:gap-2 justify-center"}>
         {rows.map((row, index) => (
           (row.division === "vicechair1")
@@ -347,7 +347,7 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
         ))}
       </div>
 
-      <SectionTitle title='Core Staff' subTitle='コアスタッフ'/>
+      <SectionTitle title='Core Staff' subTitle='コアスタッフ' />
       <div className={"lg:mx-[128px] mb-[60px] grid lg:grid-cols-4  gap-4 justify-center"}>
         {rows.map((row, index) => (
           (row.division === "core")
@@ -368,7 +368,7 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
       {
         rows.filter(r => r.division === "day").length > 0 &&
         <>
-          <SectionTitle title='Staff On The Day' subTitle='当日スタッフ'/>
+          <SectionTitle title='Staff On The Day' subTitle='当日スタッフ' />
           <div className={"lg:mx-[128px] mx-[20px] mb-[60px] grid lg:grid-cols-4 grid-cols-2 place-items-center gap-4"}>
             {rows.map((row, index) => (
               (row.division === "day")
@@ -388,7 +388,7 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
         </>
       }
 
-      <SectionTitle title='Reviewer' subTitle='レビュワー'/>
+      <SectionTitle title='Reviewer' subTitle='レビュワー' />
       <div className={"lg:mx-[128px] mx-[20px] mb-[60px] grid lg:grid-cols-4 grid-cols-2 place-items-center gap-4"}>
         {rows.map((row, index) => (
           (row.division === "reviewer")
@@ -450,14 +450,13 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const buffer = fs.readFileSync("./src/data/staff.csv");
-  const rows: Staff[] = parse(buffer, {delimiter: ",", columns: true});
+  // JSON ファイルを読み込む
+  const jsonPath = path.join(process.cwd(), 'src', 'data', 'staff.json')
+  const jsonText = fs.readFileSync(jsonPath, 'utf-8')
+  const rows = JSON.parse(jsonText) as Staff[]
 
-  return {
-    props: {
-      rows,
-    },
-  };
+  // ページコンポーネントに渡す props オブジェクトを設定する
+  return { props: { rows } }
 };
 
 export default StaffPage;

@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import { parse } from "csv-parse/sync";
+import * as path from 'path'
 import { Sponsor } from "@/types/sponsor";
 import { GetStaticProps } from "next";
 import { useTranslation } from "react-i18next";
@@ -8,7 +8,7 @@ import Image from "next/image";
 import PageTitle from "@/components/elements/PageTitle";
 import SectionSubTitle from "@/components/elements/SectionSubTitle";
 
-const DiamondComponent = ({ name, logo, url, description }: Omit<Sponsor, "category">) => (
+export const DiamondComponent = ({ name, logo, url, description }: Omit<Sponsor, "category">) => (
   <div className={""}>
     <div className={"relative"}>
       <div className={"z-20 relative"}>
@@ -37,18 +37,18 @@ const DiamondComponent = ({ name, logo, url, description }: Omit<Sponsor, "categ
       </div>
       <p className={"mx-[24px] mt-[19px] z-10 relative"}>{description}</p>
     </div>
-    <Image
-      src={"/Page_bg.svg"}
-      alt={""}
-      width={1426}
-      height={468}
-      className="block z-0 absolute bottom-[20px] left-1/2 -translate-x-1/2"
-    />
+    {/*<Image*/}
+    {/*  src={"/Page_bg.svg"}*/}
+    {/*  alt={""}*/}
+    {/*  width={1426}*/}
+    {/*  height={468}*/}
+    {/*  className="block z-0 absolute bottom-[20px] left-1/2 -translate-x-1/2"*/}
+    {/*/>*/}
   </div>
 );
 
 
-const PlatitnumComponent = ({ name, logo, url, description }: Omit<Sponsor, "category">) => (
+export const PlatitnumComponent = ({ name, logo, url, description }: Omit<Sponsor, "category">) => (
   <div className={"flex flex-col items-center"}>
     <div className={"bg-[#ffffff] shadow-lg rounded-lg mt-[72px] px-[50%] py-[100px] relative"}>
       <Image
@@ -76,7 +76,7 @@ const PlatitnumComponent = ({ name, logo, url, description }: Omit<Sponsor, "cat
   </div>
 );
 
-const GoldComponent = ({ name, logo, url, description }: Omit<Sponsor, "category">) => (
+export const GoldComponent = ({ name, logo, url, description }: Omit<Sponsor, "category">) => (
   <div className={"flex flex-col items-center"}>
     <div className={"bg-[#ffffff] shadow-lg rounded-lg mt-[72px] px-[50%] py-[50px] relative"}>
       <Image
@@ -104,7 +104,7 @@ const GoldComponent = ({ name, logo, url, description }: Omit<Sponsor, "category
   </div>
 );
 
-const SilverComponent = ({ name, logo, url, description }: Omit<Sponsor, "category">) => (
+export const SilverComponent = ({ name, logo, url, description }: Omit<Sponsor, "category">) => (
   <div className={"flex flex-col items-center"}>
     <div className={"bg-[#ffffff] shadow-lg rounded-lg mt-[36px] px-[50%] py-[50px] relative"}>
       <Image
@@ -131,7 +131,7 @@ const SilverComponent = ({ name, logo, url, description }: Omit<Sponsor, "catego
   </div>
 );
 
-const BronzeComponent = ({ name, logo, url, description }: Omit<Sponsor, "category">) => (
+export const BronzeComponent = ({ name, logo, url, description }: Omit<Sponsor, "category">) => (
   <div>
     <a
       href={url}
@@ -150,7 +150,7 @@ const BronzeComponent = ({ name, logo, url, description }: Omit<Sponsor, "catego
   </div>
 );
 
-const SpecialComponent = ({ name, logo, url, description }: Omit<Sponsor, "category">) => (
+export const SpecialComponent = ({ name, logo, url, description }: Omit<Sponsor, "category">) => (
   <div className={"flex flex-col items-center"}>
     <div className={"bg-[#ffffff] shadow-lg rounded-lg mt-[72px] px-[50%] py-[50px] relative"}>
       <Image
@@ -177,7 +177,7 @@ const SpecialComponent = ({ name, logo, url, description }: Omit<Sponsor, "categ
   </div>
 );
 
-const PatronComponent = ({ name, logo, url, description }: Omit<Sponsor, "category">) => (
+export const PatronComponent = ({ name, logo, url, description }: Omit<Sponsor, "category">) => (
   <div className={"flex items-center gap-2 flex-row"}>
     <Image
       src={"/sponsor/" + logo}
@@ -360,14 +360,13 @@ export const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "heig
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const buffer = fs.readFileSync("./src/data/sponsor.csv");
-  const rows: Sponsor[] = parse(buffer, { delimiter: ",", columns: true });
+  // JSON ファイルを読み込む
+  const jsonPath = path.join(process.cwd(), 'src', 'data', 'sponsor.json')
+  const jsonText = fs.readFileSync(jsonPath, 'utf-8')
+  const rows = JSON.parse(jsonText) as Sponsor[]
 
-  return {
-    props: {
-      rows,
-    },
-  };
-};
+  // ページコンポーネントに渡す props オブジェクトを設定する
+  return { props: { rows } }
+}
 
 export default SponsorPage;

@@ -9,10 +9,7 @@ import FaqSection from "@/components/sections/Faq";
 import SponsorsSection from "@/components/sections/Sponsors";
 import { Blog } from "@/types/blog";
 import { GetStaticProps } from "next";
-<<<<<<< HEAD
-=======
 import PageHead from "@/components/elements/PageHead";
->>>>>>> dev
 import { Sponsor } from "@/types/sponsor";
 
 type Props = {
@@ -23,7 +20,7 @@ type Props = {
 export default function Home({ blogs = [], sponsor_rows = [] }: Props) {
   return (
     <>
-      <PageHead/>
+      <PageHead />
       <HeroSection />
       <NewsSection blogs={blogs} />
       <OverviewSection />

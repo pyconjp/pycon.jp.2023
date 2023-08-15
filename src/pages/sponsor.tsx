@@ -122,8 +122,7 @@ export const GoldComponent = ({
 export const SilverComponent = ({
                                   name,
                                   logo,
-                                  url,
-                                  description
+                                  url
                                 }: Omit<Sponsor, "category" | "name.EN" | "description.EN">) => (
   <div className={"flex flex-col items-center"}>
     <div className={"bg-[#ffffff] shadow-lg rounded-lg mt-[36px] px-[50%] py-[50px] relative"}>
@@ -153,9 +152,7 @@ export const SilverComponent = ({
 
 export const BronzeComponent = ({
                                   name,
-                                  logo,
-                                  url,
-                                  description
+                                  url
                                 }: Omit<Sponsor, "category" | "name.EN" | "description.EN">) => (
   <div>
     <a
@@ -178,8 +175,7 @@ export const BronzeComponent = ({
 export const SpecialComponent = ({
                                    name,
                                    logo,
-                                   url,
-                                   description
+                                   url
                                  }: Omit<Sponsor, "category" | "name.EN" | "description.EN">) => (
   <div className={"flex flex-col items-center"}>
     <div className={"bg-[#ffffff] shadow-lg rounded-lg mt-[72px] px-[50%] py-[50px] relative"}>
@@ -209,9 +205,7 @@ export const SpecialComponent = ({
 
 export const PatronComponent = ({
                                   name,
-                                  logo,
-                                  url,
-                                  description
+                                  logo
                                 }: Omit<Sponsor, "category" | "name.EN" | "description.EN">) => (
   <div className={"flex items-center gap-2 flex-row"}>
     <Image
@@ -234,7 +228,6 @@ export const BecomeSponsorSection = () => {
   });
   useEffect(() => {
     setContents({
-      ...c,
       h1: t("H1"),
       p1: t("P1"),
       a1: t("A1"),
@@ -281,7 +274,6 @@ export const SponsorPage = ({rows = []}: { rows: Omit<Sponsor, "width" | "height
   });
   useEffect(() => {
     setContents({
-      ...c,
       h1: t("H1"),
       p1: t("P1"),
       a1: t("A1"),
@@ -373,7 +365,7 @@ export const SponsorPage = ({rows = []}: { rows: Omit<Sponsor, "width" | "height
       </div>
 
       <SectionSubTitle title={'Patron'} subTitle={'パトロン'} hasSeparator={true} className='subTitle'/>
-      <div className={"lg:mx-[128px] mb-[60px] grid lg:grid-cols-6  gap-4 justify-center mb-[32px]"}>
+      <div className={"lg:mx-[128px] mb-[60px] grid lg:grid-cols-6  gap-4 justify-center"}>
         {rows.map((row, index) => (
           (row.category === "patron")
           && <PatronComponent

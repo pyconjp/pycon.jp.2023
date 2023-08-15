@@ -35,7 +35,7 @@ export const DiamondComponent = ({ name, logo, url, description }: Omit<Sponsor,
           />
         </a>
       </div>
-      <p className={"mx-[24px] mt-[19px] z-10 relative"}>{description}</p>
+      <p className={"mx-[24px] mt-[19px] z-10 relative whitespace-pre-wrap"}>{description}</p>
     </div>
     {/*<Image*/}
     {/*  src={"/Page_bg.svg"}*/}
@@ -72,7 +72,7 @@ export const PlatitnumComponent = ({ name, logo, url, description }: Omit<Sponso
         className="object-contain ml-[3px]"
       />
     </a>
-    <p className={"mx-[24px] mt-[19px]"}>{description}</p>
+    <p className={"mx-[24px] mt-[19px] whitespace-pre-wrap"}>{description}</p>
   </div>
 );
 
@@ -100,7 +100,7 @@ export const GoldComponent = ({ name, logo, url, description }: Omit<Sponsor, "c
         className="object-contain ml-[3px]"
       />
     </a>
-    <p className={"mt-[19px]"}>{description}</p>
+    <p className={"mt-[19px] whitespace-pre-wrap"}>{description}</p>
   </div>
 );
 
@@ -261,7 +261,7 @@ export const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "heig
       </div>
       <div className={"lg:mx-[245px] mx-[20px] mb-[32px]"}>
         {rows.map((row, index) => (
-          (row.category === "diamond")
+          (row.category === "Diamond")
           && <DiamondComponent
             key={index}
             name={row.name}
@@ -275,7 +275,7 @@ export const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "heig
       <SectionSubTitle title={'Platinum'} subTitle={'プラチナスポンサー'} hasSeparator={true} className='subTitle' />
       <div className={"grid lg:grid-cols-3 gap-3 lg:mx-[80px] mx-[47px]  mb-[32px]"}>
         {rows.map((row, index) => (
-          (row.category === "platinum")
+          (row.category === "Platinum")
           && <PlatitnumComponent
             key={index}
             name={row.name}
@@ -289,7 +289,7 @@ export const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "heig
       <SectionSubTitle title={'Gold'} subTitle={'ゴールドスポンサー'} hasSeparator={true} className='subTitle' />
       <div className={"grid lg:grid-cols-4 gap-5 lg:mx-[135px] mx-[102px] mb-[32px]"}>
         {rows.map((row, index) => (
-          (row.category === "gold")
+          (row.category === "Gold")
           && <GoldComponent
             key={index}
             name={row.name}
@@ -303,7 +303,7 @@ export const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "heig
       <SectionSubTitle title={'Silver'} subTitle={'シルバースポンサー'} hasSeparator={true} className='subTitle' />
       <div className={"grid lg:grid-cols-5 gap-2 lg:mx-[135px] mb-[16px]"}>
         {rows.map((row, index) => (
-          (row.category === "silver")
+          (row.category === "Silver")
           && <SilverComponent
             key={index}
             name={row.name}
@@ -317,7 +317,7 @@ export const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "heig
       <SectionSubTitle title={'Bronze'} subTitle={'ブロンズスポンサー'} hasSeparator={true} className='subTitle' />
       <div className={"grid lg:grid-cols-4 gap-3 lg:mx-[135px] mb-[32px]"}>
         {rows.map((row, index) => (
-          (row.category === "bronze")
+          (row.category === "Bronze")
           && <BronzeComponent
             key={index}
             name={row.name}

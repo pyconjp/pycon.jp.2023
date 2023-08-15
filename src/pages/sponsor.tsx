@@ -13,7 +13,7 @@ export const DiamondComponent = ({
                                    logo,
                                    url,
                                    description
-                                 }: Omit<Sponsor, "category" | "name.EN" | "description.EN">) => (
+                                 }: Omit<Sponsor, "category" | "name_en" | "description_en">) => (
   <div className={""}>
     <div className={"relative"}>
       <div className={"z-20 relative"}>
@@ -58,7 +58,7 @@ export const PlatitnumComponent = ({
                                      logo,
                                      url,
                                      description
-                                   }: Omit<Sponsor, "category" | "name.EN" | "description.EN">) => (
+                                   }: Omit<Sponsor, "category" | "name_en" | "description_en">) => (
   <div className={"flex flex-col items-center"}>
     <div className={"bg-[#ffffff] shadow-lg rounded-lg mt-[72px] px-[50%] py-[100px] relative"}>
       <Image
@@ -91,7 +91,7 @@ export const GoldComponent = ({
                                 logo,
                                 url,
                                 description
-                              }: Omit<Sponsor, "category" | "name.EN" | "description.EN">) => (
+                              }: Omit<Sponsor, "category" | "name_en" | "description_en">) => (
   <div className={"flex flex-col items-center"}>
     <div className={"bg-[#ffffff] shadow-lg rounded-lg mt-[72px] px-[50%] py-[50px] relative"}>
       <Image
@@ -123,7 +123,7 @@ export const SilverComponent = ({
                                   name,
                                   logo,
                                   url
-                                }: Omit<Sponsor, "category" | "name.EN" | "description.EN">) => (
+                                }: Omit<Sponsor, "category" | "name_en" | "description_en">) => (
   <div className={"flex flex-col items-center"}>
     <div className={"bg-[#ffffff] shadow-lg rounded-lg mt-[36px] px-[50%] py-[50px] relative"}>
       <Image
@@ -153,7 +153,7 @@ export const SilverComponent = ({
 export const BronzeComponent = ({
                                   name,
                                   url
-                                }: Omit<Sponsor, "category" | "name.EN" | "description.EN">) => (
+                                }: Omit<Sponsor, "category" | "name_en" | "description_en">) => (
   <div>
     <a
       href={url}
@@ -176,7 +176,7 @@ export const SpecialComponent = ({
                                    name,
                                    logo,
                                    url
-                                 }: Omit<Sponsor, "category" | "name.EN" | "description.EN">) => (
+                                 }: Omit<Sponsor, "category" | "name_en" | "description_en">) => (
   <div className={"flex flex-col items-center"}>
     <div className={"bg-[#ffffff] shadow-lg rounded-lg mt-[72px] px-[50%] py-[50px] relative"}>
       <Image
@@ -206,7 +206,7 @@ export const SpecialComponent = ({
 export const PatronComponent = ({
                                   name,
                                   logo
-                                }: Omit<Sponsor, "category" | "name.EN" | "description.EN">) => (
+                                }: Omit<Sponsor, "category" | "name_en" | "description_en">) => (
   <div className={"flex items-center gap-2 flex-row"}>
     <Image
       src={"/sponsor/" + logo}
@@ -371,8 +371,8 @@ export const SponsorPage = ({rows = []}: { rows: Omit<Sponsor, "width" | "height
 const getTranslation = (sponsor: Sponsor, language: string): { name: string, description: string } => {
   if (language.startsWith("en")) {
     return {
-      name: sponsor["name.EN"] || sponsor.name,
-      description: sponsor["description.EN"] || sponsor.description,
+      name: sponsor.name_en || sponsor.name,
+      description: sponsor.description_en || sponsor.description,
     };
   } else if (language.startsWith("ja")) {
     return {

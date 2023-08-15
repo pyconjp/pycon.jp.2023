@@ -20,7 +20,7 @@ type Props = {
 export default function Home({ blogs = [], sponsor_rows = [] }: Props) {
   return (
     <>
-      <PageHead/>
+      <PageHead />
       <HeroSection />
       <NewsSection blogs={blogs} />
       <OverviewSection />

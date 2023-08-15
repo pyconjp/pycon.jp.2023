@@ -267,18 +267,18 @@ export const BecomeSponsorSection = () => {
 
 export const SponsorPage = ({rows = []}: { rows: Omit<Sponsor, "width" | "height">[] }) => {
   const {t, i18n} = useTranslation("SPONSOR")
-  const [c, setContents] = useState({
-    h1: "",
-    p1: "",
-    a1: "",
-  });
-  useEffect(() => {
-    setContents({
-      h1: t("H1"),
-      p1: t("P1"),
-      a1: t("A1"),
-    })
-  }, [t]);
+  // const [c, setContents] = useState({
+  //   h1: "",
+  //   p1: "",
+  //   a1: "",
+  // });
+  // useEffect(() => {
+  //   setContents({
+  //     h1: t("H1"),
+  //     p1: t("P1"),
+  //     a1: t("A1"),
+  //   })
+  // }, [t]);
 
   return (
     <>

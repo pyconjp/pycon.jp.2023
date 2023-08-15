@@ -4,4 +4,6 @@ export type Sponsor = {
   logo: string;
   url: string;
   description: string;
+  "name.EN": string;
+  "description.EN": string;
 };

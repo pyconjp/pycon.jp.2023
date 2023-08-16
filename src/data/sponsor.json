@@ -243,6 +243,114 @@
     "category": "Silver"
   },
   {
+    "name": "株式会社Helpfeel",
+    "name_en": "株式会社Helpfeel",
+    "url": "https://corp.helpfeel.com/",
+    "description": "",
+    "description_en": "",
+    "logo": "dummy_coming_soon.png",
+    "category": "Gold"
+  },
+  {
+    "name": "株式会社Nexedi",
+    "name_en": "株式会社Nexedi",
+    "url": "https://www.nexedi.com/ja",
+    "description": "",
+    "description_en": "",
+    "logo": "dummy_coming_soon.png",
+    "category": "Bronze"
+  },
+  {
+    "name": "OLTA",
+    "name_en": "OLTA",
+    "url": "https://corp.olta.co.jp/",
+    "description": "",
+    "description_en": "",
+    "logo": "dummy_coming_soon.png",
+    "category": "Bronze"
+  },
+  {
+    "name": "株式会社日本システ厶技研",
+    "name_en": "株式会社日本システ厶技研",
+    "url": "https://jsl.co.jp/",
+    "description": "",
+    "description_en": "",
+    "logo": "dummy_coming_soon.png",
+    "category": "Silver"
+  },
+  {
+    "name": "New Relic株式会社",
+    "name_en": "New Relic株式会社",
+    "url": "https://newrelic.com/jp",
+    "description": "",
+    "description_en": "",
+    "logo": "dummy_coming_soon.png",
+    "category": "Gold"
+  },
+  {
+    "name": "株式会社オープングルーヴ",
+    "name_en": "株式会社オープングルーヴ",
+    "url": "https://tracpath.com/",
+    "description": "",
+    "description_en": "",
+    "logo": "dummy_coming_soon.png",
+    "category": "Bronze"
+  },
+  {
+    "name": "ヤフー株式会社",
+    "name_en": "ヤフー株式会社",
+    "url": "https://www.yahoo.co.jp",
+    "description": "",
+    "description_en": "",
+    "logo": "dummy_coming_soon.png",
+    "category": "Silver"
+  },
+  {
+    "name": "MIERUNE Inc.",
+    "name_en": "MIERUNE Inc.",
+    "url": "https://www.mierune.co.jp/",
+    "description": "",
+    "description_en": "",
+    "logo": "dummy_coming_soon.png",
+    "category": "Silver"
+  },
+  {
+    "name": "CircleCI合同会社",
+    "name_en": "CircleCI G.K.",
+    "url": "https://circleci.com/ja/",
+    "description": "",
+    "description_en": "",
+    "logo": "dummy_coming_soon.png",
+    "category": "Gold"
+  },
+  {
+    "name": "株式会社グローバルウェイ",
+    "name_en": "株式会社グローバルウェイ",
+    "url": "https://www.globalway.co.jp/",
+    "description": "",
+    "description_en": "",
+    "logo": "dummy_coming_soon.png",
+    "category": "Gold"
+  },
+  {
+    "name": "株式会社アイシン",
+    "name_en": "株式会社アイシン",
+    "url": "https://www.aisin.com/jp/",
+    "description": "",
+    "description_en": "",
+    "logo": "dummy_coming_soon.png",
+    "category": "Silver"
+  },
+  {
+    "name": "株式会社DROBE",
+    "name_en": "株式会社DROBE",
+    "url": "https://drobe.co.jp/",
+    "description": "",
+    "description_en": "",
+    "logo": "dummy_coming_soon.png",
+    "category": ""
+  },
+  {
     "category": "special",
     "name": "株式会社インターネットイニシアティブ",
     "url": "http://www.iij.ad.jp/",

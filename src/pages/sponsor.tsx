@@ -1,19 +1,19 @@
 import * as fs from "fs";
 import * as path from 'path'
-import {Sponsor} from "@/types/sponsor";
-import {GetStaticProps} from "next";
-import {useTranslation} from "react-i18next";
-import {useState, useEffect} from "react";
+import { Sponsor } from "@/types/sponsor";
+import { GetStaticProps } from "next";
+import { useTranslation } from "react-i18next";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import PageTitle from "@/components/elements/PageTitle";
 import SectionSubTitle from "@/components/elements/SectionSubTitle";
 
 export const DiamondComponent = ({
-                                   name,
-                                   logo,
-                                   url,
-                                   description
-                                 }: Omit<Sponsor, "category" | "name_en" | "description_en">) => (
+  name,
+  logo,
+  url,
+  description
+}: Omit<Sponsor, "category" | "name_en" | "description_en">) => (
   <div className={""}>
     <div className={"relative"}>
       <div className={"z-20 relative"}>
@@ -54,11 +54,11 @@ export const DiamondComponent = ({
 
 
 export const PlatitnumComponent = ({
-                                     name,
-                                     logo,
-                                     url,
-                                     description
-                                   }: Omit<Sponsor, "category" | "name_en" | "description_en">) => (
+  name,
+  logo,
+  url,
+  description
+}: Omit<Sponsor, "category" | "name_en" | "description_en">) => (
   <div className={"flex flex-col items-center"}>
     <div className={"bg-[#ffffff] shadow-lg rounded-lg mt-[72px] px-[50%] py-[100px] relative"}>
       <Image
@@ -82,16 +82,30 @@ export const PlatitnumComponent = ({
         className="object-contain ml-[3px]"
       />
     </a>
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex flex-row text-secondary-600 underline justify-center mt-[16px] mx-[16px] hover:opacity-50">
+      <p>Interview</p>
+      <Image
+        src={"/hand-holding-up-microphone.png"}
+        alt={""}
+        width={20}
+        height={20}
+        className="object-contain ml-[3px]"
+      />
+    </a>
     <p className={"mx-[24px] mt-[19px] whitespace-pre-wrap"}>{description}</p>
   </div>
 );
 
 export const GoldComponent = ({
-                                name,
-                                logo,
-                                url,
-                                description
-                              }: Omit<Sponsor, "category" | "name_en" | "description_en">) => (
+  name,
+  logo,
+  url,
+  description
+}: Omit<Sponsor, "category" | "name_en" | "description_en">) => (
   <div className={"flex flex-col items-center"}>
     <div className={"bg-[#ffffff] shadow-lg rounded-lg mt-[72px] px-[50%] py-[50px] relative"}>
       <Image
@@ -120,10 +134,10 @@ export const GoldComponent = ({
 );
 
 export const SilverComponent = ({
-                                  name,
-                                  logo,
-                                  url
-                                }: Omit<Sponsor, "category" | "name_en" | "description_en">) => (
+  name,
+  logo,
+  url
+}: Omit<Sponsor, "category" | "name_en" | "description_en">) => (
   <div className={"flex flex-col items-center"}>
     <div className={"bg-[#ffffff] shadow-lg rounded-lg mt-[36px] px-[50%] py-[50px] relative"}>
       <Image
@@ -151,9 +165,9 @@ export const SilverComponent = ({
 );
 
 export const BronzeComponent = ({
-                                  name,
-                                  url
-                                }: Omit<Sponsor, "category" | "name_en" | "description_en">) => (
+  name,
+  url
+}: Omit<Sponsor, "category" | "name_en" | "description_en">) => (
   <div>
     <a
       href={url}
@@ -173,10 +187,10 @@ export const BronzeComponent = ({
 );
 
 export const SpecialComponent = ({
-                                   name,
-                                   logo,
-                                   url
-                                 }: Omit<Sponsor, "category" | "name_en" | "description_en">) => (
+  name,
+  logo,
+  url
+}: Omit<Sponsor, "category" | "name_en" | "description_en">) => (
   <div className={"flex flex-col items-center"}>
     <div className={"bg-[#ffffff] shadow-lg rounded-lg mt-[72px] px-[50%] py-[50px] relative"}>
       <Image
@@ -204,9 +218,9 @@ export const SpecialComponent = ({
 );
 
 export const PatronComponent = ({
-                                  name,
-                                  logo
-                                }: Omit<Sponsor, "category" | "name_en" | "description_en">) => (
+  name,
+  logo
+}: Omit<Sponsor, "category" | "name_en" | "description_en">) => (
   <div className={"flex items-center gap-2 flex-row"}>
     <Image
       src={"/sponsor/" + logo}
@@ -220,7 +234,7 @@ export const PatronComponent = ({
 );
 
 export const BecomeSponsorSection = () => {
-  const {t} = useTranslation("SPONSOR")
+  const { t } = useTranslation("SPONSOR")
   const [c, setContents] = useState({
     h1: "",
     p1: "",
@@ -265,12 +279,12 @@ export const BecomeSponsorSection = () => {
   </>
 };
 
-export const SponsorPage = ({rows = []}: { rows: Omit<Sponsor, "width" | "height">[] }) => {
-  const {i18n} = useTranslation("SPONSOR")
+export const SponsorPage = ({ rows = [] }: { rows: Omit<Sponsor, "width" | "height">[] }) => {
+  const { i18n } = useTranslation("SPONSOR")
 
   return (
     <>
-      <PageTitle title='SPONSOR'/>
+      <PageTitle title='SPONSOR' />
       <div className={"text-center"}>
         <h2 className={"text-tertiary-900 font-montserrat italic text-[32px] drop-shadow-lg"}>Diamond</h2>
         <h2 className={"text-primary-600 text-[16px] drop-shadow-lg"}>ダイヤモンドスポンサー</h2>
@@ -287,7 +301,7 @@ export const SponsorPage = ({rows = []}: { rows: Omit<Sponsor, "width" | "height
         ))}
       </div>
 
-      <SectionSubTitle title={'Platinum'} subTitle={'プラチナスポンサー'} hasSeparator={true} className='subTitle'/>
+      <SectionSubTitle title={'Platinum'} subTitle={'プラチナスポンサー'} hasSeparator={true} className='subTitle' />
       <div className={"grid lg:grid-cols-3 gap-3 lg:mx-[80px] mx-[47px]  mb-[32px]"}>
         {rows.map((row, index) => (
           (row.category === "Platinum")
@@ -300,7 +314,7 @@ export const SponsorPage = ({rows = []}: { rows: Omit<Sponsor, "width" | "height
         ))}
       </div>
 
-      <SectionSubTitle title={'Gold'} subTitle={'ゴールドスポンサー'} hasSeparator={true} className='subTitle'/>
+      <SectionSubTitle title={'Gold'} subTitle={'ゴールドスポンサー'} hasSeparator={true} className='subTitle' />
       <div className={"grid lg:grid-cols-4 gap-5 lg:mx-[135px] mx-[102px] mb-[32px]"}>
         {rows.map((row, index) => (
           (row.category === "Gold")
@@ -313,7 +327,7 @@ export const SponsorPage = ({rows = []}: { rows: Omit<Sponsor, "width" | "height
         ))}
       </div>
 
-      <SectionSubTitle title={'Silver'} subTitle={'シルバースポンサー'} hasSeparator={true} className='subTitle'/>
+      <SectionSubTitle title={'Silver'} subTitle={'シルバースポンサー'} hasSeparator={true} className='subTitle' />
       <div className={"grid lg:grid-cols-5 gap-2 lg:mx-[135px] mb-[16px]"}>
         {rows.map((row, index) => (
           (row.category === "Silver")
@@ -326,7 +340,7 @@ export const SponsorPage = ({rows = []}: { rows: Omit<Sponsor, "width" | "height
         ))}
       </div>
 
-      <SectionSubTitle title={'Bronze'} subTitle={'ブロンズスポンサー'} hasSeparator={true} className='subTitle'/>
+      <SectionSubTitle title={'Bronze'} subTitle={'ブロンズスポンサー'} hasSeparator={true} className='subTitle' />
       <div className={"grid lg:grid-cols-4 gap-3 lg:mx-[135px] mb-[32px]"}>
         {rows.map((row, index) => (
           (row.category === "Bronze")
@@ -339,7 +353,7 @@ export const SponsorPage = ({rows = []}: { rows: Omit<Sponsor, "width" | "height
         ))}
       </div>
 
-      <SectionSubTitle title={'Special'} subTitle={'特別スポンサー'} hasSeparator={true} className='subTitle'/>
+      <SectionSubTitle title={'Special'} subTitle={'特別スポンサー'} hasSeparator={true} className='subTitle' />
       <div className={"grid lg:grid-cols-4 gap-5 lg:mx-[135px] mx-[102px] mb-[32px]"}>
         {rows.map((row, index) => (
           (row.category === "special")
@@ -352,7 +366,7 @@ export const SponsorPage = ({rows = []}: { rows: Omit<Sponsor, "width" | "height
         ))}
       </div>
 
-      <SectionSubTitle title={'Patron'} subTitle={'パトロン'} hasSeparator={true} className='subTitle'/>
+      <SectionSubTitle title={'Patron'} subTitle={'パトロン'} hasSeparator={true} className='subTitle' />
       <div className={"lg:mx-[128px] mb-[60px] grid lg:grid-cols-6  gap-4 justify-center"}>
         {rows.map((row, index) => (
           (row.category === "patron")
@@ -381,7 +395,7 @@ const getTranslation = (sponsor: Sponsor, language: string): { name: string, des
     };
   }
 
-  return {name: '', description: ''};
+  return { name: '', description: '' };
 }
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -391,7 +405,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const rows = JSON.parse(jsonText) as Sponsor[]
 
   // ページコンポーネントに渡す props オブジェクトを設定する
-  return {props: {rows}}
+  return { props: { rows } }
 }
 
 export default SponsorPage;

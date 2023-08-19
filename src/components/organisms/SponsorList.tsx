@@ -1,4 +1,3 @@
-import SectionTitle from "../elements/SectionTitle";
 import {Sponsor} from "@/types/sponsor";
 import SectionSubTitle from "../elements/SectionSubTitle";
 import Image from "next/image";

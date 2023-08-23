@@ -248,7 +248,7 @@
     "url": "https://circleci.com/ja/",
     "description": "CircleCI は、世界トップクラスの CI/CD（継続的インテグレーション/継続的デリバリー）プラットフォームであり、アイデア段階から実際にデリバリーするまで利用できるセントラルハブとして機能します。また、CircleCI は最も利用されている DevOps ツールの 1 つでとして、エンジニアリングチームがどのように作業を進め、どのようにコードを実行しているかについて、独自の豊富なデータを有しています。LINE、Sansan、バンダイナムコ などの企業は、CircleCI を使用してエンジニアリングチームの生産性を向上し、優れた製品をリリース、市場投入までの期間を短縮しています。",
     "description_en": "CircleCI is the leading continuous integration and delivery platform for software innovation at scale. With intelligent automation and delivery tools, CircleCI is used by the world's best engineering teams to radically reduce the time from idea to execution. The company has been recognized as an innovative leader in cloud-native continuous integration by independent research firms and industry awards like the DEVIES, Forbes’ Best Startup Employers of the Year, and Deloitte’s Technology Fast 500™.\nFounded in 2011 and headquartered in downtown San Francisco with a global, remote workforce. ",
-    "logo": "dummy_coming_soon.png",
+    "logo": "circleci.png",
     "category": "Gold"
   },
   {
@@ -257,7 +257,7 @@
     "url": "https://corp.helpfeel.com/",
     "description": "株式会社Helpfeelはどんな質問にも答えられるFAQ SaaS「Helpfeel」の開発・提供により、サポート担当者やコールセンター事業者の負担軽減を目指すSaaSスタートアップです。そのほかにも知識を磨き上げるアイディエーションツール「Scrapbox」情報を知識にするメディアキャプチャー「Gyazo」を含めた3プロダクトを開発、運営しています京都と東京にオフィスを構えながらも、基本的にはフルリモート・フルフレックスで活動しています。",
     "description_en": "Helpfeel Inc. is a SaaS startup that focuses on developing and providing an FAQ SaaS called \"Helpfeel,\" which aims to alleviate the burden on support personnel and call center operators. In addition to this, they have also developed and operate three other products: \"Scrapbox\" and \"Gyazo\". We has offices in Kyoto and Tokyo while also offering full remote work and flexible hours.",
-    "logo": "dummy_coming_soon.png",
+    "logo": "helpfeel.png",
     "category": "Gold"
   },
   {
@@ -266,7 +266,7 @@
     "url": "https://drobe.co.jp/",
     "description": "",
     "description_en": "",
-    "logo": "dummy_coming_soon.png",
+    "logo": "DROBE.png",
     "category": "Silver"
   },
   {
@@ -275,7 +275,7 @@
     "url": "https://mierune.co.jp",
     "description": "",
     "description_en": "",
-    "logo": "dummy_coming_soon.png",
+    "logo": "mierune.png",
     "category": "Silver"
   },
   {

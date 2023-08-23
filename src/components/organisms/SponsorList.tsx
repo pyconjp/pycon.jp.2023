@@ -1,90 +1,111 @@
-import {Sponsor} from "@/types/sponsor";
+import { Sponsor } from "@/types/sponsor";
 import SectionSubTitle from "../elements/SectionSubTitle";
 import Image from "next/image";
-import {useTranslation} from "react-i18next";
-import {useEffect, useState} from "react";
+import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
 
-export default function SponsorList({rows = []}: {
+export default function SponsorList({ rows = [] }: {
   rows: Sponsor[]
 }) {
-  const {i18n} = useTranslation();
+  const { i18n } = useTranslation();
+  const { t } = useTranslation("SPONSOR")
+  const [c, setContents] = useState({
+    diamond: "",
+    platinum: "",
+    gold: "",
+    silver: "",
+    bronze: "",
+    special: "",
+    patron: "",
+  });
+  useEffect(() => {
+    setContents({
+      diamond: t("DIAMOND"),
+      platinum: t("PLATINUM"),
+      gold: t("GOLD"),
+      silver: t("SILVER"),
+      bronze: t("BRONZE"),
+      special: t("SPECIAL"),
+      patron: t("PATRON"),
+    })
+  }, [t]);
 
   return (
     <div>
       <div className={"text-center"}>
         <h2 className={"text-tertiary-900 font-montserrat italic text-[32px] drop-shadow-lg"}>Diamond</h2>
-        <h2 className={"text-primary-600 text-[16px] drop-shadow-lg"}>ダイヤモンドスポンサー</h2>
+        <h2 className={"text-primary-600 text-[16px] drop-shadow-lg"}>{t(c.diamond)}</h2>
       </div>
       <div className={"lg:mx-[245px] mx-[20px] mb-[32px]"}>
         {
           filterByCategory(rows, "Diamond").map(
             (row, index) =>
-              <DiamondComponent key={index}{...row}{...getTranslation(row, i18n.language)}/>
+              <DiamondComponent key={index}{...row}{...getTranslation(row, i18n.language)} />
           )
         }
       </div>
 
-      <SectionSubTitle title={'Platinum'} subTitle={'プラチナスポンサー'} hasSeparator={true} className='subTitle'/>
+      <SectionSubTitle title={'Platinum'} subTitle={t(c.platinum)} hasSeparator={true} className='subTitle' />
       <div className={"grid lg:grid-cols-3 gap-3 lg:mx-[80px] mx-[47px]  mb-[32px]"}>
         {
           filterByCategory(rows, "Platinum").map(
             (row, index) =>
-              <PlatitnumComponent key={index}{...row}{...getTranslation(row, i18n.language)}/>
+              <PlatitnumComponent key={index}{...row}{...getTranslation(row, i18n.language)} />
           )
         }
       </div>
 
-      <SectionSubTitle title={'Gold'} subTitle={'ゴールドスポンサー'} hasSeparator={true} className='subTitle'/>
+      <SectionSubTitle title={'Gold'} subTitle={t(c.gold)} hasSeparator={true} className='subTitle' />
       <div className={"grid lg:grid-cols-4 gap-5 lg:mx-[135px] mx-[102px] mb-[32px]"}>
         {
           filterByCategory(rows, "Gold").map(
             (row, index) =>
-              <GoldComponent key={index}{...row}{...getTranslation(row, i18n.language)}/>
+              <GoldComponent key={index}{...row}{...getTranslation(row, i18n.language)} />
           )
         }
       </div>
 
-      <SectionSubTitle title={'Silver'} subTitle={'シルバースポンサー'} hasSeparator={true} className='subTitle'/>
+      <SectionSubTitle title={'Silver'} subTitle={t(c.silver)} hasSeparator={true} className='subTitle' />
       <div className={"grid lg:grid-cols-5 gap-2 lg:mx-[135px] mx-[102px] mb-[16px]"}>
         {
           filterByCategory(rows, "Silver").map(
             (row, index) =>
-              <SilverComponent key={index}{...row}{...getTranslation(row, i18n.language)}/>
+              <SilverComponent key={index}{...row}{...getTranslation(row, i18n.language)} />
           )
         }
       </div>
 
-      <SectionSubTitle title={'Bronze'} subTitle={'ブロンズスポンサー'} hasSeparator={true} className='subTitle'/>
+      <SectionSubTitle title={'Bronze'} subTitle={t(c.bronze)} hasSeparator={true} className='subTitle' />
       <div className={"grid lg:grid-cols-4 gap-3 lg:mx-[135px] mb-[32px]"}>
         {
           filterByCategory(rows, "Bronze").map(
             (row, index) =>
-              <BronzeComponent key={index}{...row}{...getTranslation(row, i18n.language)}/>
+              <BronzeComponent key={index}{...row}{...getTranslation(row, i18n.language)} />
           )
         }
       </div>
 
-      <SectionSubTitle title={'Special'} subTitle={'特別スポンサー'} hasSeparator={true} className='subTitle'/>
+      <SectionSubTitle title={'Special'} subTitle={t(c.special)} hasSeparator={true} className='subTitle' />
       <div className={"grid lg:grid-cols-4 gap-5 lg:mx-[135px] mx-[102px] mb-[32px]"}>
         {
           filterByCategory(rows, "special").map(
             (row, index) =>
-              <SpecialComponent key={index}{...row}{...getTranslation(row, i18n.language)}/>
+              <SpecialComponent key={index}{...row}{...getTranslation(row, i18n.language)} />
           )
         }
       </div>
 
-      <SectionSubTitle title={'Patron'} subTitle={'パトロン'} hasSeparator={true} className='subTitle'/>
+      <SectionSubTitle title={'Patron'} subTitle={t(c.patron)} hasSeparator={true} className='subTitle' />
       <div className={"lg:mx-[128px] grid lg:grid-cols-6  gap-4 justify-center mb-[32px]"}>
         {
           filterByCategory(rows, "patron").map(
             (row, index) =>
-              <PatronComponent key={index}{...row}{...getTranslation(row, i18n.language)}/>
+              <PatronComponent key={index}{...row}{...getTranslation(row, i18n.language)} />
           )
         }
       </div>
 
-      <BecomeSponsorSection/>
+      <BecomeSponsorSection />
     </div>
   )
 }
@@ -92,7 +113,7 @@ export default function SponsorList({rows = []}: {
 const filterByCategory = (sponsors: Sponsor[], category: Sponsor["category"]) => sponsors.filter(sponsor => sponsor.category === category);
 
 
-const DiamondComponent = ({name, logo, url, description}: Sponsor) => (
+const DiamondComponent = ({ name, logo, url, description }: Sponsor) => (
   <div className={""}>
     <div className={"relative"}>
       <div className={"z-20 relative"}>
@@ -132,7 +153,7 @@ const DiamondComponent = ({name, logo, url, description}: Sponsor) => (
 );
 
 
-const PlatitnumComponent = ({name, logo, url, description}: Sponsor) => (
+const PlatitnumComponent = ({ name, logo, url, description }: Sponsor) => (
   <div className={"flex flex-col items-center"}>
     <div className={"bg-white shadow-lg rounded-lg mt-[72px] px-[50%] py-[100px] relative"}>
       <Image
@@ -160,7 +181,7 @@ const PlatitnumComponent = ({name, logo, url, description}: Sponsor) => (
   </div>
 );
 
-const GoldComponent = ({name, logo, url, description}: Sponsor) => (
+const GoldComponent = ({ name, logo, url, description }: Sponsor) => (
   <div className={"flex flex-col items-center"}>
     <div className={"bg-white shadow-lg rounded-lg mt-[72px] px-[50%] py-[50px] relative"}>
       <Image
@@ -188,7 +209,7 @@ const GoldComponent = ({name, logo, url, description}: Sponsor) => (
   </div>
 );
 
-const SilverComponent = ({name, logo, url}: Sponsor) => (
+const SilverComponent = ({ name, logo, url }: Sponsor) => (
   <div className={"flex flex-col items-center"}>
     <div className={"bg-white shadow-lg rounded-lg mt-[36px] px-[50%] py-[50px] relative"}>
       <Image
@@ -215,7 +236,7 @@ const SilverComponent = ({name, logo, url}: Sponsor) => (
   </div>
 );
 
-const BronzeComponent = ({name, url}: Sponsor) => (
+const BronzeComponent = ({ name, url }: Sponsor) => (
   <div>
     <a
       href={url}
@@ -234,7 +255,7 @@ const BronzeComponent = ({name, url}: Sponsor) => (
   </div>
 );
 
-const SpecialComponent = ({name, logo, url}: Sponsor) => (
+const SpecialComponent = ({ name, logo, url }: Sponsor) => (
   <div className={"flex flex-col items-center"}>
     <div className={"bg-white shadow-lg rounded-lg mt-[72px] px-[50%] py-[50px] relative"}>
       <Image
@@ -261,7 +282,7 @@ const SpecialComponent = ({name, logo, url}: Sponsor) => (
   </div>
 );
 
-const PatronComponent = ({name, logo}: Sponsor) => (
+const PatronComponent = ({ name, logo }: Sponsor) => (
   <div className={"flex items-center gap-2 flex-row"}>
     <Image
       src={"/sponsor/" + logo}
@@ -275,7 +296,7 @@ const PatronComponent = ({name, logo}: Sponsor) => (
 );
 
 const BecomeSponsorSection = () => {
-  const {t} = useTranslation("SPONSOR")
+  const { t } = useTranslation("SPONSOR")
   const [c, setContents] = useState({
     h1: "",
     p1: "",
@@ -333,5 +354,5 @@ const getTranslation = (sponsor: Sponsor, language: string): { name: string, des
     };
   }
 
-  return {name: '', description: ''};
+  return { name: '', description: '' };
 }

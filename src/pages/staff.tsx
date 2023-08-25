@@ -64,7 +64,7 @@ const ChairCard = ({ staff, bio = [] }: Props) => (
   </div>
 );
 
-const ViceChairCard = ({staff, bio = []}: Props) => (
+const ViceChairCard = ({ staff, bio = [] }: Props) => (
   <div className={"flex-1 flex flex-col"}>
     <Image
       src={"/staff/" + staff.icon}
@@ -122,7 +122,7 @@ const ViceChairCard = ({staff, bio = []}: Props) => (
   </div>
 );
 
-const SupervisorCard = ({staff, bio = []}: Props) => (
+const SupervisorCard = ({ staff, bio = [] }: Props) => (
   <div className={"flex-1 flex flex-col"}>
     <Image
       src={"/staff/" + staff.icon}
@@ -138,8 +138,8 @@ const SupervisorCard = ({staff, bio = []}: Props) => (
       </div>
       {
         bio.map((text, index) => (
-            <p key={index} className={"mb-[16px] lg:text-base text-sm text-alt-black whitespace-pre-wrap"}>{text}</p>
-          )
+          <p key={index} className={"mb-[16px] lg:text-base text-sm text-alt-black whitespace-pre-wrap"}>{text}</p>
+        )
         )
       }
       <div className={"flex flex-row items-center"}>

@@ -83,7 +83,7 @@ export type Lang = {
     JP: string;
   };
   BLOG: {
-    ACCESS:string;
+    ACCESS: string;
   };
   STAFF: {
     selina_bio1: string;
@@ -100,6 +100,13 @@ export type Lang = {
     H1: string;
     P1: string;
     A1: string;
+    DIAMOND: string;
+    PLATINUM: string;
+    GOLD: string;
+    SILVER: string;
+    BRONZE: string;
+    SPECIAL: string;
+    PATRON: string;
   };
   CONFERENCE: {
     SPEAKER_JP: {

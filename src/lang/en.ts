@@ -97,7 +97,7 @@ const En: Lang = {
     PAST_EVENTS: "List of past PyCon JP events",
   },
   OVERVIEW: {
-    APAC: "PyCon APAC is a volunteer, non-profit annual conference focused on the Python programming language. The purpose of this conference is to explore, discuss and practice the Python programming language and its peripheral technologies. Each year the event is organized by a team from a country or territory in teh Asia-Pacific region. Currently, Python communities in Singapore, Malaysia, Indonesia, the Philippines, Thailand, South Korea, Hong Kong, Vietnam, Japan, Taiwan, India, and Bangladesh are participating. In 2023, the event will be held in Japan, the Japanese community being the primary organizers this time.",
+    APAC: "PyCon APAC is a volunteer, non-profit annual conference focused on the Python programming language. The purpose of this conference is to explore, discuss and practice the Python programming language and its peripheral technologies. Each year the event is organized by a team from a country or territory in the Asia-Pacific region. Currently, Python communities in Singapore, Malaysia, Indonesia, the Philippines, Thailand, South Korea, Hong Kong, Vietnam, Japan, Taiwan, India, and Bangladesh are participating. In 2023, the event will be held in Japan, the Japanese community being the primary organizers this time.",
     JP: "PyCon JP is a conference for Python users to gather, exchange information and interact with Python and software using Python. Through PyCon JP, the goal is to gather Python users together, exchange knowledge and information on various fields related to Python, connect with new friends and communities, and increase work and business opportunities."
   },
   STAFF: {

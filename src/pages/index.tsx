@@ -32,18 +32,7 @@ export default function Home({ blogs = [], sponsor_rows = [] }: Props) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const blogBaseUrl =
-    "https://www.googleapis.com/blogger/v3/blogs/1711203921350230994/posts";
-  const blogUrl = `${blogBaseUrl}?key=${process.env.BLOGGER_API_KEY}`;
-  const blogResponse = await fetch(blogUrl);
-  const { items } = await blogResponse.json();
-  const blogs: Blog[] = items.slice(5).map((
-    { url, title, published }: Blog,
-  ) => ({
-    url,
-    title,
-    published,
-  }));
+  const blogs = await getBlogPosts()
   const jsonPath = path.join(process.cwd(), 'src', 'data', 'sponsor.json')
   const jsonText = fs.readFileSync(jsonPath, 'utf-8')
   const sponsor_rows = JSON.parse(jsonText) as Sponsor[]
@@ -54,3 +43,21 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   };
 };
+
+async function getBlogPosts() {
+  if (!process.env.BLOGGER_API_KEY) {
+    return []
+  }
+  const blogBaseUrl =
+    "https://www.googleapis.com/blogger/v3/blogs/1711203921350230994/posts";
+  const blogUrl = `${blogBaseUrl}?key=${process.env.BLOGGER_API_KEY}`;
+  const blogResponse = await fetch(blogUrl);
+  const { items } = await blogResponse.json();
+  return items.slice(5).map((
+    { url, title, published }: Blog,
+  ) => ({
+    url,
+    title,
+    published,
+  })) as Blog[];
+}

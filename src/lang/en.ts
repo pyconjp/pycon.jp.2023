@@ -113,8 +113,15 @@ const En: Lang = {
   },
   SPONSOR: {
     H1: "Please be our sponsor!",
-    P1: "Sponsorships for PyCon JP 2023 are now being accepted. We look forward to receiving applications from companies that want to appeal to the Python communities!",
+    P1: "Sponsorships for PyCon APAC 2023 are now being accepted. We look forward to receiving applications from companies that want to appeal to the Python communities!",
     A1: "Sponsorship application form",
+    DIAMOND: "Diamond sponsor",
+    PLATINUM: "Platinum sponsor",
+    GOLD: "Gold sponsor",
+    SILVER: "Silver sponsor",
+    BRONZE: "Bronze sponsor",
+    SPECIAL: "Special sponsor",
+    PATRON: "Patron",
   },
   BLOG: {
     ACCESS: "Read More"

@@ -70,12 +70,7 @@ export default function HeroSection() {
 
                 <a href="https://pretix.eu/pyconjp/2023-apac/"
                     className="bg-alt-black hover:bg-secondary-700 rounded text-center text-alt-white w-full py-[14px]"
-                >
-                    <button
-                        disabled
-                        suppressHydrationWarning
-                        type="button"
-                    >{t("TICKET_INFO")}</button></a>
+                ><span>{t("TICKET_INFO")}</span></a>
             </div>
         </section>
 

@@ -25,14 +25,14 @@ export default function HeroSection() {
             <div className="flex flex-col items-center sm:px-[10%] my-[24px]">
                 <div className="">
                     <div className="flex flex-row items-center mb-[16px]">
-                        <img src="/location.png" alt="" className="object-contain mx-[16px]"/>
+                        <img src="/location.png" alt="" className="object-contain mx-[16px]" />
                         <div className="flex sm:flex-row flex-col">
                             <h2 suppressHydrationWarning className="text-tertiary-900 font-bold text-2xl">{t("VENUE")}</h2>
-                            <a 
+                            <a
                                 href="https://www.toc.co.jp/saiji/ariake/access/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                suppressHydrationWarning 
+                                suppressHydrationWarning
                                 className="hover:opacity-70 text-lg text-secondary-600 font-bold underline underline-offset-8"
                             >
                                 <div className="flex flex-row sm:mx-[16px]">
@@ -48,9 +48,9 @@ export default function HeroSection() {
                             </a>
                         </div>
                     </div>
-        
+
                     <div className="flex flex-row items-center mb-[24px]">
-                        <img src="/calendar.png" alt="" className="mx-[16px]"/>
+                        <img src="/calendar.png" alt="" className="mx-[16px]" />
                         <div className="">
                             <div className="flex sm:flex-row flex-col sm:items-center justify-between">
                                 <h5 className="text-tertiary-600 font-montserrat italic mr-[16px]">Tutorial:</h5>
@@ -67,16 +67,16 @@ export default function HeroSection() {
                         </div>
                     </div>
                 </div>
-                
-                <button
-                    disabled
-                    suppressHydrationWarning
-                    type="button"
-                    className="bg-alt-black hover:bg-secondary-700 rounded text-center text-alt-white w-full py-[14px]"
-                >{t("TICKET_INFO")}</button>
+
+                <div className="bg-alt-black hover:bg-secondary-700 rounded text-center text-alt-white w-full py-[14px]">
+                    <a href="https://pretix.eu/pyconjp/2023-apac/">
+                        <span className="bg-alt-black hover:bg-secondary-700 rounded text-center text-alt-white w-full py-[14px]" tabIndex={-1}>
+                            {t("TICKET_INFO")}
+                        </span>
+                    </a></div>
             </div>
         </section>
 
-        
+
     )
 }

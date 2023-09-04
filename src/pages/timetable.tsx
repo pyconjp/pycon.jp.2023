@@ -6,6 +6,7 @@ import {useState} from "react";
 import {ClockIcon, MapPinIcon, TagIcon} from "@heroicons/react/20/solid";
 import {format, parseISO} from "date-fns";
 import cc from "classcat";
+import {tr} from "date-fns/locale";
 
 
 type Props = {
@@ -105,8 +106,15 @@ const TRACKS: { [key in Floor]: Track[] } = {
   ],
 };
 
-const ACTIVE = 'bg-secondary-600 text-alt-white';
-const INACTIVE = 'bg-secondary-100 text-alt-black';
+const ACTIVE = {day: 'bg-primary-600 text-alt-white', floor: 'bg-secondary-600 text-alt-white'};
+const INACTIVE = {day: 'bg-primary-100 text-alt-black', floor: 'bg-secondary-100 text-alt-black'};
+
+const BUTTON_CLASS = {
+  'rounded-2xl': true,
+  'flex-1': true,
+  'py-2': true,
+  'shadow': true,
+}
 
 const TimeTable = ({sessions, startDateTime}: Props) => {
   const [date, setDate] = useState<'day1' | 'day2'>(DEFAULT_DAY);
@@ -119,22 +127,22 @@ const TimeTable = ({sessions, startDateTime}: Props) => {
         <PageTitle title='Timetable'/>
 
         <div className='flex gap-6 w-full text-2xl mb-4 px-24'>
-          <button className={'rounded-2xl flex-1 py-2 shadow ' + (date === 'day1' ? ACTIVE : INACTIVE)}
+          <button className={cc({...BUTTON_CLASS, [ACTIVE.day]: date === 'day1', [INACTIVE.day]: date !== 'day1'})}
                   onClick={() => setDate('day1')}>
             Day1
           </button>
-          <button className={'rounded-2xl flex-1 py-2 shadow ' + (date === 'day2' ? ACTIVE : INACTIVE)}
+          <button className={cc({...BUTTON_CLASS, [ACTIVE.day]: date === 'day2', [INACTIVE.day]: date !== 'day2'})}
                   onClick={() => setDate('day2')}>
             Day2
           </button>
         </div>
 
         <div className='flex gap-6 w-full text-2xl mb-4 px-24'>
-          <button className={'rounded-2xl flex-1 py-2 shadow ' + (floor === '4F' ? ACTIVE : INACTIVE)}
+          <button className={cc({...BUTTON_CLASS, [ACTIVE.floor]: floor === '4F', [INACTIVE.floor]: floor !== '4F'})}
                   onClick={() => setFloor('4F')}>
             4F
           </button>
-          <button className={'rounded-2xl flex-1 py-2 shadow ' + (floor === '20F' ? ACTIVE : INACTIVE)}
+          <button className={cc({...BUTTON_CLASS, [ACTIVE.floor]: floor === '20F', [INACTIVE.floor]: floor !== '20F'})}
                   onClick={() => setFloor('20F')}>
             20F
           </button>

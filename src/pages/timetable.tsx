@@ -3,7 +3,7 @@ import PageTitle from "@/components/elements/PageTitle";
 import axios, {AxiosResponse} from "axios";
 import {Floor, Session, Track} from "@/types/timetable";
 import {useState} from "react";
-import {ClockIcon, TagIcon} from "@heroicons/react/20/solid";
+import {ClockIcon, MapPinIcon, TagIcon} from "@heroicons/react/20/solid";
 import {format, parseISO} from "date-fns";
 import cc from "classcat";
 
@@ -141,17 +141,18 @@ const TimeTable = ({sessions, startDateTime}: Props) => {
         </div>
 
         <div className={cc([
-          'mx-24',
-          'grid',
+          'w-10/12',
+          'mx-auto',
           'text-sm',
-          floor === '4F' ? 'grid-cols-[8%_23%_23%_23%_23%]' : 'grid-cols-[8%_92%]'
+          'lg:grid',
+          floor === '4F' ? 'lg:grid-cols-[8%_23%_23%_23%_23%]' : 'lg:grid-cols-[8%_92%]'
         ])}>
-          <div/>
+          <div className='hidden lg:block'/>
           {
             TRACKS[floor].map(
               (track, index) =>
                 <div key={index}
-                     className='text-lg text-center odd:bg-secondary-600 even:bg-secondary-800 text-alt-white m-0.5 py-1 rounded'>
+                     className='text-lg text-center odd:bg-secondary-600 even:bg-secondary-800 text-alt-white m-0.5 py-1 rounded hidden lg:block'>
                   {track}
                 </div>
             )
@@ -174,8 +175,7 @@ const TimeTable = ({sessions, startDateTime}: Props) => {
 
 const TalkLine = ({sessions, floor, start}: { sessions: Session[], floor: Floor, start: string }) =>
   <>
-    <div
-      className='w-full text-right text-alt-black pr-4 pt-1 font-bold border-t-2 border-secondary-300'>{format(parseISO(start), 'HH:mm')}</div>
+    <StartTime start={start}/>
     {
       TRACKS[floor].map(
         (track, index) =>
@@ -189,47 +189,51 @@ const TalkLine = ({sessions, floor, start}: { sessions: Session[], floor: Floor,
 
 
 const Talk = ({session}: { session?: Session }) =>
-  <div className='rounded h-[200px] m-0.5'>
-    {
-      session &&
-      <div className='px-4 py-2 rounded bg-secondary-100 h-full flex flex-col justify-between gap-4'>
-        <div>
-          <div className='text-primary-700 font-bold overflow-hidden text-ellipsis max-h-[100px] inline-block'>
-            {session.title}
-          </div>
-          <div className='text-alt-black'>
-            {session.speakers.length > 0 && session.speakers[0].name}
-          </div>
-        </div>
-        <div>
-          <div className='text-alt-black mb-1'>
-            <TagIcon className='w-4 h-4 inline'/>{session.track["ja-JP"]}
-          </div>
-          <div className='inline-flex flex-row gap-2'>
-            <div className='text-alt-black'>
-              {
-                session.content_locale === 'ja-JP' ?
-                  <div className='inline bg-primary-500 rounded-2xl text-alt-white px-2'>日本語</div> :
-                  <div className='inline bg-secondary-500 rounded-2xl text-alt-white px-2'>EN</div>
-              }
+  (
+    session
+      ? <div className='rounded lg:h-[200px] h-[170px] m-0.5'>
+        <div className='px-4 py-2 rounded bg-secondary-100 h-full flex flex-col justify-between gap-4'>
+          <div>
+            <div className='text-primary-700 font-bold overflow-hidden text-ellipsis max-h-[60px] inline-block'>
+              {session.title}
             </div>
             <div className='text-alt-black'>
-              <ClockIcon className='w-4 h-4 inline'/>{session.duration}min
+              {session.speakers.length > 0 && session.speakers[0].name}
+            </div>
+          </div>
+          <div>
+            <div className='text-alt-black mb-1'>
+              <TagIcon className='w-4 h-4 inline'/>{session.track["ja-JP"]}
+            </div>
+            <div className='inline-flex flex-row gap-2'>
+              <div className='text-alt-black'>
+                {
+                  session.content_locale === 'ja-JP' ?
+                    <div className='inline bg-primary-500 rounded-2xl text-alt-white px-2'>日本語</div> :
+                    <div className='inline bg-secondary-500 rounded-2xl text-alt-white px-2'>EN</div>
+                }
+              </div>
+              <div className='text-alt-black'>
+                <ClockIcon className='w-4 h-4 inline'/>{session.duration}min
+              </div>
+              <div className='text-alt-black lg:hidden'>
+                <MapPinIcon className='w-4 h-4 inline'/>{session.slot.room["ja-JP"]}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    }
-  </div>
+      : <div className='hidden lg:block'/>
+  )
 
 const OtherLine = ({title, floor, start}: { title: string, floor: Floor, start: string }) =>
   <>
-    <div
-      className='w-full text-right text-alt-black pr-4 pt-1 font-bold border-t-2 border-secondary-300'>{format(parseISO(start), 'HH:mm')}</div>
+    <StartTime start={start}/>
     <div
       className={cc({
+        'text-lg': true,
         'text-center': true,
-        'py-2': true,
+        'py-1': true,
         'bg-primary-600': true,
         'text-alt-white': true,
         'font-bold': true,
@@ -240,6 +244,37 @@ const OtherLine = ({title, floor, start}: { title: string, floor: Floor, start: 
       {title}
     </div>
   </>
+
+const StartTime = ({start}: { start: string }) => (
+  <div
+    className={cc(
+      [
+        'font-bold',
+        'text-center',
+        'text-alt-white',
+        'bg-secondary-600',
+        'rounded',
+        'mx-0.5',
+        'mt-4',
+        'text-lg',
+        'lg:w-full',
+        'lg:text-right',
+        'lg:text-alt-black',
+        'lg:bg-white',
+        'lg:rounded-none',
+        'lg:mx-0',
+        'lg:mt-0',
+        'lg:pb-auto',
+        'lg:text-sm',
+        'lg:pr-4',
+        'lg:pt-1',
+        'lg:border-t-2',
+        'lg:border-secondary-300',
+      ]
+    )}>
+    {format(parseISO(start), 'HH:mm')}
+  </div>
+)
 
 const getStartDateTime = (sessions: Session[]) => {
   const start = sessions

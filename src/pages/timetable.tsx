@@ -6,7 +6,6 @@ import {useState} from "react";
 import {ClockIcon, MapPinIcon, TagIcon} from "@heroicons/react/20/solid";
 import {format, parseISO} from "date-fns";
 import cc from "classcat";
-import {tr} from "date-fns/locale";
 
 
 type Props = {
@@ -325,10 +324,6 @@ export const getStaticProps = async () => {
   ).then(
     (response: AxiosResponse<{ results: Session[] }>) => response.data.results
   );
-
-  const day1RegularStart = regular
-    .filter(session => session.slot.start < '2023-10-28T00:00:00+09:00')
-    .map(session => session.slot.start);
 
   return {
     props: {

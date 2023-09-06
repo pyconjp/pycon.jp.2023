@@ -14,7 +14,7 @@ const Ja: Lang = {
     TUTORIAL_DATE: "2023.10.26(Thu)",
     CONFERENCE_DATE: "2023.10.27(Fri)-28(Sat)",
     SPRINT_DATE: "2023.10.29(Sun)",
-    TICKET_INFO: "チケット案内",
+    TICKET_INFO: "チケット案内 (Coming soon...)",
   },
   MENU: {
     ABOUT: {

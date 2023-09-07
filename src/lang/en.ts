@@ -14,7 +14,7 @@ const En: Lang = {
     TUTORIAL_DATE: "OCTOBER 26, 2023",
     CONFERENCE_DATE: "OCTOBER 27 - 28, 2023",
     SPRINT_DATE: "OCTOBER 29, 2023",
-    TICKET_INFO: "Ticket Info  (Coming soon)",
+    TICKET_INFO: "Ticket Info (Coming soon...)",
   },
   MENU: {
     ABOUT: {
@@ -97,7 +97,7 @@ const En: Lang = {
     PAST_EVENTS: "List of past PyCon JP events",
   },
   OVERVIEW: {
-    APAC: "PyCon APAC is a volunteer, non-profit annual conference focused on the Python programming language. The purpose of this conference is to explore, discuss and practice the Python programming language and its peripheral technologies. Each year the event is organized by a team from a country or territory in teh Asia-Pacific region. Currently, Python communities in Singapore, Malaysia, Indonesia, the Philippines, Thailand, South Korea, Hong Kong, Vietnam, Japan, Taiwan, India, and Bangladesh are participating. In 2023, the event will be held in Japan, the Japanese community being the primary organizers this time.",
+    APAC: "PyCon APAC is a volunteer, non-profit annual conference focused on the Python programming language. The purpose of this conference is to explore, discuss and practice the Python programming language and its peripheral technologies. Each year the event is organized by a team from a country or territory in the Asia-Pacific region. Currently, Python communities in Singapore, Malaysia, Indonesia, the Philippines, Thailand, South Korea, Hong Kong, Vietnam, Japan, Taiwan, India, and Bangladesh are participating. In 2023, the event will be held in Japan, the Japanese community being the primary organizers this time.",
     JP: "PyCon JP is a conference for Python users to gather, exchange information and interact with Python and software using Python. Through PyCon JP, the goal is to gather Python users together, exchange knowledge and information on various fields related to Python, connect with new friends and communities, and increase work and business opportunities."
   },
   STAFF: {
@@ -113,8 +113,15 @@ const En: Lang = {
   },
   SPONSOR: {
     H1: "Please be our sponsor!",
-    P1: "Sponsorships for PyCon JP 2023 are now being accepted. We look forward to receiving applications from companies that want to appeal to the Python communities!",
+    P1: "Sponsorships for PyCon APAC 2023 are now being accepted. We look forward to receiving applications from companies that want to appeal to the Python communities!",
     A1: "Sponsorship application form",
+    DIAMOND: "Diamond sponsor",
+    PLATINUM: "Platinum sponsor",
+    GOLD: "Gold sponsor",
+    SILVER: "Silver sponsor",
+    BRONZE: "Bronze sponsor",
+    SPECIAL: "Special sponsor",
+    PATRON: "Patron",
   },
   BLOG: {
     ACCESS: "Read More"

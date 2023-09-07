@@ -279,6 +279,42 @@
     "category": "Silver"
   },
   {
+    "name": "New Relic株式会社",
+    "name_en": "New Relic",
+    "url": "https://newrelic.com/jp",
+    "description": "New Relic は、デジタルビジネスのあらゆる重要指標を観測可能にする「オブザーバビリティプラットフォーム」を提供しています。エンジニアの皆様がオブザーバビリティプラットフォームを活用してより完璧なソフトウェアを作ることをサポートします。\nPycon APACに初めてスポンサーさせて頂くことを嬉しく思います。\nデモ、そしてTシャツなどが当たるノベルティ抽選会をご用意してお待ちしておりますので、是非ブースまで足をお運びください。",
+    "description_en": "New Relic offers an observability platform that makes every key indicator of your digital business observable. We support engineers to make more perfect software using observability platform.\nWe are happy to sponsor Pycon APAC for the first time, and we are waiting for you with demos and a novelty lottery where you can win T-shirts etc, so please come and visit our booth.",
+    "logo": "newrelic.png",
+    "category": "Gold"
+  },
+  {
+    "name": "株式会社 日本システム技研",
+    "name_en": "Japan System Laboratory Co., Ltd.",
+    "url": "https://jsl.co.jp/",
+    "description": "",
+    "description_en": "",
+    "logo": "JSL.png",
+    "category": "Silver"
+  },
+  {
+    "name": "株式会社アイシン",
+    "name_en": "AISIN CORPORATION",
+    "url": "https://www.aisin.com/jp/",
+    "description": "",
+    "description_en": "",
+    "logo": "AISIN.png",
+    "category": "Silver"
+  },
+  {
+    "name": "株式会社グローバルウェイ",
+    "name_en": "Globalway, Inc.",
+    "url": "https://www.globalway.co.jp/",
+    "description": "ライフスタイルの変革とビジネスの革新に貢献して、人々がより幸せになるための価値を創出し続けることをミッションとして5つの事業を展開しています。\n本イベントに参加するプラットフォーム事業部では、企業のDXを様々なデジタル技術(Python/AWS/Mule)を活用して幅広くご支援しています。\n\n特にPythonを活用した機械学習やAI(人工知能)分野での技術開発は、力を入れている分野のひとつです。\n具体的には、通信研究分野におけるAIティーチング技術の実用化や、信頼性・可用性が必要とされるWebアプリの技術開発などを推進しております。",
+    "description_en": "",
+    "logo": "globalway.PNG",
+    "category": "Gold"
+  },
+  {
     "name": "株式会社Nexedi",
     "name_en": "株式会社Nexedi",
     "url": "https://www.nexedi.com/ja",
@@ -294,25 +330,7 @@
     "description": "",
     "description_en": "",
     "logo": "dummy_coming_soon.png",
-    "category": "Bronze"
-  },
-  {
-    "name": "株式会社日本システ厶技研",
-    "name_en": "株式会社日本システ厶技研",
-    "url": "https://jsl.co.jp/",
-    "description": "",
-    "description_en": "",
-    "logo": "dummy_coming_soon.png",
     "category": "Silver"
-  },
-  {
-    "name": "New Relic株式会社",
-    "name_en": "New Relic株式会社",
-    "url": "https://newrelic.com/jp",
-    "description": "",
-    "description_en": "",
-    "logo": "dummy_coming_soon.png",
-    "category": "Gold"
   },
   {
     "name": "株式会社オープングルーヴ",
@@ -321,30 +339,12 @@
     "description": "",
     "description_en": "",
     "logo": "dummy_coming_soon.png",
-    "category": "Bronze"
+    "category": "Gold"
   },
   {
     "name": "ヤフー株式会社",
     "name_en": "ヤフー株式会社",
     "url": "https://www.yahoo.co.jp",
-    "description": "",
-    "description_en": "",
-    "logo": "dummy_coming_soon.png",
-    "category": "Silver"
-  },
-  {
-    "name": "株式会社グローバルウェイ",
-    "name_en": "株式会社グローバルウェイ",
-    "url": "https://www.globalway.co.jp/",
-    "description": "",
-    "description_en": "",
-    "logo": "dummy_coming_soon.png",
-    "category": "Gold"
-  },
-  {
-    "name": "株式会社アイシン",
-    "name_en": "株式会社アイシン",
-    "url": "https://www.aisin.com/jp/",
     "description": "",
     "description_en": "",
     "logo": "dummy_coming_soon.png",

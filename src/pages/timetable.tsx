@@ -55,6 +55,8 @@ const TimeTable = ({sessions, startDateTime}: Props) => {
   useEffect(() => {
     if (selected !== null) {
       document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
     }
   }, [selected]);
 

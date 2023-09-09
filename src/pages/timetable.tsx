@@ -6,6 +6,7 @@ import Timetable from "@/components/organisms/Timetable";
 import {other} from "@/data/timetable";
 import {useRouter} from "next/router";
 import Modal from "@/components/elements/Modal";
+import {useEffect} from "react";
 
 
 type Props = {
@@ -32,7 +33,7 @@ const TimeTable = ({sessions, startDateTime}: Props) => {
   const router = useRouter();
   const {id} = router.query;
 
-  let selected = null;
+  let selected: Session | null = null;
   let defaultFloor: Floor = '4F';
   let defaultDate: Day = DEFAULT_DAY;
   if (id) {
@@ -45,17 +46,17 @@ const TimeTable = ({sessions, startDateTime}: Props) => {
       defaultFloor = '20F';
       defaultDate = selected.slot.start < DATE_THRESHOLD ? 'day1' : 'day2';
     }
-    if (document !== undefined) {
-      document.body.style.overflow = 'hidden';
-    }
-  } else {
-    if (document !== undefined) {
-      document.body.style.overflow = 'auto';
-    }
   }
+
   const transient = async () => {
     await router.push(`/timetable`);
   }
+
+  useEffect(() => {
+    if (selected !== null) {
+      document.body.style.overflow = 'hidden';
+    }
+  }, [selected]);
 
   return (
     <>

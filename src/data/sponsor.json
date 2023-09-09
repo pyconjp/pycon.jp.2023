@@ -315,6 +315,15 @@
     "category": "Gold"
   },
   {
+    "name": "ENECHANGE株式会社",
+    "name_en": "ENECHANGE Ltd.",
+    "url": "https://enechange.co.jp/",
+    "description": "",
+    "description_en": "",
+    "logo": "ENECHANGE.png",
+    "category": "Silver"
+  },
+  {
     "name": "株式会社Nexedi",
     "name_en": "株式会社Nexedi",
     "url": "https://www.nexedi.com/ja",
@@ -330,7 +339,7 @@
     "description": "",
     "description_en": "",
     "logo": "dummy_coming_soon.png",
-    "category": "Silver"
+    "category": "Bronze"
   },
   {
     "name": "株式会社オープングルーヴ",
@@ -339,12 +348,30 @@
     "description": "",
     "description_en": "",
     "logo": "dummy_coming_soon.png",
-    "category": "Gold"
+    "category": "Bronze"
   },
   {
     "name": "ヤフー株式会社",
     "name_en": "ヤフー株式会社",
     "url": "https://www.yahoo.co.jp",
+    "description": "",
+    "description_en": "",
+    "logo": "dummy_coming_soon.png",
+    "category": "Silver"
+  },
+  {
+    "name": "株式会社hokan",
+    "name_en": "株式会社hokan",
+    "url": "https://www.corp.hkn.jp/",
+    "description": "",
+    "description_en": "",
+    "logo": "dummy_coming_soon.png",
+    "category": "Gold"
+  },
+  {
+    "name": "Bloomberg",
+    "name_en": "Bloomberg",
+    "url": "https://www.bloomberg.com/company/values/tech-at-bloomberg/",
     "description": "",
     "description_en": "",
     "logo": "dummy_coming_soon.png",

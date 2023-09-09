@@ -41,9 +41,9 @@ const Modal = ({session, onClose}: Props) => {
             <div className='flex gap-6'>
               {
                 speaker.avatar &&
-                <img src={speaker.avatar} alt={speaker.name} className='w-20 lg:w-32 lg:min-w-[128px] lg:max-w-[128px] min-w-[80px'/>
+                <img src={speaker.avatar} alt={speaker.name} className='flex-1'/>
               }
-              <div>
+              <div className='flex-auto'>
                 <div className='text-xl'>
                   {speaker.name}
                 </div>

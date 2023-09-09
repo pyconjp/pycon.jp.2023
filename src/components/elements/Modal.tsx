@@ -39,7 +39,7 @@ const Modal = ({session, onClose}: Props) => {
             <div className='whitespace-pre-line'>{session.description}</div>
             <hr className='my-6 border-secondary-300'/>
             <div className='flex gap-6'>
-              <Image src={speaker.avatar} alt={speaker.name} width={180} height={180}/>
+              <img src={speaker.avatar} alt={speaker.name} className='w-12'/>
               <div>
                 <div className='text-xl'>
                   {speaker.name}

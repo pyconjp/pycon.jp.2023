@@ -3,12 +3,15 @@ import {other, tracks} from "@/data/timetable";
 import {Day, Floor, Session} from "@/types/timetable";
 import {ClockIcon, MapPinIcon, TagIcon} from "@heroicons/react/20/solid";
 import {format, parseISO} from "date-fns";
+import ToggleButton from "@/components/elements/ToggleButton";
+import {useState} from "react";
 
 type Props = {
   sessions: {
     "4F": Session[],
     "20F": Session[],
   };
+  selected: Session | null,
   startDateTime: {
     "day1": {
       "4F": string[],
@@ -19,40 +22,49 @@ type Props = {
       "20F": string[],
     },
   },
-  floor: Floor,
-  date: Day,
+  defaultDate: Day,
+  defaultFloor: Floor,
 }
 
-const Timetable = ({sessions, startDateTime, floor, date}: Props) => {
+const Timetable = ({sessions, selected, startDateTime, defaultDate, defaultFloor}: Props) => {
+  const [date, setDate] = useState<Day>(defaultDate);
+  const [floor, setFloor] = useState<Floor>(defaultFloor);
+
   return (
-    <div className={cc([
-      'w-10/12',
-      'mx-auto',
-      'text-sm',
-      'lg:grid',
-      floor === '4F' ? 'lg:grid-cols-[8%_23%_23%_23%_23%]' : 'lg:grid-cols-[8%_92%]'
-    ])}>
-      <div className='hidden lg:block'/>
-      {
-        tracks[floor].map(
-          (track, index) =>
-            <div key={index}
-                 className='text-lg text-center odd:bg-secondary-600 even:bg-secondary-800 text-alt-white m-0.5 py-1 rounded hidden lg:block'>
-              {track}
-            </div>
-        )
-      }
-      {
-        startDateTime[date][floor].map((start, index) => {
-          const session_line = sessions[floor].filter(session => session.slot.start === start);
-          if (!Object.hasOwn(other[date][floor], start)) {
-            return <TalkLine key={index} sessions={session_line} floor={floor} start={start}/>;
-          } else {
-            return <OtherLine key={index} title={other[date][floor][start]} floor={floor} start={start}/>;
-          }
-        })
-      }
-    </div>
+    <>
+      <ToggleButton<Day> buttons={[{label: 'Day1', value: 'day1'}, {label: 'Day2', value: 'day2'}]}
+                         selected={date} onClick={setDate} variant={'secondary'}/>
+      <ToggleButton<Floor> buttons={[{label: '4F', value: '4F'}, {label: '20F', value: '20F'}]}
+                           selected={floor} onClick={setFloor} variant={'primary'}/>
+      <div className={cc([
+        'w-10/12',
+        'mx-auto',
+        'text-sm',
+        'lg:grid',
+        floor === '4F' ? 'lg:grid-cols-[8%_23%_23%_23%_23%]' : 'lg:grid-cols-[8%_92%]'
+      ])}>
+        <div className='hidden lg:block'/>
+        {
+          tracks[floor].map(
+            (track, index) =>
+              <div key={index}
+                   className='text-lg text-center odd:bg-secondary-600 even:bg-secondary-800 text-alt-white m-0.5 py-1 rounded hidden lg:block'>
+                {track}
+              </div>
+          )
+        }
+        {
+          startDateTime[date][floor].map((start, index) => {
+            const session_line = sessions[floor].filter(session => session.slot.start === start);
+            if (!Object.hasOwn(other[date][floor], start)) {
+              return <TalkLine key={index} sessions={session_line} floor={floor} start={start}/>;
+            } else {
+              return <OtherLine key={index} title={other[date][floor][start]} floor={floor} start={start}/>;
+            }
+          })
+        }
+      </div>
+    </>
   );
 }
 

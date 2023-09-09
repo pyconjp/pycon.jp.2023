@@ -1,15 +1,10 @@
 import PageHead from "@/components/elements/PageHead";
 import PageTitle from "@/components/elements/PageTitle";
 import axios, {AxiosResponse} from "axios";
-import {Day, Floor, Session, Track} from "@/types/timetable";
-import {useState} from "react";
-import {ClockIcon, MapPinIcon, TagIcon} from "@heroicons/react/20/solid";
-import {format, parseISO} from "date-fns";
-import cc from "classcat";
+import {Floor, Session, Day} from "@/types/timetable";
 import Timetable from "@/components/organisms/Timetable";
-import {da} from "date-fns/locale";
 import {other} from "@/data/timetable";
-import ToggleButton from "@/components/elements/ToggleButton";
+import {useRouter} from "next/router";
 
 
 type Props = {
@@ -30,35 +25,38 @@ type Props = {
 }
 
 const DATE_THRESHOLD = '2023-10-28T00:00:00+09:00';
-
 const DEFAULT_DAY = 'day1';
 
-const ACTIVE = {day: 'bg-primary-600 text-alt-white', floor: 'bg-secondary-600 text-alt-white'};
-const INACTIVE = {day: 'bg-primary-100 text-alt-black', floor: 'bg-secondary-100 text-alt-black'};
-
-const BUTTON_CLASS = {
-  'rounded-2xl': true,
-  'flex-1': true,
-  'py-2': true,
-  'shadow': true,
-}
-
 const TimeTable = ({sessions, startDateTime}: Props) => {
-  const [date, setDate] = useState<Day>(DEFAULT_DAY);
-  const [floor, setFloor] = useState<Floor>('4F');
+  const router = useRouter();
+  const {id} = router.query;
+
+  let selected = null;
+  let defaultFloor: Floor = '4F';
+  let defaultDate: Day = DEFAULT_DAY;
+  if (id) {
+    if (sessions['4F'].filter(session => session.code === id).length > 0) {
+      selected = sessions['4F'].filter(session => session.code === id)[0];
+      defaultFloor = '4F';
+      defaultDate = selected.slot.start < DATE_THRESHOLD ? 'day1' : 'day2';
+    } else if (sessions['20F'].filter(session => session.code === id).length > 0) {
+      selected = sessions['20F'].filter(session => session.code === id)[0];
+      defaultFloor = '20F';
+      defaultDate = selected.slot.start < DATE_THRESHOLD ? 'day1' : 'day2';
+    }
+  }
 
   return (
     <>
       <PageHead/>
       <div>
         <PageTitle title='Timetable'/>
-
-        <ToggleButton<Day> buttons={[{label: 'Day1', value: 'day1'}, {label: 'Day2', value: 'day2'}]}
-                           selected={date} onClick={setDate} variant={'secondary'}/>
-        <ToggleButton<Floor> buttons={[{label: '4F', value: '4F'}, {label: '20F', value: '20F'}]}
-                             selected={floor} onClick={setFloor} variant={'primary'}/>
-
-        <Timetable sessions={sessions} startDateTime={startDateTime} floor={floor} date={date}/>
+        {
+          router.isReady
+          &&
+          <Timetable sessions={sessions} selected={selected} startDateTime={startDateTime}
+                     defaultFloor={defaultFloor ?? '4F'} defaultDate={defaultDate ?? DEFAULT_DAY}/>
+        }
       </div>
     </>
   )

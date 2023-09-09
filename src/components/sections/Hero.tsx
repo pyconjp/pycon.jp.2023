@@ -68,9 +68,9 @@ export default function HeroSection() {
                     </div>
                 </div>
 
-                <button
+                <a href="https://pretix.eu/pyconjp/2023-apac/"
                     className="bg-alt-black hover:bg-secondary-700 rounded text-center text-alt-white w-full py-[14px]"
-                ><span>{t("TICKET_INFO")}</span></button>
+                ><span>{t("TICKET_INFO")}</span></a>
             </div>
         </section>
 

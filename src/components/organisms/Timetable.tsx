@@ -27,7 +27,7 @@ type Props = {
   defaultFloor: Floor,
 }
 
-const Timetable = ({sessions, selected, startDateTime, defaultDate, defaultFloor}: Props) => {
+const Timetable = ({sessions, startDateTime, defaultDate, defaultFloor}: Props) => {
   const [date, setDate] = useState<Day>(defaultDate);
   const [floor, setFloor] = useState<Floor>(defaultFloor);
 

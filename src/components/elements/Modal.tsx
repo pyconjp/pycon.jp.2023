@@ -14,7 +14,7 @@ const Modal = ({session, onClose}: Props) => {
   return (
     <div className='fixed top-0 left-0 w-full h-full flex' style={{'backgroundColor': 'rgba(17,28,59,0.5)'}}>
       <div>
-        <div className='mt-28 w-8/12 max-h-4/5 mx-auto bg-white rounded-lg shadow-lg opacity-100 overflow-y-scroll'>
+        <div className='mt-28 w-8/12 h-4/5 mx-auto bg-white rounded-lg shadow-lg opacity-100 overflow-y-scroll'>
           <div className='p-8 text-alt-black'>
             <div className='flex justify-end'>
               <button onClick={onClose}>

@@ -5,6 +5,7 @@ import {ClockIcon, MapPinIcon, TagIcon} from "@heroicons/react/20/solid";
 import {format, parseISO} from "date-fns";
 import ToggleButton from "@/components/elements/ToggleButton";
 import {useState} from "react";
+import {useRouter} from "next/router";
 
 type Props = {
   sessions: {
@@ -83,11 +84,16 @@ const TalkLine = ({sessions, floor, start}: { sessions: Session[], floor: Floor,
   </>
 
 
-const Talk = ({session}: { session?: Session }) =>
-  (
+const Talk = ({session}: { session?: Session }) => {
+  const router = useRouter();
+  const transient = async () => {
+    await router.push(`/timetable?id=${session?.code}`);
+  }
+
+  return (
     session
       ? <div className='rounded lg:h-[200px] h-[170px] m-0.5'>
-        <div className='px-4 py-2 rounded bg-secondary-100 h-full flex flex-col justify-between gap-4'>
+        <div className='px-4 py-2 rounded bg-secondary-100 h-full flex flex-col justify-between gap-4 cursor-pointer' onClick={transient}>
           <div>
             <div className='text-primary-700 font-bold overflow-hidden text-ellipsis max-h-[60px] inline-block'>
               {session.title}
@@ -120,6 +126,7 @@ const Talk = ({session}: { session?: Session }) =>
       </div>
       : <div className='hidden lg:block'/>
   )
+}
 
 const OtherLine = ({title, floor, start}: { title: string, floor: Floor, start: string }) =>
   <>

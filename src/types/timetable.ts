@@ -1,3 +1,5 @@
+import exp from "constants";
+
 export type Speaker = {
   code: string,
   name: string,
@@ -26,7 +28,7 @@ export type Session = {
   'slot_count': number,
   'do_not_record': boolean,
   'is_featured': boolean,
-  'content_locale': string,
+  'content_locale': 'ja-JP' | 'en',
   'slot': {
     room_id: number,
     room: MultilingualString<Track>,

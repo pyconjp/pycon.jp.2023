@@ -5,6 +5,7 @@ import {Floor, Session, Day} from "@/types/timetable";
 import Timetable from "@/components/organisms/Timetable";
 import {other} from "@/data/timetable";
 import {useRouter} from "next/router";
+import Modal from "@/components/elements/Modal";
 
 
 type Props = {
@@ -45,6 +46,9 @@ const TimeTable = ({sessions, startDateTime}: Props) => {
       defaultDate = selected.slot.start < DATE_THRESHOLD ? 'day1' : 'day2';
     }
   }
+  const transient = async () => {
+    await router.push(`/timetable`);
+  }
 
   return (
     <>
@@ -52,11 +56,10 @@ const TimeTable = ({sessions, startDateTime}: Props) => {
       <div>
         <PageTitle title='Timetable'/>
         {
-          router.isReady
-          &&
           <Timetable sessions={sessions} selected={selected} startDateTime={startDateTime}
                      defaultFloor={defaultFloor ?? '4F'} defaultDate={defaultDate ?? DEFAULT_DAY}/>
         }
+        {selected && <Modal session={selected} onClose={transient}/>}
       </div>
     </>
   )
@@ -73,13 +76,32 @@ const getStartDateTime = (sessions: Session[]) => {
 }
 
 export const getStaticProps = async () => {
+  const answers = await axios.get(
+    'https://pretalx.com/api/events/pyconapac2023/answers',
+    {
+      params: {
+        question: 2563, // 発表の言語
+        limit: 300,
+      },
+      headers: {
+        Authorization: `Token ${process.env.PRETALX_AUTH_KEY}`,
+      },
+    },
+  ).then(
+    (response) => response.data.results
+  );
+
+  const contentLocales = answers.reduce((acc: any, cur: any) => ({...acc, [cur.submission]: cur.answer}), {});
+  console.log(contentLocales);
+  console.log(contentLocales['7WPFBX']);
+
   const regular = await axios.get(
     'https://pretalx.com/api/events/pyconapac2023/talks/',
     {
       params: {
         state: 'confirmed',
+        submission_type: 2850, // 発表
         limit: 100,
-        submission_type: 2850,
       },
       headers: {
         Authorization: `Token ${process.env.PRETALX_AUTH_KEY}`,
@@ -87,15 +109,18 @@ export const getStaticProps = async () => {
     },
   ).then(
     (response: AxiosResponse<{ results: Session[] }>) => response.data.results
-  );
+  ).then(sessions => sessions.map(session => {
+    session.content_locale = ['日本語', 'Japanese'].includes(contentLocales[session.code]) ? 'ja-JP' : 'en';
+    return session;
+  }));
 
   const short = await axios.get(
     'https://pretalx.com/api/events/pyconapac2023/talks/',
     {
       params: {
         state: 'confirmed',
+        submission_type: 3340, // 15 Minute Talk
         limit: 100,
-        submission_type: 3340,
       },
       headers: {
         Authorization: `Token ${process.env.PRETALX_AUTH_KEY}`,
@@ -103,7 +128,10 @@ export const getStaticProps = async () => {
     },
   ).then(
     (response: AxiosResponse<{ results: Session[] }>) => response.data.results
-  );
+  ).then(sessions => sessions.map(session => {
+    session.content_locale = ['日本語', 'Japanese'].includes(contentLocales[session.code]) ? 'ja-JP' : 'en';
+    return session;
+  }));
 
   return {
     props: {

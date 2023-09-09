@@ -93,8 +93,6 @@ export const getStaticProps = async () => {
   );
 
   const contentLocales = answers.reduce((acc: any, cur: any) => ({...acc, [cur.submission]: cur.answer}), {});
-  console.log(contentLocales);
-  console.log(contentLocales['7WPFBX']);
 
   const regular = await axios.get(
     'https://pretalx.com/api/events/pyconapac2023/talks/',

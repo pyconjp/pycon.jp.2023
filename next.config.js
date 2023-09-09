@@ -7,7 +7,14 @@ const nextConfig = {
     defaultLocale: 'ja',
   } */
   images: {
-    domains: ["pretalx.com"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'pretalx.com',
+        port: '',
+        pathname: '/media/avatars/**',
+      },
+    ],
   }
 };
 

@@ -45,6 +45,9 @@ const TimeTable = ({sessions, startDateTime}: Props) => {
       defaultFloor = '20F';
       defaultDate = selected.slot.start < DATE_THRESHOLD ? 'day1' : 'day2';
     }
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'auto';
   }
   const transient = async () => {
     await router.push(`/timetable`);

@@ -56,6 +56,7 @@ const TimeTable = ({sessions, startDateTime}: Props) => {
       <div>
         <PageTitle title='Timetable'/>
         {
+          router.isReady &&
           <Timetable sessions={sessions} selected={selected} startDateTime={startDateTime}
                      defaultFloor={defaultFloor ?? '4F'} defaultDate={defaultDate ?? DEFAULT_DAY}/>
         }

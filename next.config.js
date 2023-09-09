@@ -6,6 +6,9 @@ const nextConfig = {
     locales: ['ja', 'en'],
     defaultLocale: 'ja',
   } */
+  images: {
+    domains: ["pretalx.com"],
+  }
 };
 
 module.exports = withExportImages(nextConfig);

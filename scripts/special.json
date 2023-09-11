@@ -7,5 +7,14 @@
     "description": "IIJ",
     "name_en": "Internet Initiative Japan Inc.",
     "description_en": null
-  }
+  },
+  {
+    "category": "special",
+    "name": "Python Software Foundation",
+    "url": "https://www.python.org/psf/",
+    "description": "PSF",
+    "name_en": "Python Software Foundation",
+    "description_en": "PSF",
+    "logo": "psf.png"
+  },
 ]

@@ -387,6 +387,15 @@
     "description_en": null
   },
   {
+    "category": "special",
+    "name": "Python Software Foundation",
+    "url": "https://www.python.org/psf/",
+    "description": "PSF",
+    "name_en": "Python Software Foundation",
+    "description_en": "PSF",
+    "logo": "psf.png"
+  },
+  {
     "category": "patron",
     "name": "Coming soon",
     "url": "http://pycon.jp/",

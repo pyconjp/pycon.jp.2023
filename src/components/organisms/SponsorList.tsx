@@ -117,7 +117,7 @@ const DiamondComponent = ({ name, logo, url, description }: Sponsor) => (
   <div className={""}>
     <div className={"relative"}>
       <div className={"z-20 relative"}>
-        <div className={"bg-white shadow-lg rounded-lg mt-[72px] p-[200px] relative"}>
+        <div className={"bg-white shadow-lg rounded-lg mt-[72px] lg:p-[200px] p-[100px] relative"}>
           <Image
             src={"/sponsor/" + logo}
             alt={name}

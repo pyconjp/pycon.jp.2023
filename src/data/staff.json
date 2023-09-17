@@ -5,7 +5,8 @@
         "twitter": "",
         "github": "k-nakamura",
         "facebook": "",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "Peacock",
@@ -13,7 +14,8 @@
         "twitter": "peacock0803sz",
         "github": "peacock0803sz",
         "facebook": "peacock0803sz",
-        "division": "vicechair1"
+        "division": "vicechair1",
+        "mastodon": ""
     },
     {
         "name": "Rohit Anand",
@@ -21,7 +23,8 @@
         "twitter": "",
         "github": "RA489",
         "facebook": "",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "Gursimar Singh",
@@ -29,7 +32,8 @@
         "twitter": "gursimarsm",
         "github": "gursimarsm",
         "facebook": "",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "hiroyuki hanao",
@@ -37,7 +41,8 @@
         "twitter": "hanahiro_aze",
         "github": "hanahiroAze",
         "facebook": "",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "kame-chan",
@@ -45,7 +50,8 @@
         "twitter": "okusama27",
         "github": "okusama27",
         "facebook": "",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "Shinko",
@@ -53,7 +59,8 @@
         "twitter": "shinkolab",
         "github": "ShinkoLab",
         "facebook": "shinko.sasaki9745",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "片寄 里菜 / Lina KATAYOSE(selina)",
@@ -61,7 +68,8 @@
         "twitter": "selina787b",
         "github": "se-lina",
         "facebook": "lina.katayose",
-        "division": "chair"
+        "division": "chair",
+        "mastodon": ""
     },
     {
         "name": "OJI",
@@ -69,7 +77,8 @@
         "twitter": "OldBigBuddha",
         "github": "OldBigBuddha",
         "facebook": "",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "Gamou Tatsumi",
@@ -77,7 +86,8 @@
         "twitter": "gamoutatsumi",
         "github": "gamoutatsumi",
         "facebook": "",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "Jonas Obrist",
@@ -85,7 +95,8 @@
         "twitter": "",
         "github": "ojii",
         "facebook": "",
-        "division": "core"
+        "division": "core",
+        "mastodon": "@ojii@mastodon.social"
     },
     {
         "name": "Jasmine Yap",
@@ -93,7 +104,8 @@
         "twitter": "",
         "github": "teeyingyap",
         "facebook": "",
-        "division": "day"
+        "division": "day",
+        "mastodon": ""
     },
     {
         "name": "yuutan",
@@ -101,7 +113,8 @@
         "twitter": "yuutangadget",
         "github": "yuutangadget",
         "facebook": "",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "吉田 俊輔",
@@ -109,7 +122,8 @@
         "twitter": "koedoyoshida",
         "github": "koedoyoshida",
         "facebook": "koedoyoshida",
-        "division": "supervisor1"
+        "division": "supervisor1",
+        "mastodon": ""
     },
     {
         "name": "Satoshi Itatani",
@@ -117,7 +131,8 @@
         "twitter": "H_Shinonome",
         "github": "Shinonome",
         "facebook": "hiyou.shinonome",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "倉本 拓実",
@@ -125,7 +140,8 @@
         "twitter": "katura46",
         "github": "try46",
         "facebook": "katura46",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "seigot",
@@ -133,7 +149,8 @@
         "twitter": "",
         "github": "seigot",
         "facebook": "",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "ivokun",
@@ -141,7 +158,8 @@
         "twitter": "ivokun",
         "github": "",
         "facebook": "",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "Masato",
@@ -149,7 +167,8 @@
         "twitter": "_masatojp",
         "github": "",
         "facebook": "",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "Akira Inamori",
@@ -157,7 +176,8 @@
         "twitter": "ainamori",
         "github": "ainamori",
         "facebook": "ainamori01",
-        "division": "vicechair2"
+        "division": "vicechair2",
+        "mastodon": ""
     },
     {
         "name": "Iguchi Shoma",
@@ -165,7 +185,8 @@
         "twitter": "engishoma",
         "github": "shoma564",
         "facebook": "",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "古田 陸太",
@@ -173,7 +194,8 @@
         "twitter": "rikuta0811_dash",
         "github": "FullteaR",
         "facebook": "",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "natsu",
@@ -181,7 +203,8 @@
         "twitter": "natsu_bm",
         "github": "",
         "facebook": "",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "hashimoto",
@@ -189,7 +212,8 @@
         "twitter": "",
         "github": "hashiyuta12",
         "facebook": "",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "Manabu TERADA",
@@ -197,7 +221,8 @@
         "twitter": "terapyon",
         "github": "terapyon",
         "facebook": "terapyon",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "Mary",
@@ -205,7 +230,8 @@
         "twitter": "mary_tuba",
         "github": "",
         "facebook": "aiko.miyairi",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "koyhoge",
@@ -213,7 +239,8 @@
         "twitter": "koyhoge",
         "github": "koyhoge",
         "facebook": "koyhoge",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "そう",
@@ -221,7 +248,8 @@
         "twitter": "saw0123s",
         "github": "saw012",
         "facebook": "",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "パナくま",
@@ -229,7 +257,8 @@
         "twitter": "pana_pana_kuma",
         "github": "panakuma",
         "facebook": "panakuma8787",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "wakama-chan",
@@ -237,6 +266,7 @@
         "twitter": "wakama1994",
         "github": "wakama1994",
         "facebook": "",
-        "division": "core"
+        "division": "core",
+        "mastodon": ""
     }
 ]

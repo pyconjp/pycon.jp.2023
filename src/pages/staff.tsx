@@ -1,15 +1,16 @@
 import * as fs from "fs";
-import {parse} from "csv-parse/sync";
 import {GetStaticProps} from "next";
 import Image from "next/image";
-import {Division, DivisionNames, Staff} from "@/types/staff";
+import {Division, Staff} from "@/types/staff";
 import {useTranslation} from "react-i18next";
-import {useState, useEffect} from "react";
-import { Staff } from "@/types/staff";
 import PageTitle from "@/components/elements/PageTitle";
 import SectionTitle from "@/components/elements/SectionTitle";
-import PageHead from "@/components/elements/PageHead";
 import path from "path";
+
+type Props = {
+    staff: Staff;
+    bio?: string[];
+};
 
 const StaffCard = ({staff}: { staff: Staff }) => (
     <div className={"flex items-center gap-2 flex-row"}>
@@ -27,6 +28,125 @@ const StaffCard = ({staff}: { staff: Staff }) => (
                 <GithubIcon account={staff.github}/>
                 <FacebookIcon account={staff.facebook}/>
                 <MastodonIcon account={staff.mastodon}/>
+            </div>
+        </div>
+    </div>
+);
+
+const ViceChairCard = ({staff, bio = []}: Props) => (
+    <div className={"flex-1 flex flex-col"}>
+        <Image
+            src={"/staff/" + staff.icon}
+            alt={staff.name}
+            width={180}
+            height={180}
+            className={"self-center object-contain rounded-[50%] shadow-lg m-[16px]"}
+        />
+        <div className={"p-[16px]"}>
+            <div className={"mb-[16px] flex flex-col"}>
+                <h4 className={"font-montserrat italic text-primary-600 text-base"}>Vice chair</h4>
+                <p className={"text-primary-900 text-2xl font-bold"}>{staff.name}</p>
+            </div>
+            {
+                bio.map((text, index) => (
+                    <p key={index}
+                       className={"mb-[16px] lg:text-base text-sm text-alt-black whitespace-pre-wrap"}>{text}</p>)
+                )
+            }
+            <div className={"flex flex-row items-center"}>
+                {(staff.twitter !== "")
+                    && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">
+                    <Image
+                      src="/twitter_b.svg"
+                      alt=""
+                      width={30}
+                      height={30}
+                      className={"mr-[10px] hover:opacity-50"}
+                    />
+                  </a>
+                }
+                {(staff.github !== "")
+                    && <a href={"https://github.com/" + staff.github} target="_blank" rel="noopener noreferrer">
+                    <Image
+                      src="/github_b.svg"
+                      alt=""
+                      width={30}
+                      height={30}
+                      className={"mr-[10px] hover:opacity-50"}
+                    />
+                  </a>
+                }
+                {(staff.facebook !== "")
+                    && <a href={"https://www.facebook.com/" + staff.facebook} target="_blank" rel="noopener noreferrer">
+                    <Image
+                      src="/facebook_b.svg"
+                      alt=""
+                      width={30}
+                      height={30}
+                      className={"mr-[10px] hover:opacity-50"}
+                    />
+                  </a>
+                }
+            </div>
+        </div>
+    </div>
+);
+
+const SupervisorCard = ({staff, bio = []}: Props) => (
+    <div className={"flex-1 flex flex-col"}>
+        <Image
+            src={"/staff/" + staff.icon}
+            alt={staff.name}
+            width={180}
+            height={180}
+            className={"self-center object-contain rounded-[50%] shadow-lg m-[16px]"}
+        />
+        <div className={"p-[16px]"}>
+            <div className={"mb-[16px] flex flex-col"}>
+                <h4 className={"font-montserrat italic text-primary-600 text-base"}>Supervisor</h4>
+                <p className={"text-primary-900 text-2xl font-bold"}>{staff.name}</p>
+            </div>
+            {
+                bio.map((text, index) => (
+                        <p key={index}
+                           className={"mb-[16px] lg:text-base text-sm text-alt-black whitespace-pre-wrap"}>{text}</p>
+                    )
+                )
+            }
+            <div className={"flex flex-row items-center"}>
+                {(staff.twitter !== "")
+                    && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">
+                    <Image
+                      src="/twitter_b.svg"
+                      alt=""
+                      width={30}
+                      height={30}
+                      className={"mr-[10px] hover:opacity-50"}
+                    />
+                  </a>
+                }
+                {(staff.github !== "")
+                    && <a href={"https://github.com/" + staff.github} target="_blank" rel="noopener noreferrer">
+                    <Image
+                      src="/github_b.svg"
+                      alt=""
+                      width={30}
+                      height={30}
+                      className={"mr-[10px] hover:opacity-50"}
+                    />
+                  </a>
+                }
+                {(staff.facebook !== "")
+                    && <a href={"https://www.facebook.com/" + staff.facebook} target="_blank" rel="noopener noreferrer">
+                    <Image
+                      src="/facebook_b.svg"
+                      alt=""
+                      width={30}
+                      height={30}
+                      className={"mr-[10px] hover:opacity-50"}
+                    />
+                  </a>
+                }
             </div>
         </div>
     </div>
@@ -92,28 +212,12 @@ const SimpleStaffCard = ({staff}: { staff: Staff }) => (
 
 const StaffPage = ({rows = []}: { rows: Staff[] }) => {
     const {t} = useTranslation("STAFF");
-    const [c, setContents] = useState({
-        p1: "",
-        p2: "",
-        p3: "",
-        h1: "",
-        p4: "",
-        a1: "",
-    });
-    useEffect(() => {
-        setContents({
-            ...c,
-            p1: t("P1"),
-            p2: t("P2"),
-            p3: t("P3"),
-            h1: t("H1"),
-            p4: t("P4"),
-            a1: t("A1"),
-        })
-    }, [t]);
 
     const divisions = splitDivisons(rows);
     const chair = divisions.chair[0];
+    const vicechair1 = divisions.vicechair1[0];
+    const vicechair2 = divisions.vicechair2[0];
+    const supervisor1 = divisions.supervisor1[0];
 
     return (
         <>
@@ -129,9 +233,9 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
                 />
                 <div className="p-[16px]">
                     <h4 className="mb-[16px] text-primary-900 text-2xl font-bold">{chair.name}</h4>
-                    <p className="mb-[16px] text-alt-black">{c.p1}</p>
-                    <p className="mb-[16px] text-alt-black">{c.p2}</p>
-                    <p className="mb-[16px] text-alt-black">{c.p3}</p>
+                    <p className="mb-[16px] text-alt-black">{t("selina_bio1")}</p>
+                    <p className="mb-[16px] text-alt-black">{t("selina_bio2")}</p>
+                    <p className="mb-[16px] text-alt-black">{t("selina_bio3")}</p>
                     <div className="flex flex-row items-center">
                         <a href={"https://twitter.com/" + chair.twitter} target="_blank" rel="noopener noreferrer">
                             <Image
@@ -165,6 +269,23 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
                 </div>
             </div>
 
+            <SectionTitle title='Vice Chair & Supervisor' subTitle='副座長＆スーパーバイザー'/>
+            <div
+                className={"lg:mx-[80px] mx-[20px] mb-[60px] flex flex-col lg:flex-row gap-12 lg:gap-2 justify-center"}>
+                <ViceChairCard
+                    staff={vicechair1}
+                    bio={[t("peacock_bio")]}
+                />
+                <ViceChairCard
+                    staff={vicechair2}
+                    bio={[t("ainamori_bio")]}
+                />
+                <SupervisorCard
+                    staff={supervisor1}
+                    bio={[t("yoshida_bio")]}
+                />
+            </div>
+
             <SectionTitle title='Core Staff' subTitle='コアスタッフ'/>
             <div className={"lg:mx-[128px] mb-[60px] grid lg:grid-cols-4  gap-4 justify-center"}>
                 {divisions.core.map((row, index) => (
@@ -178,22 +299,22 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
 
             {
                 divisions.day.length > 0 &&
-                <>
-                    <SectionTitle title='Staff On The Day' subTitle='当日スタッフ'/>
-                    <div
-                        className={"lg:mx-[128px] mx-[20px] mb-[60px] grid lg:grid-cols-4 grid-cols-2 place-items-center gap-4"}>
-                        {divisions.day.map((row, index) => (
-                            <SimpleStaffCard key={index} staff={row} />
-                        ))}
-                    </div>
-                </>
+              <>
+                <SectionTitle title='Staff On The Day' subTitle='当日スタッフ'/>
+                <div
+                  className={"lg:mx-[128px] mx-[20px] mb-[60px] grid lg:grid-cols-4 grid-cols-2 place-items-center gap-4"}>
+                    {divisions.day.map((row, index) => (
+                        <SimpleStaffCard key={index} staff={row}/>
+                    ))}
+                </div>
+              </>
             }
 
             <SectionTitle title='Reviewer' subTitle='レビュワー'/>
             <div
                 className={"lg:mx-[128px] mx-[20px] mb-[60px] grid lg:grid-cols-4 grid-cols-2 place-items-center gap-4"}>
                 {divisions.reviewer.map((row, index) => (
-                    <SimpleStaffCard key={index} staff={row} />
+                    <SimpleStaffCard key={index} staff={row}/>
                 ))}
             </div>
 
@@ -202,17 +323,29 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
                     <div
                         className='before:top-1/2 before:w-4 before:h-4 before:mr-4 before:-ml-8 before:-mt-2  before:content-[url("/ellipse.svg")] before:inline-block ml-0 pl-8'>
                         <h3 className="lg:text-2xl text-xl text-alt-black font-bold inline">
-                            {c.h1}
+                            {t("recruite_title")}
                         </h3>
                     </div>
-                    <p className="text-alt-black text-lg p-[12px]">{c.p4}</p>
+                    <p className="text-alt-black lg:text-lg text-base p-[12px]">{t("recruite_text")}</p>
                     <div className="ml-[auto]">
-                        <a
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSf3Zw3b-X9KMo81G9BJJFFfq6jYzzUAviLZALzhiCFeFuMybQ/viewform"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex flex-row text-primary-500 underline hover:opacity-50">
-                            <p>{c.a1}</p>
+                        {/* 募集フォーム有効 */}
+                        {/* <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf3Zw3b-X9KMo81G9BJJFFfq6jYzzUAviLZALzhiCFeFuMybQ/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-row text-primary-500 underline hover:opacity-50">
+              <p className={"lg:text-lg text-base"}>{c.recruite_link}</p>
+              <Image
+                src={"/linkout_p.svg"}
+                alt={""}
+                width={20}
+                height={20}
+                className="object-contain ml-[3px]"
+              />
+          </a> */}
+                        {/* 募集フォーム無効 */}
+                        <div className="flex flex-row text-primary-500 underline">
+                            <p className={"lg:text-lg text-base"}>{t("recruite_link")}</p>
                             <Image
                                 src={"/linkout_p.svg"}
                                 alt={""}
@@ -220,7 +353,7 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
                                 height={20}
                                 className="object-contain ml-[3px]"
                             />
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -235,7 +368,10 @@ function splitDivisons(rows: Array<Staff>): StaffByDivision {
         core: [],
         chair: [],
         day: [],
-        reviewer: []
+        reviewer: [],
+        vicechair1: [],
+        vicechair2: [],
+        supervisor1: [],
     };
     for (const staff of rows) {
         ret[staff.division].push(staff);
@@ -244,13 +380,13 @@ function splitDivisons(rows: Array<Staff>): StaffByDivision {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  // JSON ファイルを読み込む
-  const jsonPath = path.join(process.cwd(), 'src', 'data', 'staff.json')
-  const jsonText = fs.readFileSync(jsonPath, 'utf-8')
-  const rows = JSON.parse(jsonText) as Staff[]
+    // JSON ファイルを読み込む
+    const jsonPath = path.join(process.cwd(), 'src', 'data', 'staff.json')
+    const jsonText = fs.readFileSync(jsonPath, 'utf-8')
+    const rows = JSON.parse(jsonText) as Staff[]
 
-  // ページコンポーネントに渡す props オブジェクトを設定する
-  return { props: { rows } }
+    // ページコンポーネントに渡す props オブジェクトを設定する
+    return {props: {rows}}
 };
 
 export default StaffPage;

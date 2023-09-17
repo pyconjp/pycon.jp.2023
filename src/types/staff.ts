@@ -1,4 +1,4 @@
-export const DivisionNames = ["core", "chair", "reviewer", "day"] as const;
+export const DivisionNames = ["core", "chair", "reviewer", "day", "vicechair1", "vicechair2", "supervisor1"] as const;
 export type Division = typeof DivisionNames[number];
 
 export type Staff = {

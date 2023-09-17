@@ -1,7 +1,6 @@
 import {Session} from "@/types/timetable";
 import {CalendarIcon, MapPinIcon, XMarkIcon} from "@heroicons/react/20/solid";
 import {format, parseISO} from "date-fns";
-import Image from "next/image";
 
 type Props = {
   session: Session,
@@ -14,12 +13,14 @@ const Modal = ({session, onClose}: Props) => {
   return (
     <div className='fixed top-0 left-0 w-full h-full flex' style={{'backgroundColor': 'rgba(17,28,59,0.5)'}}>
       <div>
-        <div className='mt-28 lg:w-8/12 w-9/12 h-4/5 mx-auto bg-white rounded-lg shadow-lg opacity-100 overflow-y-scroll'>
-          <div className='p-8 text-alt-black'>
-            <div className='flex justify-end'>
-              <button onClick={onClose}>
-                <XMarkIcon className='w-10 h-10 hover:text-primary-500'/>
-              </button>
+        <div className='mt-28 lg:w-8/12 w-11/12 h-4/5 mx-auto bg-white rounded-lg shadow-lg opacity-100 overflow-y-scroll'>
+          <div className='lg:p-6 p-4 text-alt-black relative'>
+            <div className='sticky w-full lg:top-6 top-4'>
+              <div className='flex justify-end'>
+                <button onClick={onClose}>
+                  <XMarkIcon className='lg:w-10 lg:h-10 w-6 h-6 hover:text-primary-500 bg-white border-2 border-alt-black rounded hover:border-primary-500'/>
+                </button>
+              </div>
             </div>
             <div className='text-2xl font-bold'>{session.title}</div>
             <div className='text-lg font-bold mt-2'>{session.speakers[0].name}</div>

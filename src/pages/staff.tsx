@@ -190,7 +190,7 @@ const FacebookIcon = ({account}: { account: string }) => {
 const MastodonIcon = ({account}: { account: string }) => {
     if (account === "") return null;
     const [_, user, server] = account.split('@');
-    return <SocialIcon src="/mastodon_b.svg" url={`https://${server}/${user}`} alt={account}/>
+    return <SocialIcon src="/mastodon_b.svg" url={`https://${server}/@${user}`} alt={account}/>
 }
 
 const SocialIcon = ({src, url, alt}: { src: string, url: string, alt: string }) => {

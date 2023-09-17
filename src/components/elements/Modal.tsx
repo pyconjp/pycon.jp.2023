@@ -1,7 +1,6 @@
 import {Session} from "@/types/timetable";
 import {CalendarIcon, MapPinIcon, XMarkIcon} from "@heroicons/react/20/solid";
 import {format, parseISO} from "date-fns";
-import Image from "next/image";
 
 type Props = {
   session: Session,

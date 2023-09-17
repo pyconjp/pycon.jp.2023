@@ -11,7 +11,7 @@ const PCHeader = () => {
   return (
     <div className='lg:flex hidden justify-between items-center mx-5 h-full'>
       <Link href="/">
-        <Image src={'/logo.svg'} alt={'PyCon APAC 2023'} width={232} height={76}/>
+        <Image src={'/long_light.png'} alt={'PyCon APAC 2023'} width={200} height={80}/>
       </Link>
       <nav className='flex-1 ml-8 mr-5'>
         <ul className="flex flex-row justify-between mx-auto items-center">

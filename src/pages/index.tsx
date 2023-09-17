@@ -1,6 +1,5 @@
 import * as fs from "fs";
 import * as path from 'path'
-import Head from "next/head";
 import HeroSection from "@/components/sections/Hero";
 import NewsSection from "@/components/sections/News";
 import OverviewSection from "@/components/sections/Overview";

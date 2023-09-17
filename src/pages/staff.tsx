@@ -5,8 +5,11 @@ import Image from "next/image";
 import {Division, DivisionNames, Staff} from "@/types/staff";
 import {useTranslation} from "react-i18next";
 import {useState, useEffect} from "react";
+import { Staff } from "@/types/staff";
 import PageTitle from "@/components/elements/PageTitle";
 import SectionTitle from "@/components/elements/SectionTitle";
+import PageHead from "@/components/elements/PageHead";
+import path from "path";
 
 const StaffCard = ({staff}: { staff: Staff }) => (
     <div className={"flex items-center gap-2 flex-row"}>
@@ -241,14 +244,13 @@ function splitDivisons(rows: Array<Staff>): StaffByDivision {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-    const buffer = fs.readFileSync("./src/data/staff.csv");
-    const rows: Staff[] = parse(buffer, {delimiter: ",", columns: true});
+  // JSON ファイルを読み込む
+  const jsonPath = path.join(process.cwd(), 'src', 'data', 'staff.json')
+  const jsonText = fs.readFileSync(jsonPath, 'utf-8')
+  const rows = JSON.parse(jsonText) as Staff[]
 
-    return {
-        props: {
-            rows,
-        },
-    };
+  // ページコンポーネントに渡す props オブジェクトを設定する
+  return { props: { rows } }
 };
 
 export default StaffPage;

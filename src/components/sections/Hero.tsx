@@ -15,43 +15,47 @@ export default function HeroSection() {
     return (
         <section className="flex flex-col justify-stretch sm:mx-[60px] sm:my-[80px] mx-[16px] my-[20px]">
             <Image
-                src={"/hero.svg"}
+                src={"/main_logo.png"}
                 alt={""}
-                width={860}
-                height={663.85}
+                width={1112}
+                height={645}
                 className="self-center object-contain"
             />
 
             <div className="flex flex-col items-center sm:px-[10%] my-[24px]">
                 <div className="">
                     <div className="flex flex-row items-center mb-[16px]">
-                        <img src="/location.png" alt="" className="object-contain mx-[16px]"/>
+                        <img src="/location.png" alt="" className="object-contain mx-[16px]" />
                         <div className="flex sm:flex-row flex-col">
                             <h2 suppressHydrationWarning className="text-tertiary-900 font-bold text-2xl">{t("VENUE")}</h2>
-                            <a 
+                            <a
                                 href="https://www.toc.co.jp/saiji/ariake/access/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                suppressHydrationWarning 
+                                suppressHydrationWarning
                                 className="hover:opacity-70 text-lg text-secondary-600 font-bold underline underline-offset-8"
                             >
                                 <div className="flex flex-row sm:mx-[16px]">
                                     <p suppressHydrationWarning>{t("VENUE_INFO")}</p>
                                     <Image
-                                        src={"/linkout.png"}
+                                        src={"/linkout_b.svg"}
                                         alt={""}
-                                        width={15}
-                                        height={15}
-                                        className="object-contain"
+                                        width={20}
+                                        height={20}
+                                        className="object-contain ml-[5px]"
                                     />
                                 </div>
                             </a>
                         </div>
                     </div>
-        
+
                     <div className="flex flex-row items-center mb-[24px]">
-                        <img src="/calendar.png" alt="" className="mx-[16px]"/>
+                        <img src="/calendar.png" alt="" className="mx-[16px]" />
                         <div className="">
+                            <div className="flex sm:flex-row flex-col sm:items-center justify-between">
+                                <h5 className="text-tertiary-600 font-montserrat italic mr-[16px]">Tutorial:</h5>
+                                <p suppressHydrationWarning className="text-2xl text-left font-bold text-alt-black">{t("TUTORIAL_DATE")}</p>
+                            </div>
                             <div className="flex sm:flex-row flex-col sm:items-center justify-between">
                                 <h5 className="text-tertiary-600 font-montserrat italic mr-[16px]">Conference:</h5>
                                 <p suppressHydrationWarning className="text-2xl font-bold text-alt-black">{t("CONFERENCE_DATE")}</p>
@@ -63,16 +67,13 @@ export default function HeroSection() {
                         </div>
                     </div>
                 </div>
-                
-                <button
-                    disabled
-                    suppressHydrationWarning
-                    type="button"
+
+                <a href="https://pretix.eu/pyconjp/2023-apac/"
                     className="bg-alt-black hover:bg-secondary-700 rounded text-center text-alt-white w-full py-[14px]"
-                >{t("TICKET_INFO")}</button>
+                ><span>{t("TICKET_INFO")}</span></a>
             </div>
         </section>
 
-        
+
     )
 }

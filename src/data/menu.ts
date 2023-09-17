@@ -27,14 +27,7 @@ export const menu: Menu[] = [
   },
   {
     title: "SPONSOR",
-    children: [{title: "SPONSOR.SPONSOR_LIST", url: "/", isComingSoon: true}],
-  },
-  {
-    title: "CONTENTS",
-    children: [
-      {title: "CONTENTS.COMMUNITIES", url: "/", isComingSoon: true},
-      {title: "CONTENTS.BEGINNERS", url: "/", isComingSoon: true},
-    ],
+    children: [{title: "SPONSOR.SPONSOR_LIST", url: "/sponsor"}],
   },
   {
     title: "STAFF",

@@ -5,7 +5,7 @@ import Image, {ImageProps} from "next/image";
 import {useTranslation} from "react-i18next";
 import {TFunction} from "i18next";
 
-import pyconApacLogo from "../../../public/footer-2023-logo.png";
+import pyconApacLogo from "../../../public/tra_long_light.png";
 import pyconAssociationLogo from "../../../public/association-logo.svg";
 
 type SNS = {

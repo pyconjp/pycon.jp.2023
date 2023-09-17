@@ -2,6 +2,7 @@ import Image from "next/image";
 import {useTranslation} from "react-i18next";
 import { useState, useEffect } from "react";
 import PageTitle from "@/components/elements/PageTitle";
+import PageHead from "@/components/elements/PageHead";
 
 const Coc = () => {
   const { t } = useTranslation("COC");
@@ -183,64 +184,67 @@ const Coc = () => {
   },[t])
 
   return (
-    <div className="relative">
+    <>
+      <PageHead/>
+      <div className="relative">
         <PageTitle title='Code of conduct' />
         <div className="lg:mx-[216px] mx-[16px] lg:my-[60px] my-[20px] lg:px-[72px] px-[16px] lg:py-[60px] py-[40px] z-20 bg-[#ffffff] shadow-lg rounded-lg relative">
-            <p className={c.cl_p1}>{c.p1}</p>
-            <p className={c.cl_p2}>{c.p2}</p>
-            <h4 className={c.cl_h1}>{c.h1}</h4>
-            <p className={c.cl_p3}>{c.p3}</p>
-            <ul className={tag_ul}>
-                <li className={c.cl_ul1li1}>{c.ul1li1}</li>
-                <li className={c.cl_ul1li2}>{c.ul1li2}</li>
-                <li className={c.cl_ul1li3}>{c.ul1li3}</li>
-                <li className={c.cl_ul1li4}>{c.ul1li4}</li>
-                <li className={c.cl_ul1li5}>{c.ul1li5}</li>
-                <li className={c.cl_ul1li6}>{c.ul1li6}</li>
-                <li className={c.cl_ul1li7}>{c.ul1li7}</li>
-                <li className={c.cl_ul1li8}>{c.ul1li8}</li>
-                <li className={c.cl_ul1li9}>{c.ul1li9}</li>
-                <li className={c.cl_ul1li10}>{c.ul1li10}</li>
-                <li className={c.cl_ul1li11}>{c.ul1li11}</li>
-                <li className={c.cl_ul1li12}>{c.ul1li12}</li>
-                <li className={c.cl_ul1li13}>{c.ul1li13}</li>
-                <li className={c.cl_ul1li14}>{c.ul1li14}</li>
-                <li className={c.cl_ul1li15}>{c.ul1li15}</li>
-                <li className={c.cl_ul1li16}>{c.ul1li16}</li>
-            </ul>
-            <p className={c.cl_p4}>{c.p4}</p>
-            <p className={c.cl_p5}>{c.p5}</p>
-            <p className={c.cl_p6}>{c.p6}</p>
-            <p className={c.cl_p7}>{c.p7}</p>
-            <p className={c.cl_p8}>{c.p8}</p>
-            <h4 className={c.cl_h2}>{c.h2}</h4>
-            <ul className={tag_ul}>
-                <li className={c.cl_ul2li1}>{c.ul2li1}</li>
-                <li className={c.cl_ul2li2}>{c.ul2li2}</li>
-            </ul>
-            <h4 className={c.cl_h3}>{c.h3}</h4>
-            <p className={c.cl_p9}>{c.p9}</p>
-            <ul suppressHydrationWarning className={tag_ul}>
-                <li className={c.cl_ul3li1}>{c.ul3li1}</li>
-                <li className={c.cl_ul3li2}>{c.ul3li2}</li>
-                <li className={c.cl_ul3li3}>{c.ul3li3}</li>
-                <li className={c.cl_ul3li4}>{c.ul3li4}</li>
-                <li className={c.cl_ul3li5}>{c.ul3li5}</li>
-                <li className={c.cl_ul3li6}>{c.ul3li6}</li>
-            </ul>
-            <p className={c.cl_p10}>{c.p10}</p>
-            <p className={c.cl_p11}>{c.p11}</p>
-            <p className={c.cl_p12}>{c.p12}</p>
-            <p className={c.cl_p13}>{c.p13}</p>
+          <p className={c.cl_p1}>{c.p1}</p>
+          <p className={c.cl_p2}>{c.p2}</p>
+          <h4 className={c.cl_h1}>{c.h1}</h4>
+          <p className={c.cl_p3}>{c.p3}</p>
+          <ul className={tag_ul}>
+            <li className={c.cl_ul1li1}>{c.ul1li1}</li>
+            <li className={c.cl_ul1li2}>{c.ul1li2}</li>
+            <li className={c.cl_ul1li3}>{c.ul1li3}</li>
+            <li className={c.cl_ul1li4}>{c.ul1li4}</li>
+            <li className={c.cl_ul1li5}>{c.ul1li5}</li>
+            <li className={c.cl_ul1li6}>{c.ul1li6}</li>
+            <li className={c.cl_ul1li7}>{c.ul1li7}</li>
+            <li className={c.cl_ul1li8}>{c.ul1li8}</li>
+            <li className={c.cl_ul1li9}>{c.ul1li9}</li>
+            <li className={c.cl_ul1li10}>{c.ul1li10}</li>
+            <li className={c.cl_ul1li11}>{c.ul1li11}</li>
+            <li className={c.cl_ul1li12}>{c.ul1li12}</li>
+            <li className={c.cl_ul1li13}>{c.ul1li13}</li>
+            <li className={c.cl_ul1li14}>{c.ul1li14}</li>
+            <li className={c.cl_ul1li15}>{c.ul1li15}</li>
+            <li className={c.cl_ul1li16}>{c.ul1li16}</li>
+          </ul>
+          <p className={c.cl_p4}>{c.p4}</p>
+          <p className={c.cl_p5}>{c.p5}</p>
+          <p className={c.cl_p6}>{c.p6}</p>
+          <p className={c.cl_p7}>{c.p7}</p>
+          <p className={c.cl_p8}>{c.p8}</p>
+          <h4 className={c.cl_h2}>{c.h2}</h4>
+          <ul className={tag_ul}>
+            <li className={c.cl_ul2li1}>{c.ul2li1}</li>
+            <li className={c.cl_ul2li2}>{c.ul2li2}</li>
+          </ul>
+          <h4 className={c.cl_h3}>{c.h3}</h4>
+          <p className={c.cl_p9}>{c.p9}</p>
+          <ul suppressHydrationWarning className={tag_ul}>
+            <li className={c.cl_ul3li1}>{c.ul3li1}</li>
+            <li className={c.cl_ul3li2}>{c.ul3li2}</li>
+            <li className={c.cl_ul3li3}>{c.ul3li3}</li>
+            <li className={c.cl_ul3li4}>{c.ul3li4}</li>
+            <li className={c.cl_ul3li5}>{c.ul3li5}</li>
+            <li className={c.cl_ul3li6}>{c.ul3li6}</li>
+          </ul>
+          <p className={c.cl_p10}>{c.p10}</p>
+          <p className={c.cl_p11}>{c.p11}</p>
+          <p className={c.cl_p12}>{c.p12}</p>
+          <p className={c.cl_p13}>{c.p13}</p>
         </div>
         <Image
-            src={"/Page_bg.svg"}
-            alt={""}
-            width={1426}
-            height={468}
-            className="lg:block hidden z-0 absolute bottom-[-60px] left-1/2 -translate-x-1/2"
+          src={"/Page_bg.svg"}
+          alt={""}
+          width={1426}
+          height={468}
+          className="lg:block hidden z-0 absolute bottom-[-60px] left-1/2 -translate-x-1/2"
         />
-    </div>
+      </div>
+    </>
   )
 }
 

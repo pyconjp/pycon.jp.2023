@@ -6,6 +6,16 @@ const nextConfig = {
     locales: ['ja', 'en'],
     defaultLocale: 'ja',
   } */
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'pretalx.com',
+        port: '',
+        pathname: '/media/avatars/**',
+      },
+    ],
+  }
 };
 
 module.exports = withExportImages(nextConfig);

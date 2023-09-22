@@ -77,7 +77,7 @@ const TalkLine = ({sessions, floor, start}: { sessions: Session[], floor: Floor,
         (track, index) =>
           <Talk
             key={index}
-            session={sessions.find(session => session.slot.room["ja-JP"] === track)}
+            session={sessions.find(session => session.slot.room["ja-jp"] === track)}
           />
       )
     }
@@ -104,12 +104,12 @@ const Talk = ({session}: { session?: Session }) => {
           </div>
           <div>
             <div className='text-alt-black mb-1'>
-              <TagIcon className='w-4 h-4 inline'/>{session.track["ja-JP"]}
+              <TagIcon className='w-4 h-4 inline'/>{session.track["ja-jp"]}
             </div>
             <div className='inline-flex flex-row gap-2'>
               <div className='text-alt-black'>
                 {
-                  session.content_locale === 'ja-JP' ?
+                  session.content_locale === 'ja-jp' ?
                     <div className='inline bg-primary-500 rounded-2xl text-alt-white px-2'>日本語</div> :
                     <div className='inline bg-secondary-500 rounded-2xl text-alt-white px-2'>EN</div>
                 }
@@ -118,7 +118,7 @@ const Talk = ({session}: { session?: Session }) => {
                 <ClockIcon className='w-4 h-4 inline'/>{session.duration}min
               </div>
               <div className='text-alt-black lg:hidden'>
-                <MapPinIcon className='w-4 h-4 inline'/>{session.slot.room["ja-JP"]}
+                <MapPinIcon className='w-4 h-4 inline'/>{session.slot.room["ja-jp"]}
               </div>
             </div>
           </div>

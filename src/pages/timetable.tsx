@@ -119,7 +119,7 @@ export const getStaticProps = async () => {
   ).then(
     (response: AxiosResponse<{ results: Session[] }>) => response.data.results
   ).then(sessions => sessions.map(session => {
-    session.content_locale = ['日本語', 'Japanese'].includes(contentLocales[session.code]) ? 'ja-JP' : 'en';
+    session.content_locale = ['日本語', 'Japanese'].includes(contentLocales[session.code]) ? 'ja-jp' : 'en';
     return session;
   }));
 
@@ -138,7 +138,7 @@ export const getStaticProps = async () => {
   ).then(
     (response: AxiosResponse<{ results: Session[] }>) => response.data.results
   ).then(sessions => sessions.map(session => {
-    session.content_locale = ['日本語', 'Japanese'].includes(contentLocales[session.code]) ? 'ja-JP' : 'en';
+    session.content_locale = ['日本語', 'Japanese'].includes(contentLocales[session.code]) ? 'ja-jp' : 'en';
     return session;
   }));
 

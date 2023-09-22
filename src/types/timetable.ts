@@ -7,7 +7,7 @@ export type Speaker = {
 
 export type MultilingualString<T> = {
   en: T,
-  'ja-JP': T,
+  'ja-jp': T,
 }
 
 export type Session = {
@@ -26,7 +26,7 @@ export type Session = {
   'slot_count': number,
   'do_not_record': boolean,
   'is_featured': boolean,
-  'content_locale': 'ja-JP' | 'en',
+  'content_locale': 'ja-jp' | 'en',
   'slot': {
     room_id: number,
     room: MultilingualString<Track>,

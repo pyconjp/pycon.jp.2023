@@ -28,10 +28,10 @@ const Modal = ({session, onClose}: Props) => {
               <CalendarIcon
                 className='w-6 h-6 inline-block'/>{format(parseISO(session.slot.start), 'yyyy/MM/dd HH:mm')} ~ {format(parseISO(session.slot.end), 'HH:mm')} (Asia/Tokyo)
             </div>
-            <div className='text-lg my-2'><MapPinIcon className='w-6 h-6 inline-block'/>{session.slot.room["ja-JP"]}
+            <div className='text-lg my-2'><MapPinIcon className='w-6 h-6 inline-block'/>{session.slot.room["ja-jp"]}
             </div>
             {
-              session.content_locale === 'ja-JP' ?
+              session.content_locale === 'ja-jp' ?
                 <div className='inline bg-primary-500 rounded-2xl text-alt-white px-2'>日本語</div> :
                 <div className='inline bg-secondary-500 rounded-2xl text-alt-white px-2'>EN</div>
             }

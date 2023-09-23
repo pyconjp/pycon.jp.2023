@@ -1,9 +1,9 @@
 import PageHead from "@/components/elements/PageHead";
 import PageTitle from "@/components/elements/PageTitle";
 import axios, {AxiosResponse} from "axios";
-import {Floor, Session, Day} from "@/types/timetable";
+import {Floor, Session, Day, ConferenceEvent} from "@/types/timetable";
 import Timetable from "@/components/organisms/Timetable";
-import {other} from "@/data/timetable";
+import {events} from "@/data/timetable";
 import {useRouter} from "next/router";
 import Modal from "@/components/elements/Modal";
 import {useEffect} from "react";
@@ -11,9 +11,9 @@ import {useEffect} from "react";
 
 type Props = {
   sessions: {
-    "4F": Session[],
-    "20F": Session[],
-  };
+    "day1": Session[],
+    "day2": Session[],
+  },
   startDateTime: {
     "day1": {
       "4F": string[],
@@ -33,18 +33,15 @@ const TimeTable = ({sessions, startDateTime}: Props) => {
   const router = useRouter();
   const {id} = router.query;
 
-  let selected: Session | null = null;
-  let defaultFloor: Floor = '4F';
+  let selected: Session | undefined = undefined;
   let defaultDate: Day = DEFAULT_DAY;
   if (id) {
-    if (sessions['4F'].filter(session => session.code === id).length > 0) {
-      selected = sessions['4F'].filter(session => session.code === id)[0];
-      defaultFloor = '4F';
-      defaultDate = selected.slot.start < DATE_THRESHOLD ? 'day1' : 'day2';
-    } else if (sessions['20F'].filter(session => session.code === id).length > 0) {
-      selected = sessions['20F'].filter(session => session.code === id)[0];
-      defaultFloor = '20F';
-      defaultDate = selected.slot.start < DATE_THRESHOLD ? 'day1' : 'day2';
+    if (sessions['day1'].some(session => session.code === id)) {
+      selected = sessions['day1'].find(session => session.code === id);
+      defaultDate = 'day1';
+    } else if (sessions['day2'].some(session => session.code === id)) {
+      selected = sessions['day2'].find(session => session.code === id);
+      defaultDate = 'day2';
     }
   }
 
@@ -53,7 +50,7 @@ const TimeTable = ({sessions, startDateTime}: Props) => {
   }
 
   useEffect(() => {
-    if (selected !== null) {
+    if (selected !== undefined) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
@@ -67,8 +64,7 @@ const TimeTable = ({sessions, startDateTime}: Props) => {
         <PageTitle title='Timetable'/>
         {
           router.isReady &&
-          <Timetable sessions={sessions} selected={selected} startDateTime={startDateTime}
-                     defaultFloor={defaultFloor ?? '4F'} defaultDate={defaultDate ?? DEFAULT_DAY}/>
+          <Timetable sessions={sessions} startDateTime={startDateTime} defaultDate={defaultDate ?? DEFAULT_DAY}/>
         }
         {selected && <Modal session={selected} onClose={transient}/>}
       </div>
@@ -142,33 +138,48 @@ export const getStaticProps = async () => {
     return session;
   }));
 
+  const day1_4f = regular.filter(session => session.slot.start < DATE_THRESHOLD);
+  const day1_20f = short.filter(session => session.slot.start < DATE_THRESHOLD);
+  const day2_4f = regular.filter(session => session.slot.start >= DATE_THRESHOLD);
+  const day2_20f = short.filter(session => session.slot.start >= DATE_THRESHOLD);
+
+  const day1_events_starts = events.day1.map((event: ConferenceEvent) => event.start);
+  const day2_events_starts = events.day2.map((event: ConferenceEvent) => event.start);
+
   return {
     props: {
       sessions: {
-        "4F": regular, "20F": short,
+        "day1": [
+          ...day1_4f,
+          ...day1_20f,
+        ],
+        "day2": [
+          ...day2_4f,
+          ...day2_20f,
+        ]
       },
       startDateTime: {
         "day1": {
           "4F": [
-            ...getStartDateTime(regular.filter(session => session.slot.start < DATE_THRESHOLD)),
-            ...Object.keys(other['day1']['4F'])
+            ...getStartDateTime(day1_4f),
+            ...day1_events_starts
           ].sort(),
           "20F": [
-            ...getStartDateTime(short.filter(session => session.slot.start < DATE_THRESHOLD)),
-            ...Object.keys(other['day1']['20F'])
+            ...getStartDateTime(day1_20f),
+            ...day1_events_starts
           ].sort(),
         },
         "day2": {
           "4F": [
-            ...getStartDateTime(regular.filter(session => session.slot.start >= DATE_THRESHOLD)),
-            ...Object.keys(other['day2']['4F'])
+            ...getStartDateTime(day2_4f),
+            ...day2_events_starts
           ].sort(),
           "20F": [
-            ...getStartDateTime(short.filter(session => session.slot.start >= DATE_THRESHOLD)),
-            ...Object.keys(other['day2']['20F'])
+            ...getStartDateTime(day2_20f),
+            ...day2_events_starts
           ].sort(),
         }
-      }
+      },
     },
   }
 }

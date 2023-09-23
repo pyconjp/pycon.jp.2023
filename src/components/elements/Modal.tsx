@@ -11,7 +11,7 @@ const Modal = ({session, onClose}: Props) => {
   const speaker = session.speakers[0];
 
   return (
-    <div className='fixed top-0 left-0 w-full h-full flex' style={{'backgroundColor': 'rgba(17,28,59,0.5)'}}>
+    <div className='fixed top-0 left-0 w-full h-full flex z-[60]' style={{'backgroundColor': 'rgba(17,28,59,0.5)'}}>
       <div>
         <div className='mt-28 lg:w-8/12 w-11/12 h-4/5 mx-auto bg-white rounded-lg shadow-lg opacity-100 overflow-y-scroll'>
           <div className='lg:p-6 p-4 text-alt-black relative'>

@@ -100,10 +100,10 @@ export const events: {
 };
 
 
-export const tracks: Track[] = [
-  "track 1",
-  "track 2",
-  "track 3",
-  "track 4",
-  "track 5",
+export const tracks: {label: string, value: Track}[] = [
+  {label: "#pyconjp_1", value: "track 1"},
+  {label: "#pyconjp_2", value: "track 2"},
+  {label: "#pyconjp_3", value: "track 3"},
+  {label: "#pyconjp_4", value: "track 4"},
+  {label: "#pyconjp_5", value: "track 5"},
 ];

@@ -67,7 +67,7 @@ const Timetable = ({sessions, startTime, endTime, defaultDate}: Props) => {
       ])} suppressHydrationWarning>
         {
           tracks.map(
-            (track, index) =>
+            ({label}, index) =>
               <div key={index}
                    className={cc([
                      'text-lg',
@@ -84,7 +84,7 @@ const Timetable = ({sessions, startTime, endTime, defaultDate}: Props) => {
                    style={{gridColumn: `${index + 2} / span 1`}}
               >
                 <div className='py-auto'>
-                  {track}
+                  {label}
                 </div>
               </div>
           )
@@ -158,7 +158,7 @@ const Talk = ({session, conferenceStartAt}: {
           </div>
           <div className='text-alt-black lg:hidden flex items-center gap-1'>
             <MapPinIcon className='w-4 h-4 inline'/>
-            <div>{session.slot.room["ja-jp"]}</div>
+            <div>{tracks.find(t => t.value === session.slot.room["ja-jp"])?.label}</div>
           </div>
         </div>
       </div>

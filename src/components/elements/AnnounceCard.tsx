@@ -11,7 +11,7 @@ const AnnounceCard = ({announce}: {
     window.open(announce.url, "_blank");
   }
 
-  return <div className='flex flex-row bg-primary-600 text-alt-white items-center w-full rounded-xl shadow-2xl px-4 py-4 lg:py-2 hover:cursor-pointer gap-4 lg:justify-start justify-between' onClick={onClick}>
+  return <div className='flex flex-row bg-primary-600 hover:bg-primary-800 text-alt-white items-center w-full rounded-xl shadow-2xl px-4 py-4 lg:py-2 hover:cursor-pointer gap-4 lg:justify-start justify-between' onClick={onClick}>
     <div className='mx-2'>
       {announce.icon}
     </div>

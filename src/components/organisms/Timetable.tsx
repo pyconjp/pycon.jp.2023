@@ -44,8 +44,8 @@ const Timetable = ({sessions, startDateTime, defaultDate}: Props) => {
 
   return (
     <>
-      <ToggleButton<Day> buttons={[{label: 'Day1', value: 'day1'}, {label: 'Day2', value: 'day2'}]}
-                         selected={date} onClick={setDate} variant={'secondary'}/>
+      <ToggleButton selected={date} onClick={setDate}/>
+
       <div className={cc([
         'w-10/12',
         'mx-auto',
@@ -54,7 +54,6 @@ const Timetable = ({sessions, startDateTime, defaultDate}: Props) => {
         'lg:grid-cols-timetable',
         'lg:grid-rows-timetable',
       ])} suppressHydrationWarning>
-
         {
           tracks.map(
             (track, index) =>

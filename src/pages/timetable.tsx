@@ -62,10 +62,7 @@ const TimeTable = ({sessions, startDateTime}: Props) => {
       <PageHead/>
       <div>
         <PageTitle title='Timetable'/>
-        {
-          router.isReady &&
-          <Timetable sessions={sessions} startDateTime={startDateTime} defaultDate={defaultDate ?? DEFAULT_DAY}/>
-        }
+        <Timetable sessions={sessions} startDateTime={startDateTime} defaultDate={defaultDate ?? DEFAULT_DAY}/>
         {selected && <Modal session={selected} onClose={transient}/>}
       </div>
     </>

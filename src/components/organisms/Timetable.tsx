@@ -173,7 +173,7 @@ const StartTime = ({time, conferenceStartAt, floor}: { time: string, conferenceS
         'bg-secondary-600',
         'rounded',
         'mx-0.5',
-        'mt-auto',
+        'mt-0',
         'text-lg',
         'lg:w-full',
         'lg:text-alt-black',
@@ -181,7 +181,7 @@ const StartTime = ({time, conferenceStartAt, floor}: { time: string, conferenceS
         'lg:rounded-none',
         'lg:pb-auto',
         'lg:text-sm',
-        'lg:border-b-2',
+        'lg:border-t-2',
         'lg:border-secondary-300',
         'lg:relative',
       ]
@@ -191,7 +191,7 @@ const StartTime = ({time, conferenceStartAt, floor}: { time: string, conferenceS
       gridRow: `${differenceInMinutes(d, conferenceStartAt) / 5 + 2} / span 1`
     }}
   >
-    <div className='lg:absolute lg:top-0 lg:left-1/3'>
+    <div className='lg:absolute lg:top-0 lg:left-1/2'>
       {format(d, 'HH:mm')}
     </div>
   </div>
@@ -228,7 +228,7 @@ const EndTime = ({time, conferenceStartAt, floor}: { time: string, conferenceSta
       gridRow: `${differenceInMinutes(d, conferenceStartAt) / 5 + 1} / span 1`
     }}
   >
-    <div className='lg:absolute lg:bottom-0 lg:left-1/3'>
+    <div className='lg:absolute lg:bottom-0 lg:left-1/2'>
       {format(d, 'HH:mm')}
     </div>
   </div>

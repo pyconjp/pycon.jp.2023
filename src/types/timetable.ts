@@ -37,6 +37,11 @@ export type Session = {
   'resources': object,
 }
 
+export type Answer = {
+  submission: string,
+  answer: string,
+}
+
 export type Track = "track 1" | "track 2" | "track 3" | "track 4" | "track 5"
 
 export type Day = 'day1' | 'day2';

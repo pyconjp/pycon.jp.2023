@@ -1,12 +1,12 @@
 import PageHead from "@/components/elements/PageHead";
 import PageTitle from "@/components/elements/PageTitle";
-import axios, {AxiosResponse} from "axios";
-import {Floor, Session, Day, ConferenceEvent} from "@/types/timetable";
+import {Session, Day, ConferenceEvent, Answer} from "@/types/timetable";
 import Timetable from "@/components/organisms/Timetable";
 import {events} from "@/data/timetable";
 import {useRouter} from "next/router";
 import Modal from "@/components/elements/Modal";
 import {useEffect} from "react";
+import {fetchAnswers, fetchTalks, SUBMISSION_TYPE_REGULAR_TALK, SUBMISSION_TYPE_SHORT_TALK} from "@/utils/pretalx";
 
 
 type Props = {
@@ -72,7 +72,8 @@ const TimeTable = ({sessions, startTime, endTime}: Props) => {
       <PageHead/>
       <div>
         <PageTitle title='Timetable'/>
-        <Timetable sessions={sessions} startTime={startTime} endTime={endTime} defaultDate={defaultDate ?? DEFAULT_DAY}/>
+        <Timetable sessions={sessions} startTime={startTime} endTime={endTime}
+                   defaultDate={defaultDate ?? DEFAULT_DAY}/>
         {selected && <Modal session={selected} onClose={transient}/>}
       </div>
     </>
@@ -98,61 +99,39 @@ const getEndDateTime = (sessions: Session[]) => {
   return result;
 }
 
+const sortSessions = (session1: Session, session2: Session) => {
+  if (session1.slot.start < session2.slot.start) {
+    return -1;
+  } else if (session1.slot.start > session2.slot.start) {
+    return 1;
+  } else {
+    if (session1.slot.room["ja-jp"] < session2.slot.room["ja-jp"]) {
+      return -1;
+    } else if (session1.slot.room["ja-jp"] > session2.slot.room["ja-jp"]) {
+      return 1;
+    } else {
+      return 0;
+    }
+  }
+}
+
 export const getStaticProps = async () => {
-  const answers = await axios.get(
-    'https://pretalx.com/api/events/pyconapac2023/answers',
-    {
-      params: {
-        question: 2563, // 発表の言語
-        limit: 300,
-      },
-      headers: {
-        Authorization: `Token ${process.env.PRETALX_AUTH_KEY}`,
-      },
-    },
-  ).then(
-    (response) => response.data.results
+  const answers = await fetchAnswers();
+  const contentLocales = answers.reduce(
+    (acc: { [p: string]: string }, cur: Answer) => ({...acc, [cur.submission]: cur.answer}), {}
   );
 
-  const contentLocales = answers.reduce((acc: any, cur: any) => ({...acc, [cur.submission]: cur.answer}), {});
+  const regular = await fetchTalks(SUBMISSION_TYPE_REGULAR_TALK)
+    .then(sessions => sessions.map(session => {
+      session.content_locale = ['日本語', 'Japanese'].includes(contentLocales[session.code]) ? 'ja-jp' : 'en';
+      return session;
+    }));
 
-  const regular = await axios.get(
-    'https://pretalx.com/api/events/pyconapac2023/talks/',
-    {
-      params: {
-        state: 'confirmed',
-        submission_type: 2850, // 発表
-        limit: 100,
-      },
-      headers: {
-        Authorization: `Token ${process.env.PRETALX_AUTH_KEY}`,
-      },
-    },
-  ).then(
-    (response: AxiosResponse<{ results: Session[] }>) => response.data.results
-  ).then(sessions => sessions.map(session => {
-    session.content_locale = ['日本語', 'Japanese'].includes(contentLocales[session.code]) ? 'ja-jp' : 'en';
-    return session;
-  }));
-
-  const short = await axios.get(
-    'https://pretalx.com/api/events/pyconapac2023/talks/',
-    {
-      params: {
-        state: 'confirmed',
-        submission_type: 3340, // 15 Minute Talk
-        limit: 100,
-      },
-      headers: {
-        Authorization: `Token ${process.env.PRETALX_AUTH_KEY}`,
-      },
-    },
-  ).then(
-    (response: AxiosResponse<{ results: Session[] }>) => response.data.results
-  ).then(sessions => sessions.map(session => {
-    session.content_locale = ['日本語', 'Japanese'].includes(contentLocales[session.code]) ? 'ja-jp' : 'en';
-    return session;
-  }));
+  const short = await fetchTalks(SUBMISSION_TYPE_SHORT_TALK)
+    .then(sessions => sessions.map(session => {
+      session.content_locale = ['日本語', 'Japanese'].includes(contentLocales[session.code]) ? 'ja-jp' : 'en';
+      return session;
+    }));
 
   const day1_4f = regular.filter(session => session.slot.start < DATE_THRESHOLD);
   const day1_20f = short.filter(session => session.slot.start < DATE_THRESHOLD);
@@ -171,11 +150,11 @@ export const getStaticProps = async () => {
         "day1": [
           ...day1_4f,
           ...day1_20f,
-        ],
+        ].sort(sortSessions),
         "day2": [
           ...day2_4f,
           ...day2_20f,
-        ]
+        ].sort(sortSessions)
       },
       startTime: {
         "day1": {

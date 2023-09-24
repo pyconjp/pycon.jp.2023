@@ -1,7 +1,7 @@
 import cc from "classcat";
 import {events, tracks} from "@/data/timetable";
-import {ConferenceEvent, Day, Floor, Session} from "@/types/timetable";
-import {ClockIcon, MapPinIcon, TagIcon} from "@heroicons/react/20/solid";
+import {ConferenceEvent, Day, Session} from "@/types/timetable";
+import {CalendarIcon, ClockIcon, MapPinIcon} from "@heroicons/react/20/solid";
 import {format, parseISO} from "date-fns";
 import ToggleButton from "@/components/elements/ToggleButton";
 import {useState} from "react";
@@ -138,9 +138,10 @@ const Talk = ({session, conferenceStartAt}: { session: Session, conferenceStartA
         </div>
       </div>
       <div>
-        {/*<div className='text-alt-black mb-1 text-xs'>*/}
-        {/*  <TagIcon className='w-3 h-3 inline'/>{session.track["ja-jp"]}*/}
-        {/*</div>*/}
+        <div className='text-alt-black mb-1 text-xs lg:hidden flex items-center gap-1'>
+          <CalendarIcon className='w-4 h-4 inline'/>
+          <div>{format(parseISO(session.slot.start), 'HH:mm')} - {format(parseISO(session.slot.end), 'HH:mm')}</div>
+        </div>
         <div className='inline-flex flex-row gap-2'>
           <div className='text-alt-black'>
             {
@@ -149,11 +150,13 @@ const Talk = ({session, conferenceStartAt}: { session: Session, conferenceStartA
                 <div className='inline bg-secondary-500 rounded-2xl text-alt-white px-2 text-xs'>EN</div>
             }
           </div>
-          <div className='text-alt-black'>
-            <ClockIcon className='w-4 h-4 inline'/>{session.duration}min
+          <div className='text-alt-black flex items-center gap-1'>
+            <ClockIcon className='w-4 h-4 inline'/>
+            <div>{session.duration}min</div>
           </div>
-          <div className='text-alt-black lg:hidden'>
-            <MapPinIcon className='w-4 h-4 inline'/>{session.slot.room["ja-jp"]}
+          <div className='text-alt-black lg:hidden flex items-center gap-1'>
+            <MapPinIcon className='w-4 h-4 inline'/>
+            <div>{session.slot.room["ja-jp"]}</div>
           </div>
         </div>
       </div>

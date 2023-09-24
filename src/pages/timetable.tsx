@@ -1,6 +1,6 @@
 import PageHead from "@/components/elements/PageHead";
 import PageTitle from "@/components/elements/PageTitle";
-import {Session, Day, ConferenceEvent, Answer} from "@/types/timetable";
+import {Talk, Day, ConferenceEvent, Answer} from "@/types/timetable";
 import Timetable from "@/components/organisms/Timetable";
 import {events} from "@/data/timetable";
 import {useRouter} from "next/router";
@@ -11,8 +11,8 @@ import {fetchAnswers, fetchTalks, SUBMISSION_TYPE_REGULAR_TALK, SUBMISSION_TYPE_
 
 type Props = {
   sessions: {
-    "day1": Session[],
-    "day2": Session[],
+    "day1": (Talk | ConferenceEvent)[],
+    "day2": (Talk | ConferenceEvent)[],
   },
   startTime: {
     "day1": {
@@ -43,14 +43,14 @@ const TimeTable = ({sessions, startTime, endTime}: Props) => {
   const router = useRouter();
   const {id} = router.query;
 
-  let selected: Session | undefined = undefined;
+  let selected: Talk | undefined = undefined;
   let defaultDate: Day = DEFAULT_DAY;
   if (id) {
     if (sessions['day1'].some(session => session.code === id)) {
-      selected = sessions['day1'].find(session => session.code === id);
+      selected = sessions['day1'].find(session => session.code === id) as Talk;
       defaultDate = 'day1';
     } else if (sessions['day2'].some(session => session.code === id)) {
-      selected = sessions['day2'].find(session => session.code === id);
+      selected = sessions['day2'].find(session => session.code === id) as Talk;
       defaultDate = 'day2';
     }
   }
@@ -81,7 +81,7 @@ const TimeTable = ({sessions, startTime, endTime}: Props) => {
 }
 
 
-const getStartDateTime = (sessions: Session[]) => {
+const getStartDateTime = (sessions: Talk[]) => {
   const start = sessions
     .map(session => session.slot.start);
 
@@ -90,7 +90,7 @@ const getStartDateTime = (sessions: Session[]) => {
   return result;
 }
 
-const getEndDateTime = (sessions: Session[]) => {
+const getEndDateTime = (sessions: Talk[]) => {
   const start = sessions
     .map(session => session.slot.end);
 
@@ -99,7 +99,7 @@ const getEndDateTime = (sessions: Session[]) => {
   return result;
 }
 
-const sortSessions = (session1: Session, session2: Session) => {
+const sortSessions = (session1: Talk | ConferenceEvent, session2: Talk | ConferenceEvent) => {
   if (session1.slot.start < session2.slot.start) {
     return -1;
   } else if (session1.slot.start > session2.slot.start) {
@@ -138,11 +138,11 @@ export const getStaticProps = async () => {
   const day2_4f = regular.filter(session => session.slot.start >= DATE_THRESHOLD);
   const day2_20f = short.filter(session => session.slot.start >= DATE_THRESHOLD);
 
-  const day1_events_starts = events.day1.map((event: ConferenceEvent) => event.start);
-  const day2_events_starts = events.day2.map((event: ConferenceEvent) => event.start);
+  const day1_events_starts = events.day1.map((event: ConferenceEvent) => event.slot.start);
+  const day2_events_starts = events.day2.map((event: ConferenceEvent) => event.slot.start);
 
-  const day1_events_ends = events.day1.map((event: ConferenceEvent) => event.end);
-  const day2_events_ends = events.day2.map((event: ConferenceEvent) => event.end);
+  const day1_events_ends = events.day1.map((event: ConferenceEvent) => event.slot.end);
+  const day2_events_ends = events.day2.map((event: ConferenceEvent) => event.slot.end);
 
   return {
     props: {
@@ -150,10 +150,12 @@ export const getStaticProps = async () => {
         "day1": [
           ...day1_4f,
           ...day1_20f,
+          ...events.day1,
         ].sort(sortSessions),
         "day2": [
           ...day2_4f,
           ...day2_20f,
+          ...events.day2,
         ].sort(sortSessions)
       },
       startTime: {

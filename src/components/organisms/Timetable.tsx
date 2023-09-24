@@ -1,6 +1,6 @@
 import cc from "classcat";
-import {events, tracks} from "@/data/timetable";
-import {ConferenceEvent, Day, Session} from "@/types/timetable";
+import {tracks} from "@/data/timetable";
+import {ConferenceEvent, Day, Talk} from "@/types/timetable";
 import {CalendarIcon, ClockIcon, MapPinIcon} from "@heroicons/react/20/solid";
 import {format, parseISO} from "date-fns";
 import ToggleButton from "@/components/elements/ToggleButton";
@@ -10,8 +10,8 @@ import {differenceInMinutes} from "date-fns";
 
 type Props = {
   sessions: {
-    "day1": Session[],
-    "day2": Session[],
+    "day1": (Talk | ConferenceEvent)[],
+    "day2": (Talk | ConferenceEvent)[],
   },
   startTime: {
     "day1": {
@@ -37,6 +37,7 @@ type Props = {
 }
 
 const col = {
+  "": 1,
   'track 1': 2,
   'track 2': 3,
   'track 3': 4,
@@ -62,7 +63,7 @@ const Timetable = ({sessions, startTime, endTime, defaultDate}: Props) => {
         'text-sm',
         'lg:grid',
         'lg:grid-cols-timetable',
-        date === 'day1' ? 'lg:grid-rows-timetable1': 'lg:grid-rows-timetable2',
+        date === 'day1' ? 'lg:grid-rows-timetable1' : 'lg:grid-rows-timetable2',
       ])} suppressHydrationWarning>
         {
           tracks.map(
@@ -89,7 +90,9 @@ const Timetable = ({sessions, startTime, endTime, defaultDate}: Props) => {
           )
         }
         {sessions[date].map((session, index) =>
-          <Talk key={index} session={session} conferenceStartAt={CONFERENCE_START[date]}/>)}
+          session.slot.room['ja-jp'] !== ""
+            ? <Talk key={index} session={session as Talk} conferenceStartAt={CONFERENCE_START[date]}/>
+            : <ConferenceEvent key={index} event={session as ConferenceEvent} conferenceStartAt={CONFERENCE_START[date]}/>)}
 
         {startTime[date]["4F"].map((time, index) =>
           <StartTime key={index} time={time} conferenceStartAt={CONFERENCE_START[date]} floor={"4F"}/>)}
@@ -100,15 +103,15 @@ const Timetable = ({sessions, startTime, endTime, defaultDate}: Props) => {
           <EndTime key={index} time={time} conferenceStartAt={CONFERENCE_START[date]} floor={"4F"}/>)}
         {endTime[date]["20F"].map((time, index) =>
           <EndTime key={index} time={time} conferenceStartAt={CONFERENCE_START[date]} floor={"20F"}/>)}
-
-        {events[date].map((event, index) =>
-          <OtherLine key={index} event={event} conferenceStartAt={CONFERENCE_START[date]}/>)}
       </div>
     </>
   );
 }
 
-const Talk = ({session, conferenceStartAt}: { session: Session, conferenceStartAt: Date }) => {
+const Talk = ({session, conferenceStartAt}: {
+  session: Talk,
+  conferenceStartAt: Date
+}) => {
   const router = useRouter();
   const transient = async () => {
     await router.push(`/timetable?id=${session?.code}`);
@@ -118,8 +121,7 @@ const Talk = ({session, conferenceStartAt}: { session: Session, conferenceStartA
               style={{
                 gridColumn: `${col[session.slot.room["ja-jp"]]} / span 1`,
                 gridRow: `${differenceInMinutes(parseISO(session.slot.start), conferenceStartAt) / 5 + 2} / span ${differenceInMinutes(parseISO(session.slot.end), parseISO(session.slot.start)) / 5}`
-              }}
-  >
+              }}>
     <div className='px-4 py-2 rounded bg-secondary-100 h-full flex flex-col justify-between gap-4 cursor-pointer'
          onClick={transient}>
       <div>
@@ -128,7 +130,7 @@ const Talk = ({session, conferenceStartAt}: { session: Session, conferenceStartA
           'font-bold',
           'overflow-hidden',
           'text-ellipsis',
-          session.slot.room['ja-jp'] === 'track 5' ? 'max-h-[40px]' : 'max-h-[140px]',
+          session.slot.room['ja-jp'] === 'track 5' ? 'lg:max-h-[40px]' : 'lg:max-h-[140px]',
           'inline-block',
         ])}>
           {session.title}
@@ -138,9 +140,9 @@ const Talk = ({session, conferenceStartAt}: { session: Session, conferenceStartA
         </div>
       </div>
       <div>
-        <div className='text-alt-black mb-1 text-xs lg:hidden flex items-center gap-1'>
+        <div className='text-alt-black mb-1 text-xs lg:hidden flex items-center gap-1 font-bold'>
           <CalendarIcon className='w-4 h-4 inline'/>
-          <div>{format(parseISO(session.slot.start), 'HH:mm')} - {format(parseISO(session.slot.end), 'HH:mm')}</div>
+          <div>{format(parseISO(session.slot.start), 'HH:mm')} - {format(parseISO(session.slot.end), 'HH:mm')} (JST)</div>
         </div>
         <div className='inline-flex flex-row gap-2'>
           <div className='text-alt-black'>
@@ -164,29 +166,28 @@ const Talk = ({session, conferenceStartAt}: { session: Session, conferenceStartA
   </div>
 }
 
-const StartTime = ({time, conferenceStartAt, floor}: { time: string, conferenceStartAt: Date, floor: "4F" | "20F" }) => {
+const StartTime = ({time, conferenceStartAt, floor}: {
+  time: string,
+  conferenceStartAt: Date,
+  floor: "4F" | "20F"
+}) => {
   const d = parseISO(time);
 
   return <div
     className={cc(
       [
         'font-bold',
-        'text-center',
-        'text-alt-white',
-        'bg-secondary-600',
-        'rounded',
-        'mx-0.5',
-        'mt-0',
-        'text-lg',
-        'lg:w-full',
-        'lg:text-alt-black',
-        'lg:bg-white',
-        'lg:rounded-none',
-        'lg:pb-auto',
-        'lg:text-sm',
-        'lg:border-t-2',
-        'lg:border-secondary-300',
-        'lg:relative',
+        'w-full',
+        'text-alt-black',
+        'bg-white',
+        'rounded-none',
+        'pb-auto',
+        'text-sm',
+        'border-t-2',
+        'border-secondary-300',
+        'relative',
+        'hidden',
+        'lg:block',
       ]
     )}
     style={{
@@ -201,29 +202,28 @@ const StartTime = ({time, conferenceStartAt, floor}: { time: string, conferenceS
 
 }
 
-const EndTime = ({time, conferenceStartAt, floor}: { time: string, conferenceStartAt: Date, floor: "4F" | "20F" }) => {
+const EndTime = ({time, conferenceStartAt, floor}: {
+  time: string,
+  conferenceStartAt: Date,
+  floor: "4F" | "20F"
+}) => {
   const d = parseISO(time);
 
   return <div
     className={cc(
       [
         'font-bold',
-        'text-center',
-        'text-alt-white',
-        'bg-secondary-600',
-        'rounded',
-        'mx-0.5',
-        'mt-auto',
-        'text-lg',
-        'lg:w-full',
-        'lg:text-alt-black',
-        'lg:bg-white',
-        'lg:rounded-none',
-        'lg:pb-auto',
-        'lg:text-sm',
-        'lg:border-b-2',
-        'lg:border-secondary-300',
-        'lg:relative',
+        'w-full',
+        'text-alt-black',
+        'bg-white',
+        'rounded-none',
+        'pb-auto',
+        'text-sm',
+        'border-b-2',
+        'border-secondary-300',
+        'relative',
+        'hidden',
+        'lg:block',
       ]
     )}
     style={{
@@ -239,7 +239,10 @@ const EndTime = ({time, conferenceStartAt, floor}: { time: string, conferenceSta
 }
 
 
-const OtherLine = ({event, conferenceStartAt}: { event: ConferenceEvent, conferenceStartAt: Date }) =>
+const ConferenceEvent = ({event, conferenceStartAt}: {
+  event: ConferenceEvent,
+  conferenceStartAt: Date
+}) =>
   <div
     className={cc([
       'text-lg',
@@ -256,11 +259,14 @@ const OtherLine = ({event, conferenceStartAt}: { event: ConferenceEvent, confere
     ])}
     style={{
       gridColumn: `2 / span 5`,
-      gridRow: `${differenceInMinutes(parseISO(event.start), conferenceStartAt) / 5 + 2} / span ${differenceInMinutes(parseISO(event.end), parseISO(event.start)) / 5}`
+      gridRow: `${differenceInMinutes(parseISO(event.slot.start), conferenceStartAt) / 5 + 2} / span ${differenceInMinutes(parseISO(event.slot.end), parseISO(event.slot.start)) / 5}`
     }}
   >
     <div>
       {event.title}
+      <div className='block lg:hidden'>
+        <div>{format(parseISO(event.slot.start), 'HH:mm')} - {format(parseISO(event.slot.end), 'HH:mm')} (JST)</div>
+      </div>
     </div>
   </div>
 

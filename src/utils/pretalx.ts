@@ -1,5 +1,5 @@
 import axios, {AxiosResponse} from "axios";
-import {Answer, Session} from "@/types/timetable";
+import {Answer, Talk} from "@/types/timetable";
 
 export const SUBMISSION_TYPE_REGULAR_TALK = 2850;
 export const SUBMISSION_TYPE_SHORT_TALK = 3340;
@@ -33,5 +33,5 @@ export const fetchTalks = async (submissionTypeId: number) =>
       },
     },
   ).then(
-    (response: AxiosResponse<{ results: Session[] }>) => response.data.results
+    (response: AxiosResponse<{ results: Talk[] }>) => response.data.results
   );

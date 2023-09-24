@@ -1,9 +1,9 @@
-import {Session} from "@/types/timetable";
+import {Talk} from "@/types/timetable";
 import {CalendarIcon, MapPinIcon, XMarkIcon} from "@heroicons/react/20/solid";
 import {format, parseISO} from "date-fns";
 
 type Props = {
-  session: Session,
+  session: Talk,
   onClose: () => void,
 }
 

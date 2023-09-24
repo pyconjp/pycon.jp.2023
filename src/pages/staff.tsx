@@ -54,39 +54,10 @@ const ViceChairCard = ({staff, bio = []}: Props) => (
                 )
             }
             <div className={"flex flex-row items-center"}>
-                {(staff.twitter !== "")
-                    && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">
-                    <Image
-                      src="/twitter_b.svg"
-                      alt=""
-                      width={30}
-                      height={30}
-                      className={"mr-[10px] hover:opacity-50"}
-                    />
-                  </a>
-                }
-                {(staff.github !== "")
-                    && <a href={"https://github.com/" + staff.github} target="_blank" rel="noopener noreferrer">
-                    <Image
-                      src="/github_b.svg"
-                      alt=""
-                      width={30}
-                      height={30}
-                      className={"mr-[10px] hover:opacity-50"}
-                    />
-                  </a>
-                }
-                {(staff.facebook !== "")
-                    && <a href={"https://www.facebook.com/" + staff.facebook} target="_blank" rel="noopener noreferrer">
-                    <Image
-                      src="/facebook_b.svg"
-                      alt=""
-                      width={30}
-                      height={30}
-                      className={"mr-[10px] hover:opacity-50"}
-                    />
-                  </a>
-                }
+                {staff.twitter !== "" && <TwitterIcon account={staff.twitter} isChairs={true}/>}
+                {staff.github !== "" && <GithubIcon account={staff.github} isChairs={true}/>}
+                {staff.facebook !== "" && <FacebookIcon account={staff.facebook} isChairs={true}/>}
+                {staff.mastodon !== "" && <MastodonIcon account={staff.mastodon} isChairs={true}/>}
             </div>
         </div>
     </div>
@@ -114,39 +85,10 @@ const SupervisorCard = ({staff, bio = []}: Props) => (
                 )
             }
             <div className={"flex flex-row items-center"}>
-                {(staff.twitter !== "")
-                    && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">
-                    <Image
-                      src="/twitter_b.svg"
-                      alt=""
-                      width={30}
-                      height={30}
-                      className={"mr-[10px] hover:opacity-50"}
-                    />
-                  </a>
-                }
-                {(staff.github !== "")
-                    && <a href={"https://github.com/" + staff.github} target="_blank" rel="noopener noreferrer">
-                    <Image
-                      src="/github_b.svg"
-                      alt=""
-                      width={30}
-                      height={30}
-                      className={"mr-[10px] hover:opacity-50"}
-                    />
-                  </a>
-                }
-                {(staff.facebook !== "")
-                    && <a href={"https://www.facebook.com/" + staff.facebook} target="_blank" rel="noopener noreferrer">
-                    <Image
-                      src="/facebook_b.svg"
-                      alt=""
-                      width={30}
-                      height={30}
-                      className={"mr-[10px] hover:opacity-50"}
-                    />
-                  </a>
-                }
+                {staff.twitter !== "" && <TwitterIcon account={staff.twitter} isChairs={true}/>}
+                {staff.github !== "" && <GithubIcon account={staff.github} isChairs={true}/>}
+                {staff.facebook !== "" && <FacebookIcon account={staff.facebook} isChairs={true}/>}
+                {staff.mastodon !== "" && <MastodonIcon account={staff.mastodon} isChairs={true}/>}
             </div>
         </div>
     </div>

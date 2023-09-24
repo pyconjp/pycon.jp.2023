@@ -1,0 +1,16 @@
+name: Scheduled Deployment
+
+on:
+  schedule:
+    - cron: '0 21 * * *' # 6am JST
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Call Deploy Hook
+        env:
+          DEPLOY_HOOK_URL: ${{ secrets.DEPLOY_HOOK_URL_APAC2023_PROD }}
+        run: curl -X POST $DEPLOY_HOOK_URL

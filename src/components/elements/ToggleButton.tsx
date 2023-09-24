@@ -7,7 +7,7 @@ type Props = {
 };
 
 const ACTIVE = 'bg-secondary-600 text-alt-white';
-const INACTIVE = 'bg-secondary-100 text-alt-black';
+const INACTIVE = 'bg-secondary-200 text-alt-white';
 const BUTTONS: { label: string, value: Day }[] = [{label: 'Day1', value: 'day1'}, {label: 'Day2', value: 'day2'}];
 
 const ToggleButton = ({selected, onClick}: Props) => (

@@ -52,7 +52,7 @@ const Timetable = ({sessions, startDateTime, defaultDate}: Props) => {
         'text-sm',
         'lg:grid',
         'lg:grid-cols-timetable',
-        'lg:grid-rows-timetable',
+        date === 'day1' ? 'lg:grid-rows-timetable1': 'lg:grid-rows-timetable2',
       ])} suppressHydrationWarning>
         {
           tracks.map(
@@ -108,7 +108,14 @@ const Talk = ({session, conferenceStartAt}: { session: Session, conferenceStartA
     <div className='px-4 py-2 rounded bg-secondary-100 h-full flex flex-col justify-between gap-4 cursor-pointer'
          onClick={transient}>
       <div>
-        <div className='text-primary-700 font-bold overflow-hidden text-ellipsis max-h-[40px] inline-block'>
+        <div className={cc([
+          'text-primary-700',
+          'font-bold',
+          'overflow-hidden',
+          'text-ellipsis',
+          session.slot.room['ja-jp'] === 'track 5' ? 'max-h-[40px]' : 'max-h-[140px]',
+          'inline-block',
+        ])}>
           {session.title}
         </div>
         <div className='text-alt-black'>

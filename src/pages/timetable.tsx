@@ -14,7 +14,17 @@ type Props = {
     "day1": Session[],
     "day2": Session[],
   },
-  startDateTime: {
+  startTime: {
+    "day1": {
+      "4F": string[],
+      "20F": string[],
+    },
+    "day2": {
+      "4F": string[],
+      "20F": string[],
+    },
+  },
+  endTime: {
     "day1": {
       "4F": string[],
       "20F": string[],
@@ -29,7 +39,7 @@ type Props = {
 const DATE_THRESHOLD = '2023-10-28T00:00:00+09:00';
 const DEFAULT_DAY = 'day1';
 
-const TimeTable = ({sessions, startDateTime}: Props) => {
+const TimeTable = ({sessions, startTime, endTime}: Props) => {
   const router = useRouter();
   const {id} = router.query;
 
@@ -62,7 +72,7 @@ const TimeTable = ({sessions, startDateTime}: Props) => {
       <PageHead/>
       <div>
         <PageTitle title='Timetable'/>
-        <Timetable sessions={sessions} startDateTime={startDateTime} defaultDate={defaultDate ?? DEFAULT_DAY}/>
+        <Timetable sessions={sessions} startTime={startTime} endTime={endTime} defaultDate={defaultDate ?? DEFAULT_DAY}/>
         {selected && <Modal session={selected} onClose={transient}/>}
       </div>
     </>
@@ -73,6 +83,15 @@ const TimeTable = ({sessions, startDateTime}: Props) => {
 const getStartDateTime = (sessions: Session[]) => {
   const start = sessions
     .map(session => session.slot.start);
+
+  const result: string[] = [];
+  start.forEach(s => !result.includes(s) && result.push(s));
+  return result;
+}
+
+const getEndDateTime = (sessions: Session[]) => {
+  const start = sessions
+    .map(session => session.slot.end);
 
   const result: string[] = [];
   start.forEach(s => !result.includes(s) && result.push(s));
@@ -143,6 +162,9 @@ export const getStaticProps = async () => {
   const day1_events_starts = events.day1.map((event: ConferenceEvent) => event.start);
   const day2_events_starts = events.day2.map((event: ConferenceEvent) => event.start);
 
+  const day1_events_ends = events.day1.map((event: ConferenceEvent) => event.end);
+  const day2_events_ends = events.day2.map((event: ConferenceEvent) => event.end);
+
   return {
     props: {
       sessions: {
@@ -155,7 +177,7 @@ export const getStaticProps = async () => {
           ...day2_20f,
         ]
       },
-      startDateTime: {
+      startTime: {
         "day1": {
           "4F": [
             ...getStartDateTime(day1_4f),
@@ -174,6 +196,28 @@ export const getStaticProps = async () => {
           "20F": [
             ...getStartDateTime(day2_20f),
             ...day2_events_starts
+          ].sort(),
+        }
+      },
+      endTime: {
+        "day1": {
+          "4F": [
+            ...getEndDateTime(day1_4f),
+            ...day1_events_ends
+          ].sort(),
+          "20F": [
+            ...getEndDateTime(day1_20f),
+            ...day1_events_ends
+          ].sort(),
+        },
+        "day2": {
+          "4F": [
+            ...getEndDateTime(day2_4f),
+            ...day2_events_ends
+          ].sort(),
+          "20F": [
+            ...getEndDateTime(day2_20f),
+            ...day2_events_ends
           ].sort(),
         }
       },

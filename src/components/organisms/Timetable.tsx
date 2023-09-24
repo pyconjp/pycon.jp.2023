@@ -13,7 +13,17 @@ type Props = {
     "day1": Session[],
     "day2": Session[],
   },
-  startDateTime: {
+  startTime: {
+    "day1": {
+      "4F": string[],
+      "20F": string[],
+    },
+    "day2": {
+      "4F": string[],
+      "20F": string[],
+    },
+  },
+  endTime: {
     "day1": {
       "4F": string[],
       "20F": string[],
@@ -39,7 +49,7 @@ const CONFERENCE_START = {
   day2: new Date('2023-10-28T10:00:00+09:00'),
 };
 
-const Timetable = ({sessions, startDateTime, defaultDate}: Props) => {
+const Timetable = ({sessions, startTime, endTime, defaultDate}: Props) => {
   const [date, setDate] = useState<Day>(defaultDate);
 
   return (
@@ -81,11 +91,16 @@ const Timetable = ({sessions, startDateTime, defaultDate}: Props) => {
         {sessions[date].map((session, index) =>
           <Talk key={index} session={session} conferenceStartAt={CONFERENCE_START[date]}/>)}
 
-        {startDateTime[date]["4F"].map((time, index) =>
+        {startTime[date]["4F"].map((time, index) =>
           <StartTime key={index} time={time} conferenceStartAt={CONFERENCE_START[date]} floor={"4F"}/>)}
-
-        {startDateTime[date]["20F"].map((time, index) =>
+        {startTime[date]["20F"].map((time, index) =>
           <StartTime key={index} time={time} conferenceStartAt={CONFERENCE_START[date]} floor={"20F"}/>)}
+
+        {endTime[date]["4F"].map((time, index) =>
+          <EndTime key={index} time={time} conferenceStartAt={CONFERENCE_START[date]} floor={"4F"}/>)}
+        {endTime[date]["20F"].map((time, index) =>
+          <EndTime key={index} time={time} conferenceStartAt={CONFERENCE_START[date]} floor={"20F"}/>)}
+
         {events[date].map((event, index) =>
           <OtherLine key={index} event={event} conferenceStartAt={CONFERENCE_START[date]}/>)}
       </div>
@@ -158,21 +173,17 @@ const StartTime = ({time, conferenceStartAt, floor}: { time: string, conferenceS
         'bg-secondary-600',
         'rounded',
         'mx-0.5',
-        'mt-4',
+        'mt-auto',
         'text-lg',
         'lg:w-full',
-        'lg:text-right',
         'lg:text-alt-black',
         'lg:bg-white',
         'lg:rounded-none',
-        'lg:mx-0',
-        'lg:mt-0',
         'lg:pb-auto',
         'lg:text-sm',
-        'lg:pr-4',
-        'lg:pt-1',
-        'lg:border-t-2',
+        'lg:border-b-2',
         'lg:border-secondary-300',
+        'lg:relative',
       ]
     )}
     style={{
@@ -180,7 +191,46 @@ const StartTime = ({time, conferenceStartAt, floor}: { time: string, conferenceS
       gridRow: `${differenceInMinutes(d, conferenceStartAt) / 5 + 2} / span 1`
     }}
   >
-    {format(d, 'HH:mm')}
+    <div className='lg:absolute lg:top-0 lg:left-1/3'>
+      {format(d, 'HH:mm')}
+    </div>
+  </div>
+
+}
+
+const EndTime = ({time, conferenceStartAt, floor}: { time: string, conferenceStartAt: Date, floor: "4F" | "20F" }) => {
+  const d = parseISO(time);
+
+  return <div
+    className={cc(
+      [
+        'font-bold',
+        'text-center',
+        'text-alt-white',
+        'bg-secondary-600',
+        'rounded',
+        'mx-0.5',
+        'mt-auto',
+        'text-lg',
+        'lg:w-full',
+        'lg:text-alt-black',
+        'lg:bg-white',
+        'lg:rounded-none',
+        'lg:pb-auto',
+        'lg:text-sm',
+        'lg:border-b-2',
+        'lg:border-secondary-300',
+        'lg:relative',
+      ]
+    )}
+    style={{
+      gridColumn: `${floor === "4F" ? 1 : 7} / span 1`,
+      gridRow: `${differenceInMinutes(d, conferenceStartAt) / 5 + 1} / span 1`
+    }}
+  >
+    <div className='lg:absolute lg:bottom-0 lg:left-1/3'>
+      {format(d, 'HH:mm')}
+    </div>
   </div>
 
 }

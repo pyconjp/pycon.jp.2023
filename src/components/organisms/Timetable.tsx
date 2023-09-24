@@ -191,7 +191,7 @@ const StartTime = ({time, conferenceStartAt, floor}: { time: string, conferenceS
       gridRow: `${differenceInMinutes(d, conferenceStartAt) / 5 + 2} / span 1`
     }}
   >
-    <div className='lg:absolute lg:top-0 lg:left-1/2'>
+    <div className='lg:absolute lg:top-0 lg:left-1/3'>
       {format(d, 'HH:mm')}
     </div>
   </div>
@@ -228,7 +228,7 @@ const EndTime = ({time, conferenceStartAt, floor}: { time: string, conferenceSta
       gridRow: `${differenceInMinutes(d, conferenceStartAt) / 5 + 1} / span 1`
     }}
   >
-    <div className='lg:absolute lg:bottom-0 lg:left-1/2'>
+    <div className='lg:absolute lg:bottom-0 lg:left-1/3'>
       {format(d, 'HH:mm')}
     </div>
   </div>

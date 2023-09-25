@@ -10,6 +10,7 @@ const En: Lang = {
   },
   HERO: {
     VENUE: "TOC Ariake Convention Hall",
+    VENUE_SPRINT: "HENNGE K.K.",
     VENUE_INFO: "Venue Info",
     TUTORIAL_DATE: "OCTOBER 26, 2023",
     CONFERENCE_DATE: "OCTOBER 27 - 28, 2023",
@@ -147,6 +148,12 @@ const En: Lang = {
       IMG_ALT: "Photo of Lorena Mesa"
     }
   },
+  ANNOUNCE: {
+    NURSERY: {
+      TITLE: "Day-care service for children",
+      DESCRIPTION: "Child day care (ONLY for can speak Japanese) is available for elementary school or younger. For details, please see the linked PDF.",
+    }
+  }
 };
 
 export default En;

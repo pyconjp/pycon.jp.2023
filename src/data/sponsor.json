@@ -396,6 +396,15 @@
     "logo": "psf.png"
   },
   {
+    "category": "special",
+    "name": "株式会社エブリー",
+    "url": "https://corp.every.tv/",
+    "description": null,
+    "name_en": "every, Inc. ",
+    "description_en": null,
+    "logo": "every.png"
+  },
+  {
     "category": "patron",
     "name": "Coming soon",
     "url": "http://pycon.jp/",

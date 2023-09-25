@@ -147,6 +147,12 @@ const En: Lang = {
       IMG_ALT: "Photo of Lorena Mesa"
     }
   },
+  ANNOUNCE: {
+    NURSERY: {
+      TITLE: "Day-care service for children",
+      DESCRIPTION: "Child day care (ONLY for can speak Japanese) is available for elementary school or younger. For details, please see the linked PDF.",
+    }
+  }
 };
 
 export default En;

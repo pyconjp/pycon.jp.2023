@@ -150,7 +150,7 @@ const En: Lang = {
   ANNOUNCE: {
     NURSERY: {
       TITLE: "Day-care service for children",
-      DESCRIPTION: "Day-care service for children (ONLY for can speak Japanese) is available for elementary school or younger.\nFor details, please see the linked PDF.",
+      DESCRIPTION: "Child day care (ONLY for can speak Japanese) is available for elementary school or younger. For details, please see the linked PDF.",
     }
   }
 };

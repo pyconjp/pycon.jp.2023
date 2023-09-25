@@ -122,7 +122,7 @@ const Talk = ({session, conferenceStartAt}: {
                 gridColumn: `${col[session.slot.room["ja-jp"]]} / span 1`,
                 gridRow: `${differenceInMinutes(parseISO(session.slot.start), conferenceStartAt) / 5 + 2} / span ${differenceInMinutes(parseISO(session.slot.end), parseISO(session.slot.start)) / 5}`
               }}>
-    <div className='px-4 py-2 rounded bg-secondary-100 h-full flex flex-col justify-between gap-4 cursor-pointer'
+    <div className='px-4 py-2 rounded bg-secondary-100 h-full flex flex-col justify-between cursor-pointer'
          onClick={transient}>
       <div>
         <div className={cc([
@@ -136,7 +136,7 @@ const Talk = ({session, conferenceStartAt}: {
           {session.title}
         </div>
         <div className='text-alt-black'>
-          {session.speakers.length > 0 && session.speakers[0].name}
+          {session.speakers.map((speaker) => speaker.name).join(' / ')}
         </div>
       </div>
       <div>

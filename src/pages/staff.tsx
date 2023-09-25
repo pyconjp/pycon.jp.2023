@@ -24,10 +24,10 @@ const StaffCard = ({staff}: { staff: Staff }) => (
         <div className={"flex flex-col m-[12px]"}>
             <div className={"mb-[6px] font-bold"}>{staff.name}</div>
             <div className={"flex flex-row items-center"}>
-                <TwitterIcon account={staff.twitter}/>
-                <GithubIcon account={staff.github}/>
-                <FacebookIcon account={staff.facebook}/>
-                <MastodonIcon account={staff.mastodon}/>
+                <TwitterIcon account={staff.twitter} isChairs={false}/>
+                <GithubIcon account={staff.github} isChairs={false}/>
+                <FacebookIcon account={staff.facebook} isChairs={false}/>
+                <MastodonIcon account={staff.mastodon} isChairs={false}/>
             </div>
         </div>
     </div>
@@ -54,39 +54,10 @@ const ViceChairCard = ({staff, bio = []}: Props) => (
                 )
             }
             <div className={"flex flex-row items-center"}>
-                {(staff.twitter !== "")
-                    && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">
-                    <Image
-                      src="/twitter_b.svg"
-                      alt=""
-                      width={30}
-                      height={30}
-                      className={"mr-[10px] hover:opacity-50"}
-                    />
-                  </a>
-                }
-                {(staff.github !== "")
-                    && <a href={"https://github.com/" + staff.github} target="_blank" rel="noopener noreferrer">
-                    <Image
-                      src="/github_b.svg"
-                      alt=""
-                      width={30}
-                      height={30}
-                      className={"mr-[10px] hover:opacity-50"}
-                    />
-                  </a>
-                }
-                {(staff.facebook !== "")
-                    && <a href={"https://www.facebook.com/" + staff.facebook} target="_blank" rel="noopener noreferrer">
-                    <Image
-                      src="/facebook_b.svg"
-                      alt=""
-                      width={30}
-                      height={30}
-                      className={"mr-[10px] hover:opacity-50"}
-                    />
-                  </a>
-                }
+                {staff.twitter !== "" && <TwitterIcon account={staff.twitter} isChairs={true}/>}
+                {staff.github !== "" && <GithubIcon account={staff.github} isChairs={true}/>}
+                {staff.facebook !== "" && <FacebookIcon account={staff.facebook} isChairs={true}/>}
+                {staff.mastodon !== "" && <MastodonIcon account={staff.mastodon} isChairs={true}/>}
             </div>
         </div>
     </div>
@@ -114,94 +85,60 @@ const SupervisorCard = ({staff, bio = []}: Props) => (
                 )
             }
             <div className={"flex flex-row items-center"}>
-                {(staff.twitter !== "")
-                    && <a href={"https://twitter.com/" + staff.twitter} target="_blank" rel="noopener noreferrer">
-                    <Image
-                      src="/twitter_b.svg"
-                      alt=""
-                      width={30}
-                      height={30}
-                      className={"mr-[10px] hover:opacity-50"}
-                    />
-                  </a>
-                }
-                {(staff.github !== "")
-                    && <a href={"https://github.com/" + staff.github} target="_blank" rel="noopener noreferrer">
-                    <Image
-                      src="/github_b.svg"
-                      alt=""
-                      width={30}
-                      height={30}
-                      className={"mr-[10px] hover:opacity-50"}
-                    />
-                  </a>
-                }
-                {(staff.facebook !== "")
-                    && <a href={"https://www.facebook.com/" + staff.facebook} target="_blank" rel="noopener noreferrer">
-                    <Image
-                      src="/facebook_b.svg"
-                      alt=""
-                      width={30}
-                      height={30}
-                      className={"mr-[10px] hover:opacity-50"}
-                    />
-                  </a>
-                }
+                {staff.twitter !== "" && <TwitterIcon account={staff.twitter} isChairs={true}/>}
+                {staff.github !== "" && <GithubIcon account={staff.github} isChairs={true}/>}
+                {staff.facebook !== "" && <FacebookIcon account={staff.facebook} isChairs={true}/>}
+                {staff.mastodon !== "" && <MastodonIcon account={staff.mastodon} isChairs={true}/>}
             </div>
         </div>
     </div>
 );
 
-interface SocialIconProps {
-    src: string;
-    url: string;
-    alt: string;
-    size?: number;
-}
-
-const iconMaker = (getProps: (account: string) => SocialIconProps) => {
-    // eslint-disable-next-line react/display-name
-    return ({account}: { account: string }) => {
-        if (account === "") return null;
-        return <SocialIcon {...getProps(account)} />
-    }
-}
-
-const TwitterIcon = iconMaker(account => {
-    return {
-        src: '/twitter_b.svg',
-        url: `https://twitter.com/${account}`,
-        alt: `@${account}`
-    }
-});
-
-
-const GithubIcon = ({account}: { account: string }) => {
+const TwitterIcon = ({account, isChairs}: { account: string, isChairs: boolean }) => {
     if (account === "") return null;
-    return <SocialIcon src="/github_b.svg" url={`https://github.com/${account}`} alt={`https://github.com/${account}`}/>
+    return <SocialIcon src="/twitter_b.svg" url={`https://twitter.com/${account}`} 
+                       alt={`https://twitter.com/${account}`} isChairs={isChairs}/>
 }
 
-const FacebookIcon = ({account}: { account: string }) => {
+const GithubIcon = ({account, isChairs}: { account: string, isChairs: boolean}) => {
+    if (account === "") return null;
+    return <SocialIcon src="/github_b.svg" url={`https://github.com/${account}`} 
+                       alt={`https://github.com/${account}`} isChairs={isChairs}/>
+}
+
+const FacebookIcon = ({account, isChairs}: { account: string, isChairs: boolean }) => {
     if (account === "") return null;
     return <SocialIcon src="/facebook_b.svg" url={`https://www.facebook.com/${account}`}
-                       alt={`https://www.facebook.com/${account}`}/>
+                       alt={`https://www.facebook.com/${account}`} isChairs={isChairs}/>
 }
 
-const MastodonIcon = ({account}: { account: string }) => {
+const MastodonIcon = ({account, isChairs}: { account: string, isChairs: boolean }) => {
     if (account === "") return null;
     const [_, user, server] = account.split('@');
-    return <SocialIcon src="/mastodon_b.svg" url={`https://${server}/@${user}`} alt={account}/>
+    return <SocialIcon src="/mastodon_b.svg" url={`https://${server}/@${user}`}
+           alt={account} isChairs={isChairs}/>
 }
 
-const SocialIcon = ({src, url, alt}: { src: string, url: string, alt: string }) => {
-    return <a href={url} target="_blank" rel="noopener noreferrer">
-        <Image
-            src={src}
-            alt={alt}
-            width={20}
-            height={20}
-            className={"mr-[8px] hover:opacity-50"}
-        /></a>
+const SocialIcon = ({src, url, alt, isChairs}: { src: string, url: string, alt: string, isChairs: boolean }) => {
+    if (isChairs === true) {
+        return <a href={url} target="_blank" rel="noopener noreferrer">
+            <Image
+                src={src}
+                alt={alt}
+                width={30}
+                height={30}
+                className={"mr-[10px] hover:opacity-50"}
+            /></a>
+    } else {
+        return <a href={url} target="_blank" rel="noopener noreferrer">
+            <Image
+                src={src}
+                alt={alt}
+                width={20}
+                height={20}
+                className={"mr-[8px] hover:opacity-50"}
+            /></a>
+    }
 }
 
 const SimpleStaffCard = ({staff}: { staff: Staff }) => (

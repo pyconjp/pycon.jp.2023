@@ -144,8 +144,14 @@ const Ja: Lang = {
       NAME: "Lorena Mesa",
       BIO: "以前は政治科学者だったが、現在は GitHub でデータエンジニアとして勤務している。Python Software Foundation では Director 兼議長を務めた。[Journal of Open Source Software (JOSS)](https://joss.theoj.org/about) の編集者や PyLadies Chicago の共同管理者でもある。Obama for America (オバマ元大統領の選挙キャンペーン)での勤務とその後の大学院での研究で、ラテン系の有権者の行動予測などのテーマについての厄介で不完全なデータを分かりやすい分析に変換する方法を学ぶことになった。彼女が今エンジニア・データサイエンティストとして第一線でキャリアを築いているのは応用数学においての類い希なの研究背景があったからである。他には活動家、スター・ウォーズ・オタクやトレッキーである。モットーは「長寿と繁栄を」。",
       IMG_ALT: "Lorena Mesa 氏の画像"
-    }
+    },
   },
+  ANNOUNCE: {
+    NURSERY: {
+      TITLE: "託児所",
+      DESCRIPTION: "小学生以下のお子様を対象に託児所を設置します。\n詳しくはリンク先のPDFをご覧ください。",
+    }
+  }
 };
 
 export default Ja;

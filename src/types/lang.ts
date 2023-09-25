@@ -120,4 +120,10 @@ export type Lang = {
       IMG_ALT: string;
     };
   };
+  ANNOUNCE: {
+    NURSERY: {
+      TITLE: string;
+      DESCRIPTION: string;
+    },
+  },
 };

@@ -6,6 +6,7 @@ import NewsDate from "@/components/elements/NewsDate";
 import NewsTitle from "@/components/elements/NewsTitle";
 import {useTranslation} from "react-i18next";
 import ExternalLink from "@/components/elements/ExternalLink";
+import Announce from "@/components/elements/Announce";
 
 type Props = {
   blogs: Blog[]
@@ -45,6 +46,7 @@ export default function NewsSection({blogs}: Props) {
   return (
     <div className="flex-row items-center px-[5%] sm:px-[10%] xl:px-[20%] lg:py-[60px] py-20">
       <SectionTitle title='News' subTitle='新着情報'/>
+      <Announce/>
       <div className='lg:p-12 py-8 px-6 shadow rounded-lg'>
         <div className='mb-5'>
           <BlogList blogs={blogs}/>

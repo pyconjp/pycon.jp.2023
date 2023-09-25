@@ -8,6 +8,7 @@ export type Lang = {
   };
   HERO: {
     VENUE: string;
+    VENUE_SPRINT: string;
     VENUE_INFO: string;
     TUTORIAL_DATE: string;
     CONFERENCE_DATE: string;

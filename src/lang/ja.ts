@@ -10,6 +10,7 @@ const Ja: Lang = {
   },
   HERO: {
     VENUE: "TOC有明コンベンションホール",
+    VENUE_SPRINT: "HENNGE株式会社",
     VENUE_INFO: "会場案内",
     TUTORIAL_DATE: "2023.10.26(Thu)",
     CONFERENCE_DATE: "2023.10.27(Fri)-28(Sat)",

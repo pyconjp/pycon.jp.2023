@@ -324,6 +324,15 @@
     "category": "Silver"
   },
   {
+    "name": "株式会社hokan",
+    "name_en": "hokan, Inc.",
+    "url": "https://www.corp.hkn.jp/",
+    "description": "株式会社hokanは、「保険業界をアップデートする」をミッションに掲げ、保険流通の最適化を目指す国内唯一のInsurTechスタートアップです。\n適正な営業活動と組織の強固な監査体制を実現するクラウド型保険代理店システムをはじめ、精算管理システムの開発など、各種業務を完結させることができるプロダクトを複数展開しています。\n私たちは、最新の技術を保険業界に適用させていくことで誰もが正しく適切に保険商品を享受できる社会をつくってまいります。",
+    "description_en": "",
+    "logo": "hokan.png",
+    "category": "Gold"
+  },
+  {
     "name": "株式会社Nexedi",
     "name_en": "株式会社Nexedi",
     "url": "https://www.nexedi.com/ja",
@@ -360,15 +369,6 @@
     "category": "Silver"
   },
   {
-    "name": "株式会社hokan",
-    "name_en": "株式会社hokan",
-    "url": "https://www.corp.hkn.jp/",
-    "description": "",
-    "description_en": "",
-    "logo": "dummy_coming_soon.png",
-    "category": "Gold"
-  },
-  {
     "name": "Bloomberg",
     "name_en": "Bloomberg",
     "url": "https://www.bloomberg.com/company/values/tech-at-bloomberg/",
@@ -376,6 +376,15 @@
     "description_en": "",
     "logo": "dummy_coming_soon.png",
     "category": "Silver"
+  },
+  {
+    "name": "株式会社MaaS Tech Japan",
+    "name_en": "株式会社MaaS Tech Japan",
+    "url": "https://maas.co.jp",
+    "description": "",
+    "description_en": "",
+    "logo": "dummy_coming_soon.png",
+    "category": "Bronze"
   },
   {
     "category": "special",

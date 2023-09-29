@@ -17,26 +17,46 @@ export type Slot<T> = {
   end: string
 }
 
-export type Talk = {
+export interface Session {
   code: string,
-  speakers: Speaker[],
-  created: string,
   title: string,
-  submission_type: MultilingualString<"Keynote" | "Talk">,
-  submission_type_id: number,
-  track: MultilingualString<string>,
+  speakers?: Speaker[],
+  abstract?: string,
+  description?: string,
+  content_locale?: 'ja-jp' | 'en',
+  slot: Slot<Track>,
+  is_event?: boolean,
+  hide_end?: boolean,
+  hide_start?: boolean,
+}
+
+export interface Talk extends Session {
+  slot: Slot<"track 1" | "track 2" | "track 3" | "track 4" | "track 5">,
+  speakers: Speaker[],
   track_id: number,
-  state: string,
   abstract: string,
   description: string,
   duration: number,
-  slot_count: number,
-  do_not_record: boolean,
-  is_featured: boolean,
   content_locale: 'ja-jp' | 'en',
-  slot: Slot<"track 1" | "track 2" | "track 3" | "track 4" | "track 5">,
   image: string,
-  resources: object,
+  is_event: undefined,
+  hide_end: undefined,
+  hide_start: undefined,
+  // slot_count: number,
+  // do_not_record: boolean,
+  // is_featured: boolean,
+  // resources: object,
+  // created: string,
+  // submission_type: MultilingualString<"Keynote" | "Talk">,
+  // submission_type_id: number,
+  // state: string,
+}
+
+export interface ConferenceEvent extends Session {
+  slot: Slot<"">,
+  hide_end?: true,
+  hide_start?: true,
+  is_event: true,
 }
 
 export type Answer = {
@@ -47,9 +67,3 @@ export type Answer = {
 export type Track = "" | "track 1" | "track 2" | "track 3" | "track 4" | "track 5"
 
 export type Day = 'day1' | 'day2';
-
-export type ConferenceEvent = {
-  title: string,
-  code: "",
-  slot: Slot<"">,
-}

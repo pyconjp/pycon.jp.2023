@@ -1,9 +1,9 @@
-import {Talk} from "@/types/timetable";
+import {Session, Talk} from "@/types/timetable";
 import {CalendarIcon, MapPinIcon, XMarkIcon} from "@heroicons/react/20/solid";
 import {format, parseISO} from "date-fns";
 
 type Props = {
-  session: Talk,
+  session: Session,
   onClose: () => void,
 }
 
@@ -23,25 +23,37 @@ const Modal = ({session, onClose}: Props) => {
               </div>
             </div>
             <div className='text-2xl font-bold'>{session.title}</div>
-            <div className='text-lg font-bold mt-2'>{session.speakers.map((speaker) => speaker.name).join(' / ')}</div>
+            <div
+              className='text-lg font-bold mt-2'>{session.speakers && session.speakers.map((speaker) => speaker.name).join(' / ')}</div>
             <div className='text-lg mt-2'>
               <CalendarIcon
                 className='w-6 h-6 inline-block'/>{format(parseISO(session.slot.start), 'yyyy/MM/dd HH:mm')} ~ {format(parseISO(session.slot.end), 'HH:mm')} (Asia/Tokyo)
             </div>
-            <div className='text-lg my-2'><MapPinIcon className='w-6 h-6 inline-block'/>{session.slot.room["ja-jp"]}
-            </div>
             {
-              session.content_locale === 'ja-jp' ?
-                <div className='inline bg-primary-500 rounded-2xl text-alt-white px-2'>日本語</div> :
-                <div className='inline bg-secondary-500 rounded-2xl text-alt-white px-2'>EN</div>
+              session.slot.room["ja-jp"] !== '' &&
+              <div className='text-lg my-2'>
+                <MapPinIcon className='w-6 h-6 inline-block'/>{session.slot.room["ja-jp"]}
+              </div>
             }
-            <div className='mt-6 w-full bg-secondary-100 rounded p-4'>{session.abstract}</div>
+            {
+              session.content_locale === 'ja-jp' &&
+              <div className='inline bg-primary-500 rounded-2xl text-alt-white px-2'>日本語</div>
+            }
+            {
+              session.content_locale === 'en' &&
+              <div className='inline bg-secondary-500 rounded-2xl text-alt-white px-2'>EN</div>
+            }
+            <div className='mt-6 w-full bg-secondary-100 rounded p-4 whitespace-pre-line'>{session.abstract}</div>
             <hr className='my-6 border-secondary-300'/>
-            <div className='whitespace-pre-line'>{session.description}</div>
-            <hr className='my-6 border-secondary-300'/>
+            {
+              session.description && <>
+                <div className='whitespace-pre-line'>{session.description}</div>
+                <hr className='my-6 border-secondary-300'/>
+              </>
+            }
             <div className="flex gap-8 flex-col">
               {
-                session.speakers.map((speaker, index) => (
+                session.speakers && session.speakers.map((speaker, index) => (
                   <div key={index} className='flex items-start gap-6'>
                     {
                       speaker.avatar &&
@@ -52,7 +64,7 @@ const Modal = ({session, onClose}: Props) => {
                       <div className='text-xl'>
                         {speaker.name}
                       </div>
-                      <div className='whitespace-pre-line pt-2'>
+                      <div className='whitespace-pre-line'>
                         {speaker.biography}
                       </div>
                     </div>

@@ -90,9 +90,9 @@ const Timetable = ({sessions, startTime, endTime, defaultDate}: Props) => {
           )
         }
         {sessions[date].map((session, index) =>
-          session.slot.room['ja-jp'] !== ""
-            ? <Talk key={index} session={session as Talk} conferenceStartAt={CONFERENCE_START[date]}/>
-            : <ConferenceEvent key={index} event={session as ConferenceEvent} conferenceStartAt={CONFERENCE_START[date]}/>)}
+          session.is_event
+            ? <ConferenceEvent key={index} session={session} conferenceStartAt={CONFERENCE_START[date]}/>
+            : <Talk key={index} session={session} conferenceStartAt={CONFERENCE_START[date]}/>)}
 
         {startTime[date]["4F"].map((time, index) =>
           <StartTime key={index} time={time} conferenceStartAt={CONFERENCE_START[date]} floor={"4F"}/>)}
@@ -122,8 +122,9 @@ const Talk = ({session, conferenceStartAt}: {
                 gridColumn: `${col[session.slot.room["ja-jp"]]} / span 1`,
                 gridRow: `${differenceInMinutes(parseISO(session.slot.start), conferenceStartAt) / 5 + 2} / span ${differenceInMinutes(parseISO(session.slot.end), parseISO(session.slot.start)) / 5}`
               }}>
-    <div className='px-4 py-2 rounded bg-secondary-100 h-full flex flex-col justify-between cursor-pointer'
-         onClick={transient}>
+    <div
+      className='px-4 py-2 rounded bg-secondary-100 h-full flex flex-col justify-between cursor-pointer hover:bg-secondary-200'
+      onClick={transient}>
       <div>
         <div className={cc([
           'text-primary-700',
@@ -166,6 +167,47 @@ const Talk = ({session, conferenceStartAt}: {
   </div>
 }
 
+const ConferenceEvent = ({session, conferenceStartAt}: {
+  session: ConferenceEvent,
+  conferenceStartAt: Date
+}) => {
+  const router = useRouter();
+  const transient = async () => {
+    await router.push(`/timetable?id=${session?.code}`);
+  }
+
+  return <div
+    className={cc({
+      'text-lg': true,
+      'text-center': true,
+      'py-1': true,
+      'text-alt-white': true,
+      'font-bold': true,
+      'rounded': true,
+      'm-1': true,
+      'flex': true,
+      'justify-center': true,
+      'items-center': true,
+      'whitespace-pre-line': true,
+      'bg-secondary-600': session.code === "",
+      'bg-primary-500': session.code !== "",
+      'cursor-pointer': session.code !== "",
+      'hover:bg-primary-600': session.code !== "",
+    })}
+    style={{
+      gridColumn: `2 / span 5`,
+      gridRow: `${differenceInMinutes(parseISO(session.slot.start), conferenceStartAt) / 5 + 2} / span ${differenceInMinutes(parseISO(session.slot.end), parseISO(session.slot.start)) / 5}`
+    }}
+    onClick={session.code !== "" ? transient : undefined}
+  >
+    <div>
+      {session.title}
+      <div className='block lg:hidden'>
+        <div>{format(parseISO(session.slot.start), 'HH:mm')} - {format(parseISO(session.slot.end), 'HH:mm')} (JST)</div>
+      </div>
+    </div>
+  </div>
+}
 const StartTime = ({time, conferenceStartAt, floor}: {
   time: string,
   conferenceStartAt: Date,
@@ -202,6 +244,7 @@ const StartTime = ({time, conferenceStartAt, floor}: {
 
 }
 
+
 const EndTime = ({time, conferenceStartAt, floor}: {
   time: string,
   conferenceStartAt: Date,
@@ -237,37 +280,5 @@ const EndTime = ({time, conferenceStartAt, floor}: {
   </div>
 
 }
-
-
-const ConferenceEvent = ({event, conferenceStartAt}: {
-  event: ConferenceEvent,
-  conferenceStartAt: Date
-}) =>
-  <div
-    className={cc([
-      'text-lg',
-      'text-center',
-      'py-1',
-      'bg-primary-600',
-      'text-alt-white',
-      'font-bold',
-      'rounded',
-      'm-1',
-      'flex',
-      'justify-center',
-      'items-center',
-    ])}
-    style={{
-      gridColumn: `2 / span 5`,
-      gridRow: `${differenceInMinutes(parseISO(event.slot.start), conferenceStartAt) / 5 + 2} / span ${differenceInMinutes(parseISO(event.slot.end), parseISO(event.slot.start)) / 5}`
-    }}
-  >
-    <div>
-      {event.title}
-      <div className='block lg:hidden'>
-        <div>{format(parseISO(event.slot.start), 'HH:mm')} - {format(parseISO(event.slot.end), 'HH:mm')} (JST)</div>
-      </div>
-    </div>
-  </div>
 
 export default Timetable

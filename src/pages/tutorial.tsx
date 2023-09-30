@@ -2,16 +2,13 @@ import PageHead from "@/components/elements/PageHead";
 import PageTitle from "@/components/elements/PageTitle";
 import {Talk} from "@/types/timetable";
 import {
-  fetchTalks, getTalk, sortTalks,
+  fetchTalks, sortTalks,
   SUBMISSION_TYPE_TUTORIAL
 } from "@/utils/pretalx";
-import {GetStaticPaths, GetStaticProps} from "next";
-import {ParsedUrlQuery} from "querystring";
+import {GetStaticProps} from "next";
 import TutorialLayout from "@/components/organisms/TutorialLayout";
-import TalkContent from "@/components/elements/TalkContent";
 import {TicketIcon} from "@heroicons/react/20/solid";
 import {useRouter} from "next/router";
-import {useTransition} from "react";
 import {useTranslation} from "react-i18next";
 
 
@@ -59,7 +56,7 @@ const Tutorial = ({tutorials}: Props) => {
   )
 }
 
-export const getStaticProps: GetStaticProps<Props> = (async ({params}) => {
+export const getStaticProps: GetStaticProps<Props> = (async () => {
   const tutorials = (await fetchTalks(SUBMISSION_TYPE_TUTORIAL)).sort(sortTalks);
 
   return {

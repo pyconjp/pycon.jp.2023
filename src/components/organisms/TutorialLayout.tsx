@@ -1,5 +1,3 @@
-import Image from "next/image";
-import styles from "@/styles/text_card.module.scss";
 import React from "react";
 import {Talk} from "@/types/timetable";
 import TutorialMenu from "@/components/elements/TutorialMenu";

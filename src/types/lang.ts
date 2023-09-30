@@ -23,6 +23,7 @@ export type Lang = {
     EVENTS: {
       TIMETABLE: string;
       EVENTS: string;
+      TUTORIAL: string;
     };
     SPONSOR: {
       SPONSOR_LIST: string;

@@ -25,6 +25,7 @@ const En: Lang = {
     EVENTS: {
       TIMETABLE: "Timetable",
       EVENTS: "Event List",
+      TUTORIAL: 'Tutorial',
     },
     SPONSOR: {
       SPONSOR_LIST: "Sponsor List",

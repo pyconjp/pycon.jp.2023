@@ -153,7 +153,10 @@ const En: Lang = {
       TITLE: "Day-care service for children",
       DESCRIPTION: "Child day care (ONLY for can speak Japanese) is available for elementary school or younger. For details, please see the linked PDF.",
     }
-  }
+  },
+  TUTORIAL: {
+    INDEX: "PyCon APAC 2023 Tutorial",
+  },
 };
 
 export default En;

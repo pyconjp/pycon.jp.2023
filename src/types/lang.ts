@@ -127,4 +127,7 @@ export type Lang = {
       DESCRIPTION: string;
     },
   },
+  TUTORIAL: {
+    INDEX: string,
+  },
 };

@@ -22,6 +22,7 @@ const Modal = ({session, onClose}: Props) => {
                 </button>
               </div>
             </div>
+            {/*TODO: TalkContentに置き換える*/}
             <div className='text-2xl font-bold'>{session.title}</div>
             <div className='text-lg font-bold mt-2'>{session.speakers.map((speaker) => speaker.name).join(' / ')}</div>
             <div className='text-lg mt-2'>

@@ -152,7 +152,10 @@ const Ja: Lang = {
       TITLE: "託児所",
       DESCRIPTION: "小学生以下のお子様を対象に託児所を設置します。\n詳しくはリンク先のPDFをご覧ください。",
     }
-  }
+  },
+  TUTORIAL: {
+    INDEX: "PyCon APAC 2023 チュートリアル",
+  },
 };
 
 export default Ja;

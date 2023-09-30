@@ -113,8 +113,8 @@ const En: Lang = {
     recruite_link: "Staff application form(coming soon)",
   },
   SPONSOR: {
-    H1: "Please be our sponsor!",
-    P1: "Sponsorships for PyCon APAC 2023 are now being accepted. We look forward to receiving applications from companies that want to appeal to the Python communities!",
+    H1: "Call for sponsors has been closed.",
+    P1: "Thank you very much for your many applications for sponsorship!",
     A1: "Sponsorship application form",
     DIAMOND: "Diamond sponsor",
     PLATINUM: "Platinum sponsor",

@@ -139,12 +139,14 @@ const Ja: Lang = {
         '\n\n' +
         '教養共通教育としてのプログラミングを含む情報教育を担当。  \n' +
         '専門はシステム工学・科学。社会シミュレーション、プログラミングを含む情報教育などの研究に従事。',
-      IMG_ALT: "喜多 一氏の画像"
+      IMG_ALT: "喜多 一氏の画像",
+      DATE: "2023.10.27(Fri)",
     },
     SPEAKER_EN: {
       NAME: "Lorena Mesa",
       BIO: "以前は政治科学者だったが、現在は GitHub でデータエンジニアとして勤務している。Python Software Foundation では Director 兼議長を務めた。[Journal of Open Source Software (JOSS)](https://joss.theoj.org/about) の編集者や PyLadies Chicago の共同管理者でもある。Obama for America (オバマ元大統領の選挙キャンペーン)での勤務とその後の大学院での研究で、ラテン系の有権者の行動予測などのテーマについての厄介で不完全なデータを分かりやすい分析に変換する方法を学ぶことになった。彼女が今エンジニア・データサイエンティストとして第一線でキャリアを築いているのは応用数学においての類い希なの研究背景があったからである。他には活動家、スター・ウォーズ・オタクやトレッキーである。モットーは「長寿と繁栄を」。",
-      IMG_ALT: "Lorena Mesa 氏の画像"
+      IMG_ALT: "Lorena Mesa 氏の画像",
+      DATE: "2023.10.28(Sat)",
     },
   },
   ANNOUNCE: {

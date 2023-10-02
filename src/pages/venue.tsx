@@ -1,12 +1,9 @@
-import { GetStaticProps } from "next";
 import Image from "next/image";
-import { Staff } from "@/types/staff";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
 import PageTitle from "@/components/elements/PageTitle";
 import SectionTitle from "@/components/elements/SectionTitle";
 import Gmap from "@/components/elements/GoogleMap";
-import { convertToObject, isConstructorDeclaration } from "typescript";
 
 type SubTitle = {
   title: string;
@@ -26,13 +23,6 @@ type SelectFloor = {
 const SubtitleComponent = ({title}:SubTitle) => (
   <>
     <h4 className={"m-[12px] lg:text-3xl text-xl font-bold text-montserrat italic text-alt-black "}>{title}</h4>
-    <Image 
-      src={"/sub_separator.svg"}
-      alt={"サブ区切り線"} 
-      width={286} 
-      height={27}
-      className={"mx-auto mb-8 lg:w-auto lg:h-auto w-[150px] h-[16px]"}
-    />
   </>
 );
 const VenueInfoComponent = ({title, text}:VenueInfo) => (
@@ -162,27 +152,35 @@ const SPMapComponent = ({text_4F, text_20F}:PageInfo) => {
 const VenuePage = () => {
   const { t } = useTranslation("VENUE");
   const [c, setContents] = useState({
-    gmap_url: "",
+    gmap_t_url: "",
+    gmap_s_url: "",
     floor4: "",
     floor20: "",
     venue_title: "",
-    venue_text: "",
+    venue_text_t: "",
+    venue_text_s: "",
     location_title: "",
-    location_text: "",
+    location_text_t: "",
+    location_text_s: "",
     station_title: "",
-    station_text: "",
+    station_text_t: "",
+    station_text_s: "",
   });
   useEffect(() => {
     setContents({...c,
-      gmap_url: t("GMAP_URL"),
+      gmap_t_url: t("GMAP_T_URL"),
+      gmap_s_url: t("GMAP_S_URL"),
       floor4: t("FLOOR4"),
       floor20: t("FLOOR20"),
       venue_title: t("VENUE_TITLE"),
-      venue_text: t("VENUE_TEXT"),
+      venue_text_t: t("VENUE_TEXT_T"),
+      venue_text_s: t("VENUE_TEXT_S"),
       location_title: t("LOCATION_TITLE"),
-      location_text: t("LOCATION_TEXT"),
+      location_text_t: t("LOCATION_TEXT_T"),
+      location_text_s: t("LOCATION_TEXT_S"),
       station_title: t("STATION_TITLE"),
-      station_text: t("STATION_TEXT"),
+      station_text_t: t("STATION_TEXT_T"),
+      station_text_s: t("STATION_TEXT_S"),
     })
   },[t]);
 
@@ -199,21 +197,40 @@ const VenuePage = () => {
       </div>
 
       <SectionTitle title='Access' subTitle='会場アクセス'/>
-      <div className={"flex lg:flex-row flex-col items-center justify-center gap-10 lg:mx-[80px] mx-[20px]"}>
-        <div className={"m-[10px]"}>
-          <Gmap
-            url={c.gmap_url}
-            width={"400"}
-            height={"400"}
-          />
-        </div>
-        <div className={"flex flex-col m-[20px]"}>
-          <VenueInfoComponent title={c.venue_title} text={c.venue_text}/>
-          <VenueInfoComponent title={c.location_title} text={c.location_text}/>
-          <VenueInfoComponent title={c.station_title} text={c.station_text}/>
+      <div className={"flex flex-col items-center justify-center lg:mx-[80px] mx-[20px] mb-[60px]"}>
+        <h4 className="font-montserrat italic mr-[16px] lg:text-3xl text-2xl text-alt-black font-bold m-[12px]">Tutorial & Conference</h4>
+        <div className={"flex lg:flex-row flex-col items-center justify-center gap-10 lg:mx-[80px] mx-[20px]"}>
+          <div className={"m-[10px]"}>
+            <Gmap
+              url={c.gmap_t_url}
+              width={"400"}
+              height={"400"}
+            />
+          </div>
+          <div className={"flex flex-col m-[20px]"}>
+            <VenueInfoComponent title={c.venue_title} text={c.venue_text_t}/>
+            <VenueInfoComponent title={c.location_title} text={c.location_text_t}/>
+            <VenueInfoComponent title={c.station_title} text={c.station_text_t}/>
+          </div>
         </div>
       </div>
-      
+      <div className={"flex flex-col items-center justify-center lg:mx-[80px] mx-[20px] mb-[60px]"}>
+        <h4 className="font-montserrat italic mr-[16px] lg:text-3xl text-2xl text-alt-black font-bold m-[12px]">Sprint</h4>
+        <div className={"flex lg:flex-row flex-col items-center justify-center gap-10 lg:mx-[80px] mx-[20px]"}>
+          <div className={"m-[10px]"}>
+            <Gmap
+              url={c.gmap_s_url}
+              width={"400"}
+              height={"400"}
+            />
+          </div>
+          <div className={"flex flex-col m-[20px]"}>
+            <VenueInfoComponent title={c.venue_title} text={c.venue_text_s}/>
+            <VenueInfoComponent title={c.location_title} text={c.location_text_s}/>
+            <VenueInfoComponent title={c.station_title} text={c.station_text_s}/>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

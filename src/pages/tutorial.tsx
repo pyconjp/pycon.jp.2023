@@ -7,9 +7,12 @@ import {
 } from "@/utils/pretalx";
 import {GetStaticProps} from "next";
 import TutorialLayout from "@/components/organisms/TutorialLayout";
-import {TicketIcon} from "@heroicons/react/20/solid";
+import {ArrowTopRightOnSquareIcon} from "@heroicons/react/20/solid";
 import {useRouter} from "next/router";
 import {useTranslation} from "react-i18next";
+import Heading from "@/components/elements/Heading";
+import Markdown from "@/components/elements/Markdown";
+import React from "react";
 
 
 type Props = {
@@ -24,31 +27,19 @@ const Tutorial = ({tutorials}: Props) => {
     await router.push(url);
   }
 
+  const Link= ({href, children}: { href: string, children: React.ReactNode }) => (
+    <a href={href} target='_blank' rel='noopener noreferrer'>{children}</a>
+  )
+
   return (
     <>
       <PageHead/>
       <PageTitle title='Tutorial'/>
       <TutorialLayout tutorials={tutorials}>
         <div className='p-6 border-alt-black bg-secondary-50'>
-          <h1 className='text-2xl'>{t('INDEX')}</h1>
-
-          <div className='my-6'>
-            <div>この文章はサンプルです。</div>
-            <div>この文章はサンプルです。</div>
-            <div>この文章はサンプルです。</div>
-            <div>この文章はサンプルです。</div>
-            <div>この文章はサンプルです。</div>
-            <div>この文章はサンプルです。</div>
-            <div>この文章はサンプルです。</div>
-            <div>この文章はサンプルです。</div>
-            <div>この文章はサンプルです。</div>
-            <div>この文章はサンプルです。</div>
-          </div>
-
-          <div
-            className='bg-primary-500 text-alt-white p-4 flex items-center text-lg gap-4 rounded-2xl cursor-pointer hover:bg-primary-600'
-            onClick={() => transition('https://example.com')}>
-            <TicketIcon className='w-6 h-6'/>チケットの購入はこちら
+          <Heading>{t('INDEX')}</Heading>
+          <div className='mt-4 prose-a:text-primary-500 prose-a:font-bold prose-a:underline prose-p:mt-2'>
+            <Markdown content={t('DESCRIPTION')} components={{ArrowTopRightOnSquareIcon, Link}}/>
           </div>
         </div>
       </TutorialLayout>

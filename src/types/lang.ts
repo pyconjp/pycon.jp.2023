@@ -130,5 +130,6 @@ export type Lang = {
   },
   TUTORIAL: {
     INDEX: string,
+    DESCRIPTION: string,
   },
 };

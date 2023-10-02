@@ -22,11 +22,6 @@ type Props = {
 const Tutorial = ({tutorials}: Props) => {
   const {t} = useTranslation('TUTORIAL');
 
-  const router = useRouter();
-  const transition = async (url: string) => {
-    await router.push(url);
-  }
-
   const Link= ({href, children}: { href: string, children: React.ReactNode }) => (
     <a href={href} target='_blank' rel='noopener noreferrer'>{children}</a>
   )

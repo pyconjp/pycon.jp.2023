@@ -114,7 +114,7 @@ const Talk = ({session, conferenceStartAt}: {
 }) => {
   const router = useRouter();
   const transient = async () => {
-    await router.push(`/timetable?id=${session?.code}`);
+    await router.push(`/timetable?id=${session?.code}`, undefined, {shallow: true});
   }
 
   return <div className='rounded m-0.5 h-full'

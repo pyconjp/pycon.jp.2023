@@ -56,7 +56,7 @@ const TimeTable = ({sessions, startTime, endTime}: Props) => {
   }
 
   const transient = async () => {
-    await router.push(`/timetable`);
+    await router.push(`/timetable`, undefined, {shallow: true});
   }
 
   useEffect(() => {

@@ -6,7 +6,6 @@ import {useTranslation} from "react-i18next";
 import PageTitle from "@/components/elements/PageTitle";
 import SectionTitle from "@/components/elements/SectionTitle";
 import path from "path";
-import PageHead from "@/components/elements/PageHead";
 
 type Props = {
     staff: Staff;
@@ -159,7 +158,6 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
 
     return (
         <>
-            <PageHead/>
             <PageTitle title='Staff'/>
             <SectionTitle title='Chair' subTitle='座長'/>
             <div className={"lg:mx-[80px] mx-[20px] mb-[60px] flex lg:flex-row flex-col"}>

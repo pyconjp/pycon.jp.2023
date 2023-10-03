@@ -2,7 +2,6 @@ import Image from "next/image";
 import {useTranslation} from "react-i18next";
 import { useState, useEffect } from "react";
 import PageTitle from "@/components/elements/PageTitle";
-import PageHead from "@/components/elements/PageHead";
 
 const Coc = () => {
   const { t } = useTranslation("COC");
@@ -185,7 +184,6 @@ const Coc = () => {
 
   return (
     <>
-      <PageHead/>
       <div className="relative">
         <PageTitle title='Code of conduct' />
         <div className="lg:mx-[216px] mx-[16px] lg:my-[60px] my-[20px] lg:px-[72px] px-[16px] lg:py-[60px] py-[40px] z-20 bg-[#ffffff] shadow-lg rounded-lg relative">

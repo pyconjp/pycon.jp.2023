@@ -1,4 +1,3 @@
-import PageHead from "@/components/elements/PageHead";
 import PageTitle from "@/components/elements/PageTitle";
 import {Talk, Day, ConferenceEvent, Answer} from "@/types/timetable";
 import Timetable from "@/components/organisms/Timetable";
@@ -69,7 +68,6 @@ const TimeTable = ({sessions, startTime, endTime}: Props) => {
 
   return (
     <>
-      <PageHead/>
       <div>
         <PageTitle title='Timetable'/>
         <Timetable sessions={sessions} startTime={startTime} endTime={endTime}

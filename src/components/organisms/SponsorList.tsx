@@ -117,7 +117,7 @@ const DiamondComponent = ({ name, logo, url, description }: Sponsor) => (
   <div className={""}>
     <div className={"relative"}>
       <div className={"z-20 relative"}>
-        <div className={"bg-white shadow-lg rounded-lg mt-[72px] p-[200px] relative"}>
+        <div className={"bg-white shadow-lg rounded-lg mt-[72px] lg:p-[200px] p-[100px] relative"}>
           <Image
             src={"/sponsor/" + logo}
             alt={name}
@@ -321,20 +321,6 @@ const BecomeSponsorSection = () => {
         </div>
         <p className="text-alt-black text-lg p-[12px]">{c.p1}</p>
         <div className="ml-[auto]">
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfMgKYoLCU8Q7Vv9ppImGZ1-kcTaTlzkUXATtZuYSyeM7gwGQ/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-row text-primary-500 underline hover:opacity-50">
-            <p>{c.a1}</p>
-            <Image
-              src={"/linkout_p.svg"}
-              alt={""}
-              width={20}
-              height={20}
-              className="object-contain ml-[3px]"
-            />
-          </a>
         </div>
       </div>
     </div>

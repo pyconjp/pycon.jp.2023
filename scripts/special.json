@@ -1,0 +1,38 @@
+[
+  {
+    "category": "special",
+    "name": "株式会社インターネットイニシアティブ",
+    "url": "http://www.iij.ad.jp/",
+    "logo": "IIJ_logo.png",
+    "description": "IIJ",
+    "name_en": "Internet Initiative Japan Inc.",
+    "description_en": null
+  },
+  {
+    "category": "special",
+    "name": "Python Software Foundation",
+    "url": "https://www.python.org/psf/",
+    "description": "PSF",
+    "name_en": "Python Software Foundation",
+    "description_en": "PSF",
+    "logo": "psf.png"
+  },
+  {
+    "category": "special",
+    "name": "株式会社エブリー",
+    "url": "https://corp.every.tv/",
+    "description": null,
+    "name_en": "every, Inc. ",
+    "description_en": null,
+    "logo": "every.png"
+  },
+  {
+    "category": "special",
+    "name": "t0ki brewery トキブルワリー",
+    "url": "https://t0ki.beer/",
+    "description": null,
+    "name_en": "t0ki brewery トキブルワリー",
+    "description_en": null,
+    "logo": "t0ki.svg"
+  }
+]

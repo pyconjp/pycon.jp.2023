@@ -10,6 +10,7 @@ const En: Lang = {
   },
   HERO: {
     VENUE: "TOC Ariake Convention Hall",
+    VENUE_SPRINT: "HENNGE K.K.",
     VENUE_INFO: "Venue Info",
     TUTORIAL_DATE: "OCTOBER 26, 2023",
     CONFERENCE_DATE: "OCTOBER 27 - 28, 2023",
@@ -112,8 +113,8 @@ const En: Lang = {
     recruite_link: "Staff application form(coming soon)",
   },
   SPONSOR: {
-    H1: "Please be our sponsor!",
-    P1: "Sponsorships for PyCon APAC 2023 are now being accepted. We look forward to receiving applications from companies that want to appeal to the Python communities!",
+    H1: "Call for sponsors has been closed.",
+    P1: "Thank you very much for your many applications for sponsorship!",
     A1: "Sponsorship application form",
     DIAMOND: "Diamond sponsor",
     PLATINUM: "Platinum sponsor",
@@ -147,6 +148,12 @@ const En: Lang = {
       IMG_ALT: "Photo of Lorena Mesa"
     }
   },
+  ANNOUNCE: {
+    NURSERY: {
+      TITLE: "Day-care service for children",
+      DESCRIPTION: "Child day care (ONLY for can speak Japanese) is available for elementary school or younger. For details, please see the linked PDF.",
+    }
+  }
 };
 
 export default En;

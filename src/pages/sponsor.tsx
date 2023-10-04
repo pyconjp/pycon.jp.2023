@@ -4,12 +4,10 @@ import {Sponsor} from "@/types/sponsor";
 import {GetStaticProps} from "next";
 import PageTitle from "@/components/elements/PageTitle";
 import SponsorList from "@/components/organisms/SponsorList";
-import PageHead from "@/components/elements/PageHead";
 
 export const SponsorPage = ({rows = []}: { rows: Sponsor[] }) => {
   return (
     <>
-      <PageHead/>
       <PageTitle title='SPONSOR'/>
       <SponsorList rows={rows}/>
     </>

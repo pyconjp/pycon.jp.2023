@@ -4,7 +4,15 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateRows: {
+        'timetable1': '40px repeat(20, 5px) repeat(8, 48px) repeat(16, 5px) repeat(14, 48px) repeat(8, 5px) repeat(14, 48px) repeat(15, 5px)',
+        'timetable2': '40px repeat(18, 5px) repeat(8, 48px) repeat(16, 5px) repeat(14, 48px) repeat(8, 5px) repeat(14, 48px) repeat(28, 5px)',
+      },
+      gridTemplateColumns: {
+        'timetable': '100px repeat(5, 1fr) 100px',
+      }
+    },
     fontFamily: {
       montserrat: ['Montserrat Alternates', 'sans-serif'],
     },

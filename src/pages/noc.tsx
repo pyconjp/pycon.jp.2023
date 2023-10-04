@@ -2,11 +2,13 @@ import PageTitle from "@/components/elements/PageTitle";
 import SectionTitle from "@/components/elements/SectionTitle";
 import PageHead from "@/components/elements/PageHead";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export const ArchitectureComponent = () => {
-  return(
+  const { t } = useTranslation("CONTENTS");
+  return (
     <>
-      <SectionTitle title={'Architecture'} subTitle={'アーキテクチャ'} />
+      <SectionTitle title={'Architecture'} subTitle={t("NOC.ARCHITECTURE")} />
 
       <div className={"relative"}>
         <div className={"z-20 relative"}>
@@ -25,9 +27,10 @@ export const ArchitectureComponent = () => {
 };
 
 export const RealtimeMonitorComponent = () => {
-  return(
+  const { t } = useTranslation("CONTENTS");
+  return (
     <>
-      <SectionTitle title={'Real-time Monitor'} subTitle={'リアルタイムモニター'} />
+      <SectionTitle title={'Real-time Monitor'} subTitle={t("NOC.REALTIMEMONITOR")} />
 
       <div className={"relative"}>
         <div className={"z-20 relative"}>
@@ -49,9 +52,9 @@ export const RealtimeMonitorComponent = () => {
 };
 
 const NocPage = () => {
-  return(
+  return (
     <>
-      <PageHead/>
+      <PageHead />
       <PageTitle title='NOC' />
       <ArchitectureComponent />
       <RealtimeMonitorComponent />

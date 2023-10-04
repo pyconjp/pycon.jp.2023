@@ -5,6 +5,7 @@ const Ja: Lang = {
     ABOUT: "開催概要",
     EVENTS: "イベント詳細",
     SPONSOR: "スポンサー",
+    CONTENTS: "コンテンツ",
     STAFF: "スタッフ",
     TIMETABLE: "タイムテーブル",
   },
@@ -28,6 +29,9 @@ const Ja: Lang = {
     },
     SPONSOR: {
       SPONSOR_LIST: "スポンサー一覧",
+    },
+    CONTENTS: {
+      NOC: "NOC",
     },
     STAFF: {
       STAFF: "スタッフ一覧",
@@ -123,6 +127,12 @@ const Ja: Lang = {
     BRONZE: "ブロンズスポンサー",
     SPECIAL: "特別スポンサー",
     PATRON: "パトロン",
+  },
+  CONTENTS: {
+    NOC: {
+      ARCHITECTURE: "アーキテクチャ",
+      REALTIMEMONITOR: "リアルタイムモニタ",
+    }
   },
   CONFERENCE: {
     SPEAKER_JP: {

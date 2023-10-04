@@ -5,6 +5,7 @@ const En: Lang = {
     ABOUT: "About",
     EVENTS: "Events",
     SPONSOR: "Sponsor",
+    CONTENTS: "Contents",
     STAFF: "Volunteers",
     TIMETABLE: "Timetable",
   },
@@ -28,6 +29,9 @@ const En: Lang = {
     },
     SPONSOR: {
       SPONSOR_LIST: "Sponsor List",
+    },
+    CONTENTS: {
+      NOC: "NOC",
     },
     STAFF: {
       STAFF: "Volunteers",
@@ -123,6 +127,12 @@ const En: Lang = {
     BRONZE: "Bronze sponsor",
     SPECIAL: "Special sponsor",
     PATRON: "Patron",
+  },
+  CONTENTS: {
+    NOC: {
+      ARCHITECTURE: "Architecture",
+      REALTIMEMONITOR: "Real Time Monitor",
+    }
   },
   BLOG: {
     ACCESS: "Read More"

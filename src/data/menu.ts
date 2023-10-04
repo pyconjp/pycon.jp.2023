@@ -14,24 +14,30 @@ export const menu: Menu[] = [
   {
     title: "ABOUT",
     children: [
-      {title: "ABOUT.COC", url: "/coc"},
-      {title: "ABOUT.VENUE", url: "/", isComingSoon: true},
+      { title: "ABOUT.COC", url: "/coc" },
+      { title: "ABOUT.VENUE", url: "/", isComingSoon: true },
     ],
   },
   {
     title: "EVENTS",
     children: [
-      {title: "EVENTS.TIMETABLE", url: "/timetable"},
-      {title: "EVENTS.EVENTS", url: "/", isComingSoon: true},
+      { title: "EVENTS.TIMETABLE", url: "/timetable" },
+      { title: "EVENTS.EVENTS", url: "/", isComingSoon: true },
     ],
   },
   {
     title: "SPONSOR",
-    children: [{title: "SPONSOR.SPONSOR_LIST", url: "/sponsor"}],
+    children: [{ title: "SPONSOR.SPONSOR_LIST", url: "/sponsor" }],
+  },
+  {
+    title: "CONTENTS",
+    children: [
+      { title: "CONTENTS.NOC", url: "/noc", isComingSoon: false },
+    ],
   },
   {
     title: "STAFF",
-    children: [{title: "STAFF.STAFF", url: "/staff"}],
+    children: [{ title: "STAFF.STAFF", url: "/staff" }],
   },
 ];
 

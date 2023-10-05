@@ -63,11 +63,11 @@ const GeneralPosterCard = ({type, place, name, title, abstruct}: Poster) => {
                 </div>
                 <div className="flex items-center">
                     <Image
-                        src={isOpen ? "/arrow_up.svg": "/arrow_down.svg"}
+                        src={"/arrow_down.svg"}
                         alt={""}
                         width={25}
                         height={25}
-                        className={"object-contain w-[20px] h-[20px] min-w-[20px]"}
+                        className={isOpen ? "object-contain w-[20px] h-[20px] min-w-[20px] rotate-180" : "object-contain w-[20px] h-[20px] min-w-[20px]"}
                     />
                 </div>
             </div>
@@ -110,12 +110,12 @@ const CommunityPosterCard = ({type, place, name, title, abstruct}: Poster) => {
                     <h4 className={"text-alt-black font-bold lg:text-2xl text-lg my-[10px]"}>{name}</h4>
                 </div>
                 <div className="flex items-center">
-                    <Image
-                        src={isOpen ? "/arrow_up.svg": "/arrow_down.svg"}
+                <Image
+                        src={"/arrow_down.svg"}
                         alt={""}
                         width={25}
                         height={25}
-                        className={"object-contain w-[20px] h-[20px] min-w-[20px]"}
+                        className={isOpen ? "object-contain w-[20px] h-[20px] min-w-[20px] rotate-180" : "object-contain w-[20px] h-[20px] min-w-[20px]"}
                     />
                 </div>
             </div>

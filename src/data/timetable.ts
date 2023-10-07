@@ -143,9 +143,9 @@ export const events: {
 
 
 export const tracks: { label: string, value: Track }[] = [
-  {label: "#pyconjp_1", value: "track 1"},
-  {label: "#pyconjp_2", value: "track 2"},
-  {label: "#pyconjp_3", value: "track 3"},
-  {label: "#pyconjp_4", value: "track 4"},
-  {label: "#pyconjp_5", value: "track 5"},
+  { label: "#pyconapac_1", value: "track 1" },
+  { label: "#pyconapac_2", value: "track 2" },
+  { label: "#pyconapac_3", value: "track 3" },
+  { label: "#pyconapac_4", value: "track 4" },
+  { label: "#pyconapac_5", value: "track 5" },
 ];

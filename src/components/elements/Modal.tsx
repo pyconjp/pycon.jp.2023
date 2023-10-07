@@ -25,8 +25,11 @@ const Modal = ({session, onClose}: Props) => {
           <div
             className='text-lg font-bold mt-2'>{session.speakers && session.speakers.map((speaker) => speaker.name).join(' / ')}</div>
           <div className='text-lg mt-2'>
-            <CalendarIcon
-              className='w-6 h-6 inline-block'/>{format(parseISO(session.slot.start), 'yyyy/MM/dd HH:mm')} ~ {format(parseISO(session.slot.end), 'HH:mm')} (Asia/Tokyo)
+            <CalendarIcon className='w-6 h-6 inline-block'/>
+            {!session.hide_start && !session.hide_end
+              ? <>{format(parseISO(session.slot.start), 'yyyy/MM/dd HH:mm')} ~ {format(parseISO(session.slot.end), 'HH:mm')} (Asia/Tokyo)</>
+              : <>{format(parseISO(session.slot.start), 'yyyy/MM/dd')} (Asia/Tokyo)</>
+            }
           </div>
           {
             session.slot.room["ja-jp"] !== '' &&

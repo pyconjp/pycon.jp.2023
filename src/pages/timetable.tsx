@@ -1,5 +1,5 @@
 import PageTitle from "@/components/elements/PageTitle";
-import {Talk, Day, ConferenceEvent, Answer} from "@/types/timetable";
+import {Talk, Day, ConferenceEvent, Answer, Session} from "@/types/timetable";
 import Timetable from "@/components/organisms/Timetable";
 import {events} from "@/data/timetable";
 import {useRouter} from "next/router";
@@ -79,8 +79,9 @@ const TimeTable = ({sessions, startTime, endTime}: Props) => {
 }
 
 
-const getStartDateTime = (sessions: Talk[]) => {
+const getStartDateTime = (sessions: Session[]) => {
   const start = sessions
+    .filter(session => session?.hide_start !== true)
     .map(session => session.slot.start);
 
   const result: string[] = [];
@@ -88,8 +89,9 @@ const getStartDateTime = (sessions: Talk[]) => {
   return result;
 }
 
-const getEndDateTime = (sessions: Talk[]) => {
+const getEndDateTime = (sessions: Session[]) => {
   const start = sessions
+    .filter(session => session?.hide_end !== true)
     .map(session => session.slot.end);
 
   const result: string[] = [];
@@ -136,11 +138,10 @@ export const getStaticProps = async () => {
   const day2_4f = regular.filter(session => session.slot.start >= DATE_THRESHOLD);
   const day2_20f = short.filter(session => session.slot.start >= DATE_THRESHOLD);
 
-  const day1_events_starts = events.day1.map((event: ConferenceEvent) => event.slot.start);
-  const day2_events_starts = events.day2.map((event: ConferenceEvent) => event.slot.start);
-
-  const day1_events_ends = events.day1.map((event: ConferenceEvent) => event.slot.end);
-  const day2_events_ends = events.day2.map((event: ConferenceEvent) => event.slot.end);
+  const day1_events_starts = getStartDateTime(events.day1);
+  const day2_events_starts = getStartDateTime(events.day2);
+  const day1_events_ends = getEndDateTime(events.day1);
+  const day2_events_ends = getEndDateTime(events.day2);
 
   return {
     props: {

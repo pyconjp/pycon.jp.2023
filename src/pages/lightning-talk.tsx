@@ -5,8 +5,8 @@ import {
 } from "@/utils/pretalx";
 import {Answer, Talk} from "@/types/timetable";
 import PageTitle from "@/components/elements/PageTitle";
-import SectionSubTitle from "@/components/elements/SectionSubTitle";
 import {useTranslation} from "react-i18next";
+import SectionTitle from "@/components/elements/SectionTitle";
 
 const DATE_THRESHOLD = '2023-10-28T00:00:00+09:00';
 
@@ -32,7 +32,7 @@ const LightningTalk = ({day1, day2}: Props) => {
 
 const LightningTalks = ({talks, title, subTitle}: { talks: Talk[], title: string, subTitle: string }) => {
   return <div>
-    <SectionSubTitle title={title} subTitle={subTitle}/>
+    <SectionTitle title={title} subTitle={subTitle}/>
     <div className='flex gap-10 flex-col'>{talks.map(talk => <TalkCard key={talk.code} talk={talk}/>)}</div>
   </div>
 }

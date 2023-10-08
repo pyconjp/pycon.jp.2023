@@ -10,13 +10,15 @@ import {Blog} from "@/types/blog";
 import {GetStaticProps} from "next";
 import PageHead from "@/components/elements/PageHead";
 import {Sponsor} from "@/types/sponsor";
+import { Faq } from "@/types/faq";
 
 type Props = {
   blogs: Blog[];
   sponsor_rows: Sponsor[];
+  faq_rows: Faq[];
 };
 
-export default function Home({blogs = [], sponsor_rows = []}: Props) {
+export default function Home({blogs = [], sponsor_rows = [], faq_rows = []}: Props) {
   return (
     <>
       <PageHead/>
@@ -24,7 +26,7 @@ export default function Home({blogs = [], sponsor_rows = []}: Props) {
       <NewsSection blogs={blogs}/>
       <OverviewSection/>
       <ConferenceSection/>
-      <FaqSection/>
+      <FaqSection rows={faq_rows}/>
       <SponsorsSection rows={sponsor_rows}/>
     </>
   );
@@ -43,13 +45,16 @@ export const getStaticProps: GetStaticProps = async () => {
     title,
     published,
   }));
-  const jsonPath = path.join(process.cwd(), 'src', 'data', 'sponsor.json')
-  const jsonText = fs.readFileSync(jsonPath, 'utf-8')
-  const sponsor_rows = JSON.parse(jsonText) as Sponsor[]
+  const sponsorJsonPath = path.join(process.cwd(), 'src', 'data', 'sponsor.json')
+  const sponsorJsonText = fs.readFileSync(sponsorJsonPath, 'utf-8')
+  const sponsor_rows = JSON.parse(sponsorJsonText) as Sponsor[]
+  const faqJsonPath = path.join(process.cwd(),"src","data","faq.json")
+  const faqJsonText = fs.readFileSync(faqJsonPath, 'utf-8')
+  const faq_rows = JSON.parse(faqJsonText) as Faq[]
 
   return {
     props: {
-      blogs, sponsor_rows
+      blogs, sponsor_rows, faq_rows
     },
   };
 };

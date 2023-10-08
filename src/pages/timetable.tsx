@@ -5,7 +5,13 @@ import {events} from "@/data/timetable";
 import {useRouter} from "next/router";
 import Modal from "@/components/elements/Modal";
 import {useEffect} from "react";
-import {fetchAnswers, fetchTalks, SUBMISSION_TYPE_REGULAR_TALK, SUBMISSION_TYPE_SHORT_TALK} from "@/utils/pretalx";
+import {
+  fetchAnswers,
+  fetchTalks,
+  sortTalks,
+  SUBMISSION_TYPE_REGULAR_TALK,
+  SUBMISSION_TYPE_SHORT_TALK
+} from "@/utils/pretalx";
 
 
 type Props = {
@@ -99,22 +105,6 @@ const getEndDateTime = (sessions: Session[]) => {
   return result;
 }
 
-const sortSessions = (session1: Talk | ConferenceEvent, session2: Talk | ConferenceEvent) => {
-  if (session1.slot.start < session2.slot.start) {
-    return -1;
-  } else if (session1.slot.start > session2.slot.start) {
-    return 1;
-  } else {
-    if (session1.slot.room["ja-jp"] < session2.slot.room["ja-jp"]) {
-      return -1;
-    } else if (session1.slot.room["ja-jp"] > session2.slot.room["ja-jp"]) {
-      return 1;
-    } else {
-      return 0;
-    }
-  }
-}
-
 export const getStaticProps = async () => {
   const answers = await fetchAnswers();
   const contentLocales = answers.reduce(
@@ -150,12 +140,12 @@ export const getStaticProps = async () => {
           ...day1_4f,
           ...day1_20f,
           ...events.day1,
-        ].sort(sortSessions),
+        ].sort(sortTalks),
         "day2": [
           ...day2_4f,
           ...day2_20f,
           ...events.day2,
-        ].sort(sortSessions)
+        ].sort(sortTalks)
       },
       startTime: {
         "day1": {

@@ -23,6 +23,7 @@ export const menu: Menu[] = [
     children: [
       {title: "EVENTS.TIMETABLE", url: "/timetable"},
       {title: "EVENTS.TUTORIAL", url: "/tutorial"},
+      {title: "EVENTS.LIGHTNING_TALK", url: "/lightning-talk"},
     ],
   },
   {

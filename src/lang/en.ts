@@ -25,6 +25,7 @@ const En: Lang = {
     EVENTS: {
       TIMETABLE: "Timetable",
       EVENTS: "Event List",
+      POSTER_SESSION: "Poster Session"
     },
     SPONSOR: {
       SPONSOR_LIST: "Sponsor List",
@@ -140,12 +141,14 @@ const En: Lang = {
         '\n\n' +
         'His research major is System Science and Engineering. In ILAS, he teaches general education courses in informatics including computer programming.  \n' +
         'His research interests are social simulation and general education of informatics in universities including education in computer programming.',
-      IMG_ALT: "Photo of Hajime Kita"
+      IMG_ALT: "Photo of Hajime Kita",
+      DATE: "2023.10.27(Fri)",
     },
     SPEAKER_EN: {
       NAME: "Lorena Mesa",
       BIO: 'Political scientist turned coder, Lorena Mesa is a GitHub data engineer, past Director & Chair of the Python Software Foundation, [JOSS](https://joss.theoj.org/about) editor, and PyLadies Chicago co-organizer. Lorena\'s time at Obama for America and her subsequent graduate research required her to learn how to transform messy, incomplete data into intelligible analysis on topics like predicting Latinx voter behavior. It\'s this unique background in research and applied mathematics that drove Lorena to pursue a career in engineering and data science. One part activist, one part Star Wars fanatic, and another part [Trekkie](https://www.greggpollack.com/wp-content/uploads/2017/03/lorena_for_twitter.jpg), Lorena abides by the motto to "live long and prosper".',
-      IMG_ALT: "Photo of Lorena Mesa"
+      IMG_ALT: "Photo of Lorena Mesa",
+      DATE: "2023.10.28(Sat)",
     }
   },
   ANNOUNCE: {

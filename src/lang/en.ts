@@ -25,6 +25,7 @@ const En: Lang = {
     EVENTS: {
       TIMETABLE: "Timetable",
       EVENTS: "Event List",
+      TUTORIAL: 'Tutorial',
       POSTER_SESSION: "Poster Session"
     },
     SPONSOR: {
@@ -156,7 +157,13 @@ const En: Lang = {
       TITLE: "Day-care service for children",
       DESCRIPTION: "Child day care (ONLY for can speak Japanese) is available for elementary school or younger. For details, please see the linked PDF.",
     }
-  }
+  },
+  TUTORIAL: {
+    INDEX: "PyCon APAC 2023 Tutorial",
+    DESCRIPTION: "What are PyCon APAC 2023 Tutorials?  \n" +
+      "On the Tutorial day ( Thu. 26 October ), sessions called Tutorial will be held, where participants can learn about various topics related to Python in hands-on sessions. This year, there will be two sessions in English and one session in Japanese. You'll discover how Python is utilized in each field!\n\n" +
+      "※ Participants of the Tutorial are required to purchase a separate ticket <Link href='https://pretix.eu/pyconjp/2023-apac/'>here<ArrowTopRightOnSquareIcon className='inline-block w-4 h-4'/></Link> in addition to the main conference ticket.",
+  },
 };
 
 export default En;

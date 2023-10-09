@@ -25,6 +25,7 @@ const Ja: Lang = {
     EVENTS: {
       TIMETABLE: "タイムテーブル",
       EVENTS: "イベント一覧",
+      TUTORIAL: 'チュートリアル',
     },
     SPONSOR: {
       SPONSOR_LIST: "スポンサー一覧",
@@ -154,7 +155,12 @@ const Ja: Lang = {
       TITLE: "託児所",
       DESCRIPTION: "小学生以下のお子様を対象に託児所を設置します。\n詳しくはリンク先のPDFをご覧ください。",
     }
-  }
+  },
+  TUTORIAL: {
+    INDEX: "PyCon APAC 2023 チュートリアル",
+    DESCRIPTION: "10/26(木)のTutorial Dayに開催されるチュートリアルでは、参加者が実際に手を動かしながらPythonに関連する様々なトピックについて学びます。今年のPyCon APACでは英語セッション2つと日本語セッション1つの計3セッションが設けられ、各分野においてPythonがどのように活用されているかを知ることができます。\n\n" +
+      "※チュートリアルの参加には別途 <Link href='https://pretix.eu/pyconjp/2023-apac/'>チケット販売ページ<ArrowTopRightOnSquareIcon className='inline-block w-4 h-4'/></Link> にて購入できるオプションチケットが必要です。",
+  },
 };
 
 export default Ja;

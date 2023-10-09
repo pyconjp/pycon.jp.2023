@@ -23,6 +23,7 @@ export type Lang = {
     EVENTS: {
       TIMETABLE: string;
       EVENTS: string;
+      TUTORIAL: string;
     };
     SPONSOR: {
       SPONSOR_LIST: string;
@@ -114,11 +115,13 @@ export type Lang = {
       NAME: string;
       BIO: string;
       IMG_ALT: string;
+      DATE: string;
     };
     SPEAKER_EN: {
       NAME: string;
       BIO: string;
       IMG_ALT: string;
+      DATE: string;
     };
   };
   ANNOUNCE: {
@@ -142,4 +145,8 @@ export type Lang = {
     STATION_TEXT_T: string;
     STATION_TEXT_S: string;
   };
+  TUTORIAL: {
+    INDEX: string,
+    DESCRIPTION: string,
+  },
 };

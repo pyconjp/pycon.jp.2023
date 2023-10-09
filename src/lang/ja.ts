@@ -25,6 +25,7 @@ const Ja: Lang = {
     EVENTS: {
       TIMETABLE: "タイムテーブル",
       EVENTS: "イベント一覧",
+      TUTORIAL: 'チュートリアル',
     },
     SPONSOR: {
       SPONSOR_LIST: "スポンサー一覧",
@@ -139,12 +140,14 @@ const Ja: Lang = {
         '\n\n' +
         '教養共通教育としてのプログラミングを含む情報教育を担当。  \n' +
         '専門はシステム工学・科学。社会シミュレーション、プログラミングを含む情報教育などの研究に従事。',
-      IMG_ALT: "喜多 一氏の画像"
+      IMG_ALT: "喜多 一氏の画像",
+      DATE: "2023.10.27(Fri)",
     },
     SPEAKER_EN: {
       NAME: "Lorena Mesa",
       BIO: "以前は政治科学者だったが、現在は GitHub でデータエンジニアとして勤務している。Python Software Foundation では Director 兼議長を務めた。[Journal of Open Source Software (JOSS)](https://joss.theoj.org/about) の編集者や PyLadies Chicago の共同管理者でもある。Obama for America (オバマ元大統領の選挙キャンペーン)での勤務とその後の大学院での研究で、ラテン系の有権者の行動予測などのテーマについての厄介で不完全なデータを分かりやすい分析に変換する方法を学ぶことになった。彼女が今エンジニア・データサイエンティストとして第一線でキャリアを築いているのは応用数学においての類い希なの研究背景があったからである。他には活動家、スター・ウォーズ・オタクやトレッキーである。モットーは「長寿と繁栄を」。",
-      IMG_ALT: "Lorena Mesa 氏の画像"
+      IMG_ALT: "Lorena Mesa 氏の画像",
+      DATE: "2023.10.28(Sat)",
     },
   },
   ANNOUNCE: {
@@ -167,7 +170,12 @@ const Ja: Lang = {
     STATION_TITLE: "最寄り駅",
     STATION_TEXT_T: "<りんかい線> 国際展示場駅より徒歩3分\n<ゆりかもめ> 東京ビッグサイト駅/有明駅より徒歩4分",
     STATION_TEXT_S: "渋谷駅より徒歩約10分",
-  }
+  },
+  TUTORIAL: {
+    INDEX: "PyCon APAC 2023 チュートリアル",
+    DESCRIPTION: "10/26(木)のTutorial Dayに開催されるチュートリアルでは、参加者が実際に手を動かしながらPythonに関連する様々なトピックについて学びます。今年のPyCon APACでは英語セッション2つと日本語セッション1つの計3セッションが設けられ、各分野においてPythonがどのように活用されているかを知ることができます。\n\n" +
+      "※チュートリアルの参加には別途 <Link href='https://pretix.eu/pyconjp/2023-apac/'>チケット販売ページ<ArrowTopRightOnSquareIcon className='inline-block w-4 h-4'/></Link> にて購入できるオプションチケットが必要です。",
+  },
 };
 
 export default Ja;

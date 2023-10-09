@@ -25,6 +25,7 @@ const En: Lang = {
     EVENTS: {
       TIMETABLE: "Timetable",
       EVENTS: "Event List",
+      TUTORIAL: 'Tutorial',
     },
     SPONSOR: {
       SPONSOR_LIST: "Sponsor List",
@@ -140,12 +141,14 @@ const En: Lang = {
         '\n\n' +
         'His research major is System Science and Engineering. In ILAS, he teaches general education courses in informatics including computer programming.  \n' +
         'His research interests are social simulation and general education of informatics in universities including education in computer programming.',
-      IMG_ALT: "Photo of Hajime Kita"
+      IMG_ALT: "Photo of Hajime Kita",
+      DATE: "2023.10.27(Fri)",
     },
     SPEAKER_EN: {
       NAME: "Lorena Mesa",
       BIO: 'Political scientist turned coder, Lorena Mesa is a GitHub data engineer, past Director & Chair of the Python Software Foundation, [JOSS](https://joss.theoj.org/about) editor, and PyLadies Chicago co-organizer. Lorena\'s time at Obama for America and her subsequent graduate research required her to learn how to transform messy, incomplete data into intelligible analysis on topics like predicting Latinx voter behavior. It\'s this unique background in research and applied mathematics that drove Lorena to pursue a career in engineering and data science. One part activist, one part Star Wars fanatic, and another part [Trekkie](https://www.greggpollack.com/wp-content/uploads/2017/03/lorena_for_twitter.jpg), Lorena abides by the motto to "live long and prosper".',
-      IMG_ALT: "Photo of Lorena Mesa"
+      IMG_ALT: "Photo of Lorena Mesa",
+      DATE: "2023.10.28(Sat)",
     }
   },
   ANNOUNCE: {
@@ -168,7 +171,13 @@ const En: Lang = {
     STATION_TITLE: "By Train",
     STATION_TEXT_T: "<Rinkai Line> Approx. 3 minutes' walk from Kokusai-Tenjijo Station\n<Yurikamome> Approx. 4 minutes' walk from Tokyo Big Sight Station or Ariake Station",
     STATION_TEXT_S: "10 minutes' walk from Shibuya Station",
-  }
+  },
+  TUTORIAL: {
+    INDEX: "PyCon APAC 2023 Tutorial",
+    DESCRIPTION: "What are PyCon APAC 2023 Tutorials?  \n" +
+      "On the Tutorial day ( Thu. 26 October ), sessions called Tutorial will be held, where participants can learn about various topics related to Python in hands-on sessions. This year, there will be two sessions in English and one session in Japanese. You'll discover how Python is utilized in each field!\n\n" +
+      "※ Participants of the Tutorial are required to purchase a separate ticket <Link href='https://pretix.eu/pyconjp/2023-apac/'>here<ArrowTopRightOnSquareIcon className='inline-block w-4 h-4'/></Link> in addition to the main conference ticket.",
+  },
 };
 
 export default En;

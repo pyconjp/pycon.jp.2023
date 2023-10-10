@@ -26,6 +26,7 @@ const Ja: Lang = {
       TIMETABLE: "タイムテーブル",
       EVENTS: "イベント一覧",
       TUTORIAL: 'チュートリアル',
+      POSTER_SESSION: "ポスターセッション",
       LIGHTNING_TALK: "ライトニングトーク",
     },
     SPONSOR: {

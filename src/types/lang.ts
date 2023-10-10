@@ -24,6 +24,7 @@ export type Lang = {
       TIMETABLE: string;
       EVENTS: string;
       TUTORIAL: string;
+      POSTER_SESSION: string;
       LIGHTNING_TALK: string;
     };
     SPONSOR: {

@@ -26,6 +26,7 @@ const En: Lang = {
       TIMETABLE: "Timetable",
       EVENTS: "Event List",
       TUTORIAL: 'Tutorial',
+      POSTER_SESSION: "Poster Session",
       LIGHTNING_TALK: "Lightning Talk",
     },
     SPONSOR: {

@@ -26,6 +26,7 @@ const En: Lang = {
       TIMETABLE: "Timetable",
       EVENTS: "Event List",
       TUTORIAL: 'Tutorial',
+      LIGHTNING_TALK: "Lightning Talk",
     },
     SPONSOR: {
       SPONSOR_LIST: "Sponsor List",
@@ -162,6 +163,10 @@ const En: Lang = {
     DESCRIPTION: "What are PyCon APAC 2023 Tutorials?  \n" +
       "On the Tutorial day ( Thu. 26 October ), sessions called Tutorial will be held, where participants can learn about various topics related to Python in hands-on sessions. This year, there will be two sessions in English and one session in Japanese. You'll discover how Python is utilized in each field!\n\n" +
       "※ Participants of the Tutorial are required to purchase a separate ticket <Link href='https://pretix.eu/pyconjp/2023-apac/'>here<ArrowTopRightOnSquareIcon className='inline-block w-4 h-4'/></Link> in addition to the main conference ticket.",
+  },
+  LIGHTNING_TALK: {
+    DAY1: "Friday, OCTOBER 27, 2023",
+    DAY2: "Saturday, OCTOBER 28, 2023",
   },
 };
 

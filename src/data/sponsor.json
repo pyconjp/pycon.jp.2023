@@ -333,6 +333,42 @@
     "category": "Gold"
   },
   {
+    "name": "Anaconda",
+    "name_en": "Anaconda",
+    "url": "https://www.xlsoft.com/jp/products/anaconda/index.html",
+    "description": "",
+    "description_en": "",
+    "logo": "Anaconda.svg",
+    "category": "Silver"
+  },
+  {
+    "name": "Auth0 by Okta",
+    "name_en": "Auth0 by Okta",
+    "url": "https://auth0.com/jp",
+    "description": "Customer Idenity Cloud, powered by Auth0は、最先端の顧客アイデンティティ管理により、シンプルで安全な接続を実現し優れたデジタルエクスペリエンスを顧客に提供します。サービス横断でのシームレスなログイン体験を実現するシングルサインオンやソーシャルログイン、多要素認証やパスキーなど最新のセキュリティやプライバシー基準への準拠、プログレッシブプロファイリングによるパーソナライゼーション機能までをも、シングルプラットフォームで提供しています。また各種機能をノーコードで有効化する事が可能で、開発者の負荷を軽減することができます。",
+    "description_en": "Okta is the World’s Identity Company. We free everyone to safely use any technology — anywhere, on any device or app. Our Workforce and Customer Identity Clouds enable secure yet flexible access, authentication, and automation that transforms how people move through the digital world and puts Identity at the heart of business security and growth.",
+    "logo": "Auth0byOkta.png",
+    "category": "Gold"
+  },
+  {
+    "name": "LINEヤフー株式会社",
+    "name_en": "LY Corporation",
+    "url": "https://www.lycorp.co.jp/ja/technology/",
+    "description": "",
+    "description_en": "",
+    "logo": "lineyahoo.svg",
+    "category": "Silver"
+  },
+  {
+    "name": "Bloomberg",
+    "name_en": "Bloomberg",
+    "url": "https://TechAtBloomberg.com/python",
+    "description": "Bloomberg is building the world's most trusted information network for financial professionals. Our 8,000+ engineers are dedicated to advancing and building new systems for the Bloomberg Terminal to solve complex, real-world problems. We trust our teams to choose the right technologies for the job, and, at Bloomberg, the answer is often Python. We employ an active community of 2,000+ Python developers who have their hands in everything from financial analytics and data science to contributing to open source technologies like Project Jupyter. Bloomberg is proud to be a Visionary Sponsor of the Python Software Foundation and host of many Python community events around the world. Learn more at TechAtBloomberg.com/python.",
+    "description_en": "Bloomberg is building the world's most trusted information network for financial professionals. Our 8,000+ engineers are dedicated to advancing and building new systems for the Bloomberg Terminal to solve complex, real-world problems. We trust our teams to choose the right technologies for the job, and, at Bloomberg, the answer is often Python. We employ an active community of 2,000+ Python developers who have their hands in everything from financial analytics and data science to contributing to open source technologies like Project Jupyter. Bloomberg is proud to be a Visionary Sponsor of the Python Software Foundation and host of many Python community events around the world. Learn more at TechAtBloomberg.com/python.",
+    "logo": "Bloomberg.png",
+    "category": "Silver"
+  },
+  {
     "name": "株式会社Nexedi",
     "name_en": "株式会社Nexedi",
     "url": "https://www.nexedi.com/ja",
@@ -358,24 +394,6 @@
     "description_en": "",
     "logo": "dummy_coming_soon.png",
     "category": "Bronze"
-  },
-  {
-    "name": "ヤフー株式会社",
-    "name_en": "ヤフー株式会社",
-    "url": "https://www.yahoo.co.jp",
-    "description": "",
-    "description_en": "",
-    "logo": "dummy_coming_soon.png",
-    "category": "Silver"
-  },
-  {
-    "name": "Bloomberg",
-    "name_en": "Bloomberg",
-    "url": "https://www.bloomberg.com/company/values/tech-at-bloomberg/",
-    "description": "",
-    "description_en": "",
-    "logo": "dummy_coming_soon.png",
-    "category": "Silver"
   },
   {
     "name": "株式会社MaaS Tech Japan",

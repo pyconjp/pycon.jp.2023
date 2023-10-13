@@ -131,6 +131,10 @@ export type Lang = {
       TITLE: string;
       DESCRIPTION: string;
     },
+    ONE_DAY_STAFF: {
+      TITLE: string;
+      DESCRIPTION: string;
+    },
   },
   TUTORIAL: {
     INDEX: string,

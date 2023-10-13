@@ -255,7 +255,6 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
                 ))}
             </div>
 
-            {/* 募集フォーム無効
             <div className="lg:mx-[131px] mx-[16px] lg:my-[81px] my-[60px] py-[32px] bg-[#ffffff] shadow-lg rounded-lg">
                 <div className="flex flex-col mx-[72px]">
                     <div
@@ -267,20 +266,21 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
                     <p className="text-alt-black lg:text-lg text-base p-[12px]">{t("recruite_text")}</p>
                     <div className="ml-[auto]">
                         <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSf3Zw3b-X9KMo81G9BJJFFfq6jYzzUAviLZALzhiCFeFuMybQ/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-row text-primary-500 underline hover:opacity-50">
-              <p className={"lg:text-lg text-base"}>{c.recruite_link}</p>
-              <Image
-                src={"/linkout_p.svg"}
-                alt={""}
-                width={20}
-                height={20}
-                className="object-contain ml-[3px]"
-              />
-          </a>
+                            href="https://pyconjp-staff.connpass.com/event/299292/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex flex-row text-primary-500 underline hover:opacity-50">
+                            <p className={"lg:text-lg text-base"}>{t("recruite_link")}</p>
+                            <Image
+                                src={"/linkout_p.svg"}
+                                alt={""}
+                                width={20}
+                                height={20}
+                                className="object-contain ml-[3px]"
+                            />
+                        </a>
 
+                        {/* 募集フォーム無効
                         <div className="flex flex-row text-primary-500 underline">
                             <p className={"lg:text-lg text-base"}>{t("recruite_link")}</p>
                             <Image
@@ -291,10 +291,10 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
                                 className="object-contain ml-[3px]"
                             />
                         </div>
+ */}
                     </div>
                 </div>
             </div>
- */}
         </>
     );
 };

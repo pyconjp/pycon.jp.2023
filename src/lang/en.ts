@@ -111,7 +111,7 @@ const En: Lang = {
     peacock_bio: "He started serving as a volunteer staff member in 2020. Since 2022, he's been the vice-chair. And, also part of the PyCon JP Association's Operating Member, as a director of the PyCon JP TV.\n\nAt TOPGATE, Inc. he pushes for IaC and DevOps with Google Cloud and develops Golang Web APIs. His hobbies include mirrorless cameras, skiing, and classical music.",
     ainamori_bio: "Works for Internet Initiative Japan Inc. as infrastructure engineer. has been involved PyConJP2019 as a NOC team staff member. his involvement with Python is mainly for the purpose of infrastructure development and operational automation and orchestration. Recent deliverables are based on FastAPI.",
     yoshida_bio: "Cybertrust Japan Co., Ltd. (サイバートラスト株式会社).\n\nProvides product support for MIRACLE LINUX among other things.\n\nGot first introduced to Python when building an internal website with Zope. Co-Authored Debug Hacks (O'Reilly 2009).\n\nVolunteers as staff for PyCon JP since 2014, serving as Vice-Chair in 2015 and 2016 and as Chair 2017-2019.\n\nMember of OSS communities such as 小江戸らぐ and 東京エリアDebian勉強会.\n\nHis hobbies are visiting hot sprints and attending conferences such as OSC.",
-    recruite_title: "Recruitment of PyCon JP 2023 staff!",
+    recruite_title: "Recruitment of PyCon APAC 2023 staff!",
     recruite_text: "If you want to boost the Python community, or are interested in joining the conference staff, please apply!",
     recruite_link: "Staff application link.",
   },
@@ -157,6 +157,10 @@ const En: Lang = {
     NURSERY: {
       TITLE: "Day-care service for children",
       DESCRIPTION: "Child day care (ONLY for can speak Japanese) is available for elementary school or younger. For details, please see the linked PDF.",
+    },
+    ONE_DAY_STAFF: {
+      TITLE: "Recruitment of PyCon APAC 2023 staff!",
+      DESCRIPTION: "If you want to boost the Python community, or are interested in joining the conference staff, please apply!",
     }
   },
   TUTORIAL: {

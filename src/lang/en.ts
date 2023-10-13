@@ -113,7 +113,7 @@ const En: Lang = {
     yoshida_bio: "Cybertrust Japan Co., Ltd. (サイバートラスト株式会社).\n\nProvides product support for MIRACLE LINUX among other things.\n\nGot first introduced to Python when building an internal website with Zope. Co-Authored Debug Hacks (O'Reilly 2009).\n\nVolunteers as staff for PyCon JP since 2014, serving as Vice-Chair in 2015 and 2016 and as Chair 2017-2019.\n\nMember of OSS communities such as 小江戸らぐ and 東京エリアDebian勉強会.\n\nHis hobbies are visiting hot sprints and attending conferences such as OSC.",
     recruite_title: "Recruitment of PyCon JP 2023 staff!",
     recruite_text: "If you want to boost the Python community, or are interested in joining the conference staff, please apply!",
-    recruite_link: "Staff application form(coming soon)",
+    recruite_link: "Staff application link.",
   },
   SPONSOR: {
     H1: "Call for sponsors has been closed.",

@@ -113,7 +113,7 @@ const Ja: Lang = {
     yoshida_bio: "サイバートラスト株式会社 所属、MIRACLE LINUX の製品サポートなどを行っている。 社内サイトをZopeで構築することを切っ掛けとしてPythonを始めた。 共著書に『 Debug Hacks （2009 オライリー・ジャパン刊）』などがある。\n\nPyCon JP 2014からスタッフ、PyCon JP 2015副座長(事務局)、PyCon JP 2016副座長(メディア)、PyCon JP 2017-2019座長。\n\n小江戸らぐ、東京エリアDebian勉強会 などのOSSコミュニティ活動にも参加している。\n\n趣味は温泉巡り、OSCやカンファレンスに参加した際にもよく現地の温泉に行くこと。",
     recruite_title: "当日スタッフ募集中！",
     recruite_text: "Pythonコミュニティを盛り上げたい方、カンファレンススタッフに興味がある方など、ぜひお申し込みください！",
-    recruite_link: "当日スタッフ募集フォーム(準備中)",
+    recruite_link: "当日スタッフ募集リンク",
   },
   SPONSOR: {
     H1: "スポンサー募集は終了致しました",

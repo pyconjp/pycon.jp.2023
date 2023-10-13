@@ -156,6 +156,10 @@ const Ja: Lang = {
     NURSERY: {
       TITLE: "託児所",
       DESCRIPTION: "小学生以下のお子様を対象に託児所を設置します。\n詳しくはリンク先のPDFをご覧ください。",
+    },
+    ONE_DAY_STAFF: {
+      TITLE: "当日スタッフ募集中！",
+      DESCRIPTION: "Pythonコミュニティを盛り上げたい方、\nカンファレンススタッフに興味がある方など、ぜひお申し込みください！",
     }
   },
   TUTORIAL: {

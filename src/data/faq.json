@@ -1,0 +1,22 @@
+[
+  {
+    "question": {
+      "ja": "Q. 遠方参加者への支援制度について教えてください。",
+      "en": "Q. What is the travel grant of PyCon APAC 2023?"
+    },
+    "answer": {
+      "ja": "A. 旅費支援の申請受付は終了しました。",
+      "en": "A. Applications for travel grant are no longer being accepted."
+    }
+  },
+  {
+    "question": {
+      "ja": "Q. カンファレンスのTシャツはどこで購入できますか?",
+      "en": "A. Where can I purchase a conference T-shirt?"
+    },
+    "answer": {
+      "ja": "A. チケットにTシャツが含まれています。",
+      "en": "A. T-shirt included in ticket."
+    }
+  }
+]

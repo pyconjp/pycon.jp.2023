@@ -1,9 +1,6 @@
 import SectionTitle from "@/components/elements/SectionTitle";
-import SectionSubTitle from "@/components/elements/SectionSubTitle";
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
-import ExternalLink from "@/components/elements/ExternalLink";
-import Separator from "@/components/elements/Separator";
-import { Faq } from "@/types/faq";
 
 export default function SupportSection() {
   const { t } = useTranslation("SUPPORT");
@@ -13,7 +10,13 @@ export default function SupportSection() {
       <SectionTitle title="Support" subTitle="" />
       <div className="flex flex-col md:flex-row justify-center gap-8">
         <div className="bg-white shadow-lg rounded-lg w-fit max-w-[320px]">
-          <img className="rounded-t-lg" src="/food_support.png" alt="" />
+          <Image
+            src="/food_support.png"
+            alt="Food support image"
+            width={320}
+            height={160}
+            className="rounded-t-lg"
+          />
           <div className="p-5">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 italic">
               {t("FOOD_TITLE")}
@@ -24,7 +27,13 @@ export default function SupportSection() {
           </div>
         </div>
         <div className="bg-white shadow-lg rounded-lg w-fit max-w-[320px]">
-          <img className="rounded-t-lg" src="/nursery_support.png" alt="" />
+          <Image
+            src="/nursery_support.png"
+            alt="Nursery support image"
+            width={320}
+            height={160}
+            className="rounded-t-lg"
+          />
           <div className="p-5">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 italic">
               {t("NURSERY_TITLE")}
@@ -35,7 +44,13 @@ export default function SupportSection() {
           </div>
         </div>
         <div className="bg-white shadow-lg rounded-lg w-fit max-w-[320px]">
-          <img className="rounded-t-lg" src="/distant_support.png" alt="" />
+          <Image
+            src="/distant_support.png"
+            alt="Distant support image"
+            width={320}
+            height={160}
+            className="rounded-t-lg"
+          />
           <div className="p-5">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 italic">
               {t("DISTANT_TITLE")}

@@ -163,6 +163,21 @@ const En: Lang = {
       DESCRIPTION: "If you want to boost the Python community, or are interested in joining the conference staff, please apply!",
     }
   },
+  VENUE: {
+    GMAP_T_URL: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6485.625372822181!2d139.788521!3d35.632344!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x29ed0c04cca72dd5!2sTOC%20Ariake%20Convention%20Hall!5e0!3m2!1sen!2sjp!4v1665392941094!5m2!1sen!2sjp",
+    GMAP_S_URL: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.8970004904604!2d139.69235317636083!3d35.65490923141856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b544a131f47%3A0x79fae83a91d05ad8!2sHENNGE!5e0!3m2!1sja!2sjp!4v1696242228315!5m2!1sen!2sen",
+    FLOOR4: "4th-floor",
+    FLOOR20: "20th-floor",
+    VENUE_TITLE: "Venue",
+    VENUE_TEXT_T: "TOC Ariake Convention Hall",
+    VENUE_TEXT_S: "HENGE K.K.",
+    LOCATION_TITLE: "Location",
+    LOCATION_TEXT_T: "3-5-7 Ariake, Koto-ku, Tokyo",
+    LOCATION_TEXT_S: "Daiwa Shibuya Square 16-28 Nanpeidai-cho Shibuya-ku, Tokyo",
+    STATION_TITLE: "By Train",
+    STATION_TEXT_T: "<Rinkai Line> Approx. 3 minutes' walk from Kokusai-Tenjijo Station\n<Yurikamome> Approx. 4 minutes' walk from Tokyo Big Sight Station or Ariake Station",
+    STATION_TEXT_S: "10 minutes' walk from Shibuya Station",
+  },
   TUTORIAL: {
     INDEX: "PyCon APAC 2023 Tutorial",
     DESCRIPTION: "What are PyCon APAC 2023 Tutorials?  \n" +

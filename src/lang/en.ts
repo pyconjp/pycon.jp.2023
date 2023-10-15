@@ -144,13 +144,13 @@ const En: Lang = {
         'His research major is System Science and Engineering. In ILAS, he teaches general education courses in informatics including computer programming.  \n' +
         'His research interests are social simulation and general education of informatics in universities including education in computer programming.',
       IMG_ALT: "Photo of Hajime Kita",
-      DATE: "2023.10.27(Fri)",
+      DATE: "Friday, OCTOBER 27, 2023",
     },
     SPEAKER_EN: {
       NAME: "Lorena Mesa",
       BIO: 'Political scientist turned coder, Lorena Mesa is a GitHub data engineer, past Director & Chair of the Python Software Foundation, [JOSS](https://joss.theoj.org/about) editor, and PyLadies Chicago co-organizer. Lorena\'s time at Obama for America and her subsequent graduate research required her to learn how to transform messy, incomplete data into intelligible analysis on topics like predicting Latinx voter behavior. It\'s this unique background in research and applied mathematics that drove Lorena to pursue a career in engineering and data science. One part activist, one part Star Wars fanatic, and another part [Trekkie](https://www.greggpollack.com/wp-content/uploads/2017/03/lorena_for_twitter.jpg), Lorena abides by the motto to "live long and prosper".',
       IMG_ALT: "Photo of Lorena Mesa",
-      DATE: "2023.10.28(Sat)",
+      DATE: "Saturday, OCTOBER 28, 2023",
     }
   },
   ANNOUNCE: {
@@ -162,6 +162,21 @@ const En: Lang = {
       TITLE: "Recruitment of PyCon APAC 2023 staff!",
       DESCRIPTION: "If you want to boost the Python community, or are interested in joining the conference staff, please apply!",
     }
+  },
+  VENUE: {
+    GMAP_T_URL: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6485.625372822181!2d139.788521!3d35.632344!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x29ed0c04cca72dd5!2sTOC%20Ariake%20Convention%20Hall!5e0!3m2!1sen!2sjp!4v1665392941094!5m2!1sen!2sjp",
+    GMAP_S_URL: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.8970004904604!2d139.69235317636083!3d35.65490923141856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b544a131f47%3A0x79fae83a91d05ad8!2sHENNGE!5e0!3m2!1sja!2sjp!4v1696242228315!5m2!1sen!2sen",
+    FLOOR4: "4th-floor",
+    FLOOR20: "20th-floor",
+    VENUE_TITLE: "Venue",
+    VENUE_TEXT_T: "TOC Ariake Convention Hall",
+    VENUE_TEXT_S: "HENGE K.K.",
+    LOCATION_TITLE: "Location",
+    LOCATION_TEXT_T: "3-5-7 Ariake, Koto-ku, Tokyo",
+    LOCATION_TEXT_S: "Daiwa Shibuya Square 16-28 Nanpeidai-cho Shibuya-ku, Tokyo",
+    STATION_TITLE: "By Train",
+    STATION_TEXT_T: "<Rinkai Line> Approx. 3 minutes' walk from Kokusai-Tenjijo Station\n<Yurikamome> Approx. 4 minutes' walk from Tokyo Big Sight Station or Ariake Station",
+    STATION_TEXT_S: "10 minutes' walk from Shibuya Station",
   },
   TUTORIAL: {
     INDEX: "PyCon APAC 2023 Tutorial",

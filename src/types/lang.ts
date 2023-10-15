@@ -135,7 +135,22 @@ export type Lang = {
       TITLE: string;
       DESCRIPTION: string;
     },
-  },
+  };
+  VENUE: {
+    GMAP_T_URL: string;
+    GMAP_S_URL: string;
+    FLOOR4: string;
+    FLOOR20: string;
+    VENUE_TITLE: string;
+    VENUE_TEXT_T: string;
+    VENUE_TEXT_S: string;
+    LOCATION_TITLE: string;
+    LOCATION_TEXT_T: string;
+    LOCATION_TEXT_S: string;
+    STATION_TITLE: string;
+    STATION_TEXT_T: string;
+    STATION_TEXT_S: string;
+  };
   TUTORIAL: {
     INDEX: string,
     DESCRIPTION: string,

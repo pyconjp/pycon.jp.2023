@@ -130,18 +130,26 @@ export type Lang = {
     NURSERY: {
       TITLE: string;
       DESCRIPTION: string;
-    },
+    };
     ONE_DAY_STAFF: {
       TITLE: string;
       DESCRIPTION: string;
-    },
-  },
+    };
+  };
   TUTORIAL: {
-    INDEX: string,
-    DESCRIPTION: string,
-  },
+    INDEX: string;
+    DESCRIPTION: string;
+  };
   LIGHTNING_TALK: {
-    DAY1: string,
-    DAY2: string,
-  }
+    DAY1: string;
+    DAY2: string;
+  };
+  SUPPORT: {
+    FOOD_TITLE: string;
+    FOOD_DESCRIPTION: string;
+    NURSERY_TITLE: string;
+    NURSERY_DESCRIPTION: string;
+    DISTANT_TITLE: string;
+    DISTANT_DESCRIPTION: string;
+  };
 };

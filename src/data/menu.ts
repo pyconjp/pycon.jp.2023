@@ -15,7 +15,7 @@ export const menu: Menu[] = [
     title: "ABOUT",
     children: [
       {title: "ABOUT.COC", url: "/coc"},
-      {title: "ABOUT.VENUE", url: "/venue", isComingSoon: true},
+      {title: "ABOUT.VENUE", url: "/venue"},
     ],
   },
   {

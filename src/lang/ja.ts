@@ -26,6 +26,8 @@ const Ja: Lang = {
       TIMETABLE: "タイムテーブル",
       EVENTS: "イベント一覧",
       TUTORIAL: 'チュートリアル',
+      POSTER_SESSION: "ポスターセッション",
+      LIGHTNING_TALK: "ライトニングトーク",
     },
     SPONSOR: {
       SPONSOR_LIST: "スポンサー一覧",
@@ -111,7 +113,7 @@ const Ja: Lang = {
     yoshida_bio: "サイバートラスト株式会社 所属、MIRACLE LINUX の製品サポートなどを行っている。 社内サイトをZopeで構築することを切っ掛けとしてPythonを始めた。 共著書に『 Debug Hacks （2009 オライリー・ジャパン刊）』などがある。\n\nPyCon JP 2014からスタッフ、PyCon JP 2015副座長(事務局)、PyCon JP 2016副座長(メディア)、PyCon JP 2017-2019座長。\n\n小江戸らぐ、東京エリアDebian勉強会 などのOSSコミュニティ活動にも参加している。\n\n趣味は温泉巡り、OSCやカンファレンスに参加した際にもよく現地の温泉に行くこと。",
     recruite_title: "当日スタッフ募集中！",
     recruite_text: "Pythonコミュニティを盛り上げたい方、カンファレンススタッフに興味がある方など、ぜひお申し込みください！",
-    recruite_link: "当日スタッフ募集フォーム(準備中)",
+    recruite_link: "当日スタッフ募集リンク",
   },
   SPONSOR: {
     H1: "スポンサー募集は終了致しました",
@@ -154,6 +156,10 @@ const Ja: Lang = {
     NURSERY: {
       TITLE: "託児所",
       DESCRIPTION: "小学生以下のお子様を対象に託児所を設置します。\n詳しくはリンク先のPDFをご覧ください。",
+    },
+    ONE_DAY_STAFF: {
+      TITLE: "当日スタッフ募集中！",
+      DESCRIPTION: "Pythonコミュニティを盛り上げたい方、\nカンファレンススタッフに興味がある方など、ぜひお申し込みください！",
     }
   },
   VENUE: {
@@ -175,6 +181,10 @@ const Ja: Lang = {
     INDEX: "PyCon APAC 2023 チュートリアル",
     DESCRIPTION: "10/26(木)のTutorial Dayに開催されるチュートリアルでは、参加者が実際に手を動かしながらPythonに関連する様々なトピックについて学びます。今年のPyCon APACでは英語セッション2つと日本語セッション1つの計3セッションが設けられ、各分野においてPythonがどのように活用されているかを知ることができます。\n\n" +
       "※チュートリアルの参加には別途 <Link href='https://pretix.eu/pyconjp/2023-apac/'>チケット販売ページ<ArrowTopRightOnSquareIcon className='inline-block w-4 h-4'/></Link> にて購入できるオプションチケットが必要です。",
+  },
+  LIGHTNING_TALK: {
+    DAY1: "2023.10.27(Fri)",
+    DAY2: "2023.10.28(Sat)",
   },
 };
 

@@ -26,6 +26,8 @@ const En: Lang = {
       TIMETABLE: "Timetable",
       EVENTS: "Event List",
       TUTORIAL: 'Tutorial',
+      POSTER_SESSION: "Poster Session",
+      LIGHTNING_TALK: "Lightning Talk",
     },
     SPONSOR: {
       SPONSOR_LIST: "Sponsor List",
@@ -109,9 +111,9 @@ const En: Lang = {
     peacock_bio: "He started serving as a volunteer staff member in 2020. Since 2022, he's been the vice-chair. And, also part of the PyCon JP Association's Operating Member, as a director of the PyCon JP TV.\n\nAt TOPGATE, Inc. he pushes for IaC and DevOps with Google Cloud and develops Golang Web APIs. His hobbies include mirrorless cameras, skiing, and classical music.",
     ainamori_bio: "Works for Internet Initiative Japan Inc. as infrastructure engineer. has been involved PyConJP2019 as a NOC team staff member. his involvement with Python is mainly for the purpose of infrastructure development and operational automation and orchestration. Recent deliverables are based on FastAPI.",
     yoshida_bio: "Cybertrust Japan Co., Ltd. (サイバートラスト株式会社).\n\nProvides product support for MIRACLE LINUX among other things.\n\nGot first introduced to Python when building an internal website with Zope. Co-Authored Debug Hacks (O'Reilly 2009).\n\nVolunteers as staff for PyCon JP since 2014, serving as Vice-Chair in 2015 and 2016 and as Chair 2017-2019.\n\nMember of OSS communities such as 小江戸らぐ and 東京エリアDebian勉強会.\n\nHis hobbies are visiting hot sprints and attending conferences such as OSC.",
-    recruite_title: "Recruitment of PyCon JP 2023 staff!",
+    recruite_title: "Recruitment of PyCon APAC 2023 staff!",
     recruite_text: "If you want to boost the Python community, or are interested in joining the conference staff, please apply!",
-    recruite_link: "Staff application form(coming soon)",
+    recruite_link: "Staff application link.",
   },
   SPONSOR: {
     H1: "Call for sponsors has been closed.",
@@ -142,19 +144,23 @@ const En: Lang = {
         'His research major is System Science and Engineering. In ILAS, he teaches general education courses in informatics including computer programming.  \n' +
         'His research interests are social simulation and general education of informatics in universities including education in computer programming.',
       IMG_ALT: "Photo of Hajime Kita",
-      DATE: "2023.10.27(Fri)",
+      DATE: "Friday, OCTOBER 27, 2023",
     },
     SPEAKER_EN: {
       NAME: "Lorena Mesa",
       BIO: 'Political scientist turned coder, Lorena Mesa is a GitHub data engineer, past Director & Chair of the Python Software Foundation, [JOSS](https://joss.theoj.org/about) editor, and PyLadies Chicago co-organizer. Lorena\'s time at Obama for America and her subsequent graduate research required her to learn how to transform messy, incomplete data into intelligible analysis on topics like predicting Latinx voter behavior. It\'s this unique background in research and applied mathematics that drove Lorena to pursue a career in engineering and data science. One part activist, one part Star Wars fanatic, and another part [Trekkie](https://www.greggpollack.com/wp-content/uploads/2017/03/lorena_for_twitter.jpg), Lorena abides by the motto to "live long and prosper".',
       IMG_ALT: "Photo of Lorena Mesa",
-      DATE: "2023.10.28(Sat)",
+      DATE: "Saturday, OCTOBER 28, 2023",
     }
   },
   ANNOUNCE: {
     NURSERY: {
       TITLE: "Day-care service for children",
       DESCRIPTION: "Child day care (ONLY for can speak Japanese) is available for elementary school or younger. For details, please see the linked PDF.",
+    },
+    ONE_DAY_STAFF: {
+      TITLE: "Recruitment of PyCon APAC 2023 staff!",
+      DESCRIPTION: "If you want to boost the Python community, or are interested in joining the conference staff, please apply!",
     }
   },
   VENUE: {
@@ -177,6 +183,10 @@ const En: Lang = {
     DESCRIPTION: "What are PyCon APAC 2023 Tutorials?  \n" +
       "On the Tutorial day ( Thu. 26 October ), sessions called Tutorial will be held, where participants can learn about various topics related to Python in hands-on sessions. This year, there will be two sessions in English and one session in Japanese. You'll discover how Python is utilized in each field!\n\n" +
       "※ Participants of the Tutorial are required to purchase a separate ticket <Link href='https://pretix.eu/pyconjp/2023-apac/'>here<ArrowTopRightOnSquareIcon className='inline-block w-4 h-4'/></Link> in addition to the main conference ticket.",
+  },
+  LIGHTNING_TALK: {
+    DAY1: "Friday, OCTOBER 27, 2023",
+    DAY2: "Saturday, OCTOBER 28, 2023",
   },
 };
 

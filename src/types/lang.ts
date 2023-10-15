@@ -24,6 +24,8 @@ export type Lang = {
       TIMETABLE: string;
       EVENTS: string;
       TUTORIAL: string;
+      POSTER_SESSION: string;
+      LIGHTNING_TALK: string;
     };
     SPONSOR: {
       SPONSOR_LIST: string;
@@ -129,6 +131,10 @@ export type Lang = {
       TITLE: string;
       DESCRIPTION: string;
     },
+    ONE_DAY_STAFF: {
+      TITLE: string;
+      DESCRIPTION: string;
+    },
   };
   VENUE: {
     GMAP_T_URL: string;
@@ -149,4 +155,8 @@ export type Lang = {
     INDEX: string,
     DESCRIPTION: string,
   },
+  LIGHTNING_TALK: {
+    DAY1: string,
+    DAY2: string,
+  }
 };

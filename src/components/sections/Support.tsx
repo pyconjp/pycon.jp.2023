@@ -38,6 +38,9 @@ export default function SupportSection() {
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 italic">
               {t("NURSERY_TITLE")}
             </h5>
+            <h5 className="text-tertiary-600 font-montserrat italic mr-[16px]">
+              {t("NURSERY_SUB_TITLE")}
+            </h5>
             <p className="font-normal text-gray-700 dark:text-gray-400">
               {t("NURSERY_DESCRIPTION")}
             </p>
@@ -55,12 +58,15 @@ export default function SupportSection() {
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 italic">
               {t("DISTANT_TITLE")}
             </h5>
+            <h5 className="text-tertiary-600 font-montserrat italic mr-[16px]">
+              {t("DISTANT_SUB_TITLE")}
+            </h5>
             <p className="font-normal text-gray-700 dark:text-gray-400">
               {t("DISTANT_DESCRIPTION")}
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }

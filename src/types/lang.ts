@@ -163,8 +163,10 @@ export type Lang = {
     FOOD_TITLE: string;
     FOOD_DESCRIPTION: string;
     NURSERY_TITLE: string;
+    NURSERY_SUB_TITLE: string;
     NURSERY_DESCRIPTION: string;
     DISTANT_TITLE: string;
+    DISTANT_SUB_TITLE: string;
     DISTANT_DESCRIPTION: string;
   };
 };

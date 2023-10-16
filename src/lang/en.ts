@@ -205,10 +205,12 @@ const En: Lang = {
       "Meal are included with each schedule. Menus for vegetarians and halal are also available.  \n" +
       "Menus for vegetarians and halal are also available.",
     NURSERY_TITLE: "Nurseries",
+    NURSERY_SUB_TITLE: "Accepting reservation",
     NURSERY_DESCRIPTION:
       "A nursery will be opened in the venue for each schedule. \n" +
       "Application is required in advance.",
     DISTANT_TITLE: "Distant Support",
+    DISTANT_SUB_TITLE: "(Closed)",
     DISTANT_DESCRIPTION:
       "This is a support in which PyCon JP pays all or part of transportation expenses mainly for distant people.",
   },

@@ -172,6 +172,21 @@ const Ja: Lang = {
         "Pythonコミュニティを盛り上げたい方、\nカンファレンススタッフに興味がある方など、ぜひお申し込みください！",
     },
   },
+  VENUE: {
+    GMAP_T_URL: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6485.625372822181!2d139.788521!3d35.632344!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x29ed0c04cca72dd5!2zVE9D5pyJ5piO44Kz44Oz44OZ44Oz44K344On44Oz44Ob44O844Or!5e0!3m2!1sja!2sjp!4v1665392924080!5m2!1sja!2sjp",
+    GMAP_S_URL: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.8970004904604!2d139.69235317636083!3d35.65490923141856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b544a131f47%3A0x79fae83a91d05ad8!2sHENNGE!5e0!3m2!1sja!2sjp!4v1696242228315!5m2!1sja!2sjp",
+    FLOOR4: "4階",
+    FLOOR20: "20階",
+    VENUE_TITLE: "会場",
+    VENUE_TEXT_T: "TOC有明コンベンションホール",
+    VENUE_TEXT_S: "HENNGE株式会社",
+    LOCATION_TITLE: "所在地",
+    LOCATION_TEXT_T: "東京都江東区有明3丁目5番7号",
+    LOCATION_TEXT_S: "東京都渋谷区南平台町16番28号 Daiwa渋谷スクエア",
+    STATION_TITLE: "最寄り駅",
+    STATION_TEXT_T: "<りんかい線> 国際展示場駅より徒歩3分\n<ゆりかもめ> 東京ビッグサイト駅/有明駅より徒歩4分",
+    STATION_TEXT_S: "渋谷駅より徒歩約10分",
+  },
   TUTORIAL: {
     INDEX: "PyCon APAC 2023 チュートリアル",
     DESCRIPTION:

@@ -203,7 +203,7 @@ const Ja: Lang = {
       "各日程で食事が付きます。 \n" +
       "ベジタリアン向けやハラル対応のメニューも用意いたします。",
     NURSERY_TITLE: "託児所",
-    NURSERY_SUB_TITLE: "受付中",
+    NURSERY_SUB_TITLE: "(申し込み終了)",
     NURSERY_DESCRIPTION:
       "各日程とも会場内に託児所を開設します。 \n" +
       "ご利用には事前に申し込みが必要です。",

@@ -205,7 +205,7 @@ const En: Lang = {
       "Meal are included with each schedule. Menus for vegetarians and halal are also available.  \n" +
       "Menus for vegetarians and halal are also available.",
     NURSERY_TITLE: "Nurseries",
-    NURSERY_SUB_TITLE: "Accepting reservation",
+    NURSERY_SUB_TITLE: "(Closed)",
     NURSERY_DESCRIPTION:
       "A nursery will be opened in the venue for each schedule. \n" +
       "Application is required in advance.",

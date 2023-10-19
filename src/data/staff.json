@@ -90,15 +90,6 @@
         "mastodon": "@ojii@mastodon.social"
     },
     {
-        "name": "Jasmine Yap",
-        "icon": "jasmineyap.jpg",
-        "twitter": "",
-        "github": "teeyingyap",
-        "facebook": "",
-        "division": "day",
-        "mastodon": ""
-    },
-    {
         "name": "yuutan",
         "icon": "yuutan.png",
         "twitter": "yuutangadget",
@@ -376,5 +367,113 @@
         "facebook": "",
         "division": "core",
         "mastodon": "@NiharikaVadluri"
+    },
+    {
+        "name": "Jasmine Yap",
+        "icon": "jasmineyap.jpg",
+        "twitter": "",
+        "github": "teeyingyap",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
+    },
+    {
+        "name": "Motoki Hirao",
+        "icon": "",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
+    },
+    {
+        "name": "dmadhav",
+        "icon": "",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
+    },
+    {
+        "name": "Koti Vellanki",
+        "icon": "",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
+    },
+    {
+        "name": "白柳隆司",
+        "icon": "",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
+    },
+    {
+        "name": "Tamtam",
+        "icon": "",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
+    },
+    {
+        "name": "tamago3keran",
+        "icon": "",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
+    },
+    {
+        "name": "karosuwindam",
+        "icon": "",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
+    },
+    {
+        "name": "yzrh_hamazaki",
+        "icon": "",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
+    },
+    {
+        "name": "Masaru Irisawa",
+        "icon": "",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
+    },
+    {
+        "name": "nikkie",
+        "icon": "",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
+    },
+    {
+        "name": "himorin",
+        "icon": "",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
     }
 ]

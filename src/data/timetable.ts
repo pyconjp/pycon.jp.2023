@@ -93,10 +93,19 @@ export const events: {
         end: "2023-10-28T11:20:00+09:00",
         ...eventRoom,
       },
-      title: "Keynote",
-      code: "",
+      title: "Keynote - Through the looking glass: 10 years of Python Organizing Lessons and Tribulations (Lorena Mesa)",
+      code: "keynote2",
       is_event: true,
       hide_start: true,
+      abstract: "Community organizing can be a challenge in its own right; discovering trends to educate the community on, empowering those around you to challenge themselves, and more. Over the last 10 years from a beginner engineer to today community organizing has shaped the way not only I connect to the language and community but has fundamentally altered my outlook on career development. Together we shall explore some of these lessons learned and reflect on how we can do more, do better.",
+      speakers: [
+        {
+          code: 'keynote2_speaker',
+          name: 'Lorena Mesa',
+          biography: 'Political scientist turned coder, Lorena Mesa is a GitHub data engineer, past Director & Chair of the Python Software Foundation, https://joss.theoj.org/about editor, and PyLadies Chicago co-organizer. Lorena\'s time at Obama for America and her subsequent graduate research required her to learn how to transform messy, incomplete data into intelligible analysis on topics like predicting Latinx voter behavior. It\'s this unique background in research and applied mathematics that drove Lorena to pursue a career in engineering and data science. One part activist, one part Star Wars fanatic, and another part [Trekkie](https://www.greggpollack.com/wp-content/uploads/2017/03/lorena_for_twitter.jpg), Lorena abides by the motto to "live long and prosper".',
+          avatar: '/lorena_for_twitter.jpg',
+        }
+      ],
     },
     {
       slot: {

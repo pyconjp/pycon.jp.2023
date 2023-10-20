@@ -209,7 +209,7 @@ const En: Lang = {
     NURSERY_DESCRIPTION:
       "A nursery will be opened in the venue for each schedule. \n" +
       "Application is required in advance.",
-    DISTANT_TITLE: "Distant Support",
+    DISTANT_TITLE: "Travel Grant",
     DISTANT_SUB_TITLE: "(Closed)",
     DISTANT_DESCRIPTION:
       "This is a support in which PyCon JP pays all or part of transportation expenses mainly for distant people.",

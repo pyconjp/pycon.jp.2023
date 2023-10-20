@@ -8,7 +8,7 @@ export default function SupportSection() {
   return (
     <div className="flex-row items-center px-[5%] sm:px-[10%] xl:px-[20%] lg:py-[60px] py-20">
       <SectionTitle title="Support" subTitle="" />
-      <div className="flex flex-col md:flex-row justify-center gap-8">
+      <div className="flex flex-col md:flex-row justify-center gap-8 items-center md:items-stretch">
         <div className="bg-white shadow-lg rounded-lg w-fit max-w-[320px]">
           <Image
             src="/food_support.png"

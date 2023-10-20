@@ -170,7 +170,7 @@ const En: Lang = {
     FLOOR20: "20th-floor",
     VENUE_TITLE: "Venue",
     VENUE_TEXT_T: "TOC Ariake Convention Hall",
-    VENUE_TEXT_S: "HENGE K.K.",
+    VENUE_TEXT_S: "HENNGE K.K.",
     LOCATION_TITLE: "Location",
     LOCATION_TEXT_T: "3-5-7 Ariake, Koto-ku, Tokyo",
     LOCATION_TEXT_S: "Daiwa Shibuya Square 16-28 Nanpeidai-cho Shibuya-ku, Tokyo",

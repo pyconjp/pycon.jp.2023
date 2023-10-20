@@ -25,7 +25,7 @@ const En: Lang = {
     EVENTS: {
       TIMETABLE: "Timetable",
       EVENTS: "Event List",
-      TUTORIAL: 'Tutorial',
+      TUTORIAL: "Tutorial",
       POSTER_SESSION: "Poster Session",
       LIGHTNING_TALK: "Lightning Talk",
     },
@@ -35,7 +35,7 @@ const En: Lang = {
     STAFF: {
       STAFF: "Volunteers",
     },
-    COMING_SOON: 'Coming Soon',
+    COMING_SOON: "Coming Soon",
   },
   COC: {
     P1: 'PyCon JP Code of Conduct (hereinafter referred to as the "Code of Conduct") is an event (hereinafter referred to as the "Event") held by the General Incorporated Association PyCon JP Association (hereinafter referred to as the "PyCon JP"). All the participants who participate in this event are required to read all the terms of this agreement and agree to this code of conduct.',
@@ -102,17 +102,24 @@ const En: Lang = {
   },
   OVERVIEW: {
     APAC: "PyCon APAC is a volunteer, non-profit annual conference focused on the Python programming language. The purpose of this conference is to explore, discuss and practice the Python programming language and its peripheral technologies. Each year the event is organized by a team from a country or territory in the Asia-Pacific region. Currently, Python communities in Singapore, Malaysia, Indonesia, the Philippines, Thailand, South Korea, Hong Kong, Vietnam, Japan, Taiwan, India, and Bangladesh are participating. In 2023, the event will be held in Japan, the Japanese community being the primary organizers this time.",
-    JP: "PyCon JP is a conference for Python users to gather, exchange information and interact with Python and software using Python. Through PyCon JP, the goal is to gather Python users together, exchange knowledge and information on various fields related to Python, connect with new friends and communities, and increase work and business opportunities."
+    JP: "PyCon JP is a conference for Python users to gather, exchange information and interact with Python and software using Python. Through PyCon JP, the goal is to gather Python users together, exchange knowledge and information on various fields related to Python, connect with new friends and communities, and increase work and business opportunities.",
   },
   STAFF: {
-    selina_bio1: "Lina attended Pycon JP in 2016 for the first time. Participated in 2017 and 2018 as a speaker, and as an invited speaker in 2020.",
-    selina_bio2: "She also attended Pycon overseas, such as in the US, Taiwan, and Thailand.",
-    selina_bio3: "Loves rabbits, cars, drones, and gadgets such as Raspberry Pi as well. Currently taking special lessons in piano and violin. Always wants to be a scientist, not a programmer or an engineer. An active member of Pyladies Tokyo and a founder of moegi Inc. Lina graduated from Tokai University with a BS and an MS in Aeronautics and Astronautics. She is currently a Senior Research Fellow at the Keio Research Institute at SFC (Shonan Fujisawa Campus).",
-    peacock_bio: "He started serving as a volunteer staff member in 2020. Since 2022, he's been the vice-chair. And, also part of the PyCon JP Association's Operating Member, as a director of the PyCon JP TV.\n\nAt TOPGATE, Inc. he pushes for IaC and DevOps with Google Cloud and develops Golang Web APIs. His hobbies include mirrorless cameras, skiing, and classical music.",
-    ainamori_bio: "Works for Internet Initiative Japan Inc. as infrastructure engineer. has been involved PyConJP2019 as a NOC team staff member. his involvement with Python is mainly for the purpose of infrastructure development and operational automation and orchestration. Recent deliverables are based on FastAPI.",
-    yoshida_bio: "Cybertrust Japan Co., Ltd. (サイバートラスト株式会社).\n\nProvides product support for MIRACLE LINUX among other things.\n\nGot first introduced to Python when building an internal website with Zope. Co-Authored Debug Hacks (O'Reilly 2009).\n\nVolunteers as staff for PyCon JP since 2014, serving as Vice-Chair in 2015 and 2016 and as Chair 2017-2019.\n\nMember of OSS communities such as 小江戸らぐ and 東京エリアDebian勉強会.\n\nHis hobbies are visiting hot sprints and attending conferences such as OSC.",
+    selina_bio1:
+      "Lina attended Pycon JP in 2016 for the first time. Participated in 2017 and 2018 as a speaker, and as an invited speaker in 2020.",
+    selina_bio2:
+      "She also attended Pycon overseas, such as in the US, Taiwan, and Thailand.",
+    selina_bio3:
+      "Loves rabbits, cars, drones, and gadgets such as Raspberry Pi as well. Currently taking special lessons in piano and violin. Always wants to be a scientist, not a programmer or an engineer. An active member of Pyladies Tokyo and a founder of moegi Inc. Lina graduated from Tokai University with a BS and an MS in Aeronautics and Astronautics. She is currently a Senior Research Fellow at the Keio Research Institute at SFC (Shonan Fujisawa Campus).",
+    peacock_bio:
+      "He started serving as a volunteer staff member in 2020. Since 2022, he's been the vice-chair. And, also part of the PyCon JP Association's Operating Member, as a director of the PyCon JP TV.\n\nAt TOPGATE, Inc. he pushes for IaC and DevOps with Google Cloud and develops Golang Web APIs. His hobbies include mirrorless cameras, skiing, and classical music.",
+    ainamori_bio:
+      "Works for Internet Initiative Japan Inc. as infrastructure engineer. has been involved PyConJP2019 as a NOC team staff member. his involvement with Python is mainly for the purpose of infrastructure development and operational automation and orchestration. Recent deliverables are based on FastAPI.",
+    yoshida_bio:
+      "Cybertrust Japan Co., Ltd. (サイバートラスト株式会社).\n\nProvides product support for MIRACLE LINUX among other things.\n\nGot first introduced to Python when building an internal website with Zope. Co-Authored Debug Hacks (O'Reilly 2009).\n\nVolunteers as staff for PyCon JP since 2014, serving as Vice-Chair in 2015 and 2016 and as Chair 2017-2019.\n\nMember of OSS communities such as 小江戸らぐ and 東京エリアDebian勉強会.\n\nHis hobbies are visiting hot sprints and attending conferences such as OSC.",
     recruite_title: "Recruitment of PyCon APAC 2023 staff!",
-    recruite_text: "If you want to boost the Python community, or are interested in joining the conference staff, please apply!",
+    recruite_text:
+      "If you want to boost the Python community, or are interested in joining the conference staff, please apply!",
     recruite_link: "Staff application link.",
   },
   SPONSOR: {
@@ -128,27 +135,28 @@ const En: Lang = {
     PATRON: "Patron",
   },
   BLOG: {
-    ACCESS: "Read More"
+    ACCESS: "Read More",
   },
   CONFERENCE: {
     SPEAKER_JP: {
       NAME: "Hajime Kita",
-      BIO: 'Hajime Kita received his B.E., M.E., and D. E. degrees all from Kyoto University. \n' +
-        '\n\n' +
-        'From 1987 to 1997, he was an Assistant Professor at the Faculty of Engineering, Kyoto University.  \n' +
-        'From 1997 to 2000, he was an Associate Professor at Interdisciplinary Graduate School of Science and Engineering, Tokyo Institute of Technology.  \n' +
-        'From 2000 to 2003, he was a Professor at National Institution for Academic Degrees and University Evaluation.  \n' +
-        'From 2003 to 2013, he was a Professor at Academic Center for Computing and Media Study, Kyoto University.  \n' +
-        'Since 2013, he has been a Professor at Institute for Liberal Arts and Sciences (ILAS), Kyoto University.  \n' +
-        '\n\n' +
-        'His research major is System Science and Engineering. In ILAS, he teaches general education courses in informatics including computer programming.  \n' +
-        'His research interests are social simulation and general education of informatics in universities including education in computer programming.',
+      BIO:
+        "Hajime Kita received his B.E., M.E., and D. E. degrees all from Kyoto University. \n" +
+        "\n\n" +
+        "From 1987 to 1997, he was an Assistant Professor at the Faculty of Engineering, Kyoto University.  \n" +
+        "From 1997 to 2000, he was an Associate Professor at Interdisciplinary Graduate School of Science and Engineering, Tokyo Institute of Technology.  \n" +
+        "From 2000 to 2003, he was a Professor at National Institution for Academic Degrees and University Evaluation.  \n" +
+        "From 2003 to 2013, he was a Professor at Academic Center for Computing and Media Study, Kyoto University.  \n" +
+        "Since 2013, he has been a Professor at Institute for Liberal Arts and Sciences (ILAS), Kyoto University.  \n" +
+        "\n\n" +
+        "His research major is System Science and Engineering. In ILAS, he teaches general education courses in informatics including computer programming.  \n" +
+        "His research interests are social simulation and general education of informatics in universities including education in computer programming.",
       IMG_ALT: "Photo of Hajime Kita",
       DATE: "Friday, OCTOBER 27, 2023",
     },
     SPEAKER_EN: {
       NAME: "Lorena Mesa",
-      BIO: 'Political scientist turned coder, Lorena Mesa is a GitHub data engineer, past Director & Chair of the Python Software Foundation, [JOSS](https://joss.theoj.org/about) editor, and PyLadies Chicago co-organizer. Lorena\'s time at Obama for America and her subsequent graduate research required her to learn how to transform messy, incomplete data into intelligible analysis on topics like predicting Latinx voter behavior. It\'s this unique background in research and applied mathematics that drove Lorena to pursue a career in engineering and data science. One part activist, one part Star Wars fanatic, and another part [Trekkie](https://www.greggpollack.com/wp-content/uploads/2017/03/lorena_for_twitter.jpg), Lorena abides by the motto to "live long and prosper".',
+      BIO: "Political scientist turned coder, Lorena Mesa is a GitHub data engineer, past Director & Chair of the Python Software Foundation, [JOSS](https://joss.theoj.org/about) editor, and PyLadies Chicago co-organizer. Lorena's time at Obama for America and her subsequent graduate research required her to learn how to transform messy, incomplete data into intelligible analysis on topics like predicting Latinx voter behavior. It's this unique background in research and applied mathematics that drove Lorena to pursue a career in engineering and data science. One part activist, one part Star Wars fanatic, and another part [Trekkie](https://www.greggpollack.com/wp-content/uploads/2017/03/lorena_for_twitter.jpg), Lorena abides by the motto to \"live long and prosper\".",
       IMG_ALT: "Photo of Lorena Mesa",
       DATE: "Saturday, OCTOBER 28, 2023",
     }
@@ -156,12 +164,14 @@ const En: Lang = {
   ANNOUNCE: {
     NURSERY: {
       TITLE: "Day-care service for children",
-      DESCRIPTION: "Child day care (ONLY for can speak Japanese) is available for elementary school or younger. For details, please see the linked PDF.",
+      DESCRIPTION:
+        "Child day care (ONLY for can speak Japanese) is available for elementary school or younger. For details, please see the linked PDF.",
     },
     ONE_DAY_STAFF: {
       TITLE: "Recruitment of PyCon APAC 2023 staff!",
-      DESCRIPTION: "If you want to boost the Python community, or are interested in joining the conference staff, please apply!",
-    }
+      DESCRIPTION:
+        "If you want to boost the Python community, or are interested in joining the conference staff, please apply!",
+    },
   },
   VENUE: {
     GMAP_T_URL: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6485.625372822181!2d139.788521!3d35.632344!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x29ed0c04cca72dd5!2sTOC%20Ariake%20Convention%20Hall!5e0!3m2!1sen!2sjp!4v1665392941094!5m2!1sen!2sjp",
@@ -170,7 +180,7 @@ const En: Lang = {
     FLOOR20: "20th-floor",
     VENUE_TITLE: "Venue",
     VENUE_TEXT_T: "TOC Ariake Convention Hall",
-    VENUE_TEXT_S: "HENGE K.K.",
+    VENUE_TEXT_S: "HENNGE K.K.",
     LOCATION_TITLE: "Location",
     LOCATION_TEXT_T: "3-5-7 Ariake, Koto-ku, Tokyo",
     LOCATION_TEXT_S: "Daiwa Shibuya Square 16-28 Nanpeidai-cho Shibuya-ku, Tokyo",
@@ -180,13 +190,29 @@ const En: Lang = {
   },
   TUTORIAL: {
     INDEX: "PyCon APAC 2023 Tutorial",
-    DESCRIPTION: "What are PyCon APAC 2023 Tutorials?  \n" +
+    DESCRIPTION:
+      "What are PyCon APAC 2023 Tutorials?  \n" +
       "On the Tutorial day ( Thu. 26 October ), sessions called Tutorial will be held, where participants can learn about various topics related to Python in hands-on sessions. This year, there will be two sessions in English and one session in Japanese. You'll discover how Python is utilized in each field!\n\n" +
       "※ Participants of the Tutorial are required to purchase a separate ticket <Link href='https://pretix.eu/pyconjp/2023-apac/'>here<ArrowTopRightOnSquareIcon className='inline-block w-4 h-4'/></Link> in addition to the main conference ticket.",
   },
   LIGHTNING_TALK: {
     DAY1: "Friday, OCTOBER 27, 2023",
     DAY2: "Saturday, OCTOBER 28, 2023",
+  },
+  SUPPORT: {
+    FOOD_TITLE: "Meals",
+    FOOD_DESCRIPTION:
+      "Meal are included with each schedule. Menus for vegetarians and halal are also available.  \n" +
+      "Menus for vegetarians and halal are also available.",
+    NURSERY_TITLE: "Nurseries",
+    NURSERY_SUB_TITLE: "(Closed)",
+    NURSERY_DESCRIPTION:
+      "A nursery will be opened in the venue for each schedule. \n" +
+      "Application is required in advance.",
+    DISTANT_TITLE: "Travel Grant",
+    DISTANT_SUB_TITLE: "(Closed)",
+    DISTANT_DESCRIPTION:
+      "This is a support in which PyCon JP pays all or part of transportation expenses mainly for distant people.",
   },
 };
 

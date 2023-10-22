@@ -248,46 +248,6 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
                 ))}
             </div>
 
-            <div className="lg:mx-[131px] mx-[16px] lg:my-[81px] my-[60px] py-[32px] bg-[#ffffff] shadow-lg rounded-lg">
-                <div className="flex flex-col mx-[72px]">
-                    <div
-                        className='before:top-1/2 before:w-4 before:h-4 before:mr-4 before:-ml-8 before:-mt-2  before:content-[url("/ellipse.svg")] before:inline-block ml-0 pl-8'>
-                        <h3 className="lg:text-2xl text-xl text-alt-black font-bold inline">
-                            {t("recruite_title")}
-                        </h3>
-                    </div>
-                    <p className="text-alt-black lg:text-lg text-base p-[12px]">{t("recruite_text")}</p>
-                    <div className="ml-[auto]">
-                        <a
-                            href="https://pyconjp-staff.connpass.com/event/299292/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex flex-row text-primary-500 underline hover:opacity-50">
-                            <p className={"lg:text-lg text-base"}>{t("recruite_link")}</p>
-                            <Image
-                                src={"/linkout_p.svg"}
-                                alt={""}
-                                width={20}
-                                height={20}
-                                className="object-contain ml-[3px]"
-                            />
-                        </a>
-
-                        {/* 募集フォーム無効
-                        <div className="flex flex-row text-primary-500 underline">
-                            <p className={"lg:text-lg text-base"}>{t("recruite_link")}</p>
-                            <Image
-                                src={"/linkout_p.svg"}
-                                alt={""}
-                                width={20}
-                                height={20}
-                                className="object-contain ml-[3px]"
-                            />
-                        </div>
- */}
-                    </div>
-                </div>
-            </div>
         </>
     );
 };

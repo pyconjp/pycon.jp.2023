@@ -90,15 +90,6 @@
         "mastodon": "@ojii@mastodon.social"
     },
     {
-        "name": "Jasmine Yap",
-        "icon": "jasmineyap.jpg",
-        "twitter": "",
-        "github": "teeyingyap",
-        "facebook": "",
-        "division": "day",
-        "mastodon": ""
-    },
-    {
         "name": "yuutan",
         "icon": "yuutan.png",
         "twitter": "yuutangadget",
@@ -258,6 +249,222 @@
         "github": "wakama1994",
         "facebook": "",
         "division": "core",
+        "mastodon": ""
+    },
+    {
+        "name": "イクマ ヒロユキ",
+        "icon": "circle_dark_2x.png",
+        "twitter": "_good_bear",
+        "github": "ikuma-hiroyuki",
+        "facebook": "",
+        "division": "core",
+        "mastodon": ""
+    },
+    {
+        "name": "notoken",
+        "icon": "circle_dark_2x.png",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "core",
+        "mastodon": ""
+    },
+    {
+        "name": "chiaki",
+        "icon": "circle_dark_2x.png",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "core",
+        "mastodon": ""
+    },
+    {
+        "name": "yagi",
+        "icon": "circle_dark_2x.png",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "core",
+        "mastodon": ""
+    },
+    {
+        "name": "Hakan",
+        "icon": "circle_dark_2x.png",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "core",
+        "mastodon": ""
+    },
+    {
+        "name": "Bil",
+        "icon": "circle_dark_2x.png",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "core",
+        "mastodon": ""
+    },
+    {
+        "name": "t.toda",
+        "icon": "circle_dark_2x.png",
+        "twitter": "t0d4_",
+        "github": "t0d4",
+        "facebook": "",
+        "division": "core",
+        "mastodon": ""
+    },
+    {
+        "name": "Takanori Suzuki",
+        "icon": "circle_dark_2x.png",
+        "twitter": "takanory",
+        "github": "takanory",
+        "facebook": "",
+        "division": "core",
+        "mastodon": ""
+    },
+    {
+        "name": "Claire Filtz",
+        "icon": "circle_dark_2x.png",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "core",
+        "mastodon": ""
+    },
+    {
+        "name": "obassett",
+        "icon": "circle_dark_2x.png",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "core",
+        "mastodon": ""
+    },
+    {
+        "name": "ノータ",
+        "icon": "circle_dark_2x.png",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "core",
+        "mastodon": ""
+    },
+    {
+        "name": "Niharika Vadluri",
+        "icon": "circle_dark_2x.png",
+        "twitter": "NiharikaVadluri",
+        "github": "",
+        "facebook": "",
+        "division": "core",
+        "mastodon": "@NiharikaVadluri"
+    },
+    {
+        "name": "Jasmine Yap",
+        "icon": "jasmineyap.jpg",
+        "twitter": "",
+        "github": "teeyingyap",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
+    },
+    {
+        "name": "Motoki Hirao",
+        "icon": "circle_dark_2x.png",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
+    },
+    {
+        "name": "dmadhav",
+        "icon": "circle_dark_2x.png",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
+    },
+    {
+        "name": "Koti Vellanki",
+        "icon": "circle_dark_2x.png",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
+    },
+    {
+        "name": "白柳隆司",
+        "icon": "circle_dark_2x.png",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
+    },
+    {
+        "name": "Tamtam",
+        "icon": "circle_dark_2x.png",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
+    },
+    {
+        "name": "tamago3keran",
+        "icon": "circle_dark_2x.png",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
+    },
+    {
+        "name": "karosuwindam",
+        "icon": "circle_dark_2x.png",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
+    },
+    {
+        "name": "yzrh_hamazaki",
+        "icon": "circle_dark_2x.png",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
+    },
+    {
+        "name": "Masaru Irisawa",
+        "icon": "circle_dark_2x.png",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
+    },
+    {
+        "name": "nikkie",
+        "icon": "circle_dark_2x.png",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "day",
+        "mastodon": ""
+    },
+    {
+        "name": "himorin",
+        "icon": "circle_dark_2x.png",
+        "twitter": "",
+        "github": "",
+        "facebook": "",
+        "division": "day",
         "mastodon": ""
     },
     {

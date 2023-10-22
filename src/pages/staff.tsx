@@ -143,7 +143,7 @@ const SocialIcon = ({ src, url, alt, isChairs }: { src: string, url: string, alt
 
 const SimpleStaffCard = ({ staff }: { staff: Staff }) => (
     <div className={"flex flex-row"}>
-        <div className={"m-[12px] text-secondary-600 font-bold underline"}>{staff.name}</div>
+        <div className={"m-[12px] text-secondary-600 font-bold"}>{staff.name}</div>
     </div>
 );
 
@@ -233,19 +233,12 @@ const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
                 ))}
             </div>
 
-
-            {
-                divisions.day.length > 0 &&
-                <>
-                    <SectionTitle title='Staff On The Day' subTitle='当日スタッフ' />
-                    <div
-                        className={"lg:mx-[128px] mx-[20px] mb-[60px] grid lg:grid-cols-4 grid-cols-2 place-items-center gap-4"}>
-                        {divisions.day.map((row, index) => (
-                            <SimpleStaffCard key={index} staff={row} />
-                        ))}
-                    </div>
-                </>
-            }
+            <SectionTitle title='Staff On The Day' subTitle='当日スタッフ' />
+            <div className={"lg:mx-[128px] mb-[60px] grid lg:grid-cols-4  gap-4 justify-center"}>
+                {divisions.day.map((row, index) => (
+                    <StaffCard key={index} staff={row} />
+                ))}
+            </div>
 
             <SectionTitle title='Reviewer' subTitle='レビュワー' />
             <div

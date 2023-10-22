@@ -285,7 +285,7 @@ const SpecialComponent = ({ name, logo, url }: Sponsor) => (
 const PatronComponent = ({ name, logo }: Sponsor) => (
   <div className={"flex items-center gap-2 flex-row"}>
     <Image
-      src={"/sponsor/" + logo}
+      src={"/patron/" + logo}
       alt={name}
       width={20}
       height={20}

@@ -12,10 +12,12 @@ type Props = {
     bio?: string[];
 };
 
-const StaffCard = ({ staff }: { staff: Staff }) => (
-    <div className={"flex items-center gap-2 flex-row"}>
+const StaffCard = ({ staff }: { staff: Staff }) => {
+    const staff_icon = staff.icon ?
+        staff.icon : "circle_dark_2x.png"
+    return <div className={"flex items-center gap-2 flex-row"}>
         <Image
-            src={"/staff/" + staff.icon}
+            src={"/staff/" + staff_icon}
             alt={staff.name}
             width={600}
             height={600}
@@ -31,7 +33,7 @@ const StaffCard = ({ staff }: { staff: Staff }) => (
             </div>
         </div>
     </div>
-);
+};
 
 const ViceChairCard = ({ staff, bio = [] }: Props) => (
     <div className={"flex-1 flex flex-col"}>

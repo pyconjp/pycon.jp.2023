@@ -450,6 +450,15 @@
     "logo": "t0ki.svg"
   },
   {
+    "category": "special",
+    "name": "connpass",
+    "url": "https://connpass.com/",
+    "description": null,
+    "name_en": "connpass",
+    "description_en": null,
+    "logo": "connpass_logo_3.png"
+  },
+  {
     "category": "patron",
     "name": "Coming soon",
     "url": "http://pycon.jp/",

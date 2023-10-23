@@ -110,5 +110,12 @@
         "name": "COSCUP - Conference for Open Source Coders, Users & Promoters (Taiwan)",
         "title": "",
         "abstruct": "Introducing COSCUP - an open-source conference in Taiwan to people based in Japan and APAC.\n\n# Why do we introduce this at PyCon APAC?\n\n1. The event seems appealing to people in Python communities. You can see attendees from PyCon Taiwan, Japan, Korea, Hong Kong, India, and Berlin at the event this year.\n2. There are many talks at COSCUP that specifically address Python.\n\n# About me:\n\nI am a volunteer helping out at COSCUP as well as PyCon Taiwan."
+    },
+    {
+        "type": "Community",
+        "place": "C10",
+        "name": "PyLadies Tokyo",
+        "title": "",
+        "abstruct": "コニュニティーの説明、これまでの活動報告、参加方法の紹介など。評判が良かった回の発表内容なども共有したいと思っています。"
     }
 ]

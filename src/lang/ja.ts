@@ -12,9 +12,9 @@ const Ja: Lang = {
     VENUE: "TOC有明コンベンションホール",
     VENUE_SPRINT: "HENNGE株式会社",
     VENUE_INFO: "会場案内",
-    TUTORIAL_DATE: "2023.10.26(Thu)",
-    CONFERENCE_DATE: "2023.10.27(Fri)-28(Sat)",
-    SPRINT_DATE: "2023.10.29(Sun)",
+    TUTORIAL_DATE: "2023.10.26(Thu) (11:00 - 17:30)",
+    CONFERENCE_DATE: "2023.10.27(Fri)-28(Sat) (9:00 - 18:00)",
+    SPRINT_DATE: "2023.10.29(Sun) (10:00 - 18:00)",
     TICKET_INFO: "チケット案内",
   },
   MENU: {

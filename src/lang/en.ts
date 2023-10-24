@@ -14,7 +14,7 @@ const En: Lang = {
     VENUE_INFO: "Venue Info",
     TUTORIAL_DATE: "OCTOBER 26, 2023 (11:00 - 17:30)",
     CONFERENCE_DATE: "OCTOBER 27 - 28, 2023 (9:00 - 18:00)",
-    SPRINT_DATE: "OCTOBER 29, 2023i (10:00 - 18:00)",
+    SPRINT_DATE: "OCTOBER 29, 2023 (10:00 - 18:00)",
     TICKET_INFO: "Ticket Info",
   },
   MENU: {

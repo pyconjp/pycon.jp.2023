@@ -113,7 +113,7 @@ export default function SponsorList({ rows = [] }: {
 const filterByCategory = (sponsors: Sponsor[], category: Sponsor["category"]) => sponsors.filter(sponsor => sponsor.category === category);
 
 
-const DiamondComponent = ({ name, logo, url, description }: Sponsor) => (
+const DiamondComponent = ({ name, logo, url, description, interview_url }: Sponsor) => (
   <div className={""}>
     <div className={"relative"}>
       <div className={"z-20 relative"}>
@@ -130,7 +130,7 @@ const DiamondComponent = ({ name, logo, url, description }: Sponsor) => (
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-row text-secondary-600 underline justify-center mt-[16px] mx-[16px] hover:opacity-50">
-          <p>{name}</p>
+          <p className={"text-xl"}>{name}</p>
           <Image
             src={"/linkout_b.svg"}
             alt={""}
@@ -140,7 +140,14 @@ const DiamondComponent = ({ name, logo, url, description }: Sponsor) => (
           />
         </a>
       </div>
-      <p className={"mx-[24px] mt-[19px] z-10 relative whitespace-pre-wrap"}>{description}</p>
+      <p className={"mx-[24px] mt-[19px] z-10 text-lg relative whitespace-pre-wrap"}>{description}</p>
+      <div className={"flex flex-col my-[20px] items-center"}>
+        <div className={"flex flex-row items-center mb-[7px]"}>
+          <h4 className={"lg:text-2xl text-xl text-tertiary-800 font-montserrat italic"}>Sponsor Interview</h4>
+        </div>
+        <iframe className={"rounded-lg lg:w-[560px] lg:h-[315px] w-[336px] h-[189px]"} width="560" height="315" src={interview_url} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+      </div>
+      
     </div>
     {/*<Image*/}
     {/*  src={"/Page_bg.svg"}*/}
@@ -153,7 +160,7 @@ const DiamondComponent = ({ name, logo, url, description }: Sponsor) => (
 );
 
 
-const PlatitnumComponent = ({ name, logo, url, description }: Sponsor) => (
+const PlatitnumComponent = ({ name, logo, url, description, interview_url }: Sponsor) => (
   <div className={"flex flex-col items-center"}>
     <div className={"bg-white shadow-lg rounded-lg mt-[72px] px-[50%] py-[100px] relative"}>
       <Image
@@ -168,7 +175,7 @@ const PlatitnumComponent = ({ name, logo, url, description }: Sponsor) => (
       target="_blank"
       rel="noopener noreferrer"
       className="flex flex-row text-secondary-600 underline justify-center mt-[16px] mx-[16px] hover:opacity-50">
-      <p>{name}</p>
+      <p className={"text-lg"}>{name}</p>
       <Image
         src={"/linkout_b.svg"}
         alt={""}
@@ -177,7 +184,23 @@ const PlatitnumComponent = ({ name, logo, url, description }: Sponsor) => (
         className="object-contain ml-[3px]"
       />
     </a>
-    <p className={"mx-[24px] mt-[19px] whitespace-pre-wrap"}>{description}</p>
+    <div className={"flex flex-col my-[10px] items-center"}>
+      <a 
+        href={interview_url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={"flex flex-row items-center mb-[7px] hover:opacity-50"}>
+        <h4 className={"text-base text-tertiary-800 font-montserrat italic underline"}>Sponsor Interview</h4>
+        <Image
+          src={"/youtube.svg"}
+          alt={""}
+          width={20}
+          height={20}
+          className="object-contain ml-[5px]"
+        />
+      </a>
+    </div>
+    <p className={"mx-[24px] mt-[10px] whitespace-pre-wrap"}>{description}</p>
   </div>
 );
 

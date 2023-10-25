@@ -28,6 +28,7 @@ const Ja: Lang = {
       TUTORIAL: "チュートリアル",
       POSTER_SESSION: "ポスターセッション",
       LIGHTNING_TALK: "ライトニングトーク",
+      SPRINT: "スプリント",
     },
     SPONSOR: {
       SPONSOR_LIST: "スポンサー一覧",

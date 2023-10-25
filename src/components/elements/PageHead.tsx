@@ -6,7 +6,7 @@ const PageHead = () => {
       <title>PyCon APAC 2023</title>
       <meta name="description" content="PyCon APAC 2023"/>
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
-      <meta name="description" content=""/>
+      <meta name="description" content="PyCon APACは、Pythonユーザが集まり、PythonやPythonを使ったソフトウェアについて情報交換、交流をするためのカンファレンスです。"/>
       <meta name="format-detection" content="telephone=no"/>
       <meta property="og:type" content="website"/>
       <meta property="og:url" content="https://2023-apac.pycon.jp/"/>

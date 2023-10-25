@@ -280,8 +280,8 @@
     },
     {
         "name": "yagi",
-        "icon": "circle_dark_2x.png",
-        "twitter": "",
+        "icon": "yagikoch.jpg",
+        "twitter": "yagikoch",
         "github": "",
         "facebook": "",
         "division": "core",
@@ -316,7 +316,7 @@
     },
     {
         "name": "Takanori Suzuki",
-        "icon": "circle_dark_2x.png",
+        "icon": "takanori.jpg",
         "twitter": "takanory",
         "github": "takanory",
         "facebook": "",
@@ -325,7 +325,7 @@
     },
     {
         "name": "Claire Filtz",
-        "icon": "circle_dark_2x.png",
+        "icon": "",
         "twitter": "",
         "github": "",
         "facebook": "",
@@ -333,10 +333,10 @@
         "mastodon": ""
     },
     {
-        "name": "obassett",
-        "icon": "circle_dark_2x.png",
-        "twitter": "",
-        "github": "",
+        "name": "Oliver Bassett",
+        "icon": "obassett.png",
+        "twitter": "TattooedTech80",
+        "github": "obassett",
         "facebook": "",
         "division": "core",
         "mastodon": ""

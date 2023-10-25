@@ -26,6 +26,7 @@ export type Lang = {
       TUTORIAL: string;
       POSTER_SESSION: string;
       LIGHTNING_TALK: string;
+      SPRINT: string;
     };
     SPONSOR: {
       SPONSOR_LIST: string;

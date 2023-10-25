@@ -6,4 +6,5 @@ export type Sponsor = {
   description: string;
   name_en: string;
   description_en: string;
+  interview_url: string;
 };

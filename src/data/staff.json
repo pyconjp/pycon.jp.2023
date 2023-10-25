@@ -289,7 +289,7 @@
     },
     {
         "name": "Hakan",
-        "icon": "circle_dark_2x.png",
+        "icon": "Hakan.JPG",
         "twitter": "",
         "github": "",
         "facebook": "",
@@ -297,8 +297,8 @@
         "mastodon": ""
     },
     {
-        "name": "Bil",
-        "icon": "circle_dark_2x.png",
+        "name": "Bill",
+        "icon": "Bill.JPG",
         "twitter": "",
         "github": "",
         "facebook": "",
@@ -352,12 +352,30 @@
     },
     {
         "name": "Niharika Vadluri",
-        "icon": "circle_dark_2x.png",
+        "icon": "NiharikaVadluri.png",
         "twitter": "NiharikaVadluri",
         "github": "",
         "facebook": "",
         "division": "core",
         "mastodon": "@NiharikaVadluri"
+    },
+    {
+        "name": "Iosif Takakura",
+        "icon": "Iosif.jpg",
+        "twitter": "huideyeren",
+        "github": "huideyeren",
+        "facebook": "IosifTakakura",
+        "division": "core",
+        "mastodon": "@iosha@misskey.io"
+    },
+    {
+        "name": "Calvin Tsang",
+        "icon": "calvin_tsang.jpeg",
+        "twitter": "debugtsang1",
+        "github": "DebugTsang",
+        "facebook": "",
+        "division": "core",
+        "mastodon": ""
     },
     {
         "name": "Jasmine Yap",
@@ -378,11 +396,11 @@
         "mastodon": ""
     },
     {
-        "name": "dmadhav",
-        "icon": "circle_dark_2x.png",
+        "name": "Madhav Dhungana",
+        "icon": "madhav_dhungana.jpeg",
         "twitter": "",
-        "github": "",
-        "facebook": "",
+        "github": "madhav-dhungana",
+        "facebook": "madhav.dhungana",
         "division": "day",
         "mastodon": ""
     },

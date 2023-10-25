@@ -28,6 +28,7 @@ const En: Lang = {
       TUTORIAL: "Tutorial",
       POSTER_SESSION: "Poster Session",
       LIGHTNING_TALK: "Lightning Talk",
+      SPRINT: "Sprint",
     },
     SPONSOR: {
       SPONSOR_LIST: "Sponsor List",

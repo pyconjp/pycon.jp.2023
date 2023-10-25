@@ -143,7 +143,7 @@ const DiamondComponent = ({ name, logo, url, description, interview_url }: Spons
       <p className={"mx-[24px] mt-[19px] z-10 text-lg relative whitespace-pre-wrap"}>{description}</p>
       <div className={"flex flex-col my-[20px] items-center"}>
         <div className={"flex flex-row items-center mb-[7px]"}>
-          <h4 className={"lg:text-2xl text-xl text-tertiary-800 font-montserrat italic"}>Sponsor Interview</h4>
+          <h4 className={"lg:text-2xl text-xl text-tertiary-800 font-montserrat italic"}>Interview Video</h4>
         </div>
         <iframe className={"rounded-lg lg:w-[560px] lg:h-[315px] w-[336px] h-[189px]"} width="560" height="315" src={interview_url} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
       </div>

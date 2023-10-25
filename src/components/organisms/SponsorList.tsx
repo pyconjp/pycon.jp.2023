@@ -190,7 +190,7 @@ const PlatitnumComponent = ({ name, logo, url, description, interview_url }: Spo
         target="_blank"
         rel="noopener noreferrer"
         className={"flex flex-row items-center mb-[7px] hover:opacity-50"}>
-        <h4 className={"text-base text-tertiary-800 font-montserrat italic underline"}>Sponsor Interview</h4>
+        <h4 className={"text-base text-tertiary-800 font-montserrat italic underline"}>Interview Video</h4>
         <Image
           src={"/youtube.svg"}
           alt={""}

@@ -180,4 +180,10 @@ export type Lang = {
     DISTANT_SUB_TITLE: string;
     DISTANT_DESCRIPTION: string;
   };
+  ATTENTION: {
+    REGISTRATION_FLOW: {
+      TITLE: string;
+      DESCRIPTION: string;
+    }
+  }
 };

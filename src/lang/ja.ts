@@ -223,6 +223,13 @@ const Ja: Lang = {
     DISTANT_DESCRIPTION:
       "主に遠方者を対象に、交通費の全額または一部をPyCon JPが負担する制度です。",
   },
+  ATTENTION: {
+    REGISTRATION_FLOW: {
+      TITLE: "当日の入場方法",
+      DESCRIPTION:"一般参加者、スピーカーの方はPretixで購入した後に送付されるQRコードを入場受付スタッフにお見せください。\n" +
+        "見せる方法は、QRコードを印刷したもの及び、スマートフォンで表示させるものどちらでも可能です。",
+    }
+  }
 };
 
 export default Ja;

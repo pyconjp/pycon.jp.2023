@@ -7,7 +7,7 @@ const Live = () => {
   )
 }
 
-export const getServerSideProps = async () => {
+const getServerSideProps = async () => {
   return {
     redirect: {
       permanent: true,

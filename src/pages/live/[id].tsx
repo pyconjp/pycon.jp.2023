@@ -1,7 +1,6 @@
 import {GetStaticPaths, GetStaticProps} from "next";
 import {ParsedUrlQuery} from "querystring";
 import {lives} from "@/data/lives";
-import PageHead from "@/components/elements/PageHead";
 import PageTitle from "@/components/elements/PageTitle";
 import {LiveDate, LiveOption} from "@/types/lives";
 import Select, {PropsValue} from 'react-select';

@@ -1,8 +1,8 @@
 import * as fs from "fs";
-import {GetStaticProps} from "next";
+import { GetStaticProps } from "next";
 import Image from "next/image";
-import {Division, Staff} from "@/types/staff";
-import {useTranslation} from "react-i18next";
+import { Division, Staff } from "@/types/staff";
+import { useTranslation } from "react-i18next";
 import PageTitle from "@/components/elements/PageTitle";
 import SectionTitle from "@/components/elements/SectionTitle";
 import path from "path";
@@ -12,10 +12,12 @@ type Props = {
     bio?: string[];
 };
 
-const StaffCard = ({staff}: { staff: Staff }) => (
-    <div className={"flex items-center gap-2 flex-row"}>
+const StaffCard = ({ staff }: { staff: Staff }) => {
+    const staff_icon = staff.icon ?
+        staff.icon : "circle_dark_2x.png"
+    return <div className={"flex items-center gap-2 flex-row"}>
         <Image
-            src={"/staff/" + staff.icon}
+            src={"/staff/" + staff_icon}
             alt={staff.name}
             width={600}
             height={600}
@@ -24,16 +26,16 @@ const StaffCard = ({staff}: { staff: Staff }) => (
         <div className={"flex flex-col m-[12px]"}>
             <div className={"mb-[6px] font-bold"}>{staff.name}</div>
             <div className={"flex flex-row items-center"}>
-                <TwitterIcon account={staff.twitter} isChairs={false}/>
-                <GithubIcon account={staff.github} isChairs={false}/>
-                <FacebookIcon account={staff.facebook} isChairs={false}/>
-                <MastodonIcon account={staff.mastodon} isChairs={false}/>
+                <TwitterIcon account={staff.twitter} isChairs={false} />
+                <GithubIcon account={staff.github} isChairs={false} />
+                <FacebookIcon account={staff.facebook} isChairs={false} />
+                <MastodonIcon account={staff.mastodon} isChairs={false} />
             </div>
         </div>
     </div>
-);
+};
 
-const ViceChairCard = ({staff, bio = []}: Props) => (
+const ViceChairCard = ({ staff, bio = [] }: Props) => (
     <div className={"flex-1 flex flex-col"}>
         <Image
             src={"/staff/" + staff.icon}
@@ -50,20 +52,20 @@ const ViceChairCard = ({staff, bio = []}: Props) => (
             {
                 bio.map((text, index) => (
                     <p key={index}
-                       className={"mb-[16px] lg:text-base text-sm text-alt-black whitespace-pre-wrap"}>{text}</p>)
+                        className={"mb-[16px] lg:text-base text-sm text-alt-black whitespace-pre-wrap"}>{text}</p>)
                 )
             }
             <div className={"flex flex-row items-center"}>
-                {staff.twitter !== "" && <TwitterIcon account={staff.twitter} isChairs={true}/>}
-                {staff.github !== "" && <GithubIcon account={staff.github} isChairs={true}/>}
-                {staff.facebook !== "" && <FacebookIcon account={staff.facebook} isChairs={true}/>}
-                {staff.mastodon !== "" && <MastodonIcon account={staff.mastodon} isChairs={true}/>}
+                {staff.twitter !== "" && <TwitterIcon account={staff.twitter} isChairs={true} />}
+                {staff.github !== "" && <GithubIcon account={staff.github} isChairs={true} />}
+                {staff.facebook !== "" && <FacebookIcon account={staff.facebook} isChairs={true} />}
+                {staff.mastodon !== "" && <MastodonIcon account={staff.mastodon} isChairs={true} />}
             </div>
         </div>
     </div>
 );
 
-const SupervisorCard = ({staff, bio = []}: Props) => (
+const SupervisorCard = ({ staff, bio = [] }: Props) => (
     <div className={"flex-1 flex flex-col"}>
         <Image
             src={"/staff/" + staff.icon}
@@ -79,47 +81,47 @@ const SupervisorCard = ({staff, bio = []}: Props) => (
             </div>
             {
                 bio.map((text, index) => (
-                        <p key={index}
-                           className={"mb-[16px] lg:text-base text-sm text-alt-black whitespace-pre-wrap"}>{text}</p>
-                    )
+                    <p key={index}
+                        className={"mb-[16px] lg:text-base text-sm text-alt-black whitespace-pre-wrap"}>{text}</p>
+                )
                 )
             }
             <div className={"flex flex-row items-center"}>
-                {staff.twitter !== "" && <TwitterIcon account={staff.twitter} isChairs={true}/>}
-                {staff.github !== "" && <GithubIcon account={staff.github} isChairs={true}/>}
-                {staff.facebook !== "" && <FacebookIcon account={staff.facebook} isChairs={true}/>}
-                {staff.mastodon !== "" && <MastodonIcon account={staff.mastodon} isChairs={true}/>}
+                {staff.twitter !== "" && <TwitterIcon account={staff.twitter} isChairs={true} />}
+                {staff.github !== "" && <GithubIcon account={staff.github} isChairs={true} />}
+                {staff.facebook !== "" && <FacebookIcon account={staff.facebook} isChairs={true} />}
+                {staff.mastodon !== "" && <MastodonIcon account={staff.mastodon} isChairs={true} />}
             </div>
         </div>
     </div>
 );
 
-const TwitterIcon = ({account, isChairs}: { account: string, isChairs: boolean }) => {
+const TwitterIcon = ({ account, isChairs }: { account: string, isChairs: boolean }) => {
     if (account === "") return null;
-    return <SocialIcon src="/twitter_b.svg" url={`https://twitter.com/${account}`} 
-                       alt={`https://twitter.com/${account}`} isChairs={isChairs}/>
+    return <SocialIcon src="/twitter_b.svg" url={`https://twitter.com/${account}`}
+        alt={`https://twitter.com/${account}`} isChairs={isChairs} />
 }
 
-const GithubIcon = ({account, isChairs}: { account: string, isChairs: boolean}) => {
+const GithubIcon = ({ account, isChairs }: { account: string, isChairs: boolean }) => {
     if (account === "") return null;
-    return <SocialIcon src="/github_b.svg" url={`https://github.com/${account}`} 
-                       alt={`https://github.com/${account}`} isChairs={isChairs}/>
+    return <SocialIcon src="/github_b.svg" url={`https://github.com/${account}`}
+        alt={`https://github.com/${account}`} isChairs={isChairs} />
 }
 
-const FacebookIcon = ({account, isChairs}: { account: string, isChairs: boolean }) => {
+const FacebookIcon = ({ account, isChairs }: { account: string, isChairs: boolean }) => {
     if (account === "") return null;
     return <SocialIcon src="/facebook_b.svg" url={`https://www.facebook.com/${account}`}
-                       alt={`https://www.facebook.com/${account}`} isChairs={isChairs}/>
+        alt={`https://www.facebook.com/${account}`} isChairs={isChairs} />
 }
 
-const MastodonIcon = ({account, isChairs}: { account: string, isChairs: boolean }) => {
+const MastodonIcon = ({ account, isChairs }: { account: string, isChairs: boolean }) => {
     if (account === "") return null;
     const [_, user, server] = account.split('@');
     return <SocialIcon src="/mastodon_b.svg" url={`https://${server}/@${user}`}
-           alt={account} isChairs={isChairs}/>
+        alt={account} isChairs={isChairs} />
 }
 
-const SocialIcon = ({src, url, alt, isChairs}: { src: string, url: string, alt: string, isChairs: boolean }) => {
+const SocialIcon = ({ src, url, alt, isChairs }: { src: string, url: string, alt: string, isChairs: boolean }) => {
     if (isChairs === true) {
         return <a href={url} target="_blank" rel="noopener noreferrer">
             <Image
@@ -141,14 +143,14 @@ const SocialIcon = ({src, url, alt, isChairs}: { src: string, url: string, alt: 
     }
 }
 
-const SimpleStaffCard = ({staff}: { staff: Staff }) => (
+const SimpleStaffCard = ({ staff }: { staff: Staff }) => (
     <div className={"flex flex-row"}>
-        <div className={"m-[12px] text-secondary-600 font-bold underline"}>{staff.name}</div>
+        <div className={"m-[12px] text-secondary-600 font-bold"}>{staff.name}</div>
     </div>
 );
 
-const StaffPage = ({rows = []}: { rows: Staff[] }) => {
-    const {t} = useTranslation("STAFF");
+const StaffPage = ({ rows = [] }: { rows: Staff[] }) => {
+    const { t } = useTranslation("STAFF");
 
     const divisions = splitDivisons(rows);
     const chair = divisions.chair[0];
@@ -158,8 +160,8 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
 
     return (
         <>
-            <PageTitle title='Staff'/>
-            <SectionTitle title='Chair' subTitle='座長'/>
+            <PageTitle title='Staff' />
+            <SectionTitle title='Chair' subTitle='座長' />
             <div className={"lg:mx-[80px] mx-[20px] mb-[60px] flex lg:flex-row flex-col"}>
                 <Image
                     src={"/staff/Lina_katayose(Selina).jpg"}
@@ -193,7 +195,7 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
                             />
                         </a>
                         <a href={"https://www.facebook.com/" + chair.facebook} target="_blank"
-                           rel="noopener noreferrer">
+                            rel="noopener noreferrer">
                             <Image
                                 src="/facebook_b.svg"
                                 alt=""
@@ -206,7 +208,7 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
                 </div>
             </div>
 
-            <SectionTitle title='Vice Chair & Supervisor' subTitle='副座長＆スーパーバイザー'/>
+            <SectionTitle title='Vice Chair & Supervisor' subTitle='副座長＆スーパーバイザー' />
             <div
                 className={"lg:mx-[80px] mx-[20px] mb-[60px] flex flex-col lg:flex-row gap-12 lg:gap-2 justify-center"}>
                 <ViceChairCard
@@ -223,7 +225,7 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
                 />
             </div>
 
-            <SectionTitle title='Core Staff' subTitle='コアスタッフ'/>
+            <SectionTitle title='Core Staff' subTitle='コアスタッフ' />
             <div className={"lg:mx-[128px] mb-[60px] grid lg:grid-cols-4  gap-4 justify-center"}>
                 {divisions.core.map((row, index) => (
                     <StaffCard
@@ -233,67 +235,21 @@ const StaffPage = ({rows = []}: { rows: Staff[] }) => {
                 ))}
             </div>
 
-
-            {
-                divisions.day.length > 0 &&
-              <>
-                <SectionTitle title='Staff On The Day' subTitle='当日スタッフ'/>
-                <div
-                  className={"lg:mx-[128px] mx-[20px] mb-[60px] grid lg:grid-cols-4 grid-cols-2 place-items-center gap-4"}>
-                    {divisions.day.map((row, index) => (
-                        <SimpleStaffCard key={index} staff={row}/>
-                    ))}
-                </div>
-              </>
-            }
-
-            <SectionTitle title='Reviewer' subTitle='レビュワー'/>
-            <div
-                className={"lg:mx-[128px] mx-[20px] mb-[60px] grid lg:grid-cols-4 grid-cols-2 place-items-center gap-4"}>
-                {divisions.reviewer.map((row, index) => (
-                    <SimpleStaffCard key={index} staff={row}/>
+            <SectionTitle title='Staff On The Day' subTitle='当日スタッフ' />
+            <div className={"lg:mx-[128px] mb-[60px] grid lg:grid-cols-4  gap-4 justify-center"}>
+                {divisions.day.map((row, index) => (
+                    <StaffCard key={index} staff={row} />
                 ))}
             </div>
 
-            <div className="lg:mx-[131px] mx-[16px] lg:my-[81px] my-[60px] py-[32px] bg-[#ffffff] shadow-lg rounded-lg">
-                <div className="flex flex-col mx-[72px]">
-                    <div
-                        className='before:top-1/2 before:w-4 before:h-4 before:mr-4 before:-ml-8 before:-mt-2  before:content-[url("/ellipse.svg")] before:inline-block ml-0 pl-8'>
-                        <h3 className="lg:text-2xl text-xl text-alt-black font-bold inline">
-                            {t("recruite_title")}
-                        </h3>
-                    </div>
-                    <p className="text-alt-black lg:text-lg text-base p-[12px]">{t("recruite_text")}</p>
-                    <div className="ml-[auto]">
-                        {/* 募集フォーム有効 */}
-                        {/* <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSf3Zw3b-X9KMo81G9BJJFFfq6jYzzUAviLZALzhiCFeFuMybQ/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-row text-primary-500 underline hover:opacity-50">
-              <p className={"lg:text-lg text-base"}>{c.recruite_link}</p>
-              <Image
-                src={"/linkout_p.svg"}
-                alt={""}
-                width={20}
-                height={20}
-                className="object-contain ml-[3px]"
-              />
-          </a> */}
-                        {/* 募集フォーム無効 */}
-                        <div className="flex flex-row text-primary-500 underline">
-                            <p className={"lg:text-lg text-base"}>{t("recruite_link")}</p>
-                            <Image
-                                src={"/linkout_p.svg"}
-                                alt={""}
-                                width={20}
-                                height={20}
-                                className="object-contain ml-[3px]"
-                            />
-                        </div>
-                    </div>
-                </div>
+            <SectionTitle title='Reviewer' subTitle='レビュワー' />
+            <div
+                className={"lg:mx-[128px] mx-[20px] mb-[60px] grid lg:grid-cols-4 grid-cols-2 place-items-center gap-4"}>
+                {divisions.reviewer.map((row, index) => (
+                    <SimpleStaffCard key={index} staff={row} />
+                ))}
             </div>
+
         </>
     );
 };
@@ -323,7 +279,7 @@ export const getStaticProps: GetStaticProps = async () => {
     const rows = JSON.parse(jsonText) as Staff[]
 
     // ページコンポーネントに渡す props オブジェクトを設定する
-    return {props: {rows}}
+    return { props: { rows } }
 };
 
 export default StaffPage;

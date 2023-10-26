@@ -1,11 +1,17 @@
 import PageTitle from "@/components/elements/PageTitle";
-import {Talk, Day, ConferenceEvent, Answer} from "@/types/timetable";
+import {Talk, Day, ConferenceEvent, Answer, Session} from "@/types/timetable";
 import Timetable from "@/components/organisms/Timetable";
 import {events} from "@/data/timetable";
 import {useRouter} from "next/router";
 import Modal from "@/components/elements/Modal";
 import {useEffect} from "react";
-import {fetchAnswers, fetchTalks, SUBMISSION_TYPE_REGULAR_TALK, SUBMISSION_TYPE_SHORT_TALK} from "@/utils/pretalx";
+import {
+  fetchAnswers,
+  fetchTalks,
+  sortTalks,
+  SUBMISSION_TYPE_REGULAR_TALK,
+  SUBMISSION_TYPE_SHORT_TALK
+} from "@/utils/pretalx";
 
 
 type Props = {
@@ -79,8 +85,9 @@ const TimeTable = ({sessions, startTime, endTime}: Props) => {
 }
 
 
-const getStartDateTime = (sessions: Talk[]) => {
+const getStartDateTime = (sessions: Session[]) => {
   const start = sessions
+    .filter(session => session?.hide_start !== true)
     .map(session => session.slot.start);
 
   const result: string[] = [];
@@ -88,29 +95,14 @@ const getStartDateTime = (sessions: Talk[]) => {
   return result;
 }
 
-const getEndDateTime = (sessions: Talk[]) => {
+const getEndDateTime = (sessions: Session[]) => {
   const start = sessions
+    .filter(session => session?.hide_end !== true)
     .map(session => session.slot.end);
 
   const result: string[] = [];
   start.forEach(s => !result.includes(s) && result.push(s));
   return result;
-}
-
-const sortSessions = (session1: Talk | ConferenceEvent, session2: Talk | ConferenceEvent) => {
-  if (session1.slot.start < session2.slot.start) {
-    return -1;
-  } else if (session1.slot.start > session2.slot.start) {
-    return 1;
-  } else {
-    if (session1.slot.room["ja-jp"] < session2.slot.room["ja-jp"]) {
-      return -1;
-    } else if (session1.slot.room["ja-jp"] > session2.slot.room["ja-jp"]) {
-      return 1;
-    } else {
-      return 0;
-    }
-  }
 }
 
 export const getStaticProps = async () => {
@@ -136,11 +128,10 @@ export const getStaticProps = async () => {
   const day2_4f = regular.filter(session => session.slot.start >= DATE_THRESHOLD);
   const day2_20f = short.filter(session => session.slot.start >= DATE_THRESHOLD);
 
-  const day1_events_starts = events.day1.map((event: ConferenceEvent) => event.slot.start);
-  const day2_events_starts = events.day2.map((event: ConferenceEvent) => event.slot.start);
-
-  const day1_events_ends = events.day1.map((event: ConferenceEvent) => event.slot.end);
-  const day2_events_ends = events.day2.map((event: ConferenceEvent) => event.slot.end);
+  const day1_events_starts = getStartDateTime(events.day1);
+  const day2_events_starts = getStartDateTime(events.day2);
+  const day1_events_ends = getEndDateTime(events.day1);
+  const day2_events_ends = getEndDateTime(events.day2);
 
   return {
     props: {
@@ -149,12 +140,12 @@ export const getStaticProps = async () => {
           ...day1_4f,
           ...day1_20f,
           ...events.day1,
-        ].sort(sortSessions),
+        ].sort(sortTalks),
         "day2": [
           ...day2_4f,
           ...day2_20f,
           ...events.day2,
-        ].sort(sortSessions)
+        ].sort(sortTalks)
       },
       startTime: {
         "day1": {

@@ -1,0 +1,121 @@
+[
+    {
+        "type": "General",
+        "place": "G1",
+        "name": "Ryuji Tsutsui",
+        "title": "Python Boot Campの紹介 - あなたの街で開催しませんか？（Introducing Python Boot Camp - Want to Host it in Your Town?）",
+        "abstruct": "Python Boot Campは日本全国で開催しているPythonチュートリアルイベントで、2016年から活動を続けています。\n\n一般社団法人PyCon JP Associationから派遣されたPythonエキスパートが講師を務め、丁寧にPythonの基礎を教えています。\n\nこのポスターセッションを通じてイベントの雰囲気をみなさんに知ってもらいたいです。\nまた、このイベントは「私の街で開催したい」と思った人が現地スタッフとして立候補することで開催できます。\n話を聞いて興味を持った方には、ぜひ開催を立候補してください。開催に必要なプロセスや、FAQなどもお話します。\n\n地元にPython仲間を増やしたい方は必見です。また、私達の取り組みがいいなと思った方はぜひ周りに広めてください！"
+    },
+    {
+        "type": "General",
+        "place": "G2",
+        "name": "中川万莉奈(AIIT 追川PBL)",
+        "title": "アジャイル開発を体得したい！  社会人大学院生７名でチームを組んでSlack Bot「co-py-bot」開発に取り組んでみた",
+        "abstruct": "東京都立産業技術大学院大学(AIIT)情報アーキテクチャーコース2年追川PBLのプロジェクトチームです。\n\nAIITでは2年次にPBL（Project Based Learning）型教育を行います。PBL型教育とは、数名の学生がグループを組み一つのプロジェクトを1年かけて取り組む教育方法です。実際の業務に近いプロジェクトに取り組むことで、実務で役立つスキルやノウハウを修得していくというものです。\n\n我々追川PBLでは「スクラムを通じた大規模言語モデルの活用方法とアジャイル開発の思想の学習および習得」をテーマにSlack Bot「co-py-bot」開発を行っています。\n\n学び直しが話題になっている昨今。就業後に社会人大学院生がPythonをつかってプロダクト開発に取り組んだ結果得られた学びを発表したいと思います。"
+    },
+    {
+        "type": "General",
+        "place": "G3",
+        "name": "nikkie\n辻真吾\nstapyメンバー\n阿久津　剛史 / AKUTSU, Takeshi",
+        "title": "Start Python Club",
+        "abstruct": "「Pythonと技術を楽しく学ぶ場を提供する」ことをミッションとして、毎月、オンラインで勉強会を開催しているコミュニティです。初めて聞いた方、過去参加したことある方、常連の方、お気軽にポスターまでお越しください"
+    },
+    {
+        "type": "General",
+        "place": "G4",
+        "name": "Hassan Saad Ifti",
+        "title": "Visualisation of Wind Tunnel Data Obtained at Seven Times the Speed of Sound",
+        "abstruct": "In this poster, experimental data obtained in a wind tunnel at a flow speed of Mach 7, i.e. seven times the speed of sound, are visualised in videos using Python. The steps of data processing, analysis, and visualisation are demonstrated and results are compared to identical results obtained from MATLAB. The strengths and weaknesses of Python and its libraries are discussed."
+    },
+    {
+        "type": "General",
+        "place": "G5",
+        "name": "nikkie\nTatsuya Nibuno",
+        "title": "Python使いの視点で技術書を読む読書会「読書py」のご紹介",
+        "abstruct": "コミュニティのポスター発表として、2022年から2-3週に1回ペースで、オンラインで開催している読書会を紹介します。シーズン1としてミノ駆動本を読み、現在はちょうぜつ本を読むシーズン2です。これらの本に興味がある方や読書会で読みたい本がある方など、お気軽にお越しください。"
+    },
+    {
+        "type": "General",
+        "place": "G6",
+        "name": "桂川大輝",
+        "title": "ノートブックをチョットキレイにするためのTips",
+        "abstruct": "Jupyter NotebookやGoogle Colaboratoryなどのノートブックはデータ分析や機械学習などの目的で幅広く活用されています。しかし、これらのツールがインタラクティブな実行環境であることや、実験目的での利用がなされることにより、管理や可読性が困難になることがしばしば見受けられます。特に、再度実行する機会がある場合や、プロジェクトやチームで共有する機会がある場合は、その問題は一層深刻になります。本発表では、そんなノートブックにおける問題に対する打ち手として、「ノートブックをキレイにするためのTips」を紹介します。これらのTipsは、ノートブックの可読性の向上、再利用可能性の確保、そして効率的な管理方法を実現することを目的としています。"
+    },
+    {
+        "type": "General",
+        "place": "G7",
+        "name": "Shivay Lamba\nGaurav Pandey",
+        "title": "Building Machine Learning Microservices & MLOps using Union ML",
+        "abstruct": "UnionML is an open-source microframework developed by Flyte for streamlining machine learning development and deployment. This poster session demonstrates its benefits, including automated model fine-tuning and deployment in various prediction use cases."
+    },
+    {
+        "type": "Community",
+        "place": "C1",
+        "name": "Sphinx-Users.jp",
+        "title": "",
+        "abstruct": "SPHINXドキュメンテーションジェネレータ"
+    },
+    {
+        "type": "Community",
+        "place": "C2",
+        "name": "Python ID Community",
+        "title": "",
+        "abstruct": "In this session I will give presentation about how Python ID strive, how their regionals do, and invite the attedance to PyCon ID 2023"
+    },
+    {
+        "type": "Community",
+        "place": "C3",
+        "name": "django-ja",
+        "title": "",
+        "abstruct": "django-jaコミュニティの活動について紹介します。\n\nDjangoはPythonで作られたウェブアプリケーションフレームワークです。\ndjango-jaは、日本のDjangoユーザーのためのコミュニティです。\n\n活動内容\nDiscordグループ\nDjangoのリソース翻訳\nDjangoMeetupTokyo\nDjangoCongressJP 2023開催レポート"
+    },
+    {
+        "type": "Community",
+        "place": "C4",
+        "name": "PyCon HK",
+        "title": "",
+        "abstruct": "Introduction about PyCon HK and welcome people to join our conference this year."
+    },
+    {
+        "type": "Community",
+        "place": "C5",
+        "name": "CoderDojo横浜師岡 / CoderDojo\nMorooka Yokohama",
+        "title": "",
+        "abstruct": "横浜市港北区師岡（モロオカ）、綱島、大倉山周辺で活動する7~17歳を対象としたボラインティアによるプログラミングクラブCoderDojo横浜師岡の活動、子どもたちのプログラミングや作品作り（ロボット、電子工作、ゲームなど）でPythonをどのように活用出来るかについて紹介します。"
+    },
+    {
+        "type": "Community",
+        "place": "C6",
+        "name": "Open Source Automation Community",
+        "title": "",
+        "abstruct": "Automating Web Application Deployment with Python and Jenkins :\nThis session will discuss how to achieve Continuous Integration and Continuous Deployment (CI/CD) for web application using python and Jenkins. Tomcat with Python is a popular choice for deploying web applications as it is lightweight, easy to configure , and supports a wide range of python libraries. There are many open source tools available for both automatic deployments and server configuration management, including\npopular options like Jenkins and GitLab.\nIn this presentation, we will be presenting web server deployments using Jenkins and python. The content of this poster presentation will include but not limited to :\n– What is CI/CD?\n– benefits of using CI/CD with python\n– web server configuration\n– Steps involved in configuring deployment pipeline\n– Setting up Jenkins pipeline for web app deployment with python\n– A walkthrough of a deployment pipeline\n– Best practices for deployment pipelines with python\n– Conclusion\nThrought the poster presentation, We will focus on providing clear and easy to understand explanations rather than including complex and advanced details."
+    },
+    {
+        "type": "Community",
+        "place": "C7",
+        "name": "すごい広島 IT初心者の会",
+        "title": "",
+        "abstruct": "「すごい広島」は広島で毎週水曜日に開催されているIT系のもくもく会です。月の最終水曜日は「すごい広島 with Python」としてPythonに興味がある人が集まり、LTや情報交換の交流の場として活動していましたが、2023年8月から「すごい広島 IT初心者の会」になりました。広島のPythonコミュニティは過去に「PyCon mini Hiroshima」のイベントも開催しました。今回は広島のPythonコミュニティの活動を紹介します。"
+    },
+    {
+        "type": "Community",
+        "place": "C8",
+        "name": "PyCon mini Shizuoka",
+        "title": "",
+        "abstruct": "静岡県でカンファレンスや勉強会を実施しているコミュニティ『PyCon mini Shizuoka』についての紹介を行います。\n過去に行ったイベントの様子を写真付きで紹介したり、日頃の活動について説明を行う予定です。"
+    },
+    {
+        "type": "Community",
+        "place": "C9",
+        "name": "COSCUP - Conference for Open Source Coders, Users & Promoters (Taiwan)",
+        "title": "",
+        "abstruct": "Introducing COSCUP - an open-source conference in Taiwan to people based in Japan and APAC.\n\n# Why do we introduce this at PyCon APAC?\n\n1. The event seems appealing to people in Python communities. You can see attendees from PyCon Taiwan, Japan, Korea, Hong Kong, India, and Berlin at the event this year.\n2. There are many talks at COSCUP that specifically address Python.\n\n# About me:\n\nI am a volunteer helping out at COSCUP as well as PyCon Taiwan."
+    },
+    {
+        "type": "Community",
+        "place": "C10",
+        "name": "PyLadies Tokyo",
+        "title": "",
+        "abstruct": "コニュニティーの説明、これまでの活動報告、参加方法の紹介など。評判が良かった回の発表内容なども共有したいと思っています。"
+    }
+]

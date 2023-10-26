@@ -16,6 +16,7 @@ export const menu: Menu[] = [
     children: [
       { title: "ABOUT.COC", url: "/coc" },
       { title: "ABOUT.VENUE", url: "/", isComingSoon: true },
+      { title: "ABOUT.VENUE", url: "/venue" },
     ],
   },
   {
@@ -23,6 +24,10 @@ export const menu: Menu[] = [
     children: [
       { title: "EVENTS.TIMETABLE", url: "/timetable" },
       { title: "EVENTS.EVENTS", url: "/", isComingSoon: true },
+      { title: "EVENTS.TUTORIAL", url: "/tutorial" },
+      { title: "EVENTS.LIGHTNING_TALK", url: "/lightning-talk" },
+      { title: "EVENTS.POSTER_SESSION", url: "/poster" },
+      { title: "EVENTS.SPRINT", url: "/sprint", isComingSoon: true },
     ],
   },
   {

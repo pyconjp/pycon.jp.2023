@@ -24,6 +24,10 @@ export type Lang = {
     EVENTS: {
       TIMETABLE: string;
       EVENTS: string;
+      TUTORIAL: string;
+      POSTER_SESSION: string;
+      LIGHTNING_TALK: string;
+      SPRINT: string;
     };
     SPONSOR: {
       SPONSOR_LIST: string;
@@ -124,17 +128,56 @@ export type Lang = {
       NAME: string;
       BIO: string;
       IMG_ALT: string;
+      DATE: string;
     };
     SPEAKER_EN: {
       NAME: string;
       BIO: string;
       IMG_ALT: string;
+      DATE: string;
     };
   };
   ANNOUNCE: {
     NURSERY: {
       TITLE: string;
       DESCRIPTION: string;
+    };
+    ONE_DAY_STAFF: {
+      TITLE: string;
+      DESCRIPTION: string;
     },
-  },
+  };
+  VENUE: {
+    GMAP_T_URL: string;
+    GMAP_S_URL: string;
+    FLOOR4: string;
+    FLOOR20: string;
+    VENUE_TITLE: string;
+    VENUE_TEXT_T: string;
+    VENUE_TEXT_S: string;
+    LOCATION_TITLE: string;
+    LOCATION_TEXT_T: string;
+    LOCATION_TEXT_S: string;
+    STATION_TITLE: string;
+    STATION_TEXT_T: string;
+    STATION_TEXT_S: string;
+  };
+  TUTORIAL: {
+    INDEX: string;
+    DESCRIPTION: string;
+  };
+  LIGHTNING_TALK: {
+    DAY1: string;
+    DAY2: string;
+  };
+  SUPPORT: {
+    FOOD_TITLE: string;
+    FOOD_DESCRIPTION: string;
+    NURSERY_TITLE: string;
+    NURSERY_SUB_TITLE: string;
+    NURSERY_DESCRIPTION: string;
+    DISTANT_TITLE: string;
+    DISTANT_SUB_TITLE: string;
+    DISTANT_DESCRIPTION: string;
+  };
 };

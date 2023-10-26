@@ -1,19 +1,14 @@
 import {lives} from "@/data/lives";
+import {useRouter} from "next/router";
 
-const Live = () => {
+const Live = async () => {
+  const router = useRouter();
+  await router.push(`/live/${lives[0].options[0].value}`);
+
   return (
     <>
     </>
   )
-}
-
-const getServerSideProps = async () => {
-  return {
-    redirect: {
-      permanent: true,
-      destination: `/live/${lives[0].options[0].value}`,
-    },
-  }
 }
 
 export default Live;

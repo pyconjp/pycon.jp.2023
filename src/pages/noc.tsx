@@ -14,7 +14,7 @@ export const ArchitectureComponent = () => {
         <div className={"z-20 relative"}>
           <div className={"bg-[#ffffff] rounded-lg mt-[72px] mb-[72px] p-[200px] relative"}>
             <Image
-              src="pyconapac2023_ogp.png"
+              src="https://img.noc.pycon.jp/img/noc_topology.png"
               alt=""
               fill
               className={"object-contain m-auto max-w-[70%] max-h-[80%] absolute"}
@@ -34,16 +34,37 @@ export const RealtimeMonitorComponent = () => {
 
       <div className={"relative"}>
         <div className={"z-20 relative"}>
-          <div className={"bg-[#ffffff] rounded-lg mt-[72px] mb-[72px] relative"}>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/e_EbzeBf06g"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              className={"m-auto"}>
-            </iframe>
+          <div className={"bg-[#ffffff] rounded-lg mt-[72px] mb-[72px] p-[200px] relative"}>
+            <Image
+              src="https://img.noc.pycon.jp/img/noc_img1.png"
+              alt=""
+              fill
+              className={"object-contain m-auto max-w-[70%] max-h-[80%] absolute"}
+            />
+          </div>
+        </div>
+      </div>
+      <div className={"relative"}>
+        <div className={"z-20 relative"}>
+          <div className={"bg-[#ffffff] rounded-lg mt-[72px] mb-[72px] p-[200px] relative"}>
+            <Image
+              src="https://img.noc.pycon.jp/img/noc_img2.png"
+              alt=""
+              fill
+              className={"object-contain m-auto max-w-[70%] max-h-[80%] absolute"}
+            />
+          </div>
+        </div>
+      </div>
+      <div className={"relative"}>
+        <div className={"z-20 relative"}>
+          <div className={"bg-[#ffffff] rounded-lg mt-[72px] mb-[72px] p-[200px] relative"}>
+            <Image
+              src="https://img.noc.pycon.jp/img/noc_img3.png"
+              alt=""
+              fill
+              className={"object-contain m-auto max-w-[70%] max-h-[80%] absolute"}
+            />
           </div>
         </div>
       </div>

@@ -2,11 +2,13 @@ export const lives = [
   {
     label: 'Day1 (OCTOBER 26, 2023)',
     options: [
+      {value: 'vTrzyHtOeBI', label: 'Keynote(基調講演) 日本語同時通訳',},
       {value: 'qM2ZinHiAd8', label: '#pyconapac_1',},
       {value: '_T0oSYT1jlw', label: '#pyconapac_2',},
       {value: 'bA11hZTIBUE', label: '#pyconapac_3',},
       {value: 'CtTjApnqb8c', label: '#pyconapac_4',},
       {value: 'RvPjFTwXWTI', label: '#pyconapac_5',},
+      {value: 'eE7OEvL4bTA', label: 'General, Keynote, Opening, etc...',},
     ],
   },
   {
@@ -18,6 +20,7 @@ export const lives = [
       {value: 'xXX7u1Xdkmk', label: '#pyconapac_3',},
       {value: '4jGS2Uzj0eQ', label: '#pyconapac_4',},
       {value: '4qh7lh0XcJ4', label: '#pyconapac_5',},
+      {value: 'Msbp1RAR9gY', label: 'General, Keynote, Opening, etc...',},
     ],
   },
 ]

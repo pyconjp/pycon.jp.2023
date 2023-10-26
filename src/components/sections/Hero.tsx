@@ -104,6 +104,10 @@ export default function HeroSection() {
                 <a href="https://pretix.eu/pyconjp/2023-apac/"
                     className="bg-alt-black hover:bg-secondary-700 rounded text-center text-alt-white w-full py-[14px]"
                 ><span>{t("TICKET_INFO")}</span></a>
+                <div className='mt-8 bg-primary-50 w-10/12 p-6 rounded border-alt-black border-2'>
+                  <div className='text-lg font-bold text-primary-600'>{t('REGISTRATION_FLOW.TITLE', {ns: 'ATTENTION'})}</div>
+                  <div className='mt-2 whitespace-pre-line'>{t('REGISTRATION_FLOW.DESCRIPTION', {ns: 'ATTENTION'})}</div>
+                </div>
             </div>
         </section>
 

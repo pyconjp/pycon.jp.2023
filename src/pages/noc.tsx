@@ -34,36 +34,27 @@ export const RealtimeMonitorComponent = () => {
       <div className={"relative"}>
         <div className={"z-20 relative"}>
           <div className={"bg-[#ffffff] rounded-lg mt-[72px] mb-[72px] p-[200px] relative"}>
-            <Image
-              src="https://img.noc.pycon.jp/img/noc_img1.png"
-              alt=""
-              fill
-              className={"object-contain m-auto max-w-[70%] max-h-[80%] absolute"}
-            />
-          </div>
-        </div>
-      </div>
-      <div className={"relative"}>
-        <div className={"z-20 relative"}>
-          <div className={"bg-[#ffffff] rounded-lg mt-[72px] mb-[72px] p-[200px] relative"}>
-            <Image
-              src="https://img.noc.pycon.jp/img/noc_img2.png"
-              alt=""
-              fill
-              className={"object-contain m-auto max-w-[70%] max-h-[80%] absolute"}
-            />
-          </div>
-        </div>
-      </div>
-      <div className={"relative"}>
-        <div className={"z-20 relative"}>
-          <div className={"bg-[#ffffff] rounded-lg mt-[72px] mb-[72px] p-[200px] relative"}>
-            <Image
-              src="https://img.noc.pycon.jp/img/noc_img3.png"
-              alt=""
-              fill
-              className={"object-contain m-auto max-w-[70%] max-h-[80%] absolute"}
-            />
+            <div className="mt-10">
+              <img
+                src="https://img.noc.pycon.jp/img/noc_img1.png"
+                alt=""
+                className={"object-contain m-auto max-w-[100%] max-h-[100%] "}
+              />
+            </div>
+            <div className="mt-10">
+              <img
+                src="https://img.noc.pycon.jp/img/noc_img2.png"
+                alt=""
+                className={"object-contain m-auto max-w-[100%] max-h-[100%] "}
+              />
+            </div>
+            <div className="mt-10">
+              <img
+                src="https://img.noc.pycon.jp/img/noc_img3.png"
+                alt=""
+                className={"object-contain m-auto max-w-[100%] max-h-[100%] "}
+              />
+            </div>
           </div>
         </div>
       </div>

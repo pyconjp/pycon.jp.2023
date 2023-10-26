@@ -2,7 +2,7 @@ name: Scheduled Deployment
 
 on:
   schedule:
-    - cron: '0 21 * * *' # 6am JST
+    - cron: '0 * * * *' # Every Hour
   workflow_dispatch:
 
 jobs:

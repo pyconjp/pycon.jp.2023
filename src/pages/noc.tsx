@@ -12,12 +12,11 @@ export const ArchitectureComponent = () => {
 
       <div className={"relative"}>
         <div className={"z-20 relative"}>
-          <div className={"bg-[#ffffff] rounded-lg mt-[72px] mb-[72px] p-[200px] relative"}>
-            <Image
+          <div className={"bg-[#ffffff] rounded-lg mt-[12px] mb-[12px] p-[200px] relative"}>
+            <img
               src="https://img.noc.pycon.jp/img/noc_topology.png"
               alt=""
-              fill
-              className={"object-contain m-auto max-w-[70%] max-h-[80%] absolute"}
+              className={"object-contain m-auto max-w-[100%] max-h-[100%] "}
             />
           </div>
         </div>

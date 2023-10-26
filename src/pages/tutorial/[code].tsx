@@ -1,4 +1,3 @@
-import PageHead from "@/components/elements/PageHead";
 import PageTitle from "@/components/elements/PageTitle";
 import {Answer, Talk} from "@/types/timetable";
 import {
@@ -20,7 +19,6 @@ type Props = {
 const TutorialDetail = ({tutorial, tutorials}: Props) => {
   return (
     <>
-      <PageHead/>
       <PageTitle title='Tutorial'/>
       <TutorialLayout tutorials={tutorials}>
         <div className='p-6 border-alt-black bg-secondary-50'>

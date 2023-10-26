@@ -8,6 +8,7 @@ const Ja: Lang = {
     CONTENTS: "コンテンツ",
     STAFF: "スタッフ",
     TIMETABLE: "タイムテーブル",
+    LIVE: "配信",
   },
   HERO: {
     VENUE: "TOC有明コンベンションホール",

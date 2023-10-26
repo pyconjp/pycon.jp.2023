@@ -4,9 +4,12 @@ import Image from "next/image";
 import HeaderMenu from "@/components/elements/HeaderMenu";
 import menu from "@/data/menu";
 import LangButton from "@/components/elements/LangButton";
+import {VideoCameraIcon} from "@heroicons/react/20/solid";
+import {useRouter} from "next/router";
 
 const PCHeader = () => {
   const {t} = useTranslation();
+  const router = useRouter();
 
   return (
     <div className='lg:flex hidden justify-between items-center mx-5 h-full'>
@@ -30,6 +33,16 @@ const PCHeader = () => {
               </li>
             ))
           }
+          <li>
+            <div
+              onClick={() => router.push('/live')}
+              className='text-xl font-bold bg-primary-500 hover:bg-primary-600 text-alt-white rounded-2xl px-4 py-2 flex gap-2 items-center cursor-pointer'>
+              <VideoCameraIcon className='w-6 h-6'/>
+              <div>
+                {t('Live', {ns: 'PAGES'})}
+              </div>
+            </div>
+          </li>
         </ul>
       </nav>
       <LangButton/>

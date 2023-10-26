@@ -112,10 +112,13 @@ export const getStaticProps = async () => {
   );
 
   const regular = await fetchTalks(SUBMISSION_TYPE_REGULAR_TALK)
-    .then(sessions => sessions.map(session => {
-      session.content_locale = ['日本語', 'Japanese'].includes(contentLocales[session.code]) ? 'ja-jp' : 'en';
-      return session;
-    }));
+    .then(sessions => sessions
+      .filter(session => !session.title.startsWith('Keynote -'))
+      .map(session => {
+        session.content_locale = ['日本語', 'Japanese'].includes(contentLocales[session.code]) ? 'ja-jp' : 'en';
+        return session;
+      })
+    );
 
   const short = await fetchTalks(SUBMISSION_TYPE_SHORT_TALK)
     .then(sessions => sessions.map(session => {

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import {useTranslation} from "react-i18next";
 import Image from "next/image";
-import {Bars3Icon, ChevronRightIcon, MinusIcon, XMarkIcon} from "@heroicons/react/20/solid";
+import {Bars3Icon, ChevronRightIcon, MinusIcon, VideoCameraIcon, XMarkIcon} from "@heroicons/react/20/solid";
 import menu from "@/data/menu";
 import {useCallback, useContext} from "react";
 import menuContext from "@/utils/menuContext";
@@ -77,9 +77,19 @@ const PCHeader = () => {
                 </div>
               </div>
             </Link>
-            <button className='w-11 h-9 rounded bg-primary-100' onClick={() => setIsMenuOpen(true)}>
-              <Bars3Icon className='h-6 text-primary-800 mx-auto'/>
-            </button>
+            <div className='flex flex-row gap-4 items-center'>
+              <div
+                onClick={() => router.push('/live')}
+                className='text-lg font-bold bg-primary-500 hover:bg-primary-600 text-alt-white rounded-2xl px-2 py-1 flex gap-2 items-center cursor-pointer'>
+                <VideoCameraIcon className='w-6 h-6'/>
+                <div>
+                  {t('Live', {ns: 'PAGES'})}
+                </div>
+              </div>
+              <button className='w-11 h-9 rounded bg-primary-100' onClick={() => setIsMenuOpen(true)}>
+                <Bars3Icon className='h-6 text-primary-800 mx-auto'/>
+              </button>
+            </div>
           </div>
         )
       }

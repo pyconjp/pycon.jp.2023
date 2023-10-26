@@ -8,6 +8,7 @@ const En: Lang = {
     CONTENTS: "Contents",
     STAFF: "Volunteers",
     TIMETABLE: "Timetable",
+    LIVE: "Live",
   },
   HERO: {
     VENUE: "TOC Ariake Convention Hall",

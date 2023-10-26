@@ -6,6 +6,7 @@ export type Lang = {
     CONTENTS: string;
     STAFF: string;
     TIMETABLE: string;
+    LIVE: string;
   };
   HERO: {
     VENUE: string;

@@ -3,6 +3,7 @@ export type Lang = {
     ABOUT: string;
     EVENTS: string;
     SPONSOR: string;
+    CONTENTS: string;
     STAFF: string;
     TIMETABLE: string;
   };
@@ -31,6 +32,9 @@ export type Lang = {
     SPONSOR: {
       SPONSOR_LIST: string;
     };
+    CONTENTS: {
+      NOC: string;
+    },
     STAFF: {
       STAFF: string;
     };
@@ -112,6 +116,12 @@ export type Lang = {
     BRONZE: string;
     SPECIAL: string;
     PATRON: string;
+  };
+  CONTENTS: {
+    NOC: {
+      ARCHITECTURE: string;
+      REALTIMEMONITOR: string;
+    }
   };
   CONFERENCE: {
     SPEAKER_JP: {

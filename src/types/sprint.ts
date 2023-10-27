@@ -13,6 +13,6 @@ export type Answer = {
 }
 
 export type SprintTopic = {
+  subject?: string,
   name?: string,
-  topic?: string,
 }

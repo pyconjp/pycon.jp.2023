@@ -43,7 +43,7 @@ const extractSprint = (answers: Answer[]) => {
       sprintTopic.name = answer.answer;
     } else if (answer.question == Q_SPRINT_TOPIC) {
       // isLeader = true;
-      sprintTopic.topic = answer.answer;
+      sprintTopic.subject = answer.answer;
     }
   }
 

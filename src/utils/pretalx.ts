@@ -8,11 +8,26 @@ export const SUBMISSION_TYPE_TUTORIAL = 2910;
 
 const EVENT = 'pyconapac2023';
 
-export const fetchAnswers = async () => axios.get(
+export const fetchSpeechLang = async () => axios.get(
   `https://pretalx.com/api/events/${EVENT}/answers`,
   {
     params: {
       question: 2563, // 発表の言語
+      limit: 300,
+    },
+    headers: {
+      Authorization: `Token ${process.env.PRETALX_AUTH_KEY}`,
+    },
+  },
+).then(
+  (response: AxiosResponse<{ results: Answer[] }>) => response.data.results
+);
+
+export const fetchSlideUrl = async () => axios.get(
+  `https://pretalx.com/api/events/${EVENT}/answers`,
+  {
+    params: {
+      question: 2953, // 発表資料へのURL
       limit: 300,
     },
     headers: {

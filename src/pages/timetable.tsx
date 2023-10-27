@@ -6,7 +6,8 @@ import {useRouter} from "next/router";
 import Modal from "@/components/elements/Modal";
 import {useEffect} from "react";
 import {
-  fetchAnswers,
+  fetchSlideUrl,
+  fetchSpeechLang,
   fetchTalks,
   sortTalks,
   SUBMISSION_TYPE_REGULAR_TALK,
@@ -106,8 +107,12 @@ const getEndDateTime = (sessions: Session[]) => {
 }
 
 export const getStaticProps = async () => {
-  const answers = await fetchAnswers();
-  const contentLocales = answers.reduce(
+  const languages = await fetchSpeechLang();
+  const contentLocales = languages.reduce(
+    (acc: { [p: string]: string }, cur: Answer) => ({...acc, [cur.submission]: cur.answer}), {}
+  );
+  const urls = await fetchSlideUrl();
+  const slideUrls = urls.reduce(
     (acc: { [p: string]: string }, cur: Answer) => ({...acc, [cur.submission]: cur.answer}), {}
   );
 
@@ -116,6 +121,7 @@ export const getStaticProps = async () => {
       .filter(session => !session.title.startsWith('Keynote -'))
       .map(session => {
         session.content_locale = ['日本語', 'Japanese'].includes(contentLocales[session.code]) ? 'ja-jp' : 'en';
+        session.slide_url = slideUrls[session.code] ? slideUrls[session.code] : null;
         return session;
       })
     );

@@ -24,6 +24,7 @@ export interface Session {
   abstract?: string,
   description?: string,
   content_locale?: 'ja-jp' | 'en',
+  slide_url?: string | null,
   slot: Slot<Track>,
   is_event?: boolean,
   hide_end?: boolean,

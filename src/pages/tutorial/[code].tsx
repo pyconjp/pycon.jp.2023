@@ -1,7 +1,7 @@
 import PageTitle from "@/components/elements/PageTitle";
 import {Answer, Talk} from "@/types/timetable";
 import {
-  fetchAnswers,
+  fetchSpeechLang,
   fetchTalks, getTalk, sortTalks,
   SUBMISSION_TYPE_TUTORIAL
 } from "@/utils/pretalx";
@@ -53,7 +53,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = (async ({params}) =
   const tutorial = await getTalk(params!.code);
   const tutorials = (await fetchTalks(SUBMISSION_TYPE_TUTORIAL)).sort(sortTalks);
 
-  const answers = await fetchAnswers();
+  const answers = await fetchSpeechLang();
   const contentLocales = answers.reduce(
     (acc: { [p: string]: string }, cur: Answer) => ({...acc, [cur.submission]: cur.answer}), {}
   );

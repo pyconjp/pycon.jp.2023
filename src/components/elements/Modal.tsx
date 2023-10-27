@@ -1,5 +1,5 @@
 import {Session} from "@/types/timetable";
-import {CalendarIcon, MapPinIcon, XMarkIcon} from "@heroicons/react/20/solid";
+import {CalendarIcon, MapPinIcon, PresentationChartBarIcon, XMarkIcon} from "@heroicons/react/20/solid";
 import {format, parseISO} from "date-fns";
 
 type Props = {
@@ -25,7 +25,7 @@ const Modal = ({session, onClose}: Props) => {
           <div
             className='text-lg font-bold mt-2'>{session.speakers && session.speakers.map((speaker) => speaker.name).join(' / ')}</div>
           <div className='text-lg mt-2'>
-            <CalendarIcon className='w-6 h-6 inline-block'/>
+            <CalendarIcon className='w-6 h-6 inline-block mr-2'/>
             {!session.hide_start && !session.hide_end
               ? <>{format(parseISO(session.slot.start), 'yyyy/MM/dd HH:mm')} ~ {format(parseISO(session.slot.end), 'HH:mm')} (Asia/Tokyo)</>
               : <>{format(parseISO(session.slot.start), 'yyyy/MM/dd')} (Asia/Tokyo)</>
@@ -34,17 +34,39 @@ const Modal = ({session, onClose}: Props) => {
           {
             session.slot.room["ja-jp"] !== '' &&
             <div className='text-lg my-2'>
-              <MapPinIcon className='w-6 h-6 inline-block'/>{session.slot.room["ja-jp"]}
+              <MapPinIcon className='w-6 h-6 inline-block mr-2'/>{session.slot.room["ja-jp"]}
             </div>
           }
-          {
-            session.content_locale === 'ja-jp' &&
-            <div className='inline bg-primary-500 rounded-2xl text-alt-white px-2'>日本語</div>
-          }
-          {
-            session.content_locale === 'en' &&
-            <div className='inline bg-secondary-500 rounded-2xl text-alt-white px-2'>EN</div>
-          }
+
+          <div className='my-2 inline'>
+            <div>
+              {
+                session.slide_url && (
+                  parseISO(session.slot.end) < new Date()
+                    ? <a href={session.slide_url} rel='noopener noreferrer'
+                         className='text-primary-500 hover:text-primary-600'
+                         target='_blank'>
+                      <PresentationChartBarIcon className={'w-6 h-6 inline-block mr-2'}/>Slide
+                    </a>
+                    : <span className='text-primary-500 opacity-50'>
+                      <PresentationChartBarIcon className={'w-6 h-6 inline-block mr-2'}/>Comming soon...
+                    </span>
+                )
+              }
+            </div>
+
+            <div className='my-2'>
+              {
+                session.content_locale === 'ja-jp' &&
+                <div className='inline bg-primary-500 rounded-2xl text-alt-white px-2'>日本語</div>
+              }
+              {
+                session.content_locale === 'en' &&
+                <div className='inline bg-secondary-500 rounded-2xl text-alt-white px-2'>EN</div>
+              }
+            </div>
+          </div>
+
           <div className='mt-6 w-full bg-secondary-100 rounded p-4 whitespace-pre-line'>{session.abstract}</div>
           <hr className='my-6 border-secondary-300'/>
           {

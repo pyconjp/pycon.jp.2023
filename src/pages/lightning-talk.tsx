@@ -1,5 +1,5 @@
 import {
-  fetchAnswers,
+  fetchSpeechLang,
   fetchTalks,
   sortTalks, SUBMISSION_TYPE_LT,
 } from "@/utils/pretalx";
@@ -46,7 +46,7 @@ const TalkCard = ({talk}: { talk: Talk }) => {
 }
 
 export const getStaticProps = async () => {
-  const answers = await fetchAnswers();
+  const answers = await fetchSpeechLang();
   const contentLocales = answers.reduce(
     (acc: { [p: string]: string }, cur: Answer) => ({...acc, [cur.submission]: cur.answer}), {}
   );

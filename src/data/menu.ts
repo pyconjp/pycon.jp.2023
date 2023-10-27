@@ -25,7 +25,7 @@ export const menu: Menu[] = [
       { title: "EVENTS.TUTORIAL", url: "/tutorial" },
       { title: "EVENTS.LIGHTNING_TALK", url: "/lightning-talk" },
       { title: "EVENTS.POSTER_SESSION", url: "/poster" },
-      { title: "EVENTS.SPRINT", url: "/sprint", isComingSoon: true },
+      { title: "EVENTS.SPRINT", url: "/sprint" },
     ],
   },
   {

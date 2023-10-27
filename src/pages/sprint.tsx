@@ -10,11 +10,11 @@ import PageHead from "@/components/elements/PageHead";
 import SectionTitle from "@/components/elements/SectionTitle";
 
 export const PosterPage = ({sprint}: {sprint: Sprint}) => {
-  const { t } = useTranslation("MENU.EVENTS");
+  const { t } = useTranslation("MENU");
   return (
     <>
       <PageHead/>
-      <PageTitle title={t("SPRINT")}/>
+      <PageTitle title={t("EVENTS.SPRINT")}/>
       <SprintCard sprint={sprint}/>
     </>
   )

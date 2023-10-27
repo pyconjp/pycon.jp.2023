@@ -1,0 +1,12 @@
+{
+  "topics": [
+    "Apache Airflow: TP Chung",
+    "eBPF and Python: Dima Tisnek",
+    "Linters and Tools for Productivity, Code Health, and Refactoring!: Evan Kohilas",
+    "Humble Data Workshop held in Terakoya style: PyLadies Tokyo",
+    "Let's add docstrings to PyVista: Tetsuo Koyama",
+    "Issue support for sphinx-revealjs: Kazuya Takei",
+    "Using Scorecard to check your repo's security: Cheuk Ting Ho",
+    "Improving Python Boot Camp text: Ryuji Tsutsui"
+  ]
+}

@@ -1,27 +1,23 @@
-import * as fs from "fs";
-import * as path from 'path'
-import {Sprint} from "@/types/sprint";
+import {fetchOrderPositions, getSprints} from "@/utils/pretix";
+import {SprintTopic} from "@/types/sprint";
 import {GetStaticProps} from "next";
-import {useState} from "react";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import PageTitle from "@/components/elements/PageTitle";
 import PageHead from "@/components/elements/PageHead";
-import SectionTitle from "@/components/elements/SectionTitle";
 
-export const PosterPage = ({sprint}: {sprint: Sprint}) => {
+export const PosterPage = ({sprints}: {sprints: SprintTopic[]}) => {
   const { t } = useTranslation("MENU");
   return (
     <>
       <PageHead/>
       <PageTitle title={t("EVENTS.SPRINT")}/>
-      <SprintCard sprint={sprint}/>
+      <SprintCard sprints={sprints}/>
     </>
   )
 }
 
-const SprintCard = ({sprint}: {sprint: Sprint}) => {
-    const {topics} = sprint;
+const SprintCard = ({sprints}: {sprints: SprintTopic[]}) => {
     const { t } = useTranslation("HERO");
 
     return (
@@ -52,7 +48,7 @@ const SprintCard = ({sprint}: {sprint: Sprint}) => {
                 </div>
             </div>
             <div className={"my-[20px] bg-secondary-100 rounded p-[15px]"}>
-                { topics.map(topic => (<p key={topic} className={"lg:text-base text-sm whitespace-pre-wrap"}>{topic}</p>)) }
+                { sprints.map((topic,index) => (<p key={index} className={"lg:text-base text-sm whitespace-pre-wrap"}>{topic.topic}</p>)) }
             </div>
             <div className="flex justify-center mb-[100px]">
                 <Image
@@ -68,11 +64,15 @@ const SprintCard = ({sprint}: {sprint: Sprint}) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const jsonPath = path.join(process.cwd(), 'src', 'data', 'sprint.json')
-  const sprint = JSON.parse(fs.readFileSync(jsonPath, 'utf-8')) as Sprint;
-  console.log({sprint});
+  const orderPositions = await fetchOrderPositions();
+  const sprints = getSprints(orderPositions);
+  console.log(sprints);
 
-  return {props: {sprint}}
+  return {
+    props: {
+      sprints
+    }
+  }
 }
 
 export default PosterPage;

@@ -42,7 +42,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const blogUrl = `${blogBaseUrl}?key=${process.env.BLOGGER_API_KEY}`;
   const blogResponse = await fetch(blogUrl);
   const { items } = await blogResponse.json();
-  const blogs: Blog[] = items
+  const blogs: Blog[] = (items || [])
     .reverse()
     .slice(5)
     .reverse()

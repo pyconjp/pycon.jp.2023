@@ -90,7 +90,7 @@ export const events: {
     {
       slot: {
         start: "2023-10-28T10:20:00+09:00",
-        end: "2023-10-28T11:20:00+09:00",
+        end: "2023-10-28T11:35:00+09:00",
         ...eventRoom,
       },
       title: "Keynote - Through the looking glass: 10 years of Python Organizing Lessons and Tribulations (Lorena Mesa)",
@@ -109,7 +109,7 @@ export const events: {
     },
     {
       slot: {
-        start: "2023-10-28T12:10:00+09:00",
+        start: "2023-10-28T12:25:00+09:00",
         end: "2023-10-28T13:30:00+09:00",
         ...eventRoom,
       },

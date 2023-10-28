@@ -49,7 +49,7 @@ const Modal = ({session, onClose}: Props) => {
                       <PresentationChartBarIcon className={'w-6 h-6 inline-block mr-2'}/>Slide
                     </a>
                     : <span className='text-primary-500 opacity-50'>
-                      <PresentationChartBarIcon className={'w-6 h-6 inline-block mr-2'}/>Comming soon...
+                      <PresentationChartBarIcon className={'w-6 h-6 inline-block mr-2'}/>Coming soon...
                     </span>
                 )
               }

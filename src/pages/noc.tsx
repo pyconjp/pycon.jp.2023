@@ -31,26 +31,8 @@ export const RealtimeMonitorComponent = () => {
     <>
       <SectionTitle title={'Real-time Monitor'} subTitle={t("NOC.REALTIMEMONITOR")} />
       <div className={"my-12 lg:w-8/12 w-10/12 mx-auto"}>
-        <div className="mt-10">
-          <img
-            src={monitor01_img}
-            alt=""
-            className="w-full"
-          />
-        </div>
-        <div className="mt-10">
-          <img
-            src={monitor02_img}
-            alt=""
-            className="w-full"
-          />
-        </div>
-        <div className="mt-10">
-          <img
-            src={monitor03_img}
-            alt=""
-            className="w-full"
-          />
+        <div className='font-bold text-center'>
+          機材障害により公開中断中
         </div>
       </div>
     </>

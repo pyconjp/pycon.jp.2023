@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       gridTemplateRows: {
         'timetable1': '40px repeat(20, 8px) repeat(8, 48px) repeat(16, 8px) repeat(14, 48px) repeat(8, 8px) repeat(14, 48px) repeat(15, 8px)',
-        'timetable2': '40px repeat(18, 8px) repeat(8, 48px) repeat(16, 8px) repeat(14, 48px) repeat(8, 8px) repeat(14, 48px) repeat(28, 8px)',
+        'timetable2': '40px repeat(21, 8px) repeat(8, 48px) repeat(16, 8px) repeat(14, 48px) repeat(8, 8px) repeat(14, 48px) repeat(28, 8px)',
       },
       gridTemplateColumns: {
         'timetable': '100px repeat(5, 1fr) 100px',

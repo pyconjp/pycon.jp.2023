@@ -227,9 +227,9 @@ const En: Lang = {
       "This is a support in which PyCon JP pays all or part of transportation expenses mainly for distant people.",
   },
   ATTENTION: {
-    REGISTRATION_FLOW: {
-      TITLE: "Registration flow",
-      DESCRIPTION:"Attendees, patrons and speakers need to present their Pretix QR Code at reception. You can either print the QR Code or display it on your smartphone.",
+    APOLOGIZE: {
+      TITLE: "",
+      DESCRIPTION: "",
     }
   }
 };

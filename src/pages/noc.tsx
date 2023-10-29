@@ -32,7 +32,7 @@ export const RealtimeMonitorComponent = () => {
       <SectionTitle title={'Real-time Monitor'} subTitle={t("NOC.REALTIMEMONITOR")} />
       <div className={"my-12 lg:w-8/12 w-10/12 mx-auto"}>
         <div className='font-bold text-center'>
-          機材障害により公開中断中
+          公開停止
         </div>
       </div>
     </>

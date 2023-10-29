@@ -27,7 +27,7 @@ const SprintCard = ({sprints}: { sprints: SprintTopic[] }) => {
   const {t} = useTranslation("HERO");
 
   return (
-    <div className={"lg:mx-[120px] mx-[80px] my-[60px]"}>
+    <div className={"lg:mx-[120px] mx-auto my-[60px]"}>
       <div className={"flex flex-row justify-between duration-300 mb-6"}>
         <div className={"flex flex-col grow text-left grow"}>
           <div className={"flex flex-row items-center mx-auto"}>
@@ -49,7 +49,7 @@ const SprintCard = ({sprints}: { sprints: SprintTopic[] }) => {
                 height={"400"}
               />
             </div>
-            <div className={"flex flex-col m-[20px]"}>
+            <div className={"flex flex-col m-auto"}>
               <VenueInfoComponent title={t('VENUE_TITLE', {ns: 'VENUE'})} text={t('VENUE_TEXT_S', {ns: 'VENUE'})} />
               <VenueInfoComponent title={t('LOCATION_TITLE', {ns: 'VENUE'})} text={t('LOCATION_TEXT_S', {ns: 'VENUE'})} />
               <VenueInfoComponent title={t('STATION_TITLE', {ns: 'VENUE'})} text={t('STATION_TEXT_S', {ns: 'VENUE'})} />

@@ -194,7 +194,7 @@ const Ja: Lang = {
     VENUE_TEXT_S: "HENNGE株式会社",
     LOCATION_TITLE: "所在地",
     LOCATION_TEXT_T: "東京都江東区有明3丁目5番7号",
-    LOCATION_TEXT_S: "東京都渋谷区南平台町16番28号 Daiwa渋谷スクエア",
+    LOCATION_TEXT_S: "東京都渋谷区南平台町16番28号 Daiwa渋谷スクエア 4F",
     STATION_TITLE: "最寄り駅",
     STATION_TEXT_T: "<りんかい線> 国際展示場駅より徒歩3分\n<ゆりかもめ> 東京ビッグサイト駅/有明駅より徒歩4分",
     STATION_TEXT_S: "渋谷駅より徒歩約10分",

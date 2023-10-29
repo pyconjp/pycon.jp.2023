@@ -30,20 +30,20 @@ export default function HeroSection() {
                             <div className="flex sm:flex-row flex-col">
                                 <h2 suppressHydrationWarning className="text-tertiary-900 font-bold text-2xl">{t("VENUE")}</h2>
                                 <a
-                                  href="https://www.toc.co.jp/saiji/ariake/access/"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  suppressHydrationWarning
-                                  className="hover:opacity-70 text-lg text-secondary-600 font-bold underline underline-offset-8"
+                                    href="https://www.toc.co.jp/saiji/ariake/access/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    suppressHydrationWarning
+                                    className="hover:opacity-70 text-lg text-secondary-600 font-bold underline underline-offset-8"
                                 >
                                     <div className="flex flex-row sm:mx-[16px]">
                                         <p suppressHydrationWarning>{t("VENUE_INFO")}</p>
                                         <Image
-                                          src={"/linkout_b.svg"}
-                                          alt={""}
-                                          width={20}
-                                          height={20}
-                                          className="object-contain ml-[5px]"
+                                            src={"/linkout_b.svg"}
+                                            alt={""}
+                                            width={20}
+                                            height={20}
+                                            className="object-contain ml-[5px]"
                                         />
                                     </div>
                                 </a>
@@ -70,20 +70,20 @@ export default function HeroSection() {
                             <div className="flex sm:flex-row flex-col">
                                 <h2 suppressHydrationWarning className="text-tertiary-900 font-bold text-2xl">{t("VENUE_SPRINT")}</h2>
                                 <a
-                                  href="https://hennge.com/jp/about/map/"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  suppressHydrationWarning
-                                  className="hover:opacity-70 text-lg text-secondary-600 font-bold underline underline-offset-8"
+                                    href="https://hennge.com/jp/about/map/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    suppressHydrationWarning
+                                    className="hover:opacity-70 text-lg text-secondary-600 font-bold underline underline-offset-8"
                                 >
                                     <div className="flex flex-row sm:mx-[16px]">
                                         <p suppressHydrationWarning>{t("VENUE_INFO")}</p>
                                         <Image
-                                          src={"/linkout_b.svg"}
-                                          alt={""}
-                                          width={20}
-                                          height={20}
-                                          className="object-contain ml-[5px]"
+                                            src={"/linkout_b.svg"}
+                                            alt={""}
+                                            width={20}
+                                            height={20}
+                                            className="object-contain ml-[5px]"
                                         />
                                     </div>
                                 </a>
@@ -101,12 +101,9 @@ export default function HeroSection() {
                     </div>
                 </div>
 
-                <a href="https://pretix.eu/pyconjp/2023-apac/"
-                    className="bg-alt-black hover:bg-secondary-700 rounded text-center text-alt-white w-full py-[14px]"
-                ><span>{t("TICKET_INFO")}</span></a>
                 <div className='mt-8 bg-primary-50 w-10/12 p-6 rounded border-alt-black border-2'>
-                  <div className='text-lg font-bold text-primary-600'>{t('REGISTRATION_FLOW.TITLE', {ns: 'ATTENTION'})}</div>
-                  <div className='mt-2 whitespace-pre-line'>{t('REGISTRATION_FLOW.DESCRIPTION', {ns: 'ATTENTION'})}</div>
+                    <div className='text-lg font-bold text-primary-600'>{t('APOLOGIZE.TITLE', { ns: 'ATTENTION' })}</div>
+                    <div className='mt-2 whitespace-pre-line'>{t('APOLOGIZE.DESCRIPTION', { ns: 'ATTENTION' })}</div>
                 </div>
             </div>
         </section>

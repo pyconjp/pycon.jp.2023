@@ -182,7 +182,7 @@ export type Lang = {
     DISTANT_DESCRIPTION: string;
   };
   ATTENTION: {
-    REGISTRATION_FLOW: {
+    APOLOGIZE: {
       TITLE: string;
       DESCRIPTION: string;
     }

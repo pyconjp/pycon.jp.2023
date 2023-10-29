@@ -195,7 +195,7 @@ const En: Lang = {
     VENUE_TEXT_S: "HENNGE K.K.",
     LOCATION_TITLE: "Location",
     LOCATION_TEXT_T: "3-5-7 Ariake, Koto-ku, Tokyo",
-    LOCATION_TEXT_S: "Daiwa Shibuya Square 16-28 Nanpeidai-cho Shibuya-ku, Tokyo",
+    LOCATION_TEXT_S: "Daiwa Shibuya Square 4F 16-28 Nanpeidai-cho Shibuya-ku, Tokyo",
     STATION_TITLE: "By Train",
     STATION_TEXT_T: "<Rinkai Line> Approx. 3 minutes' walk from Kokusai-Tenjijo Station\n<Yurikamome> Approx. 4 minutes' walk from Tokyo Big Sight Station or Ariake Station",
     STATION_TEXT_S: "10 minutes' walk from Shibuya Station",

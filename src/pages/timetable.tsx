@@ -43,7 +43,7 @@ type Props = {
 }
 
 const DATE_THRESHOLD = '2023-10-28T00:00:00+09:00';
-const DEFAULT_DAY = 'day2';
+const DEFAULT_DAY = 'day1';
 
 const TimeTable = ({sessions, startTime, endTime}: Props) => {
   const router = useRouter();

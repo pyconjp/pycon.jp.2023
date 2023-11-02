@@ -103,7 +103,14 @@ export default function HeroSection() {
 
                 <div className='mt-8 bg-primary-50 w-10/12 p-6 rounded border-alt-black border-2'>
                     <div className='text-lg font-bold text-primary-600'>{t('APOLOGIZE.TITLE', { ns: 'ATTENTION' })}</div>
-                    <div className='mt-2 whitespace-pre-line'>{t('APOLOGIZE.DESCRIPTION', { ns: 'ATTENTION' })}</div>
+                    <a
+                        href="https://pyconjp.blogspot.com/2023/11/pyconapac2023-statement.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        suppressHydrationWarning
+                        className="hover:opacity-70 text-lg text-secondary-600 font-bold underline underline-offset-8"
+                    >
+                    <div className='mt-2 whitespace-pre-line'>{t('APOLOGIZE.DESCRIPTION', { ns: 'ATTENTION' })}</div></a>
                 </div>
             </div>
         </section>

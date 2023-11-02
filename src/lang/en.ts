@@ -228,8 +228,8 @@ const En: Lang = {
   },
   ATTENTION: {
     APOLOGIZE: {
-      TITLE: "",
-      DESCRIPTION: "",
+      TITLE: "お知らせ",
+      DESCRIPTION: "PyCon APAC 2023におけるNOCコンテンツに関するご指摘について",
     }
   }
 };

@@ -129,6 +129,7 @@ export const getStaticProps = async () => {
   const short = await fetchTalks(SUBMISSION_TYPE_SHORT_TALK)
     .then(sessions => sessions.map(session => {
       session.content_locale = ['日本語', 'Japanese'].includes(contentLocales[session.code]) ? 'ja-jp' : 'en';
+      session.slide_url = slideUrls[session.code] ? slideUrls[session.code] : null;
       return session;
     }));
 

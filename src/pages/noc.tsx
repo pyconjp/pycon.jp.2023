@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 export const ArchitectureComponent = () => {
   const { t } = useTranslation("CONTENTS");
-  const arc_img = `https://img.noc.pycon.jp/img/noc_topology.png?${(new Date).getTime()}`
+  const arc_img = "/network_arch.png"
   return (
     <>
       <SectionTitle title={'Architecture'} subTitle={t("NOC.ARCHITECTURE")} />

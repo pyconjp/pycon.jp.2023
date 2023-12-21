@@ -22,30 +22,12 @@ export const ArchitectureComponent = () => {
   )
 };
 
-export const RealtimeMonitorComponent = () => {
-  const { t } = useTranslation("CONTENTS");
-  const monitor01_img = `https://img.noc.pycon.jp/img/noc_img1.png?${(new Date).getTime()}`
-  const monitor02_img = `https://img.noc.pycon.jp/img/noc_img2.png?${(new Date).getTime()}`
-  const monitor03_img = `https://img.noc.pycon.jp/img/noc_img3.png?${(new Date).getTime()}`
-  return (
-    <>
-      <SectionTitle title={'Real-time Monitor'} subTitle={t("NOC.REALTIMEMONITOR")} />
-      <div className={"my-12 lg:w-8/12 w-10/12 mx-auto"}>
-        <div className='font-bold text-center'>
-          公開停止
-        </div>
-      </div>
-    </>
-  )
-};
-
 const NocPage = () => {
   return (
     <>
       <PageHead />
       <PageTitle title='NOC' />
       <ArchitectureComponent />
-      <RealtimeMonitorComponent />
     </>
   )
 }

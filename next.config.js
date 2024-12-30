@@ -6,6 +6,7 @@ const nextConfig = {
     locales: ['ja', 'en'],
     defaultLocale: 'ja',
   } */
+  output: 'export',
   images: {
     remotePatterns: [
       {
